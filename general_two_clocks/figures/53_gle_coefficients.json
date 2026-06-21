@@ -1,0 +1,88 @@
+{
+ "part_A_tau_c_measured": {
+  "smagorinsky": {
+   "closure": "smagorinsky",
+   "bs_tau_set": 0.0,
+   "n": 24,
+   "seed": 1,
+   "sample_dt": 0.0006000000000000449,
+   "n_probes_used": 64,
+   "tau_c_local_efold": 0.026722747292962038,
+   "tau_c_local_integral": 0.023199001762096563,
+   "tau_mem_meanfield": 0.024903740462611162,
+   "tau_turn": 1.5,
+   "clock_C_local": 0.01781516486197469,
+   "sign_tau_c": 1
+  },
+  "two_clocks": {
+   "closure": "backscatter",
+   "bs_tau_set": 0.05,
+   "n": 24,
+   "seed": 1,
+   "sample_dt": 0.0006000000000000449,
+   "n_probes_used": 64,
+   "tau_c_local_efold": 0.03241023484307029,
+   "tau_c_local_integral": 0.02824449914507113,
+   "tau_mem_meanfield": 0.0219856347567897,
+   "tau_turn": 1.5,
+   "clock_C_local": 0.021606823228713528,
+   "sign_tau_c": 1
+  },
+  "result8_tau_mem_set": 0.05,
+  "result8_tau_mem_eff": 0.0095
+ },
+ "part_B_g5_correction": {
+  "tau_c": 0.03241023484307029,
+  "omega": 0.9,
+  "eps": 0.4,
+  "lag_equivalence_rel_err": 0.00011402921983351549,
+  "correction_rel_amplitude": 0.0033268771330759173,
+  "cycle_mean_correction": 1.57642242961217e-21,
+  "cycle_typical_rms": 0.0022741841784185584,
+  "net_over_rms": 6.931815129891529e-19,
+  "is_pure_lag": true,
+  "is_net_zero_in_steady_state": true
+ },
+ "part_C_ice_kernel": {
+  "Vbar_1m_per_yr": {
+   "inputs": {
+    "theta_far_K": 2.0,
+    "Vbar_m_per_s": 3.2e-08,
+    "Vbar_m_per_yr": 1.009824
+   },
+   "kappa_ice": 1.0905125408942202e-06,
+   "A_W_per_m3": 0.0018082477056000005,
+   "tau_d_s": 1064953653.2170119,
+   "tau_d_yr": 33.74698650749475,
+   "B_s_minus_half": 2.174014985694183e-07,
+   "dc_gain_check_J_per_m3": 3851400.0,
+   "stefan_weight": 0.012574850299401197,
+   "int_Kice_dtau_dimensionless": 0.012574850299401197,
+   "fast_bath_dc_gain_normalized": 1.0,
+   "bath_weight_slow_over_fast": 0.012574850299401197,
+   "tau_sgs_phys_s": 10.0,
+   "fast_slow_separation": 106495365.3217012
+  },
+  "Vbar_10m_per_yr": {
+   "inputs": {
+    "theta_far_K": 2.0,
+    "Vbar_m_per_s": 3.2e-07,
+    "Vbar_m_per_yr": 10.09824
+   },
+   "kappa_ice": 1.0905125408942202e-06,
+   "A_W_per_m3": 0.18082477056000004,
+   "tau_d_s": 10649536.532170119,
+   "tau_d_yr": 0.33746986507494753,
+   "B_s_minus_half": 2.1740149856941828e-06,
+   "dc_gain_check_J_per_m3": 3851400.0,
+   "stefan_weight": 0.012574850299401197,
+   "int_Kice_dtau_dimensionless": 0.012574850299401197,
+   "fast_bath_dc_gain_normalized": 1.0,
+   "bath_weight_slow_over_fast": 0.012574850299401197,
+   "tau_sgs_phys_s": 10.0,
+   "fast_slow_separation": 1064953.6532170118
+  }
+ },
+ "verdict": "tau_c MEASURED (sign +, value = SGS K_u memory time, consistent with RESULT-8 tau_mem); \u00a7G.5 correction is a pure time-lag with net-zero mean in steady turbulence (explains RESULT 8/11 null); ice-bath B, tau_d closed-form from \u00a7B.2, fast/slow baths separated by ~1e6-1e9 in physical time (\u00a7D.4 scale-selectivity, real numbers); bath weights K_SGS:K_ice = 1:St with St=c_i*|theta_far|/L (~0.01-0.06), the slow ice bath subdominant by the \u00a7G.4 Stefan number.",
+ "wall_time_s": 114.18742156028748
+}

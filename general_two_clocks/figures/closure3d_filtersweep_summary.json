@@ -1,0 +1,113 @@
+{
+  "kc16": {
+    "sec": 403,
+    "meta": {
+      "n": 192,
+      "kc": 16,
+      "nu": 0.0012,
+      "steps": 2500,
+      "backend": "cupy",
+      "ke": 0.03512116052063708
+    },
+    "div_scores": {
+      "truth": 1.6523773061847583e-14,
+      "Smagorinsky": 1.474074715057454e-14,
+      "surrogate": 6.5206747139691394,
+      "projected-FDT": 1.4114192400324853e-14
+    },
+    "transfer_corrs": {
+      "Smagorinsky": -0.6310195997207307,
+      "surrogate": -0.129796997848342,
+      "projected-FDT": 0.9991937155844514
+    },
+    "net_transfer": -17328992708.96865,
+    "enstrophy_norm": 0.16775604678809788,
+    "alignment": {
+      "cos_extensional": 0.48406227033673893,
+      "cos_intermediate": 0.6472397914309199,
+      "cos_compressive": 0.3295533494167251,
+      "n_points": 400000
+    },
+    "flux": {
+      "mean_flux_true": 0.000345912253626748,
+      "mean_flux_smag": 0.002127010044162691,
+      "backscatter_fraction_true": 0.46504762437608504,
+      "backscatter_fraction_smag": 0.0,
+      "pi_true_std": 0.003490034499076079
+    }
+  },
+  "kc24": {
+    "sec": 394,
+    "meta": {
+      "n": 192,
+      "kc": 24,
+      "nu": 0.0012,
+      "steps": 2500,
+      "backend": "cupy",
+      "ke": 0.03512116052063708
+    },
+    "div_scores": {
+      "truth": 1.6698616875532564e-14,
+      "Smagorinsky": 1.4855311362617344e-14,
+      "surrogate": 9.759536382146525,
+      "projected-FDT": 1.4378458723750763e-14
+    },
+    "transfer_corrs": {
+      "Smagorinsky": -0.6367633520474725,
+      "surrogate": -0.27645586436460884,
+      "projected-FDT": 0.9997110050887328
+    },
+    "net_transfer": -4721568795.847126,
+    "enstrophy_norm": 0.16775604678809788,
+    "alignment": {
+      "cos_extensional": 0.48406227033673893,
+      "cos_intermediate": 0.6472397914309199,
+      "cos_compressive": 0.3295533494167251,
+      "n_points": 400000
+    },
+    "flux": {
+      "mean_flux_true": 9.424947717705048e-05,
+      "mean_flux_smag": 0.0011464107293025873,
+      "backscatter_fraction_true": 0.4807467990451389,
+      "backscatter_fraction_smag": 0.0,
+      "pi_true_std": 0.0015706119476147694
+    }
+  },
+  "kc32": {
+    "sec": 394,
+    "meta": {
+      "n": 192,
+      "kc": 32,
+      "nu": 0.0012,
+      "steps": 2500,
+      "backend": "cupy",
+      "ke": 0.03512116052063708
+    },
+    "div_scores": {
+      "truth": 1.9352101627572346e-14,
+      "Smagorinsky": 1.4987328999931864e-14,
+      "surrogate": 13.06000806083878,
+      "projected-FDT": 1.4502572786185583e-14
+    },
+    "transfer_corrs": {
+      "Smagorinsky": -0.5525888813888826,
+      "surrogate": 0.2441819454648152,
+      "projected-FDT": 0.9998601184266861
+    },
+    "net_transfer": -1358127649.6520405,
+    "enstrophy_norm": 0.16775604678809788,
+    "alignment": {
+      "cos_extensional": 0.48406227033673893,
+      "cos_intermediate": 0.6472397914309199,
+      "cos_compressive": 0.3295533494167251,
+      "n_points": 400000
+    },
+    "flux": {
+      "mean_flux_true": 2.711023103846078e-05,
+      "mean_flux_smag": 0.0006865288878191783,
+      "backscatter_fraction_true": 0.4889373779296875,
+      "backscatter_fraction_smag": 0.0,
+      "pi_true_std": 0.0006998482538186716
+    }
+  }
+}

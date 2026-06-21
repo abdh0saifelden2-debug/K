@@ -1,0 +1,153 @@
+{
+  "params": {
+    "lam": 0.1,
+    "tau_c": 1.0,
+    "D": 1.0,
+    "dt": 0.02,
+    "n": 3000000,
+    "probe_w": [
+      0.05,
+      0.1,
+      0.2,
+      0.4,
+      0.8
+    ],
+    "De": 0.1
+  },
+  "response": {
+    "rows": [
+      {
+        "omega0": 0.05,
+        "chi_noiseless": [
+          8.000997587723678,
+          -3.9980012922491834
+        ],
+        "chi_noisy": [
+          8.148975747688844,
+          -3.96421942394532
+        ],
+        "chi_analytic": [
+          8.0,
+          -4.0
+        ],
+        "err_noiseless_vs_analytic": 0.00024975022371377724,
+        "noisefree_err": 0.01697010255301069,
+        "lam_from_resp_noisy": 0.09923151797992906
+      },
+      {
+        "omega0": 0.1,
+        "chi_noiseless": [
+          5.0024977213040405,
+          -4.997501452748199
+        ],
+        "chi_noisy": [
+          5.1854519415809,
+          -4.922231842631424
+        ],
+        "chi_analytic": [
+          5.0,
+          -5.0
+        ],
+        "err_noiseless_vs_analytic": 0.0004996268624111706,
+        "noisefree_err": 0.027977762928527668,
+        "lam_from_resp_noisy": 0.10144225453978685
+      },
+      {
+        "omega0": 0.2,
+        "chi_noiseless": [
+          2.0039983213886337,
+          -3.9979997005397325
+        ],
+        "chi_noisy": [
+          1.98212939462551,
+          -4.0257819849101
+        ],
+        "chi_analytic": [
+          2.0,
+          -4.0
+        ],
+        "err_noiseless_vs_analytic": 0.000999694249697168,
+        "noisefree_err": 0.007906027076246484,
+        "lam_from_resp_noisy": 0.09843828283893756
+      },
+      {
+        "omega0": 0.4,
+        "chi_noiseless": [
+          0.5929396973235515,
+          -2.351761395266463
+        ],
+        "chi_noisy": [
+          0.6383156216378213,
+          -2.329612698161486
+        ],
+        "chi_analytic": [
+          0.588235294117647,
+          -2.352941176470588
+        ],
+        "err_noiseless_vs_analytic": 0.001999739944659372,
+        "noisefree_err": 0.020818781891354762,
+        "lam_from_resp_noisy": 0.10940286393384403
+      },
+      {
+        "omega0": 0.8,
+        "chi_noiseless": [
+          0.15876757608539144,
+          -1.2301472718054944
+        ],
+        "chi_noisy": [
+          0.15944681221945597,
+          -1.2477741465490866
+        ],
+        "chi_analytic": [
+          0.15384615384615385,
+          -1.2307692307692308
+        ],
+        "err_noiseless_vs_analytic": 0.003999337367131249,
+        "noisefree_err": 0.014221787817249584,
+        "lam_from_resp_noisy": 0.10076496422313312
+      }
+    ],
+    "lam_from_response": 0.10076496422313312,
+    "lam_true": 0.1,
+    "lam_resp_rel_err": 0.007649642231331161,
+    "max_err_vs_analytic": 0.003999337367131249,
+    "max_D_independence_err": 0.027977762928527668
+  },
+  "spectrum": {
+    "corner_hz": 0.15915494309189535,
+    "highf_slope_memory": -3.9273890270019383,
+    "highf_slope_white": -1.9780707999225287,
+    "slope_band_hz": [
+      0.477464829275686,
+      1.909859317102744
+    ]
+  },
+  "fdt": {
+    "D_fit": 0.99337561070119,
+    "D_true": 1.0,
+    "tau_c_fit": 0.9904322940615371,
+    "tau_c_true": 1.0,
+    "white_flat_ratio": 1.0059722411488707,
+    "mem_drop_ratio": 0.03136166852900139,
+    "mem_drop_predicted": 0.03033783783783784
+  },
+  "debias": {
+    "De_true": 0.1,
+    "De_recovered": 0.09980087467654646,
+    "De_rel_err": 0.0019912532345355005
+  },
+  "checks": {
+    "resp_ok": true,
+    "Dindep_ok": true,
+    "proximity_ok": true,
+    "slope_mem_ok": true,
+    "slope_white_ok": true,
+    "tcfit_ok": true,
+    "Dfit_ok": true,
+    "white_flat_ok": true,
+    "mem_drop_ok": true,
+    "debias_ok": true
+  },
+  "verdict": "The fold mode's RESPONSE chi(w)=1/(lam+iw) is noise-free: the tidal admittance |chi(0)|=1/lam measures proximity to ungrounding with no knowledge of the noise D (verified D-independent and lam recovered to 0.8%). Its FLUCTUATION spectrum is a DOUBLE Lorentzian: the high-frequency slope steepens from -1.98 (white bath, ~-2) to -3.93 (memory bath, ~-4), a model-free memory signature. The first-FDT effective temperature T_eff(w)=w S/(2|Im chi|)=D/(1+w^2 tau_c^2) is FLAT for a white bath (ratio 1.01) but rolls off for a memory bath (ratio 0.03); fitting the roll-off recovers tau_c to 1.0% and D to 0.7%, so De=lam*tau_c is de-biased from RESPONSE + FLUCTUATION. NR27 is the first-FDT / response dual of NR26's correlation-only result: the fold has one fluctuation-dissipation structure with two measurable faces.",
+  "ok": true
+}
