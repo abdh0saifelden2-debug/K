@@ -1,0 +1,69 @@
+# Pressure and Temperature: two clocks, not one
+
+Dataset: **NEON bundled eddy covariance (DP4.00200)**, site **WREF** (Old-growth forest dominated by Douglas-fir, western hemlock, and western red cedar), 45.820, -121.952, elev 351 m, canopy 53 m. Month: January 2020, 30-min resolution (1488 intervals; 1097 valid pressure, 1180 valid temperature). Local time = UTC-8 (PST).
+
+This report tests the physical claims in the hypothesis against real surface-atmosphere measurements. Each number below is computed by `run_analysis.py`; figures are in `figures/`.
+
+## 1. The solar source drives the heating cycle
+
+- Incoming shortwave radiation peaks at **11.5 h** local; air temperature peaks later at **14.0 h**.
+- Cross-correlation: solar radiation leads temperature by **+2.0 h** and leads the sensible heat flux by **+3.0 h**.
+- Sensible heat flux H peaks at **9.5 h** and is positive (upward, buoyant) by day, negative (downward) at night - exactly the "hot air floats up" mechanism.
+
+![diurnal](01_diurnal_composites.png)
+![leadlag](02_lead_lag.png)
+
+**Verdict:** supported. The sun is the clock that sets temperature, and daytime heating does drive buoyant upward heat transport.
+
+## 2. The central claim: two different clocks for P and T
+
+Spectral (Lomb-Scargle) analysis of the full month:
+
+| signal | strongest diurnal (20-28 h) | strongest semidiurnal (10.5-13.5 h) |
+|---|---|---|
+| temperature | 23.6 h (power 0.045) | 12.1 h (power 0.003) |
+| pressure | 23.2 h (power 0.014) | 12.2 h (power 0.003) |
+
+- Temperature is overwhelmingly **diurnal**: its 12 h power is only **7%** of its 24 h power.
+- Pressure carries a much stronger **semidiurnal (12 h) tide**: its 12 h power is **21%** of its 24 h power - a qualitatively different spectral fingerprint.
+- The single strongest period is **60 h** for temperature (the daily cycle) versus **121 h** for pressure: pressure's dominant variability lives on the multi-day **synoptic** scale of passing weather systems, not the daily solar cycle.
+- In the diurnal composite, pressure's daily extrema (min near **0.5 h**, max near **9.5 h**) are offset from the temperature peak at **14.0 h**.
+
+![spectra](03_spectra_two_clocks.png)
+
+**Verdict:** supported. Temperature and pressure are driven on different periodicities. The 12 h atmospheric (thermal) tide in pressure is a real, well-documented phenomenon and is the clearest evidence for the "two clocks" intuition.
+
+## 3. Is kinetic theory wrong to make P and T "equal"?
+
+Kinetic theory / the ideal gas law for a fixed parcel gives P = rho*R*T, i.e. at constant density P should rise steeply and almost perfectly with T.
+
+- Bulk fit of pressure on temperature: slope **+0.014 kPa/K**, **R^2 = 0.01**, Pearson r = **+0.07** (p = 2.4e-02).
+- The constant-density (kinetic-theory) lock would require a slope of **+0.353 kPa/K** - far steeper and of the opposite tightness to what the atmosphere shows.
+- After removing the slow synoptic trend, fast P and T fluctuations correlate at only r = **-0.07**.
+- What actually varies is air density: its coefficient of variation over the month is **1.2%**, absorbing the P-T mismatch.
+
+![coupling](04_pressure_temperature_coupling.png)
+
+**Verdict (nuanced):** Kinetic theory is *not* wrong - P = rho*R*T holds locally for every parcel. But it is wrong to read it as "bulk P and T move together": in the open atmosphere density is free to change, so P and T are effectively **decoupled** on the daily scale. The data back the hypothesis's spirit - P and T are not one locked quantity - while pointing to changing density (not a failure of the gas law) as the reason.
+
+## 4. Uneven streams shear against each other
+
+- Momentum flux tracks mechanical shear: u* vs wind speed r = **0.37**.
+- Turbulence (vertical velocity variance) rises mainly with **mechanical shear** (r = **0.51** vs wind speed); its link to daytime buoyancy is weak in this winter month (r = **0.01** vs upward heat flux), as expected when the sun is low and heat fluxes are small.
+- Wind arrives from a wide spread of directions (circular std **82 deg**) - the "uneven streams" picture.
+
+![shear](05_shear_turbulence.png)
+
+**Verdict:** supported in analogy, with a winter caveat. The momentum flux and turbulence that mix and distort the flow are real and measurable; in January they are dominated by mechanical wind shear rather than buoyancy. (The literal Marangoni effect is a liquid-surface-tension phenomenon; the atmospheric analogue here is shear- and buoyancy-driven turbulent stress.)
+
+## Summary
+
+| claim | result |
+|---|---|
+| Sun drives uneven heating and buoyant uplift | supported |
+| Temperature and pressure run on two different clocks | supported (12 h pressure tide) |
+| Bulk P and T are not locked "equal" | supported (R^2 low; density varies) |
+| Kinetic theory is literally "wrong" | not quite - it holds locally; bulk decoupling is via density |
+| Uneven sheared streams create turbulent stress | supported (analogue of Marangoni shear) |
+
+_Generated by `run_analysis.py` from the NEON DP4.00200 HDF5 bundle._

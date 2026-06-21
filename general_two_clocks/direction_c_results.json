@@ -1,0 +1,33 @@
+{
+  "backend": "cupy(GPU)",
+  "n": 64,
+  "bs_tau": 0.05,
+  "nseeds": 3,
+  "spinup": 400,
+  "measure": 600,
+  "Ri_sweep": [0.0, 0.25, 0.5, 0.75, 1.0, 1.5],
+  "R_values": [1.0006, 1.0006, 1.0006, 1.0006, 1.0006, 1.0006],
+  "peak_Ri": 0.0,
+  "peak_R": 1.0006,
+  "has_hump": false,
+  "mean_sgs_dominance": 1.23,
+  "wall_time_s": 1707.4,
+  "white": [
+    {"Ri": 0.0, "melt_mean": 2.3751e-05, "melt_std": 0.0, "sgs_dominance": 1.23},
+    {"Ri": 0.25, "melt_mean": 2.3762e-05, "melt_std": 0.0, "sgs_dominance": 1.23},
+    {"Ri": 0.5, "melt_mean": 2.3774e-05, "melt_std": 0.0, "sgs_dominance": 1.23},
+    {"Ri": 0.75, "melt_mean": 2.3786e-05, "melt_std": 0.0, "sgs_dominance": 1.23},
+    {"Ri": 1.0, "melt_mean": 2.3797e-05, "melt_std": 0.0, "sgs_dominance": 1.23},
+    {"Ri": 1.5, "melt_mean": 2.3821e-05, "melt_std": 0.0, "sgs_dominance": 1.23}
+  ],
+  "colored": [
+    {"Ri": 0.0, "melt_mean": 2.3764e-05, "melt_std": 0.0, "tau_mem": 3.1645e-03, "N_BV": 0.0, "product_mean": 0.0, "sgs_dominance": 1.23},
+    {"Ri": 0.25, "melt_mean": 2.3776e-05, "melt_std": 0.0, "tau_mem": 3.1652e-03, "N_BV": 0.1524, "product_mean": 0.0, "sgs_dominance": 1.23},
+    {"Ri": 0.5, "melt_mean": 2.3788e-05, "melt_std": 0.0, "tau_mem": 3.1658e-03, "N_BV": 0.2155, "product_mean": 0.001, "sgs_dominance": 1.23},
+    {"Ri": 0.75, "melt_mean": 2.3800e-05, "melt_std": 0.0, "tau_mem": 3.1664e-03, "N_BV": 0.264, "product_mean": 0.001, "sgs_dominance": 1.23},
+    {"Ri": 1.0, "melt_mean": 2.3811e-05, "melt_std": 0.0, "tau_mem": 3.167e-03, "N_BV": 0.3048, "product_mean": 0.001, "sgs_dominance": 1.23},
+    {"Ri": 1.5, "melt_mean": 2.3835e-05, "melt_std": 0.0, "tau_mem": 3.1682e-03, "N_BV": 0.3733, "product_mean": 0.001, "sgs_dominance": 1.23}
+  ],
+  "verdict": "NULL — no stratification resonance from memory",
+  "interpretation": "R(Ri) is flat at 1.0006 across all Ri. The colored-FDT OU memory (bs_tau=0.05) does not create a melt enhancement hump. Measured tau_mem (3.17e-3) is 16x shorter than set bs_tau because spatial averaging of N^3=262144 independent OU processes decorrelates the mean-field force much faster than any individual point (CLT effect). The product tau_mem*N_BV never exceeds 0.001, far below the 2*pi resonance threshold. The FDT variance constraint pins the instantaneous forcing amplitude identically for white and colored, so the only difference (temporal coloring) washes out of the time-averaged melt flux. This is consistent with Direction A's null: memory recolors but does not reshape."
+}
