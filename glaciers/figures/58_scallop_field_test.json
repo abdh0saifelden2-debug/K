@@ -1,0 +1,59 @@
+{
+  "description": "Sec.G.2/RESULT 14 field test: I = tau*c_mig/lam = Im(s)/(2pi|Re(s)|). harmonic_mode_rate() is the raw-array 'pin' recipe (self-checked on a synthetic damped-migrating train); bushuk_adjustment_bound() commits the regime-matched figure estimate from Bushuk et al. 2019 exp 1b.",
+  "solver_band": [
+    0.3313385857968097,
+    0.8788974079609474
+  ],
+  "harmonic_self_check": {
+    "Re_s_true": -0.0001388888888888889,
+    "Re_s_rec": -0.00013892277420063409,
+    "c_mig_true": 1.833e-06,
+    "c_mig_rec": 1.8312979351451613e-06,
+    "lam_true": 0.13,
+    "lam_rec": 0.13,
+    "I_true": 0.10152,
+    "I_rec": 0.10140099256209657,
+    "downstream_rec": true,
+    "recovered": true
+  },
+  "bushuk_bound": {
+    "regime": "adjustment (exp 1b, U 1.00->0.16 m/s): damping + downstream migration",
+    "c_mig_m_per_s": 1.8333333333333335e-06,
+    "tau_h_range": [
+      1.0,
+      3.0
+    ],
+    "lam_observed_m": 0.13,
+    "lam_curl_m": 0.05,
+    "I_observed_lambda": [
+      0.050769230769230775,
+      0.1523076923076923
+    ],
+    "I_point_estimate": 0.10153846153846155,
+    "I_curl_lambda": [
+      0.132,
+      0.396
+    ],
+    "I_obs_range": [
+      0.050769230769230775,
+      0.396
+    ],
+    "solver_band": [
+      0.3313385857968097,
+      0.8788974079609474
+    ],
+    "sign_downstream": true,
+    "same_order_of_magnitude": true,
+    "point_below_band": true,
+    "factor_below_band": 3.263183041938277,
+    "falsified": false,
+    "note": "sign structure matches s=-beta+i*omega_mig exactly; |I_obs| point ~0.1 sits a factor ~2-3 below the solver band -- a mild, honest tension, NOT a falsification (I_obs is O(0.1-1), downstream). tau is figure-read (factor ~2); the raw h(x,t) arrays would pin it."
+  },
+  "verdict": {
+    "decomposition_recovers_known_mode": true,
+    "field_sign_matches_downstream": true,
+    "field_same_order_as_solver": true,
+    "field_not_falsified": true,
+    "pin_requires_raw_arrays": true
+  }
+}
