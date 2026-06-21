@@ -1,0 +1,433 @@
+\documentclass[11pt]{article}
+\usepackage{preamble}
+\title{Falsifiable forecasts for subglacial hydrology: an exact Mori–Zwanzig memory kernel, a motivated thermal-lag falsification, and an honest co-temporal null}
+\author{Abdelrahman Saifelden\\ Alexandria Higher Institute of Engineering and Technology (AIET), Alexandria, Egypt\\ \texttt{Abdulrahman.Saifelden22011411@aiet.edu.eg}}
+\date{\today}
+\begin{document}
+\maketitle
+
+\begin{quote}
+\textbf{Note (provenance).} This is the combined working manuscript. Per the referee's primary recommendation (one thesis per paper), it has been \textbf{split for submission} into two single-thesis papers, both built from the content below: \code{paper4a\_\allowbreak{}hydraulic\_\allowbreak{}memory\_\allowbreak{}kernel.\allowbreak{}md} (the hydraulic Mori–Zwanzig kernel + thermal-lag falsification + matched-lag null + the RTN/variable-$\phi $ screen) and \code{paper4b\_\allowbreak{}sliding\_\allowbreak{}law\_\allowbreak{}field\_\allowbreak{}test.\allowbreak{}md} (the field-measurable $s_{N}(N)$ sliding law + $N_{c}$ inversion + tidal-admittance early-warning). Submit 4a/4b; this omnibus is retained for provenance only.
+\end{quote}
+
+
+\begin{abstract}
+
+
+Subglacial hydrology controls ice-stream sliding through the effective pressure $N=p_{i}-p_{w}$ (Schoof 2010; Röthlisberger 1972), and the central modelling difficulty is that the cavity\ensuremath{\leftrightarrow}channel storage system has \emph{memory}. We make three honest claims on open Antarctic data, reporting a structural certification, a motivated falsification, and a null with equal weight. \textbf{The central positive result is structural:} the lumped, linearised cavity\ensuremath{\leftrightarrow}channel hydraulic subsystem's Green's function is an \emph{exact} Mori–Zwanzig memory kernel — projecting out the channel variable yields a generalized Langevin equation whose kernel equals the eliminated subsystem's own Green's function (verified to $7\times 10^{-18}$), with the projection exact to $5\times 10^{-16}$, the reduced model reproducing the full trajectory to $9\times 10^{-8}$, and the Markovian (adiabatic-elimination) limit recovered as the channel time vanishes. This certifies \emph{why} surge response carries memory and how it degenerates to a local closure; it is a structural result, not a field-validated lag value. \textbf{A motivated null:} a literal thermal sliding-lag kernel $\tau _{ice}=H^{2}/\kappa _{ice}$ — surge lag set by the \emph{full-thickness} ice thermal-diffusion time — is implausible a priori (the thermal skin depth at surge periods is metres, and a drainage impulse gives a peakless $t^{-1/2}$ response), and is duly falsified on real thickness at the 131 Siegfried \& Fricker (2018) active lakes by \textasciitilde{}5 orders of magnitude (median $\tau _{ice}\approx 1.5\times 10^{5} yr$ vs observed 0.02–2 yr; robust on the independent Arthern et al. (2015) thickness inversion, $r=0.970$). We report it as a motivated null that relocates the memory into the hydraulic subsystem above, not as a headline empirical result. \textbf{An honest co-temporal null:} a matched lake-drainage\ensuremath{\to}velocity test (CryoSat-2 drainage dates + ITS\_LIVE velocities) returns a null (peak $+0.56\sigma $, 0/5 significant), limited not by record precision (\textasciitilde{}1–3 \%) but by temporal aliasing and an amplitude bound, with unblock routes via sub-annual GPS or fast-outlet trunk velocity. We also expose two field-scale predictors, positioned honestly against their established counterparts. A dimensionless intrusion screen $RTN=\rho _{w} g d_{base}/(\phi  \rho _{i} g H)$ is, by construction, the flotation/effective-pressure ratio ($RTN>1 \iff $ ocean head exceeds the $\phi $-fraction of overburden, i.e. $N\to 0$), so its concentration within \textasciitilde{}6 km of the grounding line on Bedmap2 and BedMachine restates known flotation geometry rather than adding skill over a thickness-above-flotation predictor; we present it as a continental screen, not a verified forecast, paired with a residence number $Ro$. And a regularized-Coulomb sliding law gives a closed-form master curve $|s_{N}|(N)=m/(1-(N_{c}/N)^{m})$ that \emph{derives} the near-flotation weakening imposed by hand in Joughin, Smith \& Schoof (2019), with an $N_{c}$ inversion and a velocity/tidal-admittance early-warning that \textbf{operationalizes}, for ungrounding, the critical-slowing-down indicators already established for marine-ice-sheet tipping (Scheffer et al. 2009; Dakos et al. 2008; Rosier et al. 2021). Synthetic plant-and-recover harnesses calibrate every estimator. The contributions are the exact MZ certification, the falsifiable-forecast discipline, and a field-measurable sliding law — not a verified intrusion forecast or a new early-warning.
+
+
+\end{abstract}
+
+
+\section*{1. Introduction}
+
+
+Subglacial hydrology controls ice-stream sliding through the effective pressure $N=p_{i}-p_{w}$, the difference between ice overburden and basal water pressure (Cuffey \& Paterson 2010; Schoof 2010; Röthlisberger 1972). Near the grounding line $N\to 0$ as the ice approaches flotation (Schoof 2007; Leguy et al. 2014), and seawater intrusion beneath grounded ice is an active question (Robel et al. 2022). The cavity\ensuremath{\leftrightarrow}channel drainage system carries \emph{memory}, so its surge response is non-local (Werder et al. 2013; Hewitt 2013). Because these are hard to observe at continental scale, testable \emph{falsifiable} statements that key on open geometry and velocity datasets are valuable even when they return null or negative results.
+
+
+We expose a structural prediction (a non-local hydraulic memory kernel) and two field-scale predictors (an intrusion screen and a sliding law) to open data (Bedmap2, BedMachine, the Siegfried \& Fricker active-lake inventory, ITS\_LIVE velocities, CryoSat-2 elevation), reporting each against its established counterpart: synthetic plant-and-recover harnesses prove the estimators while the real-data runs expose the physics to falsification.
+
+
+\textbf{Contributions.}
+
+\begin{enumerate}
+\item The \textbf{exact Mori–Zwanzig structure} of the cavity\ensuremath{\leftrightarrow}channel hydraulic memory kernel — a structural certification (§5).
+\item A \textbf{motivated falsification} of the literal $H^{2}/\kappa $ thermal sliding-lag kernel on 131 real lakes, relocating the memory into hydrology (§4).
+\item An \textbf{honest matched-lag null} with a precise account of \emph{why} it is null (aliasing + amplitude bound, not noise) and the two routes to a verified lag (§6).
+\item A \textbf{field-measurable sliding law} — the closed-form $s_{N}(N)$ master curve, an $N_{c}$ inversion, and a velocity/tidal-admittance early-warning that operationalizes established critical-slowing-down theory for ungrounding (§7).
+\item A nondimensional \textbf{intrusion screen} $RTN$, shown to be the flotation/effective- pressure ratio, applied at continental scale and paired with a residence number $Ro$ — presented as a screen, not a verified forecast (§3).
+\item \textbf{Calibrated estimators} via synthetic plant-and-recover (§8).
+\end{enumerate}
+
+
+\medskip\hrule\medskip
+
+
+\section*{2. Data and methods}
+
+
+\begin{center}\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+Dataset & What & Access \\
+\midrule
+BAS \textbf{Bedmap2} & thickness, bed, surface, grounded/shelf mask (1 km) & open, no auth \\
+\textbf{BedMachine} (Antarctica) & independent thickness/bed & NSIDC/USAP-DC \\
+\textbf{Siegfried \& Fricker (2018)} & 131 active subglacial-lake outlines & open (GitHub mirror) \\
+\textbf{ITS\_LIVE} & surface-speed datacubes (image-pair $v$) & open (anonymous S3) \\
+\textbf{CryoSat-2} in-lake elevation & drainage \emph{dates} & open (Siegfried 2021-GRL mirror) \\
+\textbf{USAP-DC 601439} & ICESat lake volume-change (drainage volumes) & open \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+
+Runners raise \code{DataUnavailableError} with provisioning hints rather than fabricate gated series. Synthetic harnesses (\code{validation/\allowbreak{}synthetic/\allowbreak{}}) are exercised in \code{pytest} and prove the math against controlled inputs.
+
+
+\medskip\hrule\medskip
+
+
+\section*{3. The Regime Transition Number}
+
+
+\textbf{3.1 Definition.} $RTN = (p_{ocean} - p_{atm})/p_{w}$ on grounded ice ($icemask==0$): overburden $p_{i}=\rho _{i} g H$, ocean head at the bed $p_{ocean}=\rho _{w} g\cdot d_{base}$ ($d_{base}=max(0,-bed)$), subglacial water $p_{w}=\phi  p_{i}$ (so $N_{eff}=(1-\phi )p_{i}$), gauge-corrected so the atmosphere cancels ($p_{atm}=0$). \textbf{$RTN$ is, by construction, the flotation ratio.} With $p_{atm}=0$, $RTN = \rho _{w} d_{base}/(\phi  \rho _{i} H)$, so $RTN>1 \iff  \rho _{w} d_{base}/(\rho _{i} H) > \phi $ — the ice is within a factor $\phi $ of flotation ($\rho _{w} d_{base} \ge  \rho _{i} H$), equivalently $N\to 0$ (Schoof 2007; Leguy et al. 2014; Cuffey \& Paterson 2010). $RTN$ is therefore a nondimensional form of the effective-pressure/flotation criterion, not an independent predictor. The checkable \emph{screen} is \textbf{directional}: because $N\to 0$ at the grounding line, $RTN>1$ necessarily concentrates there; the question (§3.4) is whether it adds skill beyond that geometry.
+
+
+\textbf{3.2 Result on Bedmap2} (1 km decimated to 3 km, 1,329,743 grounded cells, $\phi =0.9$):
+
+
+\begin{center}\small
+\begin{tabular}{llllllll}
+\toprule
+dist-to-GL [km] & 0–5 & 5–10 & 10–25 & 25–50 & 50–100 & 100–250 & >250 \\
+\midrule
+$RTN>1$ fraction & 15.1\% & 6.0\% & 3.6\% & 2.1\% & 0.8\% & 0.0\% & 0.0\% \\
+n cells & 50532 & 52094 & 87318 & 99425 & 143492 & 285743 & 611139 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+
+\begin{itemize}
+\item Median distance-to-GL: \textbf{$RTN>1$ cells = 6 km} vs \textbf{$RTN<1$ cells = 222 km}.
+\item Robust across $\phi $: overall $RTN>1$ fraction $2.5\% / 1.3\% / 0.6\%$ for $\phi =0.8/0.9/0.95$ — only the magnitude scales; the monotone grounding-line decay holds.
+\item \emph{Gauge fix.} The corrected gauge ($p_{atm}=0$) sharpens, not weakens, the signal: it flips 2,919 grounded cells into $RTN>1$, clustered at median 4.2 km from the grounding line (the spurious offset was largest where $d_{base}\to 0$, i.e. at the grounding line). The earlier $-p_{atm}$ convention \emph{understated} the concentration.
+\end{itemize}
+
+
+\textbf{3.3 Independent cross-check.} The directional concentration survives on \textbf{BedMachine v4} (NSIDC-0756; an independent thickness/bed inversion to Bedmap2), decimated to 2 km from its 500 m native posting, with the same monotone grounding-line decay: overall $RTN>1$ fractions $2.5\% / 1.4\% / 0.8\%$ for $\phi =0.8/0.9/0.95$, and a median distance-to-GL of \textbf{6 km} for $RTN>1$ cells (at $\phi =0.9$) versus \ensuremath{\approx}200 km for the rest (\code{validation/\allowbreak{}external/\allowbreak{}rtn\_\allowbreak{}corollaries\_\allowbreak{}bedmachine.\allowbreak{}py}, \code{validation/\allowbreak{}reports/\allowbreak{}rtn\_\allowbreak{}bedmachine.\allowbreak{}json}, Figs. 1–2).
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.82\linewidth]{figures/rtn_bedmap2.png}
+\caption{Regime Transition Number on real Bedmap2 geometry (1.33 M grounded cells). The fraction of cells with $RTN>1$ (ocean intrusion favoured) decays monotonically from 15.1\% within 5 km of the grounding line to 0\% beyond 100 km; the median distance to the grounding line is 6 km for $RTN>1$ cells versus 222 km for the rest.}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.82\linewidth]{figures/rtn_bedmachine.png}
+\caption{Independent BedMachine Antarctica v4 cross-check at 2 km resolution. The directional result — $RTN>1$ concentrated near the grounding line — reproduces the Bedmap2 finding on an independent thickness inversion (median distance-to-grounding-line 6 km for $RTN>1$ cells versus \ensuremath{\approx}200 km for the rest).}
+\end{figure}
+
+
+\textbf{3.4 Scope, and the baseline question.} This is \textbf{not} a precision/recall score: no gridded intrusion survey exists, and 1 km cannot resolve the \textasciitilde{}1–10 m Röthlisberger channel (channel size is absorbed into $\phi $, not resolved). More fundamentally, because $RTN$ is a monotone function of the flotation ratio $\rho _{w} d_{base}/(\rho _{i} H)$ (§3.1), its grounding-line concentration largely \emph{restates} known flotation geometry; to be informative as a screen it must be shown to add skill over the trivial predictors it is built from — thickness-above- flotation, bed-depth-below-sea-level, or distance-to-grounding-line. A direct baseline test on real Bedmap2 geometry confirms it does not: over 478,767 grounded cells, ${RTN>1}$ is \emph{identical} to the thickness-above-flotation threshold ${H_{af}/H<1-\phi }$ (agreement \textbf{100.0000 \%}, 0 disagreeing cells, for $\phi =0.8/0.9/0.95$), and $RTN$ is a strictly monotone function of the flotation fraction ($Spearman(RTN, H_{af}/H)=-1.000$). So $RTN$ adds \textbf{no skill} over thickness-above-flotation — it \emph{is} that standard quantity, nondimensionalised by $\phi $. It is, however, not reducible to distance-to-grounding-line alone ($Spearman=-0.23$). We therefore present $RTN$ as a compact continental-scale screen and a nondimensional packaging of the flotation/effective-pressure criterion, \textbf{not} a verified forecast; a future gridded intrusion survey (IceBridge successors, NISAR) would be needed to test any predictor against actual intrusion (\code{validation/\allowbreak{}external/\allowbreak{}rtn\_\allowbreak{}baseline\_\allowbreak{}skill.\allowbreak{}py}).
+
+
+\textbf{3.4b The variable-$\phi $ escape — the only way $RTN$ can add skill, and its open data step.} The zero-skill result above is specific to a spatially-uniform $\phi $: with one continent-wide $\phi $, $RTN=(1-H_{af}/H)/\phi $ is a monotone function of the flotation fraction, so the identity is algebraically forced. $RTN$'s only possible source of information beyond flotation is therefore $\phi $ \emph{itself} — a spatially-varying, data-derived basal-connectivity fraction $\phi (x,y)$ makes $RTN=\rho _{w} d_{base}/(\phi (x,y) \rho _{i} H)$ no longer a function of the flotation fraction alone. A synthetic plant-and-recover (\code{validation/\allowbreak{}synthetic/\allowbreak{}rtn\_\allowbreak{}variable\_\allowbreak{}phi\_\allowbreak{}skill.\allowbreak{}py}, 5 tests) establishes the mechanism and its size: against a planted truth in which intrusion depends on \emph{both} flotation proximity and connectivity, a connectivity-informed $\phi (x,y)$ adds genuine skill over thickness-above-flotation (near-flotation-band $F1$ 0.78\ensuremath{\to}0.89; $ROC-AUC$ 0.995\ensuremath{\to}0.999), a connectivity-blind random $\phi $ of the same distribution adds none, and the gain rises monotonically with $\phi $'s informativeness — so the skill is connectivity-sourced, not a variance artifact. On real Bedmap2 a calibration-free $\phi (x,y)$ from subglacial hydraulic-potential routing (Shreve 1972: priority-flood fill + D8 flow accumulation) reproduces the constant-$\phi $ anchor exactly and then reorders the intrusion classification on \textasciitilde{}10\ensuremath{^{3}} grounded cells, concentrated at the grounding line (median 10 km), with the routed $\phi $ nearly rank-independent of the flotation fraction in the near-flotation band ($Spearman(RTN, H_{af}/H)=-0.99$ vs $-1.00$ at constant $\phi $; \code{validation/\allowbreak{}external/\allowbreak{}rtn\_\allowbreak{}variable\_\allowbreak{}phi\_\allowbreak{}real.\allowbreak{}py}). The reordering is therefore real and non-trivial — but its \emph{correctness} is unvalidated, because the routed $\phi $ is a model field derived from the same geometry that sets the flotation fraction. A decisive intrusion-skill test needs a $\phi $ field from an \textbf{independent} observation of basal water — radar bed specularity (Schroeder et al. 2013, 2015) or a basal-water inventory — which the harness ingests directly ($--specularity-npy$), scored against a future gridded intrusion survey. We thus state variable-$\phi $ $RTN$ as a falsifiable screen whose single open step is an independent connectivity observable, not a verified forecast.
+
+
+\textbf{3.5 The intrusion residence number $Ro$ — thinning-paced vs hydraulic-limited .} The RTN=1 surface is a \emph{threshold}; the \emph{pace} at which the intrusion front advances is a separate, testable quantity. The level-set advance speed is $v_{kin}=(dH/dt)/|\nabla m|=A\cdot dH/dt$ (geometric amplification $A=1/|\nabla m|$); the newly near-flotation bed must then re-pressurise to ocean head over a hydraulic residence time $\tau _{hyd}$ (the §5 cavity\ensuremath{\leftrightarrow}channel band, 0.01–2 yr), so the front moves at $v_{obs}=min(v_{kin}, \ell /\tau _{hyd})$ and the \textbf{residence number} $Ro=v_{kin}\cdot \tau _{hyd}/\ell $ has a regime boundary at the critical residence $\tau _{crit}=\ell /v_{kin}$ ($Ro=1$ exactly at $\tau _{hyd}=\tau _{crit}$). For the runaway-tail cells ($A=0.70 km/m$, $dH/dt=1.5 m/yr$): $v_{kin}=1.05 km/yr$, $\tau _{crit}\approx 1.9 yr$, so \textasciitilde{}98 \% of the residence band lies below $\tau _{crit}$ \ensuremath{\Rightarrow} intrusion is predicted \textbf{thinning-paced ($Ro\approx 1$)}, turning hydraulic-limited only at the slow (\textasciitilde{}2 yr) end. The implied hydraulic diffusivity $D_{hyd}=\ell ^{2}/\tau _{hyd}\approx 0.06–12.7 m^{2}/s$ spans the distributed\ensuremath{\to}channelized range. Falsifier: a DInSAR $v_{obs}$ over the runaway cells with $Ro\gg 1$ would place $\tau _{hyd}>\tau _{crit}$ (hydraulic limitation); $Ro\approx 1$ confirms thinning-pacing (\code{validation/\allowbreak{}synthetic/\allowbreak{}intrusion\_\allowbreak{}residence\_\allowbreak{}number.\allowbreak{}py}, 7/7 tests). (Werder et al. 2013; Hewitt 2013)
+
+
+\medskip\hrule\medskip
+
+
+\section*{4. The thermal sliding-lag kernel, falsified}
+
+
+\textbf{4.1 The hypothesis (a motivated null).} No established sliding theory predicts that surge lag equals the \emph{full-thickness} ice thermal-diffusion time; we state $\tau _{ice} = H^{2}/\kappa _{ice}$ ($\kappa _{ice}=1.09\times 10^{-6} m^{2} s^{-1}$) as an explicit, falsifiable straw hypothesis precisely so the data can reject it.
+
+
+\textbf{4.2 The test.} On real Bedmap2 thickness at the 131 Siegfried \& Fricker (2018) catalogued active lakes (130 with valid thickness; median $H=2282 m$, range 637–3905 m):
+
+
+\begin{itemize}
+\item $\tau _{ice} = H^{2}/\kappa _{ice}$: \textbf{median \ensuremath{\approx} 1.5\ensuremath{\times}10\ensuremath{^{5}} yr} (p5 \ensuremath{\approx} 2\ensuremath{\times}10\ensuremath{^{4}}; p95 \ensuremath{\approx} 3\ensuremath{\times}10\ensuremath{^{5}} yr).
+\item Observed post-drainage surge lags: \textbf{0.02–2 yr} (Stearns et al. 2008; Siegfried et al. 2016).
+\item \ensuremath{\Rightarrow} the literal kernel is \textbf{\textasciitilde{}8\ensuremath{\times}10\ensuremath{^{4}}\ensuremath{\times} too slow} at the median lake; the $log_{10} \tau _{ice}$ histogram (10\ensuremath{^{4}}–10\ensuremath{^{6}} yr) is fully disjoint from the observed band.
+\end{itemize}
+
+
+\textbf{4.3 Robust to the thickness dataset.} Recomputing on an independent ice-thickness dataset (USAP-DC 601470, Stubblefield et al. 2021; ice thickness after Arthern et al. 2015): median thickness 2356 m, $\tau _{ice}$ median \textbf{\ensuremath{\approx}1.55\ensuremath{\times}10\ensuremath{^{5}} yr}; the 601470-vs-Bedmap2 thickness at the same centroids agrees at \textbf{$r=0.970$}, so the falsification is not an artefact of one sampling.
+
+
+\textbf{4.4 Why the falsification is diagnostic.} Two facts exclude ice thermal diffusion as the lag-setting mechanism: (i) the thermal skin depth at surge periods is $\delta _{skin}=\sqrt{\kappa _{ice} P/\pi }\approx 0.5–5 m$ ($P=0.02–2 yr$) — the perturbation never penetrates beyond metres of ice, so the full-thickness $H$ is the wrong scale; (ii) a drainage is an \emph{impulse}, whose semi-infinite diffusive response is a monotone $t^{-1/2}$ decay with \textbf{no peak}, yet observed speed-ups \textbf{rise to a peak}. The lag is therefore \textbf{hydromechanical}, not thermal — the memory relocates into subglacial hydrology (cavity/channel pressurisation, effective-pressure control of sliding), with the ice-thermal $t^{-1/2}$ term subdominant.
+
+
+\medskip\hrule\medskip
+
+
+\section*{5. The replacement kernel is an exact Mori–Zwanzig memory kernel}
+
+
+We refine the ontology to \textbf{two driving potentials} — the Leray pressure constraint (elliptic) and temperature (parabolic) — plus a \textbf{distinct, nonlinear-parabolic hydraulic subsystem} (cavity\ensuremath{\leftrightarrow}channel storage–transport, with $\phi $ the hydraulic potential, \emph{not} the Leray pressure). Its lumped linearisation $\dot{x}=Mx+F$, $x=(s,q)$ ($s$ the resolved cavity store, $q$ the eliminated channel variable, $M=[[-1/\tau _{1},-a],[b,-1/\tau _{2}]]$), reduces by exact projection (linear Nakajima–Zwanzig / Mori, no Markov approximation) to
+
+
+\begin{quote}
+$\dot{s}(t) = M_{ss} s(t) + \int _{0}^{t} K(t-\tau ) s(\tau ) d\tau  + R(t)$, $K(\tau ) = M_{sq} M_{qs} e^{M_{qq} \tau }$,
+\end{quote}
+
+
+a non-local (memory) equation whose kernel $K(\tau )=-ab\cdot e^{-\tau /\tau _{2}}$ is exactly the channel subsystem's own Green's function weighted by the up/down couplings. The harness reuses the \textbf{same coupled model} as the lag-shape/lag-value derivations and certifies five properties (\code{validation/\allowbreak{}synthetic/\allowbreak{}hydraulic\_\allowbreak{}mz\_\allowbreak{}projection\_\allowbreak{}synthetic.\allowbreak{}py}, 6/6 tests):
+
+
+\begin{enumerate}
+\item \textbf{Projection exact to machine precision.} The GLE Laplace transfer function equals the full 2\ensuremath{\times}2 resolvent's (1,1) component for 400 random stable overdamped systems — max abs err \textbf{$5.0\times 10^{-16}$}.
+\item \textbf{The kernel IS the eliminated subsystem's Green's function} — reproduced to \textbf{$6.9\times 10^{-18}$}, decaying at exactly $1/\tau _{2}$, sign-definite.
+\item \textbf{The reduced GLE reproduces the resolved trajectory} to rel-err \textbf{$9.1\times 10^{-8}$} over the transient.
+\item \textbf{Memory is necessary for the lag/peak.} The full response peaks at the interior time set by the coupled eigenvalues ($t*=0.911$, analytic $0.911$); the Markovian adiabatic-elimination closure collapses to a monotone response with argmax at $t=0$.
+\item \textbf{Markovian limit = adiabatic elimination (DC gain).} $\int _{0}^\infty  K d\tau  = M_{sq} M_{qs}/(-M_{qq})$ (err $7.5\times 10^{-9}$); shrinking the channel time $\tau _{2}\to 0$ at fixed DC gain collapses the kernel toward $(\int K)\cdot \delta (\tau )$, recovering the local closure — the FDT-Markov limit, here \emph{derived from the projection} rather than assumed.
+\end{enumerate}
+
+
+This certifies the \emph{structure} of the replacement mechanism (that the surge-lag memory is a genuine MZ kernel obtained by projecting out the channel, and how it degenerates to a local closure). (Werder et al. 2013; Hewitt 2013; Schoof 2010; Röthlisberger 1972)
+
+
+\textbf{Honest scope.} This validates the \textbf{projection structure} of the \emph{linearised lumped} model. It does \textbf{not} validate the physical identity of $\phi $ as distinct from the Leray pressure, that this subsystem dominates a real surge, or any field lag value — those remain, gated on real co-temporal velocity data (§6).
+
+
+\textbf{5.3 Physical magnitudes — the dimensional bridge and the roughness closure.} The reduced kernel is dimensionless; the bridge to metres uses only known ice constants. With $\rho _{i}L=3.0\times 10^{8} J m^{-3}$, Glen $A$, effective pressure $N$, and literature subglacial inputs ($Q$, $\partial \phi /\partial s$), the steady R-channel $S*=V_{o}/k_{creep}$, $R*=\sqrt{2S*/\pi }$, $\tau =1/k_{creep}$ is \textbf{metre-scale} (central $R*\approx 2.4 m$, $\tau \approx 0.18 yr$; 73 \% of the literature box gives 0.1–50 m) — the R-channel regime, no free fudge factor; the wide upper tail is the low-$N$ near-flotation limit ($k_{creep}\propto N^{3}\to 0$, the §3 fold reappearing in the hydrology). Crucially $\rho _{i}L$ \textbf{cancels} in the scallop fraction $\Delta S/S=V_{scallop}/V_{o}=0.33$, so a scalloped reach grows channels \textbf{+33 \% in area} (calibration-free); the only genuine calibration is the concentration gain $g\in [0.1,0.9]$ (network competition, direction- invariant). The roughness leg closes the $\phi $ loop: $z_{0}=c_{z}\cdot a$ feeds the log-law drag $C_{d}=[\kappa /\ln(H/z_{0})]^{2}$, and although the Nikuradse prefactor $c_{z}$ is \textasciitilde{}10\ensuremath{\times} uncertain, the log law \textbf{buffers} it — at the Curl anchor a 10\ensuremath{\times} $z_{0}$ uncertainty propagates to only \textasciitilde{}1.7\ensuremath{\times} in $C_{d}$ (and $\partial \phi /\partial s$), the least damaging open closure (\code{validation/\allowbreak{}synthetic/\allowbreak{}a3\_\allowbreak{}dimensional\_\allowbreak{}bridge.\allowbreak{}py}, \code{a2\_\allowbreak{}z0\_\allowbreak{}roughness.\allowbreak{}py}; 6+5 tests). (Röthlisberger 1972; Werder et al. 2013; Cuffey \& Paterson 2010; Nikuradse 1933; Curl 1966)
+
+
+\medskip\hrule\medskip
+
+
+\section*{6. The matched lag test — an honest null}
+
+
+Both halves of a matched test are open: drainage \textbf{dates} from CryoSat-2 in-lake elevation ($detect_{drainages}$ extracts 7 fill\ensuremath{\to}drain events across 5 lakes, including the documented Mercer \ensuremath{\approx}2012.5 drainage), and velocity \textbf{response} from ITS\_LIVE box-mean surface speed.
+
+
+\begin{center}\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+lake & base speed (m/yr) & drainages & annual noise floor & quarterly scatter & peak post-drainage \\
+\midrule
+Mac1 & 422 & 3 & 1.0\% & 2.3\% & \textbf{+0.56\ensuremath{\sigma}} \\
+Mac2 & 402 & 1 & 1.1\% & 2.1\% & +0.27\ensuremath{\sigma} \\
+Mac3 & 394 & 1 & 1.1\% & 3.4\% & -0.12\ensuremath{\sigma} \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+
+\textbf{Result.} No matched lake shows a post-drainage surge above the 2\ensuremath{\sigma} floor (peak $+0.56\sigma $, 0/5 significant). The lag value stays, \emph{not} promoted to.
+
+
+\textbf{Why null is a \emph{stronger} statement than ``too noisy''.} The modern ITS\_LIVE record is well resolved (annual \ensuremath{\approx}1 \%, quarterly \ensuremath{\approx}2–3 \%), so the limit is not a noise budget. Two distinct, quantifiable limits remain: (1) \textbf{temporal aliasing} — the derived lag is sub-annual ($t*$ baseline \ensuremath{\approx}0.01 yr, p95 \ensuremath{\approx}0.1 yr), finer than the finest \emph{robust} ITS\_LIVE bin (quarterly, 0.25 yr); a brief transient is averaged out regardless of scatter (a Nyquist limit); (2) \textbf{amplitude bound} — a \emph{sustained} speed-up would survive aliasing as a step, yet the peak anomaly is only $+0.56\sigma $, bounding any sustained surge to \ensuremath{\lesssim}10 m/yr on \textasciitilde{}400 m/yr. These map onto the two routes to: \textbf{sub-annual GPS/GNSS} (EarthScope/POLENET; beats aliasing) \textbf{or fast-outlet trunk velocity} (e.g. Byrd, Stearns et al. 2008; steep $v(N)$ sensitivity beats the amplitude floor), paired with that site's drainage dates. The thermal $H^{2}/\kappa $ kernel stays regardless.
+
+
+\textbf{Vetted forcing obtained.} USAP-DC 601439 (Smith et al. 2009 ICESat) yields \textbf{58 drainage events across 52 lakes} (median drained volume 0.128 km\ensuremath{^{3}}, max 2.92 km\ensuremath{^{3}}; implied water flux $q_{water}$ median \ensuremath{\approx}2.5 m\ensuremath{^{3}}/s, p95 \ensuremath{\approx}31 m\ensuremath{^{3}}/s — squarely in the literature subglacial-flood range), anchoring the §4/§5 forcing magnitude to real observations.
+
+
+\medskip\hrule\medskip
+
+
+\section*{7. A field-measurable sliding law: the $s_{N}(N)$ master curve, three probes, and an ungrounding early-warning}
+
+
+The §4 falsification relocated the surge memory into effective pressure $N$. This section turns $N$ from a tuned coefficient into a \textbf{measured} quantity with a closed-form, invertible sliding law and an operational precursor — the constructive capstone of the paper's sliding-law arc (\code{validation/\allowbreak{}synthetic/\allowbreak{}sn\_\allowbreak{}master\_\allowbreak{}curve.\allowbreak{}py}, \code{tidal\_\allowbreak{}admittance\_\allowbreak{}probe.\allowbreak{}py}, \code{spatial\_\allowbreak{}ews.\allowbreak{}py}; 17 tests).
+
+
+\textbf{7.1 $s_{N}(N)$ as the common observable.} A lake drainage is an in-situ effective- pressure \emph{step} whose surge amplitude $du/u=|s_{N}|\cdot (dN/N)$ measures the sliding sensitivity $s_{N}=d ln u_{b}/d ln N$; ocean thermal forcing lowers $N$ \emph{continuously}, so the gating slope $d ln u_*/dTF$ measures the \textbf{same} $s_{N}$ ($+0.46\to +0.62/^{\circ}C$, direct BedMachine $N$); ocean tides oscillate $N$ at known amplitude, a third probe (7.3). All three read one curve.
+
+
+\textbf{7.2 The closed-form master curve.} Solving the regularized-Coulomb law $\tau _{b}=C N (u/(u+u0))^{1/m}$ at $\tau _{b}=\tau _{d}$ gives, exactly, $|s_{N}|(N)=m/(1-(N_{c}/N)^{m})$, $N_{c}=\tau _{d}/C$ — $\to m$ far from flotation, a \textbf{simple pole} at $N_{c}$ ($\approx N_{c}/(N-N_{c})$). Verified to $1.4\times 10^{-4}$ against the numeric $s_{N}$. This \emph{derives} the near-flotation weakening that Joughin, Smith \& Schoof (2019) impose by hand (ad hoc $h_{af}<h_{T}$ ramp + fixed $u0$).
+
+
+\textbf{7.3 Inversion — measuring $N_{c}$ and $m$.} A drainage-step population recovers the flotation/Type-III threshold $N_{c}$ to \textbf{0.2 / 0.4 / 1.0 \%} at 5 / 10 / 20 \% amplitude noise; $m$ is degenerate with the per-event drop far from flotation. Ocean \textbf{tides} give a continuous third probe: the fundamental velocity admittance equals $|s_{N}|$ and the 2f/1f harmonic ratio diverges toward $N_{c}$, so admittance + harmonics + the known tidal amplitude recover $m$ and the dimensionless flotation proximity $R=(N_{c}/N)^{m}$ \textbf{from surface velocity alone} — a sliding-law reading of the Gudmundsson nonlinear MSf response, answering the ``no knowledge of $N$'' objection. The tidal forcing amplitude is \textbf{measured}, not assumed: sampling the CATS2008 tide model (USAP-DC 601235) across the BedMachine grounding zone (within 10 km of the line; $n=1108$ valid cells) gives a tidal ocean-pressure swing with median \textbf{0.30 \% of ice overburden} (median tide $\eta \approx 0.84 m$), rising monotonically from 0.21 \% at 8–10 km to 0.45 \% at 2–4 km from the grounding line (\code{validation/\allowbreak{}reports/\allowbreak{}tidal\_\allowbreak{}forcing\_\allowbreak{}gz.\allowbreak{}json}).
+
+
+\textbf{7.4 An ungrounding early-warning (operationalizing established CSD theory).} The $N_{c}$ fold makes the basal drag stiffness $\partial \tau _{b}/\partial u\propto (1-R)^{2}/R\to 0$ (critical slowing down), so an ice stream approaching ungrounding should show \textbf{rising variance and lag-1 autocorrelation of its surface speed} (Kendall-\ensuremath{\tau}\ensuremath{\approx}0.54 in an OU demonstration with $N$ declining toward $N_{c}$). Critical-slowing-down early-warning is established (Scheffer et al. 2009; Dakos et al. 2008) and has already been applied to marine-ice-sheet tipping — Rosier et al. (2021) detected rising lag-1 autocorrelation and variance in grounding-line flux ahead of Pine Island tipping, and Boers \& Rypdal (2021) in Greenland surface melt. The contribution here is not the early-warning concept but a specific \textbf{operational route}: reading $R(t)=(N_{c}/N)^{m}\to 1$ from the continuous tidal admittance of surface velocity. A single-snapshot \textbf{spatial} analogue (variance + along-flow correlation length rising toward the grounding line) is also derived (exact Lyapunov solve).
+
+
+\textbf{7.5 The framework on the same real lakes.} Reading the §6 matched data (open CryoSat-2 drainage + ITS\_LIVE velocity, 3 MacAyeal lakes) through this lens (\code{validation/\allowbreak{}external/\allowbreak{}lake\_\allowbreak{}lag\_\allowbreak{}sn\_\allowbreak{}ews.\allowbreak{}py}, 5 tests): across the 3 resolved drainage events $|\Delta v/v|\le 2 \%$, mixed sign, near the \textasciitilde{}1 \% year-to-year noise floor — \textbf{0 positive >2\ensuremath{\sigma} surge detections} — so via the master curve these trunk lakes sit \textbf{far from the $N_{c}$ pole}; and \textbf{no} lake shows the joint critical-slowing-down signature (rising variance \emph{and} high AC1), so the early-warning correctly returns a \textbf{true negative} on stable ice (unit tests confirm the detectors \emph{do} fire on planted surges/CSD, so the null is real). Both probes agree: far from ungrounding — consistent with the 1/19 population non-detection.
+
+
+\textbf{7.6 Scope and falsification.} Absolute $s_{N}$ is uncalibrated (per-event \code{dN/\allowbreak{}N} is a lumped-storage lower bound); the robust claims are the sign/shape and the \emph{threshold} $N_{c}$. With n=8 annual points per lake the CSD test is weak; a strong test needs the dense quarterly/GPS series and a stream actually nearing flotation. Falsifiers: a co-located \code{dN}+GPS population whose $|s_{N}(N)|$ does not follow $m/(1-(N_{c}/N)^{m})$; a stream nearing flotation with no variance/AC1 rise; tidal admittance/harmonics not steepening toward the grounding line. (Schoof 2005; Gagliardini et al. 2007; Joughin, Smith \& Schoof 2019; Tulaczyk et al. 2000; Gudmundsson 2011; Scheffer et al. 2009; Dakos et al. 2008; Boers \& Rypdal 2021)
+
+
+\medskip\hrule\medskip
+
+
+\section*{8. Estimator calibration (synthetic plant-and-recover)}
+
+
+Every real-data estimator has a synthetic null/recovery harness exercised in \code{pytest}:
+
+
+\begin{itemize}
+\item \textbf{RTN classifier} — plant $H*$, recover $RTN>1$ region ($rtn_{synthetic}$).
+\item \textbf{Lag estimator is kernel-shape-generic} — plant one target lag with five markedly different causal kernels (Gamma $k=2/4$, log-normal, bi-exponential, raised-cosine); $estimate_{lag}$ recovers it to \ensuremath{\le}10 \% for every shape, delta-kernel control returns 0. So a recovered lag is a property of the data, not the assumed Gamma form.
+\item \textbf{Grounding-line migration level-set law is exact} — $|dH/dt|/|\nabla m|$ reproduced to rel-err $5\times 10^{-16}$ (1-D) / $4\times 10^{-14}$ (tilted 2-D); the thinning-paced null is flat by construction; a planted $u_*$ discount is recovered sign-faithfully and is unbiased under 25 \% noise / null under permutation.
+\item \textbf{$\phi $-area inversion, MISI band, intrusion-clock drivers} — calibrated on synthetic ground truth.
+\item \textbf{CMN commutator identity} — to \textasciitilde{}$10^{-7}$ ($cmn_{synthetic}$).
+\end{itemize}
+
+
+These guarantee the §3–§6 verdicts are read against the right null with unbiased, sign-faithful estimators.
+
+
+\medskip\hrule\medskip
+
+
+\section*{9. Discussion and limitations}
+
+
+\textbf{What this is.} A machine-precision certification of the cavity\ensuremath{\leftrightarrow}channel kernel's exact MZ structure (the central positive result); a motivated null on a literal thermal sliding kernel; an honest matched-lag null with a precise diagnosis and a concrete unblock path; a flotation-ratio intrusion \emph{screen} with an independent cross-check; and a field-measurable sliding law (the $s_{N}(N)$ master curve, an $N_{c}$ inversion, and an early-warning that operationalizes established CSD theory) read honestly against the same real lakes.
+
+
+\textbf{What this is not.} No RTN precision/recall (no gridded survey). No verified surge-lag \emph{value} (the matched test is null; the value is to order of magnitude only). No nonlinear hydraulic-kernel derivation (the §5 result is the \emph{linearised lumped} projection; a coupled GlaDS/Röthlisberger derivation is future work). The physical distinctness of $\phi $ from the Leray pressure remains unproven.
+
+
+\textbf{The open gates, each with a concrete unblock.}
+
+\begin{enumerate}
+\item \textbf{Matched lag \ensuremath{\to}:} sub-annual GPS/GNSS (EarthScope/POLENET) or fast-outlet trunk velocity, paired with drainage dates.
+\item \textbf{Derived nonlinear hydraulic kernel:} a coupled GlaDS/Röthlisberger cavity\ensuremath{\leftrightarrow}channel model (replace the lumped RC analogue).
+\item \textbf{RTN precision/recall:} a future gridded intrusion survey (NISAR / IceBridge successors) to score against.
+\item \textbf{$s_{N}$ law / early-warning \ensuremath{\to}:} a co-located \code{dN}+GPS (or tidal- admittance) population at a stream nearing flotation, to fit $m/(1-(N_{c}/N)^{m})$ and test the variance/AC1 rise; and a DInSAR $v_{obs}$ over runaway intrusion cells to place $Ro$ on the thinning-paced vs hydraulic-limited curve (§3.5).
+\end{enumerate}
+
+
+\medskip\hrule\medskip
+
+
+\section*{10. Reproduce}
+
+
+\begin{Verbatim}
+pip install -r requirements.txt
+python glaciers/validation/external/run_rtn_bedmap2.py --stride 3 --phi 0.9 # §3 RTN (Fig 57 family)
+# §3.3 BedMachine cross-check: glaciers/validation/external/rtn_corollaries_bedmachine.py (GPU)
+python glaciers/validation/external/rtn_baseline_skill.py --stride 5 # §3.4 RTN==thickness-above-flotation (zero skill at constant phi)
+python glaciers/validation/synthetic/rtn_variable_phi_skill.py # §3.4b variable-phi is the only escape (plant-and-recover, 5 tests)
+python glaciers/validation/external/rtn_variable_phi_real.py --stride 10 # §3.4b hydraulic-routing phi(x,y) reorders RTN on real Bedmap2
+python glaciers/validation/external/run_sliding_real.py --with-velocity Mac1 # §4 τ_ice + ITS_LIVE
+python -m glaciers.validation.external.lag_fit_real # §6 matched-lag null
+python glaciers/validation/external/run_usapdc_lakes.py # §6 vetted forcing (58 events)
+pytest glaciers/tests/test_validation_synthetic.py -v # §8 estimator calibration + §5 MZ projection (6/6)
+python glaciers/validation/synthetic/intrusion_residence_number.py # §3.5 intrusion residence number Ro
+python glaciers/validation/synthetic/sn_master_curve.py # §7 s_N(N) master curve + inversion
+python glaciers/validation/synthetic/tidal_admittance_probe.py # §7.3 tidal third probe
+python glaciers/validation/external/lake_lag_sn_ews.py # §7.5 §I framework on real lakes
+\end{Verbatim}
+
+\section*{Data and code availability}
+
+
+The intrusion result (Figs. 1–2) uses open datasets — Bedmap2, BedMachine Antarctica v4, CryoSat-2 lake-drainage dates, and ITS\_LIVE velocities — and regenerates from the scripts in the reproduce section. All analysis code and derived products are in the public repository at https://github.com/abdh0saifelden2-debug/K.
+
+
+\section*{References}
+
+
+Arthern, R. J., Hindmarsh, R. C. A., \& Williams, C. R. (2015). Flow speed within the Antarctic ice sheet and its controls inferred from satellite observations. \emph{Journal of Geophysical Research: Earth Surface} 120(7), 1171–1188. doi:10.1002/2014JF003239
+
+
+Boers, N., \& Rypdal, M. (2021). Critical slowing down suggests that the western Greenland Ice Sheet is close to a tipping point. \emph{Proceedings of the National Academy of Sciences} 118(21), e2024192118. doi:10.1073/pnas.2024192118
+
+
+Cuffey, K. M., \& Paterson, W. S. B. (2010). \emph{The Physics of Glaciers}, 4th ed. Academic Press, Amsterdam.
+
+
+Curl, R. L. (1966). Scallops and flutes. \emph{Transactions of the Cave Research Group of Great Britain} 7, 121–160.
+
+
+Dakos, V., Scheffer, M., van Nes, E. H., Brovkin, V., Petoukhov, V., \& Held, H. (2008). Slowing down as an early warning signal for abrupt climate change. \emph{Proceedings of the National Academy of Sciences} 105(38), 14308–14312. doi:10.1073/pnas.0802430105
+
+
+Fretwell, P., Pritchard, H. D., Vaughan, D. G., et al. (2013). Bedmap2: improved ice bed, surface and thickness datasets for Antarctica. \emph{The Cryosphere} 7, 375–393. doi:10.5194/tc-7-375-2013
+
+
+Gardner, A. S., Moholdt, G., Scambos, T., et al. (2018). Increased West Antarctic and unchanged East Antarctic ice discharge over the last 7 years. \emph{The Cryosphere} 12, 521–547. doi:10.5194/tc-12-521-2018
+
+
+Gardner, A., Fahnestock, M., Greene, C. A., Kennedy, J. H., Liukis, M., Lopez, L., \& Scambos, T. (2025). MEaSUREs ITS\_LIVE Regional Glacier and Ice Sheet Surface Velocities, Version 2 (NSIDC-0776) [Data set]. \emph{NASA NSIDC DAAC.} doi:10.5067/JQ6337239C96
+
+
+Gagliardini, O., Cohen, D., Råback, P., \& Zwinger, T. (2007). Finite-element modeling of subglacial cavities and related friction law. \emph{Journal of Geophysical Research: Earth Surface} 112, F02027. doi:10.1029/2006JF000576
+
+
+Gudmundsson, G. H. (2011). Ice-stream response to ocean tides and the form of the basal sliding law. \emph{The Cryosphere} 5, 259–270. doi:10.5194/tc-5-259-2011
+
+
+Hewitt, I. J. (2013). Seasonal changes in ice sheet motion due to melt water lubrication. \emph{Earth and Planetary Science Letters} 371–372, 16–25. doi:10.1016/j.epsl.2013.04.022
+
+
+Joughin, I., Smith, B. E., \& Schoof, C. G. (2019). Regularized Coulomb friction laws for ice sheet sliding: Application to Pine Island Glacier, Antarctica. \emph{Geophysical Research Letters} 46, 4764–4771. doi:10.1029/2019GL082526
+
+
+Leguy, G. R., Asay-Davis, X. S., \& Lipscomb, W. H. (2014). Parameterization of basal friction near grounding lines in a one-dimensional ice sheet model. \emph{The Cryosphere} 8, 1239–1259. doi:10.5194/tc-8-1239-2014
+
+
+Mori, H. (1965). Transport, collective motion, and Brownian motion. \emph{Progress of Theoretical Physics} 33, 423–455. doi:10.1143/PTP.33.423
+
+
+Morlighem, M., Rignot, E., Binder, T., et al. (2020). Deep glacial troughs and stabilizing ridges unveiled beneath the margins of the Antarctic ice sheet. \emph{Nature Geoscience} 13, 132–137. doi:10.1038/s41561-019-0510-8
+
+
+Nakajima, S. (1958). On quantum theory of transport phenomena. \emph{Progress of Theoretical Physics} 20, 948–959. doi:10.1143/PTP.20.948
+
+
+Nikuradse, J. (1933). Strömungsgesetze in rauhen Rohren. \emph{VDI-Forschungsheft} 361. (English transl. NACA TM 1292, 1950.)
+
+
+Robel, A. A., Wilson, E., \& Seroussi, H. (2022). Layered seawater intrusion and melt under grounded ice. \emph{The Cryosphere} 16, 451–469. doi:10.5194/tc-16-451-2022
+
+
+Rosier, S. H. R., Reese, R., Donges, J. F., De Rydt, J., Gudmundsson, G. H., \& Winkelmann, R. (2021). The tipping points and early warning indicators for Pine Island Glacier, West Antarctica. \emph{The Cryosphere} 15, 1501–1516. doi:10.5194/tc-15-1501-2021
+
+
+Röthlisberger, H. (1972). Water pressure in intra- and subglacial channels. \emph{Journal of Glaciology} 11, 177–203. doi:10.3189/S0022143000022188
+
+
+Scheffer, M., Bascompte, J., Brock, W. A., Brovkin, V., Carpenter, S. R., Dakos, V., Held, H., van Nes, E. H., Rietkerk, M., \& Sugihara, G. (2009). Early-warning signals for critical transitions. \emph{Nature} 461, 53–59. doi:10.1038/nature08227
+
+
+Schoof, C. (2005). The effect of cavitation on glacier sliding. \emph{Proceedings of the Royal Society A} 461, 609–627. doi:10.1098/rspa.2004.1350
+
+
+Schoof, C. (2007). Ice sheet grounding line dynamics: Steady states, stability, and hysteresis. \emph{Journal of Geophysical Research: Earth Surface} 112, F03S28. doi:10.1029/2006JF000664
+
+
+Schoof, C. (2010). Ice-sheet acceleration driven by melt supply variability. \emph{Nature} 468, 803–806. doi:10.1038/nature09618
+
+
+Schroeder, D. M., Blankenship, D. D., \& Young, D. A. (2013). Evidence for a water system transition beneath Thwaites Glacier, West Antarctica. \emph{Proceedings of the National Academy of Sciences} 110(30), 12225–12228. doi:10.1073/pnas.1302828110
+
+
+Schroeder, D. M., Blankenship, D. D., Raney, R. K., \& Grima, C. (2015). Estimating subglacial water geometry using radar bed echo specularity: Application to Thwaites Glacier, West Antarctica. \emph{IEEE Geoscience and Remote Sensing Letters} 12(3), 443–447. doi:10.1109/LGRS.2014.2337878
+
+
+Shreve, R. L. (1972). Movement of water in glaciers. \emph{Journal of Glaciology} 11, 205–214. doi:10.3189/S002214300002219X
+
+
+Siegfried, M. R., Fricker, H. A., Carter, S. P., \& Tulaczyk, S. (2016). Episodic ice velocity fluctuations triggered by a subglacial flood in West Antarctica. \emph{Geophysical Research Letters} 43, 2640–2648. doi:10.1002/2016GL067758
+
+
+Siegfried, M. R., \& Fricker, H. A. (2018). Thirteen years of subglacial lake activity in Antarctica from multi-mission satellite altimetry. \emph{Annals of Glaciology} 59, 42–55. doi:10.1017/aog.2017.36
+
+
+Siegfried, M. R., \& Fricker, H. A. (2021). Illuminating active subglacial lake processes with ICESat-2 laser altimetry. \emph{Geophysical Research Letters} 48, e2020GL091089. doi:10.1029/2020GL091089
+
+
+Smith, B. E., Fricker, H. A., Joughin, I. R., \& Tulaczyk, S. (2009). An inventory of active subglacial lakes in Antarctica detected by ICESat (2003–2008). \emph{Journal of Glaciology} 55, 573–595. doi:10.3189/002214309789470879
+
+
+Stearns, L. A., Smith, B. E., \& Hamilton, G. S. (2008). Increased flow speed on a large East Antarctic outlet glacier caused by subglacial floods. \emph{Nature Geoscience} 1, 827–831. doi:10.1038/ngeo356
+
+
+Stubblefield, A. G., Arthern, R. J., Kingslake, J., \& Siegfried, M. R. (2021). Antarctic ice thickness, slipperiness, and subglacial lake locations. \emph{U.S. Antarctic Program Data Center.} doi:10.15784/601470
+
+
+Tulaczyk, S., Kamb, W. B., \& Engelhardt, H. F. (2000). Basal mechanics of Ice Stream B, West Antarctica: 1. Till mechanics. \emph{Journal of Geophysical Research: Solid Earth} 105(B1), 463–481. doi:10.1029/1999JB900329
+
+
+Werder, M. A., Hewitt, I. J., Schoof, C. G., \& Flowers, G. E. (2013). Modeling channelized and distributed subglacial drainage in two dimensions. \emph{Journal of Geophysical Research: Earth Surface} 118, 2140–2158. doi:10.1002/jgrf.20146
+
+
+Wingham, D. J., Francis, C. R., Baker, S., et al. (2006). CryoSat: A mission to determine the fluctuations in Earth's land and marine ice fields. \emph{Advances in Space Research} 37, 841–871. doi:10.1016/j.asr.2005.07.027
+
+
+Zwanzig, R. (1960). Ensemble method in the theory of irreversibility. \emph{The Journal of Chemical Physics} 33, 1338–1341. doi:10.1063/1.1731409
+
+
+Zwanzig, R. (1973). Nonlinear generalized Langevin equations. \emph{Journal of Statistical Physics} 9, 215–220. doi:10.1007/BF01008729
+
+
+\end{document}
