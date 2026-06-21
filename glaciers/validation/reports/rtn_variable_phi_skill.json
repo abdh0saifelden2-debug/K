@@ -1,0 +1,108 @@
+{
+  "what": "variable-phi(x,y) is the only way RTN can add skill over thickness-above-flotation; it works iff phi carries real connectivity information",
+  "phi_map": {
+    "PHI_LO": 0.8,
+    "PHI_HI": 0.97,
+    "phi=PHI_HI-(PHI_HI-PHI_LO)*c": "well-connected c->1 => low phi => high RTN"
+  },
+  "population": {
+    "n_cells": 300000,
+    "n_finite": 300000,
+    "phi_bar_baseline": 0.8849505506980558,
+    "intrusion_base_rate": 0.21491333333333335,
+    "n_intrude_true": 64474
+  },
+  "anchor_constant_phi": {
+    "spearman_rtn_oceanratio_f": 1.0,
+    "spearman_rtn_flotfrac_Haf": -1.0,
+    "disagree_vs_flotthresh_cells": 0,
+    "note": "reproduces committed baseline: constant-phi RTN is an exact monotone function of the flotation fraction (Spearman -1 vs H_af/H) and {RTN>1} is identical to thickness-above-flotation -- zero skill",
+    "pass": true
+  },
+  "degeneracy_break_variable_phi": {
+    "sigma_obs": 0.12,
+    "spearman_rtn_f": 0.9862996753065394,
+    "disagree_vs_flotthresh_cells": 11566,
+    "pass": true
+  },
+  "skill": {
+    "auc_baseline_flotation": 0.994843349630281,
+    "auc_phi_aware": 0.9985702751182002,
+    "auc_gain": 0.003726925487919197,
+    "f1_baseline": 0.9184173942924978,
+    "f1_phi_aware": 0.9585057097259022,
+    "precision_baseline": 0.9249622451547949,
+    "recall_baseline": 0.911964512826876,
+    "precision_phi_aware": 0.9575413287102966,
+    "recall_phi_aware": 0.959472035239011,
+    "contested_band": {
+      "PHI_LO<f<PHI_HI": [
+        0.8,
+        0.97
+      ],
+      "n_cells": 56007,
+      "f1_baseline": 0.7800471658384571,
+      "f1_phi_aware": 0.8896307286515001,
+      "note": "where baseline and per-cell truth can disagree"
+    },
+    "pass": true
+  },
+  "null_random_phi": {
+    "auc_null": 0.9897762669808097,
+    "auc_gain_vs_baseline": -0.005067082649471311,
+    "f1_null": 0.8897626216109532,
+    "f1_baseline": 0.9184173942924978,
+    "pass": true
+  },
+  "dose_response": {
+    "rows": [
+      {
+        "sigma": 0.0,
+        "corr_phi_obs_true": 1.0,
+        "auc": 1.0,
+        "gain": 0.005156650369719018
+      },
+      {
+        "sigma": 0.05,
+        "corr_phi_obs_true": 0.9760317796363644,
+        "auc": 0.999732538632035,
+        "gain": 0.004889189001754057
+      },
+      {
+        "sigma": 0.12,
+        "corr_phi_obs_true": 0.883202243079676,
+        "auc": 0.9986129440716071,
+        "gain": 0.003769594441326074
+      },
+      {
+        "sigma": 0.25,
+        "corr_phi_obs_true": 0.6658576540391338,
+        "auc": 0.9947790689913518,
+        "gain": -6.428063892915947e-05
+      },
+      {
+        "sigma": 0.5,
+        "corr_phi_obs_true": 0.39029427603223,
+        "auc": 0.9875773386955099,
+        "gain": -0.007266010934771083
+      },
+      {
+        "sigma": 1.0,
+        "corr_phi_obs_true": 0.19489114752923697,
+        "auc": 0.9799613687321561,
+        "gain": -0.014881980898124869
+      },
+      {
+        "sigma": 3.0,
+        "corr_phi_obs_true": 0.06439278664716536,
+        "auc": 0.9738178089355892,
+        "gain": -0.021025540694691758
+      }
+    ],
+    "monotone_nonincreasing": true,
+    "corr_info_vs_gain": 0.9837471324565505,
+    "pass": true
+  },
+  "verdict": "constant-phi RTN == thickness-above-flotation (Spearman -1.0000 vs H_af/H, 0 disagreeing cells); a data-derived variable phi(x,y) breaks the degeneracy (Spearman 0.986, 11566 disagreeing cells) and adds genuine operating-point skill (F1 0.918 -> 0.959; AUC 0.995 -> 0.999) -- but ONLY when phi carries connectivity information (random-phi F1 0.890, AUC gain -0.005). RTN is rescuable iff a real connectivity field (specularity / hydraulic routing) is supplied; the real-geometry test is rtn_variable_phi_real.py.",
+  "pass": true
+}

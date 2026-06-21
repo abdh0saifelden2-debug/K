@@ -1,0 +1,28 @@
+{
+  "test": "Full-family GPU (CuPy) backend verification sweep (pending item: 'GPU re-runs of the full CuPy family')",
+  "runner": "glaciers/gpu_family_sweep.py --gpu",
+  "where": "Kaggle notebook, accelerator = Tesla P100-PCIE-16GB",
+  "branch": "hyp-gpu-family-v3",
+  "device": "cupy 14.0.1 on Tesla P100-PCIE-16GB",
+  "backend": "cupy",
+  "smoke": false,
+  "n_pass": 13,
+  "n_total": 13,
+  "pass_criterion": "subprocess returncode==0 AND no 'Implicit conversion to a NumPy array' (device->host) TypeError in stderr",
+  "cases": [
+    {"case": "scallop_probe",             "pass": true, "returncode": 0, "elapsed_s": 15.7},
+    {"case": "scallop_doublediff",        "pass": true, "returncode": 0, "elapsed_s": 10.4},
+    {"case": "scallop_channel_feedback",  "pass": true, "returncode": 0, "elapsed_s": 7.4},
+    {"case": "scallop_amplitude_band",    "pass": true, "returncode": 0, "elapsed_s": 10.9},
+    {"case": "scallop_amplitude_closure", "pass": true, "returncode": 0, "elapsed_s": 26.1},
+    {"case": "scallop_g1_populations",    "pass": true, "returncode": 0, "elapsed_s": 5.2},
+    {"case": "scallop_shedding_det",      "pass": true, "returncode": 0, "elapsed_s": 54.2},
+    {"case": "scallop_sweep",             "pass": true, "returncode": 0, "elapsed_s": 57.1},
+    {"case": "scallop3d_probe",           "pass": true, "returncode": 0, "elapsed_s": 9.6},
+    {"case": "subglacial.slip_gate",      "pass": true, "returncode": 0, "elapsed_s": 14.7},
+    {"case": "subglacial.wall_flux_gate", "pass": true, "returncode": 0, "elapsed_s": 7.1},
+    {"case": "candidate4_anchor",         "pass": true, "returncode": 0, "elapsed_s": 1.8},
+    {"case": "scallop_battery",           "pass": true, "returncode": 0, "elapsed_s": 30.6}
+  ],
+  "note": "Reproduces .agents/skills/testing-gpu-cupy (verified 13/13 PASS on Tesla P100, cupy 14.0.1). Confirms the backend-agnostic NumPy/CuPy solver family runs clean on a real CUDA device with no device->host conversion bugs that the CPU pytest suite cannot catch. CPU-side full pytest: 354 passed."
+}

@@ -1,0 +1,59 @@
+{
+  "what": "max-tractable z_0(\u03bb,a) roughness closure + log-law sensitivity + one-field-point flag",
+  "anchor": {
+    "ustar_m_s": 0.05,
+    "lam_m": 0.07919999999999999,
+    "a_m": 0.00792,
+    "a_over_lam": 0.1,
+    "H_channel_m": 2.4,
+    "u_flow_m_s": 1.0
+  },
+  "cz_band": [
+    0.01,
+    0.1
+  ],
+  "alpha_s_band": [
+    0.3,
+    3.0
+  ],
+  "z0_band_m": [
+    7.92e-05,
+    0.0007920000000000001
+  ],
+  "H_over_z0_band": [
+    3030.30303030303,
+    30303.0303030303
+  ],
+  "Cd_band": [
+    0.00157867319993062,
+    0.002615814933731692
+  ],
+  "Cd_central": 0.0020000734138772495,
+  "dphi_ds_band_Pa_m": [
+    0.6577804999710917,
+    1.0899228890548716
+  ],
+  "central": {
+    "c_z": 0.03162277660168379,
+    "z0_m": 0.0002504523906853356,
+    "Cd": 0.0020000734138772495
+  },
+  "buffering": {
+    "input_cz_ratio": 10.0,
+    "output_Cd_ratio": 1.6569705077951868,
+    "output_dphi_ratio": 1.6569705077951866,
+    "log_law_compression": 6.035110433743501
+  },
+  "settled_legs": {
+    "wavelength": "VERIFIED/LIT: \u03bb=Re*\u03bd/u*, Re*\u22482200 (Curl 1966)",
+    "amplitude": "MEASURED amplitude-independent (\u00a7G.6/figures/59) -> z_0 is geometry-set, not steepness-set"
+  },
+  "one_field_point": {
+    "needed": "a single scallop train with BOTH geometry (\u03bb,a) AND an independent drag measure (near-wall velocity profile -> z_0, or measured u* + d\u03c6/ds) on the same train",
+    "pins": "the Nikuradse geometry prefactor c_z=\u03b1_s/30 (amplitude leg already settled)",
+    "candidates": "Curl 1966 / Blumberg & Curl 1974 (limestone & ice scallops); cave-scallop morphometry; subglacial-conduit dye-trace + pressure",
+    "in_repo": false
+  },
+  "verdict": "MAX-TRACTABLE THEORY: with wavelength (Curl) and amplitude (\u00a7G.6 measured) legs settled, only the Nikuradse geometry prefactor c_z\u2208[0.01,0.1] (~10\u00d7 uncertain) is open. At the Curl anchor (u*=0.05 -> \u03bb\u22487.9 cm, a\u22487.9 mm, H=2.4 m), z_0\u2208[7.9e-05,7.9e-04] m gives C_d\u2208[1.6e-03,2.6e-03] \u2014 the 10\u00d7 roughness uncertainty BUFFERS to only ~1.7\u00d7 in C_d (and d\u03c6/ds), because the log law depends only on ln(H/z_0) with H/z_0~10\u00b3-10\u2074. So the missing field point is the framework's least damaging open closure; the single (geometry+drag) scallop-train point that would pin c_z is specified, and does not exist in-repo (no faked field verification).",
+  "references": "this repo \u00a7A.2/\u00a7G.6 (figures/59); Curl 1966; Blumberg & Curl 1974; Nikuradse 1933; R\u00f6thlisberger 1972; Werder et al. 2013"
+}

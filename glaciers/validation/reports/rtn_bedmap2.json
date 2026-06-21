@@ -1,0 +1,178 @@
+{
+  "dataset": "BAS Bedmap2 (bedmap2_bin), ice thickness+bed+icemask",
+  "test": "\u00a7V.1 / \u00a7H.1 RTN directional: RTN>1 concentration vs distance-to-grounding-line",
+  "provenance": "https://secure.antarctica.ac.uk/data/bedmap2/bedmap2_bin.zip (open, no auth)",
+  "stride_km": 3,
+  "generated_utc": "2026-06-14T12:06:59.387764Z",
+  "by": "reproduction run",
+  "phi_runs": {
+    "0.8": {
+      "phi": 0.8,
+      "grid": [
+        2223,
+        2223
+      ],
+      "cellsize_km": 3.0,
+      "n_grounded": 1329743,
+      "rtn_gt1_frac_grounded": 0.025138692213457787,
+      "median_dist_pred": 9.0,
+      "median_dist_notpred": 226.75316976836285,
+      "bins": [
+        {
+          "lo_km": 0,
+          "hi_km": 5,
+          "n": 50532,
+          "rtn_gt1_frac": 0.22833056281168368
+        },
+        {
+          "lo_km": 5,
+          "hi_km": 10,
+          "n": 52094,
+          "rtn_gt1_frac": 0.11365992244788267
+        },
+        {
+          "lo_km": 10,
+          "hi_km": 25,
+          "n": 87318,
+          "rtn_gt1_frac": 0.06603449460592317
+        },
+        {
+          "lo_km": 25,
+          "hi_km": 50,
+          "n": 99425,
+          "rtn_gt1_frac": 0.04698013578073925
+        },
+        {
+          "lo_km": 50,
+          "hi_km": 100,
+          "n": 143492,
+          "rtn_gt1_frac": 0.029360521840938868
+        },
+        {
+          "lo_km": 100,
+          "hi_km": 250,
+          "n": 285743,
+          "rtn_gt1_frac": 0.004616036088373118
+        },
+        {
+          "lo_km": 250,
+          "hi_km": null,
+          "n": 611139,
+          "rtn_gt1_frac": 0.0
+        }
+      ]
+    },
+    "0.9": {
+      "phi": 0.9,
+      "grid": [
+        2223,
+        2223
+      ],
+      "cellsize_km": 3.0,
+      "n_grounded": 1329743,
+      "rtn_gt1_frac_grounded": 0.012864891937765417,
+      "median_dist_pred": 6.0,
+      "median_dist_notpred": 221.77691493931465,
+      "bins": [
+        {
+          "lo_km": 0,
+          "hi_km": 5,
+          "n": 50532,
+          "rtn_gt1_frac": 0.15119132430934853
+        },
+        {
+          "lo_km": 5,
+          "hi_km": 10,
+          "n": 52094,
+          "rtn_gt1_frac": 0.05994932237877683
+        },
+        {
+          "lo_km": 10,
+          "hi_km": 25,
+          "n": 87318,
+          "rtn_gt1_frac": 0.03549096406239263
+        },
+        {
+          "lo_km": 25,
+          "hi_km": 50,
+          "n": 99425,
+          "rtn_gt1_frac": 0.02083982901684687
+        },
+        {
+          "lo_km": 50,
+          "hi_km": 100,
+          "n": 143492,
+          "rtn_gt1_frac": 0.007902879603044073
+        },
+        {
+          "lo_km": 100,
+          "hi_km": 250,
+          "n": 285743,
+          "rtn_gt1_frac": 0.00013648628312854557
+        },
+        {
+          "lo_km": 250,
+          "hi_km": null,
+          "n": 611139,
+          "rtn_gt1_frac": 0.0
+        }
+      ]
+    },
+    "0.95": {
+      "phi": 0.95,
+      "grid": [
+        2223,
+        2223
+      ],
+      "cellsize_km": 3.0,
+      "n_grounded": 1329743,
+      "rtn_gt1_frac_grounded": 0.006003415697619766,
+      "median_dist_pred": 4.242640687119286,
+      "median_dist_notpred": 219.0,
+      "bins": [
+        {
+          "lo_km": 0,
+          "hi_km": 5,
+          "n": 50532,
+          "rtn_gt1_frac": 0.08355101717723423
+        },
+        {
+          "lo_km": 5,
+          "hi_km": 10,
+          "n": 52094,
+          "rtn_gt1_frac": 0.03182708181364457
+        },
+        {
+          "lo_km": 10,
+          "hi_km": 25,
+          "n": 87318,
+          "rtn_gt1_frac": 0.016743397695778647
+        },
+        {
+          "lo_km": 25,
+          "hi_km": 50,
+          "n": 99425,
+          "rtn_gt1_frac": 0.005743022378677395
+        },
+        {
+          "lo_km": 50,
+          "hi_km": 100,
+          "n": 143492,
+          "rtn_gt1_frac": 0.00048783207426197976
+        },
+        {
+          "lo_km": 100,
+          "hi_km": 250,
+          "n": 285743,
+          "rtn_gt1_frac": 0.0
+        },
+        {
+          "lo_km": 250,
+          "hi_km": null,
+          "n": 611139,
+          "rtn_gt1_frac": 0.0
+        }
+      ]
+    }
+  }
+}

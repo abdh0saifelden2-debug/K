@@ -1,0 +1,108 @@
+{
+  "params": {
+    "nw": 12,
+    "u_star_m_per_s": 0.05,
+    "dT_K": 0.1,
+    "lam_phys_m": 0.07875999999999998,
+    "beta_per_a": 6.333292783572322e-05,
+    "lam_nd": 2.0943951023931953,
+    "afracs": [
+      0.05,
+      0.1,
+      0.2,
+      0.4
+    ],
+    "Ns_MPa": [
+      0.1,
+      1.0
+    ]
+  },
+  "beta_melt_per_s": 1.0449900691855613e-08,
+  "tau_melt_yr": 3.032381718108177,
+  "sigma_crit_MPa": {
+    "cold": 0.351803622607384,
+    "temperate": 0.1632927766318958
+  },
+  "physical_stress_sweep": [
+    {
+      "a_over_lam": 0.05,
+      "a_phys_m": 0.003938,
+      "sigma_topo_Pa": 35.42534226,
+      "rho_cold": 1.02103644239353e-12,
+      "ampl_correction_cold": 0.999999999998979,
+      "rho_temperate": 1.02103644239353e-11,
+      "ampl_correction_temperate": 0.9999999999897897
+    },
+    {
+      "a_over_lam": 0.1,
+      "a_phys_m": 0.007876,
+      "sigma_topo_Pa": 70.85068452,
+      "rho_cold": 8.16829153914824e-12,
+      "ampl_correction_cold": 0.9999999999918316,
+      "rho_temperate": 8.16829153914824e-11,
+      "ampl_correction_temperate": 0.9999999999183171
+    },
+    {
+      "a_over_lam": 0.2,
+      "a_phys_m": 0.015752,
+      "sigma_topo_Pa": 141.70136904,
+      "rho_cold": 6.534633231318592e-11,
+      "ampl_correction_cold": 0.9999999999346536,
+      "rho_temperate": 6.534633231318592e-10,
+      "ampl_correction_temperate": 0.9999999993465367
+    },
+    {
+      "a_over_lam": 0.4,
+      "a_phys_m": 0.031504,
+      "sigma_topo_Pa": 283.40273808,
+      "rho_cold": 5.227706585054874e-10,
+      "ampl_correction_cold": 0.9999999994772293,
+      "rho_temperate": 5.2277065850548734e-09,
+      "ampl_correction_temperate": 0.9999999947722935
+    }
+  ],
+  "worstcase_N_stress": [
+    {
+      "ice": "cold",
+      "N_Pa": 100000.0,
+      "N_MPa": 0.1,
+      "rho": 0.022966725433768945,
+      "ampl_correction": 0.9775489027524035,
+      "creep_dominates_over_years": false
+    },
+    {
+      "ice": "cold",
+      "N_Pa": 1000000.0,
+      "N_MPa": 1.0,
+      "rho": 22.966725433768946,
+      "ampl_correction": 0.0417245152143733,
+      "creep_dominates_over_years": true
+    },
+    {
+      "ice": "temperate",
+      "N_Pa": 100000.0,
+      "N_MPa": 0.1,
+      "rho": 0.22966725433768945,
+      "ampl_correction": 0.8132281285628035,
+      "creep_dominates_over_years": false
+    },
+    {
+      "ice": "temperate",
+      "N_Pa": 1000000.0,
+      "N_MPa": 1.0,
+      "rho": 229.66725433768943,
+      "ampl_correction": 0.004335249070663633,
+      "creep_dominates_over_years": true
+    }
+  ],
+  "max_rho_physical": 5.2277065850548734e-09,
+  "stress_margin_temperate": 2304.745222126977,
+  "checks": {
+    "physical_null": true,
+    "stress_margin_ok": true,
+    "sign_smoothing_only": true,
+    "worstcase_sigmaN_overpredicts_over_years": true
+  },
+  "verdict": "Coupled Stefan+creep amplitude sweep (\u00a7D.6 residual, quantified). The melt amplitude e-folds in ~3.0 yr; creep matches it only at a deviatoric stress sigma_crit ~ 0.16 MPa (temperate) / 0.35 MPa (cold). The physical topographic relief stress rho_i g a is ~35-283 Pa across a/lam in [0.05,0.40] -- ~2305x below sigma_crit -- so rho = r_creep/beta_melt <= 5.2e-09 and the coupled amplitude correction 1/(1+rho) departs from 1 by < 5e-09: the long-time creep smoothing correction is QUANTIFIED and NEGLIGIBLE, and is always same-sign smoothing (never enhancement). The worst-case sigma=N bound of \u00a7D.6 is solver-clock-only: extrapolated to the melt timescale it would give rho>1 at high N, which is why \u00a7D.6 (correctly) restricts it to the run window. Consistent with identical scallops on non-creeping limestone (Curl 1966).",
+  "ok": true
+}

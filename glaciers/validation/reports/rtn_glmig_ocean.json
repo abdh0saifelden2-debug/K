@@ -1,0 +1,225 @@
+{
+  "hypothesis": "the marine-West \u00a7H.1.4 u_*-Ro residence organisation is ocean-driven: Ro, thinning and u_* should rise with observed shelf ocean thermal forcing in warm marine sectors and be flat/absent in the cold interior",
+  "ocean_data": "Schmidtko et al. 2014 Antarctic shelf-bottom CT/SA (GEOMAR, open)",
+  "TF_definition": "TF = CT - CT_freezing(SA, p) [degC], TEOS-10 (gsw)",
+  "dhdt_source": "ICESat2_ATL15_delta_h_trend",
+  "bedmap2_stride": 4,
+  "search_radius_km": 150.0,
+  "knn": 5,
+  "n_good_points": 10473,
+  "n_with_TF": 7958,
+  "sectors": {
+    "Amundsen (PIG/Thwaites/Smith)": {
+      "n_in_sector": 272,
+      "n_with_TF": 272,
+      "TF_coverage_frac": 1.0,
+      "median_match_dist_km": 91.3363564911642,
+      "median_TF_degC": 2.545325408510355,
+      "fits": {
+        "thinning_vs_TF": {
+          "n": 272,
+          "median_TF": 2.545325408510355,
+          "median_y": 0.43980983454605627,
+          "slope_per_degC": -0.7386962436321483,
+          "r": -0.35760664412802523,
+          "ci95": [
+            -0.8821533158413436,
+            -0.5946106302388419
+          ]
+        },
+        "Ro_vs_TF": {
+          "n": 272,
+          "median_TF": 2.545325408510355,
+          "median_y": 1.1382742609376346,
+          "slope_per_degC": 0.5010551186266938,
+          "r": 0.09545624171873164,
+          "ci95": [
+            -0.30377303684500634,
+            1.1343787022858163
+          ]
+        },
+        "speed_vs_TF": {
+          "n": 272,
+          "median_TF": 2.545325408510355,
+          "median_y": 38.503421783447266,
+          "slope_per_degC": 1.342846728960603,
+          "r": 0.3422717857751467,
+          "ci95": [
+            0.7165533302346735,
+            1.836261864770627
+          ]
+        }
+      }
+    },
+    "Bellingshausen+WAIS-Pacific": {
+      "n_in_sector": 6238,
+      "n_with_TF": 5964,
+      "TF_coverage_frac": 0.9560756652773325,
+      "median_match_dist_km": 80.48579232379691,
+      "median_TF_degC": 0.17683608503474532,
+      "fits": {
+        "thinning_vs_TF": {
+          "n": 5964,
+          "median_TF": 0.17683608503474532,
+          "median_y": 0.31906943285993755,
+          "slope_per_degC": -0.11334024800272373,
+          "r": -0.25459766707199166,
+          "ci95": [
+            -0.12367902817886074,
+            -0.10322987619703379
+          ]
+        },
+        "Ro_vs_TF": {
+          "n": 5964,
+          "median_TF": 0.17683608503474532,
+          "median_y": 3.9400145137532183,
+          "slope_per_degC": 0.2711556462419325,
+          "r": 0.23127340025382517,
+          "ci95": [
+            0.24053185831022295,
+            0.2994494464267514
+          ]
+        },
+        "speed_vs_TF": {
+          "n": 5964,
+          "median_TF": 0.17683608503474532,
+          "median_y": 18.56503677368164,
+          "slope_per_degC": 0.5557675673452378,
+          "r": 0.5397674323435506,
+          "ci95": [
+            0.5319002036423793,
+            0.5786353064239148
+          ]
+        }
+      }
+    },
+    "Ross/Siple Coast": {
+      "n_in_sector": 1277,
+      "n_with_TF": 639,
+      "TF_coverage_frac": 0.5003915426781519,
+      "median_match_dist_km": 22.284440231944615,
+      "median_TF_degC": 0.6049005465569728,
+      "fits": {
+        "thinning_vs_TF": {
+          "n": 639,
+          "median_TF": 0.6049005465569728,
+          "median_y": 0.16465252599692698,
+          "slope_per_degC": 0.2723587618311425,
+          "r": 0.13585964501564846,
+          "ci95": [
+            0.1501561622627375,
+            0.4022825826963642
+          ]
+        },
+        "Ro_vs_TF": {
+          "n": 639,
+          "median_TF": 0.6049005465569728,
+          "median_y": 2.350606447227659,
+          "slope_per_degC": -0.25756036100418583,
+          "r": -0.042789689683960214,
+          "ci95": [
+            -0.6670225098712701,
+            0.16141960498499916
+          ]
+        },
+        "speed_vs_TF": {
+          "n": 639,
+          "median_TF": 0.6049005465569728,
+          "median_y": 24.2113037109375,
+          "slope_per_degC": 0.465770339325453,
+          "r": 0.06542706628634601,
+          "ci95": [
+            -0.09778829078221747,
+            1.0085723612836237
+          ]
+        }
+      }
+    },
+    "East Antarctica": {
+      "n_in_sector": 2373,
+      "n_with_TF": 768,
+      "TF_coverage_frac": 0.32364096080910243,
+      "median_match_dist_km": 66.58759092903517,
+      "median_TF_degC": 0.33902453889139206,
+      "fits": {
+        "thinning_vs_TF": {
+          "n": 768,
+          "median_TF": 0.33902453889139206,
+          "median_y": 0.1710573098048788,
+          "slope_per_degC": 0.21191971365626439,
+          "r": 0.14312633054660406,
+          "ci95": [
+            0.11443078236933008,
+            0.3286016888866522
+          ]
+        },
+        "Ro_vs_TF": {
+          "n": 768,
+          "median_TF": 0.33902453889139206,
+          "median_y": 3.1138731251814535,
+          "slope_per_degC": -0.2598117849235103,
+          "r": -0.052305946477310905,
+          "ci95": [
+            -0.6311618965334371,
+            0.16801091525408135
+          ]
+        },
+        "speed_vs_TF": {
+          "n": 768,
+          "median_TF": 0.33902453889139206,
+          "median_y": 98.29608154296875,
+          "slope_per_degC": 1.1670868043192322,
+          "r": 0.2767697231667843,
+          "ci95": [
+            0.9014835294264806,
+            1.45170499307587
+          ]
+        }
+      }
+    },
+    "CONTINENTAL": {
+      "n_in_sector": 10473,
+      "n_with_TF": 7958,
+      "TF_coverage_frac": 0.7598586842356536,
+      "median_match_dist_km": 73.64705007055454,
+      "median_TF_degC": 0.22980935301047323,
+      "fits": {
+        "thinning_vs_TF": {
+          "n": 7958,
+          "median_TF": 0.22980935301047323,
+          "median_y": 0.2822876623698643,
+          "slope_per_degC": -0.049156776050538545,
+          "r": -0.09699043277797695,
+          "ci95": [
+            -0.059849732404153075,
+            -0.03845142083231244
+          ]
+        },
+        "Ro_vs_TF": {
+          "n": 7958,
+          "median_TF": 0.22980935301047323,
+          "median_y": 3.6576139053681684,
+          "slope_per_degC": 0.23903980763267288,
+          "r": 0.18181986360056576,
+          "ci95": [
+            0.20841533821113356,
+            0.2696067397708123
+          ]
+        },
+        "speed_vs_TF": {
+          "n": 7958,
+          "median_TF": 0.22980935301047323,
+          "median_y": 22.821744918823242,
+          "slope_per_degC": 0.39004099311571566,
+          "r": 0.32151830109995483,
+          "ci95": [
+            0.36522860008555474,
+            0.41404891257749077
+          ]
+        }
+      }
+    }
+  },
+  "verdict": "PARTIALLY SUPPORTED: a positive TF organisation appears in some marine-West components but not all/clean of the East contrast. Marine sectors with positive Ro-TF slope (CI>0): Bellingshausen+WAIS-Pacific; with positive thinning-TF slope: none; East Antarctica Ro-TF flat/negative. TF = Schmidtko-2014 shelf-bottom CT - CT_freezing(SA,p) (TEOS-10).",
+  "caveats": "Schmidtko is a 1975-2012 climatology vs CryoSat-era (2010-2016) Ro/thinning - TF is a slowly-varying boundary condition; nearest-shelf-column TF is a source-water proxy, not in-cavity; bootstrap CIs ignore spatial autocorrelation (true CIs wider); correlation is an organisation consistent with the ocean-melt mechanism, not proof."
+}

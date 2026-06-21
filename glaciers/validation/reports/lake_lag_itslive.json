@@ -1,0 +1,1589 @@
+{
+  "n_event_lakes_total": 52,
+  "n_lakes_with_coords": 31,
+  "n_lakes_run": 24,
+  "lakes_skipped_no_coords": [
+    "InstituteW_2",
+    "KambTrunk_1",
+    "Macayeal_1",
+    "Macayeal_3",
+    "Macayeal_4",
+    "Mercer_1",
+    "Mercer_2",
+    "Recovery_10",
+    "Recovery_11",
+    "Recovery_3",
+    "Recovery_4",
+    "Recovery_5",
+    "Recovery_7",
+    "Recovery_8",
+    "Recovery_9",
+    "Slessor_3",
+    "Whillans_1",
+    "Whillans_2a",
+    "Whillans_3",
+    "Whillans_4",
+    "Whillans_5"
+  ],
+  "n_events_testable": 7,
+  "n_fast_outlet_events_testable": 7,
+  "fast_outlet_events_testable": [
+    [
+      "Byrd_1",
+      2003.82
+    ],
+    [
+      "Byrd_1",
+      2005.41
+    ],
+    [
+      "Byrd_1",
+      2006.42
+    ],
+    [
+      "Byrd_2",
+      2005.85
+    ],
+    [
+      "Byrd_s2",
+      2003.82
+    ],
+    [
+      "Byrd_s3",
+      2005.17
+    ],
+    [
+      "Byrd_s4",
+      2004.16
+    ]
+  ],
+  "n_significant_events": 0,
+  "significant_events": [],
+  "lags_in_band_yr": [],
+  "obs_lag_band_yr": [
+    0.02,
+    2.0
+  ],
+  "median_amplitude_bound_frac": 0.2915,
+  "k_sigma": 2.0,
+  "verified_lag_value": false,
+  "verdict": "NOT CONFIRMED on this catalogue: no sustained, significant, in-band post-drainage surge on the testable outlet events; the matched test returns a quantified amplitude bound (median local floor ~29.1% of trunk speed). The literal thermal H^2/kappa kernel remains FALSIFIED (orders of magnitude off).",
+  "lakes": {
+    "Bindschadler_3": {
+      "lon": -126.653,
+      "lat": -80.024,
+      "n_pairs": 7005,
+      "median_speed_mpyr": 64.7,
+      "n_qtr_bins": 49,
+      "n_ann_bins": 17,
+      "noise_floor_qtr": 0.0869,
+      "noise_floor_ann": 0.0974,
+      "yr_range": [
+        2000.0,
+        2025.1
+      ],
+      "n_2003_2009_pairs": 75,
+      "fast": false,
+      "events": [
+        {
+          "event": {
+            "lake": "Bindschadler_3",
+            "t": 2004.8251,
+            "drop_km3": 0.074,
+            "dur_yr": 2.4351,
+            "rate": 0.0304
+          },
+          "quarterly": {
+            "t0": 2004.825,
+            "n_pre_bins": 0,
+            "n_post_bins": 2,
+            "pre_pairs": 0,
+            "post_pairs": 16,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          },
+          "annual": {
+            "t0": 2004.825,
+            "n_pre_bins": 0,
+            "n_post_bins": 1,
+            "pre_pairs": 0,
+            "post_pairs": 6,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ]
+    },
+    "Byrd_1": {
+      "lon": 148.307,
+      "lat": -81.027,
+      "n_pairs": 56748,
+      "median_speed_mpyr": 69.0,
+      "n_qtr_bins": 80,
+      "n_ann_bins": 26,
+      "noise_floor_qtr": 0.1424,
+      "noise_floor_ann": 0.1628,
+      "yr_range": [
+        1985.0,
+        2025.2
+      ],
+      "n_2003_2009_pairs": 10913,
+      "fast": true,
+      "events": [
+        {
+          "event": {
+            "lake": "Byrd_1",
+            "t": 2003.8219,
+            "drop_km3": 0.271,
+            "dur_yr": 0.3366,
+            "rate": 0.8052
+          },
+          "quarterly": {
+            "t0": 2003.822,
+            "n_pre_bins": 2,
+            "n_post_bins": 3,
+            "pre_pairs": 209,
+            "post_pairs": 127,
+            "testable": true,
+            "baseline": 93.0,
+            "sigma_bin_mpyr": 19.23,
+            "resp_frac": 0.1632,
+            "peak_sigma": 0.79,
+            "sustained_sigma": 0.2,
+            "detrend_sigma": 0.79,
+            "sustained_detrend_sigma": 0.2,
+            "lag_to_peak": 1.303,
+            "in_band": false
+          },
+          "annual": {
+            "t0": 2003.822,
+            "n_pre_bins": 1,
+            "n_post_bins": 2,
+            "pre_pairs": 152,
+            "post_pairs": 127,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        },
+        {
+          "event": {
+            "lake": "Byrd_1",
+            "t": 2005.4137,
+            "drop_km3": 0.066,
+            "dur_yr": 0.4219,
+            "rate": 0.1564
+          },
+          "quarterly": {
+            "t0": 2005.414,
+            "n_pre_bins": 3,
+            "n_post_bins": 5,
+            "pre_pairs": 127,
+            "post_pairs": 2804,
+            "testable": true,
+            "baseline": 95.2,
+            "sigma_bin_mpyr": 19.23,
+            "resp_frac": -0.0777,
+            "peak_sigma": -0.38,
+            "sustained_sigma": -1.25,
+            "detrend_sigma": -1.74,
+            "sustained_detrend_sigma": -5.68,
+            "lag_to_peak": 1.461,
+            "in_band": false
+          },
+          "annual": {
+            "t0": 2005.414,
+            "n_pre_bins": 1,
+            "n_post_bins": 3,
+            "pre_pairs": 52,
+            "post_pairs": 2879,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        },
+        {
+          "event": {
+            "lake": "Byrd_1",
+            "t": 2006.4219,
+            "drop_km3": 0.948,
+            "dur_yr": 0.8,
+            "rate": 1.185
+          },
+          "quarterly": {
+            "t0": 2006.422,
+            "n_pre_bins": 2,
+            "n_post_bins": 9,
+            "pre_pairs": 86,
+            "post_pairs": 4138,
+            "testable": true,
+            "baseline": 90.4,
+            "sigma_bin_mpyr": 26.35,
+            "resp_frac": 0.0273,
+            "peak_sigma": 0.09,
+            "sustained_sigma": -0.67,
+            "detrend_sigma": 0.09,
+            "sustained_detrend_sigma": -0.67,
+            "lag_to_peak": 2.453,
+            "in_band": false
+          },
+          "annual": {
+            "t0": 2006.422,
+            "n_pre_bins": 2,
+            "n_post_bins": 3,
+            "pre_pairs": 127,
+            "post_pairs": 4138,
+            "testable": true,
+            "baseline": 96.3,
+            "sigma_bin_mpyr": 17.57,
+            "resp_frac": -0.0884,
+            "peak_sigma": -0.49,
+            "sustained_sigma": -1.12,
+            "detrend_sigma": -0.49,
+            "sustained_detrend_sigma": -1.12,
+            "lag_to_peak": 0.078,
+            "in_band": false
+          }
+        }
+      ]
+    },
+    "Byrd_2": {
+      "lon": 146.883,
+      "lat": -80.686,
+      "n_pairs": 40398,
+      "median_speed_mpyr": 49.8,
+      "n_qtr_bins": 82,
+      "n_ann_bins": 26,
+      "noise_floor_qtr": 0.1992,
+      "noise_floor_ann": 0.1851,
+      "yr_range": [
+        1984.9,
+        2025.2
+      ],
+      "n_2003_2009_pairs": 4292,
+      "fast": true,
+      "events": [
+        {
+          "event": {
+            "lake": "Byrd_2",
+            "t": 2005.8548,
+            "drop_km3": 1.363,
+            "dur_yr": 1.3918,
+            "rate": 0.9793
+          },
+          "quarterly": {
+            "t0": 2005.855,
+            "n_pre_bins": 3,
+            "n_post_bins": 6,
+            "pre_pairs": 108,
+            "post_pairs": 1005,
+            "testable": true,
+            "baseline": 73.1,
+            "sigma_bin_mpyr": 40.99,
+            "resp_frac": 0.0562,
+            "peak_sigma": 0.1,
+            "sustained_sigma": -0.06,
+            "detrend_sigma": -4.08,
+            "sustained_detrend_sigma": -10.14,
+            "lag_to_peak": 2.02,
+            "in_band": false
+          },
+          "annual": {
+            "t0": 2005.855,
+            "n_pre_bins": 2,
+            "n_post_bins": 2,
+            "pre_pairs": 108,
+            "post_pairs": 874,
+            "testable": true,
+            "baseline": 86.2,
+            "sigma_bin_mpyr": 55.24,
+            "resp_frac": -0.1886,
+            "peak_sigma": -0.29,
+            "sustained_sigma": -0.44,
+            "detrend_sigma": -0.29,
+            "sustained_detrend_sigma": -0.44,
+            "lag_to_peak": 0.645,
+            "in_band": false
+          }
+        }
+      ]
+    },
+    "Byrd_s2": {
+      "lon": 149.542,
+      "lat": -80.765,
+      "n_pairs": 44364,
+      "median_speed_mpyr": 90.1,
+      "n_qtr_bins": 82,
+      "n_ann_bins": 26,
+      "noise_floor_qtr": 0.1163,
+      "noise_floor_ann": 0.1286,
+      "yr_range": [
+        1984.9,
+        2025.2
+      ],
+      "n_2003_2009_pairs": 5869,
+      "fast": true,
+      "events": [
+        {
+          "event": {
+            "lake": "Byrd_s2",
+            "t": 2003.8219,
+            "drop_km3": 0.071,
+            "dur_yr": 3.9616,
+            "rate": 0.0179
+          },
+          "quarterly": {
+            "t0": 2003.822,
+            "n_pre_bins": 3,
+            "n_post_bins": 3,
+            "pre_pairs": 94,
+            "post_pairs": 137,
+            "testable": true,
+            "baseline": 102.3,
+            "sigma_bin_mpyr": 48.04,
+            "resp_frac": 0.525,
+            "peak_sigma": 1.12,
+            "sustained_sigma": 0.68,
+            "detrend_sigma": 2.35,
+            "sustained_detrend_sigma": 2.05,
+            "lag_to_peak": 1.303,
+            "in_band": false
+          },
+          "annual": {
+            "t0": 2003.822,
+            "n_pre_bins": 1,
+            "n_post_bins": 2,
+            "pre_pairs": 57,
+            "post_pairs": 137,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ]
+    },
+    "Byrd_s3": {
+      "lon": 149.61,
+      "lat": -81.807,
+      "n_pairs": 46909,
+      "median_speed_mpyr": 46.6,
+      "n_qtr_bins": 81,
+      "n_ann_bins": 26,
+      "noise_floor_qtr": 0.1702,
+      "noise_floor_ann": 0.147,
+      "yr_range": [
+        1989.1,
+        2025.1
+      ],
+      "n_2003_2009_pairs": 9698,
+      "fast": true,
+      "events": [
+        {
+          "event": {
+            "lake": "Byrd_s3",
+            "t": 2005.1671,
+            "drop_km3": 0.064,
+            "dur_yr": 2.6164,
+            "rate": 0.0245
+          },
+          "quarterly": {
+            "t0": 2005.167,
+            "n_pre_bins": 3,
+            "n_post_bins": 4,
+            "pre_pairs": 126,
+            "post_pairs": 1419,
+            "testable": true,
+            "baseline": 75.0,
+            "sigma_bin_mpyr": 9.69,
+            "resp_frac": -0.2187,
+            "peak_sigma": -1.69,
+            "sustained_sigma": -5.73,
+            "detrend_sigma": 0.64,
+            "sustained_detrend_sigma": -0.56,
+            "lag_to_peak": 1.708,
+            "in_band": false
+          },
+          "annual": {
+            "t0": 2005.167,
+            "n_pre_bins": 1,
+            "n_post_bins": 3,
+            "pre_pairs": 43,
+            "post_pairs": 2567,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ]
+    },
+    "Byrd_s4": {
+      "lon": 143.716,
+      "lat": -80.753,
+      "n_pairs": 39575,
+      "median_speed_mpyr": 20.6,
+      "n_qtr_bins": 82,
+      "n_ann_bins": 26,
+      "noise_floor_qtr": 0.4864,
+      "noise_floor_ann": 0.5203,
+      "yr_range": [
+        1984.9,
+        2025.2
+      ],
+      "n_2003_2009_pairs": 4092,
+      "fast": true,
+      "events": [
+        {
+          "event": {
+            "lake": "Byrd_s4",
+            "t": 2004.1639,
+            "drop_km3": 0.065,
+            "dur_yr": 4.0,
+            "rate": 0.0163
+          },
+          "quarterly": {
+            "t0": 2004.164,
+            "n_pre_bins": 3,
+            "n_post_bins": 2,
+            "pre_pairs": 114,
+            "post_pairs": 57,
+            "testable": true,
+            "baseline": 42.6,
+            "sigma_bin_mpyr": 35.22,
+            "resp_frac": 0.2642,
+            "peak_sigma": 0.32,
+            "sustained_sigma": -0.25,
+            "detrend_sigma": -1.17,
+            "sustained_detrend_sigma": -2.09,
+            "lag_to_peak": 0.961,
+            "in_band": false
+          },
+          "annual": {
+            "t0": 2004.164,
+            "n_pre_bins": 1,
+            "n_post_bins": 3,
+            "pre_pairs": 96,
+            "post_pairs": 245,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ]
+    },
+    "Byrd_s6": {
+      "lon": 143.657,
+      "lat": -80.326,
+      "n_pairs": 28813,
+      "median_speed_mpyr": 36.1,
+      "n_qtr_bins": 81,
+      "n_ann_bins": 26,
+      "noise_floor_qtr": 0.2687,
+      "noise_floor_ann": 0.2698,
+      "yr_range": [
+        1985.0,
+        2025.2
+      ],
+      "n_2003_2009_pairs": 2208,
+      "fast": true,
+      "events": [
+        {
+          "event": {
+            "lake": "Byrd_s6",
+            "t": 2003.8685,
+            "drop_km3": 0.066,
+            "dur_yr": 3.4027,
+            "rate": 0.0194
+          },
+          "quarterly": {
+            "t0": 2003.869,
+            "n_pre_bins": 3,
+            "n_post_bins": 2,
+            "pre_pairs": 63,
+            "post_pairs": 17,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          },
+          "annual": {
+            "t0": 2003.869,
+            "n_pre_bins": 1,
+            "n_post_bins": 2,
+            "pre_pairs": 42,
+            "post_pairs": 18,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ]
+    },
+    "Cook_E1": {
+      "lon": 155.333,
+      "lat": -71.874,
+      "n_pairs": 5965,
+      "median_speed_mpyr": 8.7,
+      "n_qtr_bins": 51,
+      "n_ann_bins": 19,
+      "noise_floor_qtr": 1.2026,
+      "noise_floor_ann": 1.4018,
+      "yr_range": [
+        2000.0,
+        2025.2
+      ],
+      "n_2003_2009_pairs": 78,
+      "fast": true,
+      "events": [
+        {
+          "event": {
+            "lake": "Cook_E1",
+            "t": 2005.189,
+            "drop_km3": 0.05,
+            "dur_yr": 0.6685,
+            "rate": 0.0748
+          },
+          "quarterly": {
+            "t0": 2005.189,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          },
+          "annual": {
+            "t0": 2005.189,
+            "n_pre_bins": 0,
+            "n_post_bins": 1,
+            "pre_pairs": 0,
+            "post_pairs": 7,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ]
+    },
+    "Cook_E2": {
+      "lon": 155.658,
+      "lat": -72.835,
+      "n_pairs": 12608,
+      "median_speed_mpyr": 5.1,
+      "n_qtr_bins": 68,
+      "n_ann_bins": 21,
+      "noise_floor_qtr": 1.2638,
+      "noise_floor_ann": 0.8212,
+      "yr_range": [
+        2000.0,
+        2025.2
+      ],
+      "n_2003_2009_pairs": 258,
+      "fast": true,
+      "events": [
+        {
+          "event": {
+            "lake": "Cook_E2",
+            "t": 2004.1366,
+            "drop_km3": 0.265,
+            "dur_yr": 0.6557,
+            "rate": 0.4041
+          },
+          "quarterly": {
+            "t0": 2004.137,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          },
+          "annual": {
+            "t0": 2004.137,
+            "n_pre_bins": 1,
+            "n_post_bins": 1,
+            "pre_pairs": 8,
+            "post_pairs": 11,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        },
+        {
+          "event": {
+            "lake": "Cook_E2",
+            "t": 2005.4164,
+            "drop_km3": 2.916,
+            "dur_yr": 2.7475,
+            "rate": 1.0613
+          },
+          "quarterly": {
+            "t0": 2005.416,
+            "n_pre_bins": 0,
+            "n_post_bins": 5,
+            "pre_pairs": 0,
+            "post_pairs": 72,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          },
+          "annual": {
+            "t0": 2005.416,
+            "n_pre_bins": 0,
+            "n_post_bins": 2,
+            "pre_pairs": 0,
+            "post_pairs": 72,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ]
+    },
+    "David_1": {
+      "lon": 157.225,
+      "lat": -75.272,
+      "n_pairs": 19127,
+      "median_speed_mpyr": 91.8,
+      "n_qtr_bins": 74,
+      "n_ann_bins": 21,
+      "noise_floor_qtr": 0.0579,
+      "noise_floor_ann": 0.0578,
+      "yr_range": [
+        1989.9,
+        2025.2
+      ],
+      "n_2003_2009_pairs": 633,
+      "fast": true,
+      "events": [
+        {
+          "event": {
+            "lake": "David_1",
+            "t": 2005.1671,
+            "drop_km3": 0.073,
+            "dur_yr": 0.2493,
+            "rate": 0.2928
+          },
+          "quarterly": {
+            "t0": 2005.167,
+            "n_pre_bins": 0,
+            "n_post_bins": 4,
+            "pre_pairs": 0,
+            "post_pairs": 130,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          },
+          "annual": {
+            "t0": 2005.167,
+            "n_pre_bins": 0,
+            "n_post_bins": 2,
+            "pre_pairs": 0,
+            "post_pairs": 190,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ]
+    },
+    "David_s1": {
+      "lon": 155.521,
+      "lat": -75.335,
+      "n_pairs": 18477,
+      "median_speed_mpyr": 49.6,
+      "n_qtr_bins": 74,
+      "n_ann_bins": 21,
+      "noise_floor_qtr": 0.1802,
+      "noise_floor_ann": 0.1936,
+      "yr_range": [
+        1989.4,
+        2025.2
+      ],
+      "n_2003_2009_pairs": 704,
+      "fast": true,
+      "events": [
+        {
+          "event": {
+            "lake": "David_s1",
+            "t": 2003.8575,
+            "drop_km3": 0.102,
+            "dur_yr": 3.9616,
+            "rate": 0.0257
+          },
+          "quarterly": {
+            "t0": 2003.858,
+            "n_pre_bins": 1,
+            "n_post_bins": 0,
+            "pre_pairs": 6,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          },
+          "annual": {
+            "t0": 2003.858,
+            "n_pre_bins": 1,
+            "n_post_bins": 0,
+            "pre_pairs": 7,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ]
+    },
+    "David_s2": {
+      "lon": 152.925,
+      "lat": -75.244,
+      "n_pairs": 13077,
+      "median_speed_mpyr": 25.0,
+      "n_qtr_bins": 73,
+      "n_ann_bins": 20,
+      "noise_floor_qtr": 0.2695,
+      "noise_floor_ann": 0.1556,
+      "yr_range": [
+        2000.0,
+        2025.2
+      ],
+      "n_2003_2009_pairs": 665,
+      "fast": true,
+      "events": [
+        {
+          "event": {
+            "lake": "David_s2",
+            "t": 2003.8192,
+            "drop_km3": 0.12,
+            "dur_yr": 3.4027,
+            "rate": 0.0353
+          },
+          "quarterly": {
+            "t0": 2003.819,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          },
+          "annual": {
+            "t0": 2003.819,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ]
+    },
+    "EAP_1": {
+      "error": "RuntimeError: no datacube"
+    },
+    "Foundation_10": {
+      "error": "RuntimeError: no datacube"
+    },
+    "Foundation_13": {
+      "error": "RuntimeError: no datacube"
+    },
+    "Foundation_4": {
+      "error": "RuntimeError: empty box series (centroid outside cube coverage)"
+    },
+    "Foundation_6": {
+      "error": "RuntimeError: no datacube"
+    },
+    "Foundation_9": {
+      "error": "RuntimeError: no datacube"
+    },
+    "Foundation_N1": {
+      "error": "RuntimeError: empty box series (centroid outside cube coverage)"
+    },
+    "Kamb_3": {
+      "lon": -128.605,
+      "lat": -81.935,
+      "n_pairs": 8465,
+      "median_speed_mpyr": 28.5,
+      "n_qtr_bins": 46,
+      "n_ann_bins": 13,
+      "noise_floor_qtr": 0.1622,
+      "noise_floor_ann": 0.077,
+      "yr_range": [
+        2007.9,
+        2025.1
+      ],
+      "n_2003_2009_pairs": 4,
+      "fast": false,
+      "events": [
+        {
+          "event": {
+            "lake": "Kamb_3",
+            "t": 2004.1393,
+            "drop_km3": 0.053,
+            "dur_yr": 3.6223,
+            "rate": 0.0146
+          },
+          "quarterly": {
+            "t0": 2004.139,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          },
+          "annual": {
+            "t0": 2004.139,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ]
+    },
+    "Kamb_5": {
+      "lon": -127.493,
+      "lat": -82.271,
+      "n_pairs": 5450,
+      "median_speed_mpyr": 32.9,
+      "n_qtr_bins": 44,
+      "n_ann_bins": 13,
+      "noise_floor_qtr": 0.1458,
+      "noise_floor_ann": 0.0466,
+      "yr_range": [
+        2000.0,
+        2025.1
+      ],
+      "n_2003_2009_pairs": 4,
+      "fast": false,
+      "events": [
+        {
+          "event": {
+            "lake": "Kamb_5",
+            "t": 2004.1721,
+            "drop_km3": 0.181,
+            "dur_yr": 2.2772,
+            "rate": 0.0795
+          },
+          "quarterly": {
+            "t0": 2004.172,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          },
+          "annual": {
+            "t0": 2004.172,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ]
+    },
+    "Lambert_1": {
+      "lon": 68.272,
+      "lat": -74.002,
+      "n_pairs": 4704,
+      "median_speed_mpyr": 276.8,
+      "n_qtr_bins": 24,
+      "n_ann_bins": 13,
+      "noise_floor_qtr": 0.0092,
+      "noise_floor_ann": 0.0048,
+      "yr_range": [
+        2013.9,
+        2025.2
+      ],
+      "n_2003_2009_pairs": 0,
+      "fast": true,
+      "events": [
+        {
+          "event": {
+            "lake": "Lambert_1",
+            "t": 2003.8301,
+            "drop_km3": 0.839,
+            "dur_yr": 3.9616,
+            "rate": 0.2118
+          },
+          "quarterly": {
+            "t0": 2003.83,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          },
+          "annual": {
+            "t0": 2003.83,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ]
+    },
+    "Ninnis_1": {
+      "lon": 149.714,
+      "lat": -69.66,
+      "n_pairs": 3044,
+      "median_speed_mpyr": 65.6,
+      "n_qtr_bins": 46,
+      "n_ann_bins": 22,
+      "noise_floor_qtr": 0.1857,
+      "noise_floor_ann": 0.137,
+      "yr_range": [
+        2000.1,
+        2025.2
+      ],
+      "n_2003_2009_pairs": 163,
+      "fast": true,
+      "events": [
+        {
+          "event": {
+            "lake": "Ninnis_1",
+            "t": 2004.8005,
+            "drop_km3": 0.129,
+            "dur_yr": 1.6378,
+            "rate": 0.0788
+          },
+          "quarterly": {
+            "t0": 2004.801,
+            "n_pre_bins": 2,
+            "n_post_bins": 1,
+            "pre_pairs": 27,
+            "post_pairs": 8,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          },
+          "annual": {
+            "t0": 2004.801,
+            "n_pre_bins": 2,
+            "n_post_bins": 1,
+            "pre_pairs": 27,
+            "post_pairs": 8,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ]
+    },
+    "Ninnis_2": {
+      "lon": 149.381,
+      "lat": -70.841,
+      "n_pairs": 8949,
+      "median_speed_mpyr": 27.1,
+      "n_qtr_bins": 67,
+      "n_ann_bins": 20,
+      "noise_floor_qtr": 0.2917,
+      "noise_floor_ann": 0.1628,
+      "yr_range": [
+        2000.0,
+        2025.2
+      ],
+      "n_2003_2009_pairs": 233,
+      "fast": true,
+      "events": [
+        {
+          "event": {
+            "lake": "Ninnis_2",
+            "t": 2003.8274,
+            "drop_km3": 0.078,
+            "dur_yr": 2.6027,
+            "rate": 0.03
+          },
+          "quarterly": {
+            "t0": 2003.827,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          },
+          "annual": {
+            "t0": 2003.827,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ]
+    },
+    "Rutford_1": {
+      "lon": -84.161,
+      "lat": -78.181,
+      "n_pairs": 3471,
+      "median_speed_mpyr": 381.9,
+      "n_qtr_bins": 24,
+      "n_ann_bins": 13,
+      "noise_floor_qtr": 0.0571,
+      "noise_floor_ann": 0.0322,
+      "yr_range": [
+        2000.0,
+        2025.2
+      ],
+      "n_2003_2009_pairs": 5,
+      "fast": true,
+      "events": [
+        {
+          "event": {
+            "lake": "Rutford_1",
+            "t": 2007.1918,
+            "drop_km3": 0.119,
+            "dur_yr": 0.9394,
+            "rate": 0.1267
+          },
+          "quarterly": {
+            "t0": 2007.192,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          },
+          "annual": {
+            "t0": 2007.192,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ]
+    },
+    "Slessor_1": {
+      "lon": -25.286,
+      "lat": -80.035,
+      "n_pairs": 8264,
+      "median_speed_mpyr": 424.0,
+      "n_qtr_bins": 48,
+      "n_ann_bins": 19,
+      "noise_floor_qtr": 0.0121,
+      "noise_floor_ann": 0.0164,
+      "yr_range": [
+        1985.0,
+        2025.2
+      ],
+      "n_2003_2009_pairs": 318,
+      "fast": true,
+      "events": [
+        {
+          "event": {
+            "lake": "Slessor_1",
+            "t": 2003.8384,
+            "drop_km3": 0.228,
+            "dur_yr": 2.0137,
+            "rate": 0.1132
+          },
+          "quarterly": {
+            "t0": 2003.838,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          },
+          "annual": {
+            "t0": 2003.838,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ]
+    },
+    "Slessor_5": {
+      "lon": -17.049,
+      "lat": -79.199,
+      "n_pairs": 7482,
+      "median_speed_mpyr": 78.6,
+      "n_qtr_bins": 53,
+      "n_ann_bins": 19,
+      "noise_floor_qtr": 0.1909,
+      "noise_floor_ann": 0.1327,
+      "yr_range": [
+        1985.0,
+        2025.2
+      ],
+      "n_2003_2009_pairs": 115,
+      "fast": true,
+      "events": [
+        {
+          "event": {
+            "lake": "Slessor_5",
+            "t": 2004.194,
+            "drop_km3": 0.054,
+            "dur_yr": 2.017,
+            "rate": 0.0268
+          },
+          "quarterly": {
+            "t0": 2004.194,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          },
+          "annual": {
+            "t0": 2004.194,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ]
+    },
+    "Slessor_6": {
+      "lon": -14.291,
+      "lat": -78.769,
+      "n_pairs": 5408,
+      "median_speed_mpyr": 83.9,
+      "n_qtr_bins": 51,
+      "n_ann_bins": 22,
+      "noise_floor_qtr": 0.1976,
+      "noise_floor_ann": 0.0851,
+      "yr_range": [
+        1986.1,
+        2025.2
+      ],
+      "n_2003_2009_pairs": 173,
+      "fast": true,
+      "events": [
+        {
+          "event": {
+            "lake": "Slessor_6",
+            "t": 2004.2022,
+            "drop_km3": 0.084,
+            "dur_yr": 3.0636,
+            "rate": 0.0274
+          },
+          "quarterly": {
+            "t0": 2004.202,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          },
+          "annual": {
+            "t0": 2004.202,
+            "n_pre_bins": 0,
+            "n_post_bins": 1,
+            "pre_pairs": 0,
+            "post_pairs": 10,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ]
+    },
+    "Totten_1": {
+      "lon": 107.504,
+      "lat": -70.111,
+      "n_pairs": 9173,
+      "median_speed_mpyr": 12.3,
+      "n_qtr_bins": 61,
+      "n_ann_bins": 20,
+      "noise_floor_qtr": 0.6768,
+      "noise_floor_ann": 0.7725,
+      "yr_range": [
+        2000.0,
+        2025.2
+      ],
+      "n_2003_2009_pairs": 102,
+      "fast": true,
+      "events": [
+        {
+          "event": {
+            "lake": "Totten_1",
+            "t": 2003.8301,
+            "drop_km3": 0.874,
+            "dur_yr": 2.011,
+            "rate": 0.4346
+          },
+          "quarterly": {
+            "t0": 2003.83,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          },
+          "annual": {
+            "t0": 2003.83,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ]
+    },
+    "Totten_2": {
+      "lon": 110.513,
+      "lat": -70.83,
+      "n_pairs": 8894,
+      "median_speed_mpyr": 25.7,
+      "n_qtr_bins": 60,
+      "n_ann_bins": 20,
+      "noise_floor_qtr": 0.3839,
+      "noise_floor_ann": 0.3566,
+      "yr_range": [
+        2000.0,
+        2025.2
+      ],
+      "n_2003_2009_pairs": 96,
+      "fast": true,
+      "events": [
+        {
+          "event": {
+            "lake": "Totten_2",
+            "t": 2004.1749,
+            "drop_km3": 0.6,
+            "dur_yr": 1.2443,
+            "rate": 0.4822
+          },
+          "quarterly": {
+            "t0": 2004.175,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          },
+          "annual": {
+            "t0": 2004.175,
+            "n_pre_bins": 0,
+            "n_post_bins": 1,
+            "pre_pairs": 0,
+            "post_pairs": 9,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        },
+        {
+          "event": {
+            "lake": "Totten_2",
+            "t": 2006.8575,
+            "drop_km3": 0.322,
+            "dur_yr": 0.9315,
+            "rate": 0.3457
+          },
+          "quarterly": {
+            "t0": 2006.858,
+            "n_pre_bins": 0,
+            "n_post_bins": 4,
+            "pre_pairs": 0,
+            "post_pairs": 32,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          },
+          "annual": {
+            "t0": 2006.858,
+            "n_pre_bins": 1,
+            "n_post_bins": 2,
+            "pre_pairs": 9,
+            "post_pairs": 23,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ]
+    },
+    "Whillans_6": {
+      "lon": -136.926,
+      "lat": -83.847,
+      "n_pairs": 15,
+      "median_speed_mpyr": 105.9,
+      "n_qtr_bins": 0,
+      "n_ann_bins": 0,
+      "noise_floor_qtr": null,
+      "noise_floor_ann": null,
+      "yr_range": [
+        2017.6,
+        2022.1
+      ],
+      "n_2003_2009_pairs": 0,
+      "fast": false,
+      "events": [
+        {
+          "event": {
+            "lake": "Whillans_6",
+            "t": 2004.1885,
+            "drop_km3": 0.116,
+            "dur_yr": 2.6827,
+            "rate": 0.0432
+          },
+          "quarterly": {
+            "t0": 2004.188,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          },
+          "annual": {
+            "t0": 2004.188,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ]
+    }
+  }
+}

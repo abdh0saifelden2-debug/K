@@ -1,0 +1,263 @@
+{
+  "what": "\u00a7H.1.6 effective-pressure gating recomputed with a direct, phi-free BedMachine effective pressure N = rho_i g (H - H_flot), n_hat=1-H_flot/H, head-to-head vs the Bedmap2 rel=m/H proxy",
+  "N_definition": "N = rho_i g (H - H_flot); n_hat = 1 - H_flot/H (ocean-connected, phi-free)",
+  "rho_i": 917.0,
+  "rho_w": 1028.0,
+  "g": 9.81,
+  "median_N_MPa_at_GL": 0.3099,
+  "n_points_with_both_proxies": 10016,
+  "bedmachine_direct_N": {
+    "domains": {
+      "CONTINENTAL": {
+        "n": 10473,
+        "n_usable": 7958,
+        "terciles_P1": {
+          "rel_terciles": [
+            0.09996805316854185,
+            0.5033309586647616
+          ],
+          "low_rel_near_flotation": {
+            "n": 2654,
+            "median_rel": 0.03514380097831915,
+            "median_TF": 0.17246212307501,
+            "TF_slope": 0.38615832725479543,
+            "r": 0.276343249061395,
+            "ci95": [
+              0.3353808766318071,
+              0.4348411181427083
+            ]
+          },
+          "mid_rel": {
+            "n": 2658,
+            "median_rel": 0.1982983470459817,
+            "median_TF": 0.19379300209225075,
+            "TF_slope": 0.4738580842707573,
+            "r": 0.46784550725001256,
+            "ci95": [
+              0.4409745819815861,
+              0.5069393820766196
+            ]
+          },
+          "high_rel_well_grounded": {
+            "n": 2646,
+            "median_rel": 1.0,
+            "median_TF": 0.48863203276768186,
+            "TF_slope": 0.3779013541578189,
+            "r": 0.3115606940963632,
+            "ci95": [
+              0.3383140482959487,
+              0.4195953772372199
+            ]
+          }
+        },
+        "interaction_P2": {
+          "n": 7958,
+          "b_TF": 0.4595932094288378,
+          "c_lnrel": -0.18531512565403682,
+          "d_interaction": 0.03141237313474196,
+          "d_ci95": [
+            0.013504325532603487,
+            0.04901557709959159
+          ],
+          "r2": 0.1384448395257878,
+          "TF_slope_lowrel": 0.337216177929894,
+          "TF_slope_highrel": 0.4595932094288378,
+          "rel_p10": 0.020326647956810943,
+          "rel_p90": 1.0
+        }
+      },
+      "MARINE_WEST": {
+        "n": 6238,
+        "n_usable": 5964,
+        "terciles_P1": {
+          "rel_terciles": [
+            0.11306258579226158,
+            0.5241771423903235
+          ],
+          "low_rel_near_flotation": {
+            "n": 1994,
+            "median_rel": 0.042563881472886034,
+            "median_TF": 0.16067951139123943,
+            "TF_slope": 0.6203644812159449,
+            "r": 0.5532766745476168,
+            "ci95": [
+              0.5764404051365369,
+              0.6640145596504533
+            ]
+          },
+          "mid_rel": {
+            "n": 2015,
+            "median_rel": 0.23189441378302666,
+            "median_TF": 0.19379300209225075,
+            "TF_slope": 0.6163562305867271,
+            "r": 0.6326594768416327,
+            "ci95": [
+              0.5817942982696751,
+              0.6519667749142022
+            ]
+          },
+          "high_rel_well_grounded": {
+            "n": 1955,
+            "median_rel": 1.0,
+            "median_TF": 0.21765586899238504,
+            "TF_slope": 0.463938441749289,
+            "r": 0.4665191804781412,
+            "ci95": [
+              0.4244153107360313,
+              0.5024308518622056
+            ]
+          }
+        },
+        "interaction_P2": {
+          "n": 5964,
+          "b_TF": 0.5019054122327046,
+          "c_lnrel": -0.007928849314370908,
+          "d_interaction": -0.03508042456771511,
+          "d_ci95": [
+            -0.05212636446135426,
+            -0.01888117755253088
+          ],
+          "r2": 0.2981221572097482,
+          "TF_slope_lowrel": 0.6322703058011815,
+          "TF_slope_highrel": 0.5019054122327046,
+          "rel_p10": 0.024326911842701967,
+          "rel_p90": 1.0
+        }
+      }
+    },
+    "gating_supported": true,
+    "interaction_d": -0.03508042456771511,
+    "interaction_ci": [
+      -0.05212636446135426,
+      -0.01888117755253088
+    ]
+  },
+  "bedmap2_rel_proxy": {
+    "domains": {
+      "CONTINENTAL": {
+        "n": 10473,
+        "n_usable": 7937,
+        "terciles_P1": {
+          "rel_terciles": [
+            0.2310634291102543,
+            0.64352675582085
+          ],
+          "low_rel_near_flotation": {
+            "n": 2660,
+            "median_rel": 0.10684724214092674,
+            "median_TF": 0.19138140689483457,
+            "TF_slope": 0.3498089610078838,
+            "r": 0.2637049634646311,
+            "ci95": [
+              0.30646770442359433,
+              0.39597827411141495
+            ]
+          },
+          "mid_rel": {
+            "n": 2653,
+            "median_rel": 0.35864456767493963,
+            "median_TF": 0.17683608503474532,
+            "TF_slope": 0.4115715256815837,
+            "r": 0.37245718209630446,
+            "ci95": [
+              0.3748680168497468,
+              0.4476843799637452
+            ]
+          },
+          "high_rel_well_grounded": {
+            "n": 2624,
+            "median_rel": 1.0,
+            "median_TF": 0.4886861204799917,
+            "TF_slope": 0.40689359333068553,
+            "r": 0.3613704571330749,
+            "ci95": [
+              0.36861327847994363,
+              0.44579002781810834
+            ]
+          }
+        },
+        "interaction_P2": {
+          "n": 7937,
+          "b_TF": 0.4005877635257143,
+          "c_lnrel": -0.20540586087562618,
+          "d_interaction": -0.004241645685807468,
+          "d_ci95": [
+            -0.025627666571740416,
+            0.017581636204076594
+          ],
+          "r2": 0.1417560781507201,
+          "TF_slope_lowrel": 0.4124849146750792,
+          "TF_slope_highrel": 0.4005877635257143,
+          "rel_p10": 0.060516258083860734,
+          "rel_p90": 1.0
+        }
+      },
+      "MARINE_WEST": {
+        "n": 6238,
+        "n_usable": 5964,
+        "terciles_P1": {
+          "rel_terciles": [
+            0.24391130498000732,
+            0.5909033672841486
+          ],
+          "low_rel_near_flotation": {
+            "n": 1995,
+            "median_rel": 0.1481927013523772,
+            "median_TF": 0.3395289858102632,
+            "TF_slope": 0.6714161640935256,
+            "r": 0.5659935633670395,
+            "ci95": [
+              0.6244238301910672,
+              0.714902237503415
+            ]
+          },
+          "mid_rel": {
+            "n": 2005,
+            "median_rel": 0.36162607536653346,
+            "median_TF": 0.16067951139123943,
+            "TF_slope": 0.4453784424846601,
+            "r": 0.5304230418453657,
+            "ci95": [
+              0.41212740420128163,
+              0.478504267912268
+            ]
+          },
+          "high_rel_well_grounded": {
+            "n": 1964,
+            "median_rel": 1.0,
+            "median_TF": 0.7434389170020838,
+            "TF_slope": 0.5127566312525544,
+            "r": 0.5047440186991642,
+            "ci95": [
+              0.47497957337238733,
+              0.5521376772497207
+            ]
+          }
+        },
+        "interaction_P2": {
+          "n": 5964,
+          "b_TF": 0.44174629485404854,
+          "c_lnrel": 0.062497008952052714,
+          "d_interaction": -0.1001834155159487,
+          "d_ci95": [
+            -0.12227693635794383,
+            -0.07793990479096068
+          ],
+          "r2": 0.31238787425443315,
+          "TF_slope_lowrel": 0.6822515643445083,
+          "TF_slope_highrel": 0.44174629485404854,
+          "rel_p10": 0.09065904828247733,
+          "rel_p90": 1.0
+        }
+      }
+    },
+    "gating_supported": true,
+    "interaction_d": -0.1001834155159487,
+    "interaction_ci": [
+      -0.12227693635794383,
+      -0.07793990479096068
+    ]
+  },
+  "verdict": "BedMachine direct phi-free N REPRODUCES the marine-West gating (interaction d=-0.035 CI[-0.052,-0.019], d ln u_*/dTF +0.62/degC near flotation vs +0.46/degC well grounded); the Bedmap2-rel proxy gives d=-0.100 CI[-0.122,-0.078]. The effective-pressure reading is robust to a more-direct, independent N.",
+  "caveats": "N assumes an ocean-connected hydraulic head at the bed (the relevant limit near grounding lines); truly-measured N needs boreholes/seismic. n_hat is the most-direct N obtainable from open gridded geometry. Speed/N are correlated (fast ice rides near flotation); the interaction term controls main effects, not every confound; bootstrap CIs ignore spatial autocorrelation."
+}

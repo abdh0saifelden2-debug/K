@@ -1,0 +1,16 @@
+{
+  "test": "Part 9c — 3D closure benchmark (vortex-stretching extension of Part 9b), reproduced on GPU",
+  "runner": "general_two_clocks/run_closure3d.py --gpu --n 128 --kc 24 --nu 0.0012 --steps 2500",
+  "where": "Kaggle notebook, Tesla P100-PCIE-16GB, cupy 14.0.1",
+  "meta": {"n": 128, "kc": 24, "nu": 0.0012, "steps": 2500, "backend": "cupy", "ke": 0.03490705074914602},
+  "div_scores": {"truth": 1.0e-14, "surrogate": 9.9e+00},
+  "transfer_corrs": {"Smagorinsky": -0.641, "surrogate": 0.26832545320737655, "projected-FDT": 0.9997222850131601},
+  "net_transfer": -452255916.4560504,
+  "smagorinsky_purely_dissipative_T_le_0_all_k": true,
+  "enstrophy_norm_wSw_star": 0.1679250790713831,
+  "alignment_abs_cos": {"extensional_e1": 0.47855341103669646, "intermediate_e2": 0.6535814566200705, "compressive_e3": 0.3254259117627024, "n_points": 400000},
+  "flux": {"mean_flux_true": 0.0001028310899655596, "mean_flux_smag": 0.0012418580446798136, "backscatter_fraction_true": 0.48015499114990234, "backscatter_fraction_smag": 0.0, "pi_true_std": 0.0017660660167359234},
+  "committed_reference": {"ke": "3.491e-02", "wSw_star": 0.168, "div_truth": "1.05e-14", "div_surrogate": "9.85e+00"},
+  "verdict": "Reproduces Part 9c exactly: forward cascade (net T_true<0), FDT transfer corr 1.000 vs Smagorinsky -0.641; the 3D-only physics confirmed — vortex-stretching production <wSw>*=0.168 (=0 in 2D), intermediate-eigenvector alignment highest (|cos e2|=0.654), and ~half the volume in backscatter for truth (0.480) which Smagorinsky has at exactly 0.000.",
+  "note": "Re-run of the committed Tesla P100 benchmark (commit f0e63fd). Numbers are not bit-identical (forced-DNS round-off) but match the committed Fig 61-64 / REPORT_CLOSURE3D.md verdicts."
+}

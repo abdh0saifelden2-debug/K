@@ -1,0 +1,16 @@
+{
+  "test": "RESULT 11 / Theorem 3 — Counter-Gradient parameter C_G on a 3D active-buoyancy LES, reproduced on GPU",
+  "runner": "glaciers/theorem3_cg_gpu_probe.py",
+  "where": "Kaggle notebook, Tesla P100-PCIE-16GB, cupy 14.0.1",
+  "config": {"backend": "cupy(GPU)", "n": 64, "bs_tau": 0.05, "nseeds": 3, "spinup": 400, "measure": 600, "sample_every": 5, "Ri_sweep": [0.0, 0.25, 0.5, 0.75, 1.0, 1.5], "wall_time_s": 531.8},
+  "C_G_two_clocks_fluid": -0.5980,
+  "C_G_two_clocks_band": -0.3256,
+  "C_G_smagorinsky_fluid": -0.6038,
+  "C_G_smagorinsky_band": -0.3208,
+  "R_two_clocks_over_smag": 1.0004,
+  "max_counter_gradient_departure": 0.6744,
+  "has_melt_hump": false,
+  "verdict": "PARTIAL: counter-gradient flux present but no co-located melt hump",
+  "committed_reference": {"C_G_fluid_mean_Ri0": -0.5979553514499275, "C_G_band_mean_Ri0": -0.32558713116989585, "max_counter_gradient_departure": 0.6744212765071271, "has_melt_hump": false},
+  "interpretation": "C_G(band) = -0.326 > -1 means heat in the lee band is carried counter-gradient (the global pressure field's memory), which a down-gradient eddy diffusivity (C_G = -1 by construction) structurally cannot represent. The departure (C_G+1) peaks at +0.674. But it does not co-locate with a basal melt hump (peak R = 1.0004), so the result is honestly PARTIAL. Reproduces committed Fig 52 (52_theorem3_cg.json)."
+}
