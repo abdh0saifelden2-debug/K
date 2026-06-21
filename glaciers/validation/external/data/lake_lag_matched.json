@@ -1,0 +1,277 @@
+{
+  "_description": "Derived matched-data artifact for the section H.2 / G.4 lag test. Drainage dates derived from open CryoSat-2 in-lake elevation series; surface-velocity response from open ITS_LIVE datacubes (box-mean surface speed at the lake centroid). Annual bins (median + 16/84 bootstrap CI + count) are the stable estimator (noise_floor_frac ~1%); quarterly bins are also well resolved (quarterly_scatter_frac ~2-3%). The lag VALUE is not verifiable from this record for two reasons that are NOT velocity noise: (1) the derived sub-annual lag (t* p95 ~0.1 yr) is finer than the finest robust bin (quarterly, 0.25 yr), so a brief post-drainage transient is temporally aliased; and (2) the time-integrated response is below detection (peak ~0.56 sigma), bounding any sustained surge to a few percent. See lag_fit_real.run() for the full logic.",
+  "_sources": {
+    "cs2_elevation": "mrsiegfried/Siegfried2021-GRL data/cs2/proc_out/<lake>/<lake>_elevs.dat (CryoSat-2 monthly in-lake mean elevation, 2010.6-2020.5)",
+    "lake_outlines": "Siegfried & Fricker (2018) outlines (same repo), EPSG:3031",
+    "velocity": "ITS_LIVE datacubes (anon S3), box-mean surface speed at lake centroid",
+    "drainage_dates_note": "The vetted full 131-lake volume-change catalogue remains USAP-DC-gated; these 5 marquee lakes have OPEN CS2 series."
+  },
+  "_obs_lag_band_yr": [
+    0.02,
+    2.0
+  ],
+  "_derived_tstar_yr": {
+    "baseline": 0.01,
+    "p50": 0.012,
+    "p75": 0.027,
+    "p95": 0.1
+  },
+  "_thermal_tau_median_yr": 151000.0,
+  "lakes": {
+    "Mac1": {
+      "outline": "Mac1",
+      "has_velocity": true,
+      "median_speed_mpyr": 421.8,
+      "noise_floor_frac": 0.0097,
+      "quarterly_scatter_frac": 0.0228,
+      "drainage_events": [
+        {
+          "t_peak": 2012.125,
+          "t_trough": 2012.708,
+          "drop_m": 6.43
+        },
+        {
+          "t_peak": 2015.458,
+          "t_trough": 2015.958,
+          "drop_m": 4.24
+        },
+        {
+          "t_peak": 2019.625,
+          "t_trough": 2020.292,
+          "drop_m": 6.05
+        }
+      ],
+      "velocity_annual": [
+        {
+          "t": 2013.5,
+          "v": 419.1,
+          "ci_lo": 416.2,
+          "ci_hi": 420.3,
+          "n": 42
+        },
+        {
+          "t": 2014.5,
+          "v": 425.3,
+          "ci_lo": 423.7,
+          "ci_hi": 426.7,
+          "n": 114
+        },
+        {
+          "t": 2015.5,
+          "v": 415.6,
+          "ci_lo": 414.2,
+          "ci_hi": 416.5,
+          "n": 113
+        },
+        {
+          "t": 2016.5,
+          "v": 424.1,
+          "ci_lo": 423.0,
+          "ci_hi": 425.7,
+          "n": 117
+        },
+        {
+          "t": 2017.5,
+          "v": 429.7,
+          "ci_lo": 428.7,
+          "ci_hi": 430.3,
+          "n": 129
+        },
+        {
+          "t": 2018.5,
+          "v": 422.1,
+          "ci_lo": 420.1,
+          "ci_hi": 423.5,
+          "n": 231
+        },
+        {
+          "t": 2019.5,
+          "v": 421.5,
+          "ci_lo": 420.5,
+          "ci_hi": 422.2,
+          "n": 320
+        },
+        {
+          "t": 2020.5,
+          "v": 418.7,
+          "ci_lo": 417.4,
+          "ci_hi": 421.4,
+          "n": 175
+        }
+      ],
+      "elev_amplitude_m": 6.65
+    },
+    "Mac2": {
+      "outline": "Mac2",
+      "has_velocity": true,
+      "median_speed_mpyr": 402.0,
+      "noise_floor_frac": 0.0105,
+      "quarterly_scatter_frac": 0.0209,
+      "drainage_events": [
+        {
+          "t_peak": 2014.208,
+          "t_trough": 2014.958,
+          "drop_m": 1.48
+        }
+      ],
+      "velocity_annual": [
+        {
+          "t": 2013.5,
+          "v": 404.5,
+          "ci_lo": 403.7,
+          "ci_hi": 406.9,
+          "n": 36
+        },
+        {
+          "t": 2014.5,
+          "v": 403.2,
+          "ci_lo": 402.2,
+          "ci_hi": 404.5,
+          "n": 121
+        },
+        {
+          "t": 2015.5,
+          "v": 392.2,
+          "ci_lo": 391.6,
+          "ci_hi": 393.9,
+          "n": 124
+        },
+        {
+          "t": 2016.5,
+          "v": 400.9,
+          "ci_lo": 399.0,
+          "ci_hi": 405.7,
+          "n": 120
+        },
+        {
+          "t": 2017.5,
+          "v": 407.3,
+          "ci_lo": 405.8,
+          "ci_hi": 408.1,
+          "n": 104
+        },
+        {
+          "t": 2018.5,
+          "v": 404.2,
+          "ci_lo": 402.6,
+          "ci_hi": 405.3,
+          "n": 183
+        },
+        {
+          "t": 2019.5,
+          "v": 400.6,
+          "ci_lo": 399.7,
+          "ci_hi": 401.4,
+          "n": 195
+        },
+        {
+          "t": 2020.5,
+          "v": 400.2,
+          "ci_lo": 398.7,
+          "ci_hi": 401.0,
+          "n": 164
+        }
+      ],
+      "elev_amplitude_m": 2.27
+    },
+    "Mac3": {
+      "outline": "Mac3",
+      "has_velocity": true,
+      "median_speed_mpyr": 394.1,
+      "noise_floor_frac": 0.0105,
+      "quarterly_scatter_frac": 0.0336,
+      "drainage_events": [
+        {
+          "t_peak": 2011.792,
+          "t_trough": 2012.625,
+          "drop_m": 3.11
+        }
+      ],
+      "velocity_annual": [
+        {
+          "t": 2013.5,
+          "v": 393.6,
+          "ci_lo": 391.3,
+          "ci_hi": 395.8,
+          "n": 48
+        },
+        {
+          "t": 2014.5,
+          "v": 396.8,
+          "ci_lo": 395.5,
+          "ci_hi": 397.8,
+          "n": 133
+        },
+        {
+          "t": 2015.5,
+          "v": 394.6,
+          "ci_lo": 394.0,
+          "ci_hi": 395.7,
+          "n": 134
+        },
+        {
+          "t": 2016.5,
+          "v": 395.9,
+          "ci_lo": 394.7,
+          "ci_hi": 397.2,
+          "n": 104
+        },
+        {
+          "t": 2017.5,
+          "v": 395.3,
+          "ci_lo": 393.1,
+          "ci_hi": 396.8,
+          "n": 130
+        },
+        {
+          "t": 2018.5,
+          "v": 393.5,
+          "ci_lo": 393.0,
+          "ci_hi": 394.8,
+          "n": 219
+        },
+        {
+          "t": 2019.5,
+          "v": 393.1,
+          "ci_lo": 392.7,
+          "ci_hi": 393.5,
+          "n": 410
+        },
+        {
+          "t": 2020.5,
+          "v": 382.7,
+          "ci_lo": 382.1,
+          "ci_hi": 383.8,
+          "n": 353
+        }
+      ],
+      "elev_amplitude_m": 3.55
+    },
+    "Mercer": {
+      "outline": "MercerSubglacialLake",
+      "has_velocity": false,
+      "velocity_note": "ITS_LIVE returns 0-1 finite samples at this slow ice-plain lake (box-mean speed unresolved); response side not measurable from satellite.",
+      "drainage_events": [
+        {
+          "t_peak": 2012.542,
+          "t_trough": 2013.208,
+          "drop_m": 5.98
+        }
+      ],
+      "elev_amplitude_m": 7.45
+    },
+    "Conway": {
+      "outline": "ConwaySubglacialLake",
+      "has_velocity": false,
+      "velocity_note": "ITS_LIVE returns 0-1 finite samples at this slow ice-plain lake (box-mean speed unresolved); response side not measurable from satellite.",
+      "drainage_events": [
+        {
+          "t_peak": 2013.125,
+          "t_trough": 2014.292,
+          "drop_m": 4.94
+        }
+      ],
+      "elev_amplitude_m": 7.06
+    }
+  }
+}
