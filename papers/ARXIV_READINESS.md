@@ -79,4 +79,4 @@ should be smoothed so each paper stands on its own.
 5. Tag a release / pin the commit, and use full GitHub URLs in the Reproduce sections.
 6. Secure an endorser in the chosen category; submit LaTeX source; verify metadata.
 
-Items 1–5 are mechanical and do not change any result; I can do them on request.
+
