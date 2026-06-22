@@ -629,6 +629,4 @@ proved wrong on purpose, which is exactly how science is supposed to work."*
 
 ---
 
-*Every concept above is used in Papers 1–4 in this repository. If a term in the papers
-isn't here, tell me and I'll add it. The full papers, code, and data are in the public
-repository.*
+
