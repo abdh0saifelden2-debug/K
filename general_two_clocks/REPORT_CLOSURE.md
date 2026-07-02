@@ -9,7 +9,7 @@ three models on three diagnostics.
 
 ## 1. Force spectrum E_m(k) (figure 28)
 
-![force spectrum](28_closure_force_spectrum.png)
+![force spectrum](./figures/28_closure_force_spectrum.png)
 
 - **Smagorinsky** captures the rough magnitude but over-dissipates near k_c (the
   well-known Smagorinsky cusp problem).
@@ -20,7 +20,7 @@ three models on three diagnostics.
 
 ## 2. Structural solenoidality — RMS ∇·m (figure 29)
 
-![divergence](29_closure_divergence.png)
+![divergence](./figures/29_closure_divergence.png)
 
 | model | relative RMS(∇·m) |
 |---|---|
