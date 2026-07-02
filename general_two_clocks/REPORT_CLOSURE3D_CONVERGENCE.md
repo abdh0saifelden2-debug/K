@@ -36,7 +36,7 @@ same hardware/stack class behind the committed headline (PAPER_OUTLINE.md). Wall
 | RMS div(m), surrogate | 9.85 | 10.21 | 9.76 | 9.85 |
 | net transfer `Σ_k T_true` (extensive) | −4.5e8 | −1.9e9 | −4.7e9 | −4.5e8 |
 
-![convergence](65_closure3d_convergence.png)
+![convergence](./figures/65_closure3d_convergence.png)
 
 ## What this shows
 
@@ -80,7 +80,7 @@ filter-independent by construction (KE `0.0351`, `⟨ωSω⟩* = 0.168`, interme
 | RMS div(m), projected-FDT | 1.4e-14 | 1.4e-14 | 1.5e-14 |
 | RMS div(m), surrogate | 6.5 | 9.8 | 13.1 |
 
-![filter sweep](66_closure3d_filtersweep.png)
+![filter sweep](./figures/66_closure3d_filtersweep.png)
 
 The verdicts hold at every cutoff: **Smagorinsky carries exactly zero backscatter** while
 truth carries ~½, the **projected-FDT transfer correlation stays `≥0.999`**, and the
