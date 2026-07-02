@@ -10,8 +10,8 @@ This report tests the physical claims in the hypothesis against real surface-atm
 - Cross-correlation: solar radiation leads temperature by **+2.0 h** and leads the sensible heat flux by **+3.0 h**.
 - Sensible heat flux H peaks at **9.5 h** and is positive (upward, buoyant) by day, negative (downward) at night - exactly the "hot air floats up" mechanism.
 
-![diurnal](01_diurnal_composites.png)
-![leadlag](02_lead_lag.png)
+![diurnal](./figures/01_diurnal_composites.png)
+![leadlag](./figures/02_lead_lag.png)
 
 **Verdict:** supported. The sun is the clock that sets temperature, and daytime heating does drive buoyant upward heat transport.
 
