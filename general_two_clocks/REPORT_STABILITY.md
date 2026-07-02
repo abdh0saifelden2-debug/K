@@ -8,7 +8,7 @@ A first-order / K-theory closure assumes momentum and heat are stirred by the sa
 
 Stability follows the expected daily rhythm - convective/unstable by day, stable by night (figure 6).
 
-![stability](06_stability_distribution.png)
+![stability](./figures/06_stability_distribution.png)
 
 ## Transport efficiencies by stability class
 
@@ -24,13 +24,13 @@ Stability follows the expected daily rhythm - convective/unstable by day, stable
 - Heat efficiency |r_wT| does the opposite: it is **largest under strong convection** (~0.21) and smallest near-neutral (~0.10), where the heat flux itself passes through zero.
 - The momentum/heat transport ratio is therefore **far from constant**: it swings from ~0.77 to ~3.28 across regimes - a **~4.3x** range. A single fixed-Prandtl K-closure assumes this ratio is constant, so it cannot reproduce the observed swing.
 
-![decoupling](07_transport_decoupling.png)
+![decoupling](./figures/07_transport_decoupling.png)
 
 ## Flux-variance similarity
 
 On the momentum side, sigma_w/u* follows the textbook Monin-Obukhov curve closely; the scalar side (sigma_T/|T*|) is far more scattered, the usual fingerprint that scalar (heat) transport is influenced by non-local / larger-scale motions that momentum is not - i.e. they are not slaved to one local length scale.
 
-![similarity](08_flux_variance_similarity.png)
+![similarity](./figures/08_flux_variance_similarity.png)
 
 ## Verdict
 
