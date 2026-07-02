@@ -44,6 +44,6 @@ This **demonstrates** the crossover. It does **not** test 3D Navier-Stokes regul
 
 ## Figures
 
-![16_acoustic_pulse](16_acoustic_pulse.png)
-![17_crossover](17_crossover.png)
-![18_field_match](18_field_match.png)
+![16_acoustic_pulse](./figures/16_acoustic_pulse.png)
+![17_crossover](./figures/17_crossover.png)
+![18_field_match](./figures/18_field_match.png)
