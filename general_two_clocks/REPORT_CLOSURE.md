@@ -36,7 +36,7 @@ three models on three diagnostics.
 
 ## 3. Energy-transfer spectrum T(k) (figure 30)
 
-![transfer](30_closure_transfer.png)
+![transfer](./figures/30_closure_transfer.png)
 
 - **Truth** shows both forward dissipation (T<0, large scales losing energy to
   subgrid) **and** backscatter (T>0, subgrid returning energy to resolved scales) —
