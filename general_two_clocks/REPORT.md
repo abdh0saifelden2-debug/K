@@ -29,7 +29,7 @@ Spectral (Lomb-Scargle) analysis of the full month:
 - The single strongest period is **60 h** for temperature (the daily cycle) versus **121 h** for pressure: pressure's dominant variability lives on the multi-day **synoptic** scale of passing weather systems, not the daily solar cycle.
 - In the diurnal composite, pressure's daily extrema (min near **0.5 h**, max near **9.5 h**) are offset from the temperature peak at **14.0 h**.
 
-![spectra](03_spectra_two_clocks.png)
+![spectra](./figures/03_spectra_two_clocks.png)
 
 **Verdict:** supported. Temperature and pressure are driven on different periodicities. The 12 h atmospheric (thermal) tide in pressure is a real, well-documented phenomenon and is the clearest evidence for the "two clocks" intuition.
 
@@ -42,7 +42,7 @@ Kinetic theory / the ideal gas law for a fixed parcel gives P = rho*R*T, i.e. at
 - After removing the slow synoptic trend, fast P and T fluctuations correlate at only r = **-0.07**.
 - What actually varies is air density: its coefficient of variation over the month is **1.2%**, absorbing the P-T mismatch.
 
-![coupling](04_pressure_temperature_coupling.png)
+![coupling](./figures/04_pressure_temperature_coupling.png)
 
 **Verdict (nuanced):** Kinetic theory is *not* wrong - P = rho*R*T holds locally for every parcel. But it is wrong to read it as "bulk P and T move together": in the open atmosphere density is free to change, so P and T are effectively **decoupled** on the daily scale. The data back the hypothesis's spirit - P and T are not one locked quantity - while pointing to changing density (not a failure of the gas law) as the reason.
 
@@ -52,7 +52,7 @@ Kinetic theory / the ideal gas law for a fixed parcel gives P = rho*R*T, i.e. at
 - Turbulence (vertical velocity variance) rises mainly with **mechanical shear** (r = **0.51** vs wind speed); its link to daytime buoyancy is weak in this winter month (r = **0.01** vs upward heat flux), as expected when the sun is low and heat fluxes are small.
 - Wind arrives from a wide spread of directions (circular std **82 deg**) - the "uneven streams" picture.
 
-![shear](05_shear_turbulence.png)
+![shear](./figures/05_shear_turbulence.png)
 
 **Verdict:** supported in analogy, with a winter caveat. The momentum flux and turbulence that mix and distort the flow are real and measurable; in January they are dominated by mechanical wind shear rather than buoyancy. (The literal Marangoni effect is a liquid-surface-tension phenomenon; the atmospheric analogue here is shear- and buoyancy-driven turbulent stress.)
 
