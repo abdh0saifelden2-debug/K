@@ -31,6 +31,6 @@ Demonstrates scale separation and the elliptic limit in a nonlinear compressible
 
 ## Figures
 
-![19_ns_structure](19_ns_structure.png)
-![20_ns_two_clocks](20_ns_two_clocks.png)
-![21_ns_mach_sweep](21_ns_mach_sweep.png)
+![19_ns_structure](./figures/19_ns_structure.png)
+![20_ns_two_clocks](./figures/20_ns_two_clocks.png)
+![21_ns_mach_sweep](./figures/21_ns_mach_sweep.png)
