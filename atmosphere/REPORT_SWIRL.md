@@ -16,7 +16,7 @@ means over 6 snapshots; ± is one standard deviation.
 
 ## 1. The swirl and its core well (figure 40)
 
-![fields](40_swirl_fields.png)
+![fields](./figures/40_swirl_fields.png)
 
 The coherent vortex sits in a turbulent skirt. The pressure panel shows the deep
 low-pressure core depression — the global, elliptic structure (∇⁻² of the swirl
@@ -25,7 +25,7 @@ picture: the azimuthal speed peaks near r_core and the pressure dips at the core
 
 ## 2. Energy transfer and solenoidality (figure 41)
 
-![transfer](41_swirl_transfer.png)
+![transfer](./figures/41_swirl_transfer.png)
 
 | model | rel. RMS(∇·m) | transfer corr. with truth | net resolved SGS power ⟨ū·m⟩ |
 |---|---|---|---|
@@ -44,7 +44,7 @@ picture: the azimuthal speed peaks near r_core and the pressure dips at the core
 
 ## 3. Where the swirl is fed vs drained (figure 42)
 
-![transfer map](42_swirl_transfer_map.png)
+![transfer map](./figures/42_swirl_transfer_map.png)
 
 The exact transfer density Π = ū·m has coherent **backscatter patches (red)** that
 return energy to the resolved swirl; Smagorinsky's Π is sign-definite drain and so
@@ -54,7 +54,7 @@ instantaneous subgrid field pointwise — the discriminating statement is the
 
 ## 4. Suspension margin — does the particle stay up? (figure 43)
 
-![levitation](43_swirl_levitation.png)
+![levitation](./figures/43_swirl_levitation.png)
 
 The levitation force scales with the core-well depth, which scales with the
 resolved swirl energy (p ~ ρ|u|²). Turning each closure's net SGS power into a
