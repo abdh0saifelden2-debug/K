@@ -18,10 +18,10 @@ Using IEM ASOS 1-minute observations (Janâ€“Mar 2020) for stations spanning 25â€
 
 ## Figures
 
-![09_asos_spectra](09_asos_spectra.png)
-![10_asos_diurnal](10_asos_diurnal.png)
-![11_tide_vs_latitude](11_tide_vs_latitude.png)
-![12_asos_coupling](12_asos_coupling.png)
+![09_asos_spectra](./figures/09_asos_spectra.png)
+![10_asos_diurnal](./figures/10_asos_diurnal.png)
+![11_tide_vs_latitude](./figures/11_tide_vs_latitude.png)
+![12_asos_coupling](./figures/12_asos_coupling.png)
 
 ## Interpretation
 
