@@ -20,7 +20,7 @@ production <wSw>* = 0.168.
 
 ## 1. Force spectrum E_m(k) (figure 61)
 
-![force spectrum](61_closure3d_force_spectrum.png)
+![force spectrum](./figures/61_closure3d_force_spectrum.png)
 
 The four force-spectrum curves repeat the Part-9b finding in 3D: Smagorinsky carries
 roughly the right magnitude but mis-sets the near-cutoff shape; the surrogate matches
@@ -28,7 +28,7 @@ E_m(k) by construction; projected-FDT fills the correct E_m(k).
 
 ## 2. Structural solenoidality -- RMS div(m) (figure 62)
 
-![divergence](62_closure3d_divergence.png)
+![divergence](./figures/62_closure3d_divergence.png)
 
 | model | relative RMS(div m) |
 |---|---|
@@ -43,7 +43,7 @@ projected -- the 3D projection `project3d`); the spectrum-matched **surrogate fa
 
 ## 3. Energy-transfer spectrum T(k) (figure 63)
 
-![transfer](63_closure3d_transfer.png)
+![transfer](./figures/63_closure3d_transfer.png)
 
 **The sign flips vs 2D.**  Net transfer integral sum_k T_true(k) = -4.523e+08
 **< 0**: 3D is a net **forward** cascade (resolved -> subgrid), the opposite of the 2D
@@ -55,7 +55,7 @@ inverse cascade.  Transfer-spectrum correlation with truth:
 
 ## 4. Vortex stretching + backscatter -- the 3D-only physics (figure 64)
 
-![vortex stretching](64_closure3d_vortex_stretching.png)
+![vortex stretching](./figures/64_closure3d_vortex_stretching.png)
 
 These diagnostics have **no 2D analogue** and are the reason 3D is scientifically
 necessary, not merely "2D with an extra index":
