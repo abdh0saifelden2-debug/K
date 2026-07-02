@@ -16,7 +16,7 @@ two operators the thesis separates — both are functions of the Laplacian:
 | pressure (elliptic) | `lap^-1` (steady Poisson) | `~ln r` | **global** — felt across the whole cavity, at once |
 | temperature (parabolic) | `exp(t*lap)` (heat kernel) | Gaussian, width `sqrt(4*kappa*t)` | **local** — a confined blob |
 
-![elliptic vs parabolic](39_elliptic_pressure.png)
+![elliptic vs parabolic](./figures/39_elliptic_pressure.png)
 
 **Result (computed).** From the identical bump-induced source:
 
