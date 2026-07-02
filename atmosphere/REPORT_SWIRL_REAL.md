@@ -11,7 +11,7 @@ vortex; here the swirl's **target tangential profile is taken from Hurricane Oti
 
 **Calibration (figure 44).**
 
-![calibration](44_otis_calibration.png)
+![calibration](./figures/44_otis_calibration.png)
 
 From the NHC best track (HURDAT2, bundled in
 `swirl/data/otis_besttrack.csv`) we read Otis's peak-intensity vortex:
@@ -35,7 +35,7 @@ top over 4000 steps. The measured core well depth is **1.510**.
 
 ## Calibrated vortex and its core well (figure 45)
 
-![otis fields](45_swirl_fields.png)
+![otis fields](./figures/45_swirl_fields.png)
 
 The Otis-fitted vortex develops the same deep, global (elliptic) low-pressure core
 well — the structure that would levitate a particle (Goldshtik–Sorokin) and exactly
@@ -43,8 +43,8 @@ the kind of nonlocal response the two-clocks thesis says K-theory cannot see.
 
 ## Energy transfer, solenoidality, suspension margin (figures 46–47)
 
-![otis transfer](46_swirl_transfer.png)
-![otis levitation](47_swirl_levitation.png)
+![otis transfer](./figures/46_swirl_transfer.png)
+![otis levitation](./figures/47_swirl_levitation.png)
 
 | model | rel. RMS(∇·m) | transfer corr. | net resolved SGS power ⟨ū·m⟩ | suspension margin | verdict |
 |---|---|---|---|---|---|
