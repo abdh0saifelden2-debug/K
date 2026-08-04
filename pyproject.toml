@@ -1,0 +1,9 @@
+[project]
+name = "k-two-clocks"
+version = "0.1.0"
+description = "Two Clocks: Diagnosing and Repairing K-Theory's Structural Blindness"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["general_two_clocks/tests", "atmosphere/tests", "glaciers/tests", "ocean/tests"]
+pythonpath = [".", "general_two_clocks", "atmosphere", "glaciers", "ocean"]
