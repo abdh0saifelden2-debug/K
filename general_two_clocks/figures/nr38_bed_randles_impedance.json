@@ -1,0 +1,37 @@
+{
+ "constituents_cpd": {
+  "Ssa": 0.005476,
+  "Mf": 0.073202,
+  "O1": 0.929536,
+  "K1": 1.002738,
+  "M2": 1.932274,
+  "S2": 2.0
+ },
+ "band_decades": 2.562566556202029,
+ "true_params": {
+  "R_ch": 0.2,
+  "R_ct": 1.2,
+  "C": 0.5,
+  "sigma_w": 0.9
+ },
+ "fit_params": {
+  "R_ch": 0.2033730369922861,
+  "R_ct": 1.341816251196323,
+  "C": 0.5002264270150107,
+  "sigma_w": 0.8728319045298115
+ },
+ "recovery_rel_err": {
+  "R_ch": 0.016865184961430413,
+  "R_ct": 0.11818020933026918,
+  "C": 0.00045285403002148783,
+  "sigma_w": 0.03018677274465389
+ },
+ "recovery_max_rel_err": 0.11818020933026918,
+ "kk_dc_lhs": 13.685523219075684,
+ "kk_dc_rhs": 13.68467672346402,
+ "kk_dc_rel_residual": 6.185336125717503e-05,
+ "discrim_delta_aicc_warburg_needed": 56.293451486953266,
+ "control_delta_aicc_no_spurious_warburg": -4.714285714524237,
+ "overdetermination_predict_rel_err": 0.015407402998385817,
+ "warburg_element": "sigma_W/sqrt(i w + 1/tau_d), tau_d=200 d (NR34 tempered)"
+}

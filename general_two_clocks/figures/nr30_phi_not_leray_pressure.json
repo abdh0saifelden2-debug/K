@@ -1,0 +1,67 @@
+{
+  "params": {
+    "n": 64,
+    "L": 2000.0,
+    "D_h": 1.0,
+    "omega": 9.869604401089359e-06,
+    "omega_c": 9.869604401089359e-06,
+    "k2_min": 9.869604401089359e-06
+  },
+  "transfer": {
+    "numeric_vs_closed_relerr": 0.0,
+    "leray_max_phase": 0.0,
+    "leray_omega_indep": 0.0,
+    "hydraulic_phase_relerr": 2.7755575615628914e-17,
+    "dominant_mode_lag_rad": 0.7853981633974483,
+    "hydraulic_mag_relerr": 2.0311168044685852e-16
+  },
+  "coincidence_sweep": [
+    {
+      "D_h": 1.0,
+      "rel_gap": 0.7071067811865477,
+      "max_lag": 0.7853981633974483
+    },
+    {
+      "D_h": 10.0,
+      "rel_gap": 0.0995037190209989,
+      "max_lag": 0.09966865249116204
+    },
+    {
+      "D_h": 100.0,
+      "rel_gap": 0.009999500037496875,
+      "max_lag": 0.009999666686665238
+    },
+    {
+      "D_h": 1000.0,
+      "rel_gap": 0.000999999500000375,
+      "max_lag": 0.0009999996666668666
+    },
+    {
+      "D_h": 10000.0,
+      "rel_gap": 9.999999950000001e-05,
+      "max_lag": 9.999999966666667e-05
+    }
+  ],
+  "separator": {
+    "lag_phi": 0.785273178369712,
+    "lag_p": -1.963172502935776e-06,
+    "lag_closed": 0.7853981633974483
+  },
+  "memory": {
+    "tau_closed": 101321.18364233777,
+    "tau_measured": 101321.18364233778,
+    "tau_hyd_dominant_s": 101321.18364233777,
+    "tau_hyd_dominant_days": 1.1726988847492796
+  },
+  "checks": {
+    "transfer_ok": true,
+    "elliptic_instantaneous_ok": true,
+    "parabolic_lag_ok": true,
+    "screening_ok": true,
+    "coincidence_limit_ok": true,
+    "separator_ok": true,
+    "tau_ok": true
+  },
+  "verdict": "The subglacial hydraulic potential phi is NOT a Leray pressure. The Leray transfer H_p=1/k^2 is real and omega-independent (max phase 0.0e+00, instantaneous), while the Darcy head transfer H_phi=1/(k^2+i*omega/D_h) is screened (|H_phi|<|H_p|) and lags the forcing by arctan(omega/(D_h k^2)): the dominant mode lags 0.785 rad = 45 deg at its hydraulic clock omega_c=D_h k^2 (NR28 p/phi crossover). A driven test recovers the head lag 0.785 rad (closed form 0.785) while the Leray pressure lag is -2.0e-06 (none). The two operators coincide ONLY as D_h->inf (tau_hyd->0): the relative gap falls 0.71->1.0e-04 over the sweep. So phi has storage, a finite hydraulic time (tau_hyd~1.17 d here) and memory; the Leray pressure has none. The falsifiable separator is a nonzero measured hydraulic response time.",
+  "ok": true
+}

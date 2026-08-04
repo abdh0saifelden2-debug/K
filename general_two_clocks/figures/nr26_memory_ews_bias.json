@@ -1,0 +1,176 @@
+{
+  "params": {
+    "tau_c": 1.0,
+    "D": 1.0,
+    "dt": 0.02,
+    "n": 4000000,
+    "ews_dt": 2.0,
+    "lams": [
+      0.05,
+      0.1,
+      0.2,
+      0.4
+    ]
+  },
+  "rows": [
+    {
+      "lam": 0.05,
+      "De": 0.05,
+      "var_sim": 19.247231879655875,
+      "var_analytic": 19.047619047619047,
+      "var_rel_err": 0.010479673681933477,
+      "lam_A": 0.02763626966183276,
+      "lam_true": 0.05,
+      "lam_V": 0.05195552307222888,
+      "bias_V_measured": 1.0391104614445774,
+      "bias_V_predicted": 1.05,
+      "brackets": true,
+      "ac_sim": [
+        0.9462272286795699,
+        0.863467172266185,
+        0.7842014611355412,
+        0.7121323075221598
+      ],
+      "ac_analytic": [
+        0.94533753039382,
+        0.8608578643511001,
+        0.7796781927082995,
+        0.7055823925307834
+      ],
+      "ac_max_abs_err": 0.006549914991376471,
+      "lam_app_lags": [
+        0.02763626966183276,
+        0.036699849795242906,
+        0.04051488765127665,
+        0.04243644495774338
+      ],
+      "apprate_lagslope": 0.009063580133410146,
+      "nr22_invariant": 2.014300415374326
+    },
+    {
+      "lam": 0.1,
+      "De": 0.1,
+      "var_sim": 9.08980073823993,
+      "var_analytic": 9.09090909090909,
+      "var_rel_err": 0.00012191879360756719,
+      "lam_A": 0.05535089179355095,
+      "lam_true": 0.1,
+      "lam_V": 0.11001341270255736,
+      "bias_V_measured": 1.1001341270255736,
+      "bias_V_predicted": 1.1,
+      "brackets": true,
+      "ac_sim": [
+        0.8952056741512631,
+        0.7447438975858106,
+        0.6132490716571676,
+        0.5049868724060965
+      ],
+      "ac_analytic": [
+        0.8946635830603561,
+        0.7427649801630732,
+        0.6095152898626219,
+        0.49921713094936815
+      ],
+      "ac_max_abs_err": 0.005769741456728372,
+      "lam_app_lags": [
+        0.05535089179355095,
+        0.07367872033298388,
+        0.08149735160880146,
+        0.08540285566001396
+      ],
+      "apprate_lagslope": 0.018327828539432926,
+      "nr22_invariant": 1.805296246052785
+    },
+    {
+      "lam": 0.2,
+      "De": 0.2,
+      "var_sim": 4.145990119558308,
+      "var_analytic": 4.166666666666667,
+      "var_rel_err": 0.004962371306006075,
+      "lam_A": 0.1091400327149983,
+      "lam_true": 0.2,
+      "lam_V": 0.2411969086184254,
+      "bias_V_measured": 1.205984543092127,
+      "bias_V_predicted": 1.2,
+      "brackets": true,
+      "ac_sim": [
+        0.8039002654624752,
+        0.5577677569538023,
+        0.3779202727225975,
+        0.2563068195743952
+      ],
+      "ac_analytic": [
+        0.8040662367353959,
+        0.5570822954243434,
+        0.3758730768460859,
+        0.25228678183634357
+      ],
+      "ac_max_abs_err": 0.004020037738051652,
+      "lam_app_lags": [
+        0.1091400327149983,
+        0.1459531523536596,
+        0.16217867072205308,
+        0.17017250477307563
+      ],
+      "apprate_lagslope": 0.03681311963866131,
+      "nr22_invariant": 1.4666206346325406
+    },
+    {
+      "lam": 0.4,
+      "De": 0.4,
+      "var_sim": 1.775443965621099,
+      "var_analytic": 1.7857142857142858,
+      "var_rel_err": 0.0057513792521846074,
+      "lam_A": 0.20954145574947308,
+      "lam_true": 0.4,
+      "lam_V": 0.5632394034188359,
+      "bias_V_measured": 1.4080985085470898,
+      "bias_V_predicted": 1.4,
+      "brackets": true,
+      "ac_sim": [
+        0.6576496662876951,
+        0.3237553380852838,
+        0.14999156621324783,
+        0.07016974703762402
+      ],
+      "ac_analytic": [
+        0.6586580847042942,
+        0.3242837707319362,
+        0.14954408736457656,
+        0.06771336487867533
+      ],
+      "ac_max_abs_err": 0.0024563821589486945,
+      "lam_app_lags": [
+        0.20954145574947308,
+        0.2819417944525018,
+        0.3161960352852657,
+        0.3321047518397103
+      ],
+      "apprate_lagslope": 0.0724003387030287,
+      "nr22_invariant": 1.0075589757872132
+    }
+  ],
+  "debias": {
+    "lam_true": 0.4,
+    "lam_recovered": 0.38253220118741227,
+    "tau_c_true": 1.0,
+    "tau_c_recovered": 0.9209132269793223,
+    "c1_fit": 1.5512939079533012,
+    "c1_predicted": 1.6666666666666667,
+    "lam_rel_err": 0.043669497031469384,
+    "tau_c_rel_err": 0.07908677302067768,
+    "max_rel_err": 0.07908677302067768
+  },
+  "checks": {
+    "var_ok": true,
+    "bias_ok": true,
+    "acf_ok": true,
+    "bias_monotone": true,
+    "bracket_ok": true,
+    "gauge_positive": true,
+    "gauge_monotone": true,
+    "debias_ok": true
+  },
+  "verdict": "A slow critical mode (lambda->0 at the fold) driven by a finite-memory bath (tau_c) has Var=D/(lambda(1+De)), De=lambda*tau_c: memory SUPPRESSES the CSD variance by 1/(1+De), so the white-noise variance EWS reads lambda_V=lambda(1+De) (false SAFETY) while the lag-1 AC1 rate reads lambda_A<lambda (false ALARM) -- the two standard precursors BRACKET the truth and split by ~De. The ACF is bi-exponential, so the apparent rate grows with lag (a D-free memory gauge) and a blind 2-exp fit recovers (lambda, tau_c), de-biasing the proximity from the record alone. The index's two 'separate' failure modes are coupled at finite distance, and the coupling is exactly the Deborah number.",
+  "ok": true
+}

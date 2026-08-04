@@ -1,0 +1,160 @@
+{
+ "relationship": "NR33 persistence-pressure bound",
+ "statement": "radar persistence of distributed specular basal water over t_obs bounds phi = p_w/p_i >= 1 - n(2A t_obs)^{-1/n}/(rho_i g H) (cylinder, rigorous-conservative); sheet geometry sharpens N_max by (2h/(n^n w))^{1/n}",
+ "two_clocks_reading": "the slow (creep/geometry) clock's time integral measures the level of the fast (elliptic pressure) field: memory as a gauge, the converse of the usual fast-constrains-slow direction",
+ "verify_efold": {
+  "survival_at_Nmax": 0.3678785214685313,
+  "target": 0.36787944117144233,
+  "abs_err": 9.197029110508126e-07
+ },
+ "verify_sheet_crossover": [
+  {
+   "w_over_h": 0.07407407407407407,
+   "nmax_ratio_sheet_over_cyl": 1.0000000000000002,
+   "analytic": 1.0,
+   "match": true
+  },
+  {
+   "w_over_h": 1.0,
+   "nmax_ratio_sheet_over_cyl": 0.41997368329829116,
+   "analytic": 0.41997368329829105,
+   "match": true
+  },
+  {
+   "w_over_h": 100.0,
+   "nmax_ratio_sheet_over_cyl": 0.09048058721983024,
+   "analytic": 0.09048058721983022,
+   "match": true
+  },
+  {
+   "w_over_h": 1000.0,
+   "nmax_ratio_sheet_over_cyl": 0.041997368329829116,
+   "analytic": 0.041997368329829116,
+   "match": true
+  },
+  {
+   "w_over_h": 10000.0,
+   "nmax_ratio_sheet_over_cyl": 0.019493451588085783,
+   "analytic": 0.019493451588085776,
+   "match": true
+  }
+ ],
+ "verify_archive_dividend": {
+  "loglog_slope": -0.3333333333333333,
+  "target": -0.3333333333333333,
+  "abs_err": 0.0
+ },
+ "magnitude_table": [
+  {
+   "t_obs_yr": 1.0,
+   "H_m": 2000.0,
+   "Nmax_cyl_bar": 5.627811206011352,
+   "phi_floor_cyl": 0.968719680438632,
+   "Nmax_sheet_bar": 0.1382202250089811,
+   "phi_floor_sheet": 0.9992317487829893
+  },
+  {
+   "t_obs_yr": 1.0,
+   "H_m": 3000.0,
+   "Nmax_cyl_bar": 5.627811206011352,
+   "phi_floor_cyl": 0.9791464536257547,
+   "Nmax_sheet_bar": 0.1382202250089811,
+   "phi_floor_sheet": 0.9994878325219928
+  },
+  {
+   "t_obs_yr": 1.0,
+   "H_m": 4000.0,
+   "Nmax_cyl_bar": 5.627811206011352,
+   "phi_floor_cyl": 0.984359840219316,
+   "Nmax_sheet_bar": 0.1382202250089811,
+   "phi_floor_sheet": 0.9996158743914946
+  },
+  {
+   "t_obs_yr": 4.0,
+   "H_m": 2000.0,
+   "Nmax_cyl_bar": 3.5452989016439767,
+   "phi_floor_cyl": 0.980294633468597,
+   "Nmax_sheet_bar": 0.08707328550501053,
+   "phi_floor_sheet": 0.9995160320600404
+  },
+  {
+   "t_obs_yr": 4.0,
+   "H_m": 3000.0,
+   "Nmax_cyl_bar": 3.5452989016439767,
+   "phi_floor_cyl": 0.9868630889790647,
+   "Nmax_sheet_bar": 0.08707328550501053,
+   "phi_floor_sheet": 0.9996773547066936
+  },
+  {
+   "t_obs_yr": 4.0,
+   "H_m": 4000.0,
+   "Nmax_cyl_bar": 3.5452989016439767,
+   "phi_floor_cyl": 0.9901473167342986,
+   "Nmax_sheet_bar": 0.08707328550501053,
+   "phi_floor_sheet": 0.9997580160300202
+  },
+  {
+   "t_obs_yr": 10.0,
+   "H_m": 2000.0,
+   "Nmax_cyl_bar": 2.6121985651503152,
+   "phi_floor_cyl": 0.9854809618012115,
+   "Nmax_sheet_bar": 0.06415614529811324,
+   "phi_floor_sheet": 0.9996434093729714
+  },
+  {
+   "t_obs_yr": 10.0,
+   "H_m": 3000.0,
+   "Nmax_cyl_bar": 2.6121985651503152,
+   "phi_floor_cyl": 0.9903206412008076,
+   "Nmax_sheet_bar": 0.06415614529811324,
+   "phi_floor_sheet": 0.9997622729153143
+  },
+  {
+   "t_obs_yr": 10.0,
+   "H_m": 4000.0,
+   "Nmax_cyl_bar": 2.6121985651503152,
+   "phi_floor_cyl": 0.9927404809006057,
+   "Nmax_sheet_bar": 0.06415614529811324,
+   "phi_floor_sheet": 0.9998217046864857
+  },
+  {
+   "t_obs_yr": 25.0,
+   "H_m": 2000.0,
+   "Nmax_cyl_bar": 1.9246843589433968,
+   "phi_floor_cyl": 0.98930228118914,
+   "Nmax_sheet_bar": 0.047270652021919705,
+   "phi_floor_sheet": 0.9997372617795813
+  },
+  {
+   "t_obs_yr": 25.0,
+   "H_m": 3000.0,
+   "Nmax_cyl_bar": 1.9246843589433968,
+   "phi_floor_cyl": 0.9928681874594267,
+   "Nmax_sheet_bar": 0.047270652021919705,
+   "phi_floor_sheet": 0.9998248411863875
+  },
+  {
+   "t_obs_yr": 25.0,
+   "H_m": 4000.0,
+   "Nmax_cyl_bar": 1.9246843589433968,
+   "phi_floor_cyl": 0.99465114059457,
+   "Nmax_sheet_bar": 0.047270652021919705,
+   "phi_floor_sheet": 0.9998686308897906
+  }
+ ],
+ "icecap_application": {
+  "available": true,
+  "stride_km": 5.0,
+  "min_pts": 3,
+  "spec_thresh": 0.2,
+  "t_obs_yr": 4.0,
+  "n_cells_seen_both_epochs": 259,
+  "n_persistent_specular": 7,
+  "median_H_persistent": 3878.0,
+  "median_phi_floor_cyl": 0.9898373560952022,
+  "median_phi_floor_sheet": 0.999750403331635,
+  "median_Nmax_cyl_bar": 3.5452989016439767,
+  "median_Nmax_sheet_bar": 0.08707328550501053,
+  "registered_C1": "modelled-N products must satisfy N <= 3.55 bar on these cells (registered 2026-07-04)"
+ }
+}

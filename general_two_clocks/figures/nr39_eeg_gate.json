@@ -1,0 +1,43 @@
+{
+ "description": "NR39 real-data gate EXECUTED (ledger E7) -- the imaginary-coherence",
+ "meta": {
+  "dataset": "OpenNeuro ds003775 (Hatlestad-Hall et al.; SRM resting EEG, CC0)",
+  "subject": "sub-001_ses-t1_task-resteyesc",
+  "system": "BioSemi ActiveTwo 64-ch (10-10)",
+  "sfreq_hz": 1024.0,
+  "duration_s": 240.0,
+  "band_hz": [
+   8.0,
+   13.0
+  ],
+  "window_s": 4.0,
+  "overlap": 0.5,
+  "n_segments": 118,
+  "n_channels": 64,
+  "n_pairs": 2016,
+  "montage": "biosemi64",
+  "n_surrogates": 200,
+  "provenance": "alpha-band (8-13 Hz) coherency matrix; whole-series phase-randomization surrogate ceiling (preserves PSD)"
+ },
+ "n_pairs": 2016,
+ "re_over_im": 8.239900559353636,
+ "med_re": 0.53032,
+ "med_im": 0.06436,
+ "spearman_re_im": -0.2504815648845553,
+ "topmix_re_over_im": 28.189308484551255,
+ "topmix_med_im": 0.030585,
+ "spearman_dist_re": -0.15117899420780484,
+ "spearman_dist_im": 0.1499689012693929,
+ "near_med_re": 0.82683,
+ "near_med_im": 0.02843,
+ "surrogate_median_imcoh": 0.01575,
+ "frac_clearing_ceiling": 0.6259920634920635,
+ "frac_topmix_clearing": 0.3316831683168317,
+ "verdicts": {
+  "volume_conduction_dominates_real": true,
+  "mixing_feeds_real_not_imaginary": true,
+  "imcoh_is_interregional": true,
+  "surrogate_ceiling_inverts_with_mixing": true,
+  "reading": "Imaginary-coherence lemma on real resting EEG (ds003775): volume conduction dominates coherency in the REAL part (Re/Im = 8.2), and the decisive signature holds -- mixing strength anti-correlates with imaginary coherency (Spearman -0.25); the most-mixed near-electrode pairs have the SMALLEST |Im| (Re/Im = 28, |Im| below the median) and are the LEAST likely to clear the phase-surrogate ceiling.  Imaginary coherency rises with electrode distance (genuine inter-regional coupling) where mixing falls.  P0's surrogate ceiling and Nolte's ImCoh artifact rejection are one lemma: instantaneous mixing is real, so it is invisible to Im."
+ }
+}

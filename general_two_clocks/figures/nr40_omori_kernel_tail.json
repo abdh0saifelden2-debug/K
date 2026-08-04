@@ -1,0 +1,39 @@
+{
+ "synthetic_temporal": {
+  "true_tau_D": 6.0,
+  "fit_tau_D": 7.752510076970185,
+  "delta_aicc": 8.803007640332908,
+  "cutoff_preferred": true
+ },
+ "synthetic_temporal_control": {
+  "delta_aicc": -2.0499201968577836,
+  "no_spurious_cutoff": true
+ },
+ "synthetic_spatial_front": {
+  "true_D": 0.5,
+  "fit_D": 0.5073479628079095,
+  "front_r2": 0.9977645824358007,
+  "D_recovered": true
+ },
+ "real_comcat": {
+  "Pawnee_2016": {
+   "kind": "injection",
+   "n_events": 93,
+   "temporal_delta_aicc": -2.184882533196941,
+   "tau_D_day": 2451021024945458.0,
+   "omori_p": 0.7430756915498355,
+   "spatial_front_D": 1.3307612763644325,
+   "spatial_front_r2": -0.5426117655877285
+  },
+  "Ridgecrest_2019": {
+   "kind": "tectonic",
+   "n_events": 344,
+   "temporal_delta_aicc": -2.0474058649738254,
+   "tau_D_day": 4832709868082.416,
+   "omori_p": 1.2734490211383438,
+   "spatial_front_D": 3.570650029486226,
+   "spatial_front_r2": -4.119333063657572
+  }
+ },
+ "real_diffusion_clock_resolved": false
+}

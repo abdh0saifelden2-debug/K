@@ -1,0 +1,41 @@
+{
+  "params": {
+    "omega_c": 0.5,
+    "dt": 0.02,
+    "n": 4000000,
+    "s_d": 1.0,
+    "n_p": 0.05,
+    "n_th": 0.25,
+    "nperseg": 16384
+  },
+  "phase": {
+    "rms_err_rad": 0.03466338041435105,
+    "p95_err_rad": 0.08555927683239711,
+    "max_err_rad": 0.134016345193116,
+    "omega_c_true": 0.5,
+    "omega_c_from_crossover": 0.51420617414244,
+    "crossover_rel_err": 0.02841234828487993,
+    "omega_c_from_fit": 0.5059568630941242,
+    "fit_rel_err": 0.011913726188248486
+  },
+  "coherence": {
+    "gamma_low": 0.8893030079131259,
+    "gamma_high": 0.053766097469410974,
+    "gamma_an_low": 0.8951737546244816,
+    "gamma_an_high": 0.06296733569460841,
+    "drops": true
+  },
+  "causality": {
+    "one_sided_pressure_leads": true,
+    "bounded_by_90deg": true
+  },
+  "checks": {
+    "phase_ok": true,
+    "crossover_ok": true,
+    "fit_ok": true,
+    "coh_ok": true,
+    "causal_ok": true
+  },
+  "verdict": "Co-located pressure (elliptic, instantaneous) and temperature (parabolic, lagged) have a cross-spectral phase phi(omega)=arctan(omega/omega_c) with the 45deg crossover at the parabolic clock omega_c=kappa k^2 (recovered to 1.2% from the phase alone, no calibration). The phase is POSITIVE for all omega (pressure leads, never lags) and BOUNDED by 90deg (a first-order diffusive lag, not an unbounded transport delay). The magnitude-squared coherence falls from 0.89 at low omega (clocks coupled, large scales) to 0.05 at high omega (clocks DECOUPLED, small scales) as the parabolic low-pass cedes temperature to its own filamentation. The two-clocks decoupling is thus one cross-spectral signature on the kind of co-located p+T time series NEON/ASOS/reanalysis already provide.",
+  "ok": true
+}

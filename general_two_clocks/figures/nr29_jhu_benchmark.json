@@ -1,0 +1,82 @@
+{
+ "dataset": "JHTDB isotropic1024coarse (Re_lambda~433; Li et al. 2008)",
+ "access": "public demo token, full-domain strided periodic lattice (n=64, stride=16; aliasing noted in module docstring)",
+ "law": "P(Pi<0) = Phi(-<Pi>/sigma(Pi))  [NR29, zero parameters]",
+ "rows": [
+  {
+   "mean_pi": 0.09233455017043063,
+   "std_pi": 0.26443124400571577,
+   "backscatter_fraction": 0.35810089111328125,
+   "nr29_closed_form": 0.3634764535665328,
+   "abs_err": 0.005375562453251548,
+   "forward_cascade": true,
+   "t": 0.0,
+   "kc": 8,
+   "n_lattice": 64,
+   "n_samples": 262144
+  },
+  {
+   "mean_pi": 0.08884420069863547,
+   "std_pi": 0.2947789754008276,
+   "backscatter_fraction": 0.3764915466308594,
+   "nr29_closed_form": 0.3815575696932259,
+   "abs_err": 0.0050660230623665314,
+   "forward_cascade": true,
+   "t": 0.0,
+   "kc": 12,
+   "n_lattice": 64,
+   "n_samples": 262144
+  },
+  {
+   "mean_pi": 0.08782976262198898,
+   "std_pi": 0.3321736782259272,
+   "backscatter_fraction": 0.3916015625,
+   "nr29_closed_form": 0.39573232769024225,
+   "abs_err": 0.004130765190242247,
+   "forward_cascade": true,
+   "t": 0.0,
+   "kc": 16,
+   "n_lattice": 64,
+   "n_samples": 262144
+  },
+  {
+   "mean_pi": 0.1084375037083214,
+   "std_pi": 0.3091988219876681,
+   "backscatter_fraction": 0.36000823974609375,
+   "nr29_closed_form": 0.36290492094449894,
+   "abs_err": 0.0028966811984051932,
+   "forward_cascade": true,
+   "t": 4.0,
+   "kc": 8,
+   "n_lattice": 64,
+   "n_samples": 262144
+  },
+  {
+   "mean_pi": 0.11032580576932113,
+   "std_pi": 0.3511457695844818,
+   "backscatter_fraction": 0.3691291809082031,
+   "nr29_closed_form": 0.3766891078516268,
+   "abs_err": 0.007559926943423667,
+   "forward_cascade": true,
+   "t": 4.0,
+   "kc": 12,
+   "n_lattice": 64,
+   "n_samples": 262144
+  },
+  {
+   "mean_pi": 0.10777254444424182,
+   "std_pi": 0.39997607159810167,
+   "backscatter_fraction": 0.38683319091796875,
+   "nr29_closed_form": 0.3937926765625349,
+   "abs_err": 0.006959485644566166,
+   "forward_cascade": true,
+   "t": 4.0,
+   "kc": 16,
+   "n_lattice": 64,
+   "n_samples": 262144
+  }
+ ],
+ "max_abs_err": 0.007559926943423667,
+ "all_forward_cascade": true,
+ "in_repo_comparator": "new_relationships6.py (NR29) tracks <=0.005 on house HIT; this is the external check"
+}

@@ -1,0 +1,246 @@
+{
+ "meta": {
+  "atl15": "ATL15 v005 (release 0329) 10km gridded delta_h, ICESat-2 ATLAS; NSIDC via earthaccess. Quarterly 2019-01..2026-01 (29 epochs).",
+  "outlines": "Siegfried & Fricker (2018) active subglacial lake outlines, EPSG:3031 (mrsiegfried/Siegfried2021-GRL).",
+  "detrend": "non-secular residual std after removing degree-1 (and degree-2) polynomial in time; identical for lakes and controls",
+  "control": "pseudo-lakes: random boxes, pixel counts drawn from real-lake distribution, centres >=40 km from every lake centroid, well-observed pixels",
+  "n_lakes_total": 131,
+  "n_lakes_covered": 131,
+  "n_controls": 1600
+ },
+ "discriminator": {
+  "n_lakes": 131,
+  "n_controls": 1600,
+  "lake_median": 0.0954159753410456,
+  "lake_p90": 0.432470713154693,
+  "ctrl_median": 0.07753,
+  "ctrl_p90": 0.2293300000000001,
+  "ctrl_p95": 0.3337119999999999,
+  "detect_k": 22,
+  "detect_frac": 0.16793893129770993,
+  "detect_enrichment_over_chance": 3.3587786259541983,
+  "perm_p_median": 0.021195760847830435,
+  "median_diff_m": 0.017885975341045593,
+  "mannwhitney_p": 0.00043343255138008664,
+  "detect_binomial_p": 6.155024966462425e-07
+ },
+ "size_dependence": {
+  "resolved_n": 60,
+  "resolved_median": 0.1120866923315548,
+  "resolved_detect_frac": 0.18333333333333332,
+  "subpixel_n": 71,
+  "subpixel_median": 0.07932358568683369,
+  "subpixel_detect_frac": 0.15492957746478872
+ },
+ "fill_drain_asymmetry": {
+  "n_active": 22,
+  "median_fall_over_rise": 1.3135136498370787,
+  "n_fall_faster": 16,
+  "sign_test_p": 0.026239395141601562,
+  "examples": [
+   {
+    "name": "David_s2",
+    "max_rise_m_q": 0.1202359605911536,
+    "max_fall_m_q": 1.1024640394088747,
+    "fall_over_rise": 9.169170637374098
+   },
+   {
+    "name": "Slessor_4",
+    "max_rise_m_q": 0.12572995073892052,
+    "max_fall_m_q": 1.0070700492610793,
+    "fall_over_rise": 8.009786398089586
+   },
+   {
+    "name": "Byrd_2",
+    "max_rise_m_q": 0.2572107881773461,
+    "max_fall_m_q": 1.675389211822654,
+    "fall_over_rise": 6.51368173043923
+   },
+   {
+    "name": "Mac1",
+    "max_rise_m_q": 0.6228332512315026,
+    "max_fall_m_q": 1.4432667487684974,
+    "fall_over_rise": 2.317260271372451
+   },
+   {
+    "name": "Byrd_s10",
+    "max_rise_m_q": 0.16216502463055474,
+    "max_fall_m_q": 0.3278349753694453,
+    "fall_over_rise": 2.021613329485324
+   },
+   {
+    "name": "Thw_170",
+    "max_rise_m_q": 0.9870237931034416,
+    "max_fall_m_q": 1.9890762068965566,
+    "fall_over_rise": 2.0152261989981213
+   }
+  ]
+ },
+ "connectivity_lag": {
+  "connected": [
+   {
+    "a": "MercerSubglacialLake",
+    "b": "ConwaySubglacialLake",
+    "lag_q": 2,
+    "r": 0.6736757826696328
+   },
+   {
+    "a": "MercerSubglacialLake",
+    "b": "WhillansSubglacialLake",
+    "lag_q": 0,
+    "r": -0.5307208629646015
+   },
+   {
+    "a": "EngelhardtSubglacialLake",
+    "b": "WhillansSubglacialLake",
+    "lag_q": 6,
+    "r": 0.6230017416206829
+   },
+   {
+    "a": "Mac1",
+    "b": "Mac2",
+    "lag_q": -1,
+    "r": -0.6321406697735706
+   },
+   {
+    "a": "Mac1",
+    "b": "Mac3",
+    "lag_q": 1,
+    "r": 0.6981403805618982
+   },
+   {
+    "a": "Mac2",
+    "b": "Mac3",
+    "lag_q": 1,
+    "r": -0.5265585569909974
+   }
+  ],
+  "unconnected": [
+   {
+    "a": "MercerSubglacialLake",
+    "b": "Byrd_1",
+    "lag_q": -3,
+    "r": -0.2360354506327625
+   },
+   {
+    "a": "Mac1",
+    "b": "Thw_142",
+    "lag_q": 2,
+    "r": -0.5806873641279524
+   },
+   {
+    "a": "EngelhardtSubglacialLake",
+    "b": "Byrd_2",
+    "lag_q": -6,
+    "r": 0.6019404613202176
+   },
+   {
+    "a": "Mac2",
+    "b": "Thw_170",
+    "lag_q": 0,
+    "r": 0.3582184047321013
+   },
+   {
+    "a": "ConwaySubglacialLake",
+    "b": "Byrd_1",
+    "lag_q": -2,
+    "r": 0.27490419036376584
+   },
+   {
+    "a": "Mac3",
+    "b": "Rutford_1",
+    "lag_q": 3,
+    "r": -0.6561641976434709
+   }
+  ],
+  "connected_median_absr": 0.6275712056971268,
+  "unconnected_median_absr": 0.46945288443002686,
+  "contrast": 0.1581183212670999,
+  "note": "29 quarterly epochs: lag VALUES are illustrative (best-of-lag selection applied identically to both groups); the connected-vs-unconnected |r| contrast is the falsifiable statement"
+ },
+ "top_lakes": [
+  {
+   "name": "Slessor_23",
+   "region": "A2",
+   "ns_std": 2.085,
+   "n_pix": 3
+  },
+  {
+   "name": "EngelhardtSubglacialLake",
+   "region": "A3",
+   "ns_std": 1.071,
+   "n_pix": 5
+  },
+  {
+   "name": "MercerSubglacialLake",
+   "region": "A3",
+   "ns_std": 1.029,
+   "n_pix": 1
+  },
+  {
+   "name": "Thw_170",
+   "region": "A3",
+   "ns_std": 0.995,
+   "n_pix": 1
+  },
+  {
+   "name": "Byrd_2",
+   "region": "A4",
+   "ns_std": 0.907,
+   "n_pix": 6
+  },
+  {
+   "name": "ConwaySubglacialLake",
+   "region": "A3",
+   "ns_std": 0.765,
+   "n_pix": 2
+  },
+  {
+   "name": "Byrd_1",
+   "region": "A4",
+   "ns_std": 0.677,
+   "n_pix": 3
+  },
+  {
+   "name": "Thw_142",
+   "region": "A3",
+   "ns_std": 0.531,
+   "n_pix": 1
+  },
+  {
+   "name": "Mac1",
+   "region": "A3",
+   "ns_std": 0.494,
+   "n_pix": 2
+  },
+  {
+   "name": "Slessor_4",
+   "region": "A2",
+   "ns_std": 0.489,
+   "n_pix": 3
+  },
+  {
+   "name": "Whillans_6",
+   "region": "A3",
+   "ns_std": 0.483,
+   "n_pix": 1
+  },
+  {
+   "name": "Rutford_1",
+   "region": "A2",
+   "ns_std": 0.464,
+   "n_pix": 1
+  }
+ ],
+ "top_includes_known_active": [
+  "Byrd_1",
+  "Byrd_2",
+  "ConwaySubglacialLake",
+  "EngelhardtSubglacialLake",
+  "Mac1",
+  "MercerSubglacialLake",
+  "Thw_142",
+  "Thw_170",
+  "Whillans_6"
+ ]
+}

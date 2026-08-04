@@ -1,0 +1,25 @@
+{
+ "lemma": {
+  "max_imag_real_mixing": 0.0,
+  "max_imag_lagged_source": 0.9615575802679021
+ },
+ "synthetic_array": {
+  "n_seg": 155,
+  "analytic_null_1sigma": 0.05679618342470648,
+  "max_abs_imcoh_pure_mixing": 0.04111008251461989,
+  "median_abs_recoh_pure_mixing": 0.40106241595644326,
+  "imcoh_injected_pair": 0.3766754596370982,
+  "max_imcoh_other_pairs": 0.037124050038515884,
+  "injected_over_null": 6.632055834111618,
+  "mixing_dominated_re_over_im": 18.250984806720385
+ },
+ "surrogate_ceiling": {
+  "injected_imcoh": 0.3766754596370982,
+  "surrogate_p95": 0.05297568289871451,
+  "surrogate_median": 0.01852758849977696,
+  "clears_ceiling": true
+ },
+ "real_eeg": {
+  "available": false
+ }
+}
