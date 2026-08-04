@@ -1,0 +1,72 @@
+[
+ {
+  "data_dir": "/home/data_neon_jan2020",
+  "site": "WREF",
+  "month": "2020-01",
+  "n_intervals": 1488,
+  "n_valid_pressure": 1097,
+  "n_valid_temperature": 1180,
+  "temp_diurnal_period_h": 23.635408852213054,
+  "temp_semidiurnal_period_h": 12.065266316579145,
+  "temp_semi_over_diurnal_power": 0.07273211392160778,
+  "pres_diurnal_period_h": 23.158289572393098,
+  "pres_semidiurnal_period_h": 12.184546136534134,
+  "pres_semi_over_diurnal_power": 0.2074917530977123,
+  "pres_dominant_period_h": 120.96774193548387,
+  "temp_dominant_period_h": 60.49287321830458,
+  "pearson_r": 0.07144161975083015,
+  "r_squared": 0.005103905032622206,
+  "slope_kpa_per_k": 0.014160731612531612,
+  "gaslaw_slope_kpa_per_k": 0.3526768737654465,
+  "transport_ratio_by_class": {
+   "strongly unstable": 0.8680033215295158,
+   "unstable": 2.1682518588183077,
+   "near-neutral": 3.3388360975586355,
+   "stable": 1.1201894832658759,
+   "strongly stable": 0.7675018659249842
+  },
+  "class_counts": {
+   "strongly unstable": 95,
+   "unstable": 73,
+   "near-neutral": 122,
+   "stable": 152,
+   "strongly stable": 160
+  },
+  "transport_ratio_swing": 4.350264469435146
+ },
+ {
+  "data_dir": "/home/data_neon_jul2020",
+  "site": "WREF",
+  "month": "2020-07",
+  "n_intervals": 1488,
+  "n_valid_pressure": 1036,
+  "n_valid_temperature": 1344,
+  "temp_diurnal_period_h": 23.99324831207802,
+  "temp_semidiurnal_period_h": 12.065266316579145,
+  "temp_semi_over_diurnal_power": 0.009880162669012808,
+  "pres_diurnal_period_h": 23.87396849212303,
+  "pres_semidiurnal_period_h": 11.945986496624156,
+  "pres_semi_over_diurnal_power": 0.08485987932031264,
+  "pres_dominant_period_h": 168.2025506376594,
+  "temp_dominant_period_h": 23.99324831207802,
+  "pearson_r": -0.48942518599100976,
+  "r_squared": 0.23953701268233438,
+  "slope_kpa_per_k": -0.02437831720538586,
+  "gaslaw_slope_kpa_per_k": 0.333743846392385,
+  "transport_ratio_by_class": {
+   "strongly unstable": 0.43745571534769884,
+   "unstable": 0.6126319054021224,
+   "near-neutral": 2.602310861871527,
+   "stable": 1.380378076133178,
+   "strongly stable": 0.8671979662330623
+  },
+  "class_counts": {
+   "strongly unstable": 343,
+   "unstable": 280,
+   "near-neutral": 101,
+   "stable": 85,
+   "strongly stable": 221
+  },
+  "transport_ratio_swing": 5.948741256707908
+ }
+]

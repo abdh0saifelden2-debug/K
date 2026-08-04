@@ -1,0 +1,46 @@
+{
+  "classifier_gap_decades": 3.0287902016316353,
+  "verdict": "midlat_equinox_noon: R(hmF2)=17 at 228 km (balance-formed; R=1 level at 274 km, e-fold 16 km) | midlat_equinox_midnight: R(hmF2)=0.0048 at 332 km (dynamics-formed; R=1 level at 254 km, e-fold 15 km) | midlat_winter_noon: R(hmF2)=27 at 217 km (balance-formed; R=1 level at 264 km, e-fold 15 km) | midlat_summer_noon: R(hmF2)=5.1 at 245 km (balance-formed; R=1 level at 272 km, e-fold 17 km) | equator_equinox_noon: R(hmF2)=0.0037 at 359 km (dynamics-formed; R=1 level at 274 km, e-fold 16 km) | classifier gap = 3.0 decades between balance-formed (daytime midlat) and dynamics-formed (midnight wind/flux, equatorial ExB fountain) peaks",
+  "conditions": {
+    "midlat_equinox_noon": {
+      "hmF2_km": 228.455566,
+      "R_at_peak": 17.419812926956492,
+      "z_R1_km": 273.7552625550655,
+      "peak_minus_z1_km": -45.29969655506548,
+      "efold_km": 16.048812321602725,
+      "balance_formed": true
+    },
+    "midlat_equinox_midnight": {
+      "hmF2_km": 332.212006,
+      "R_at_peak": 0.004806973677937076,
+      "z_R1_km": 253.94560281379333,
+      "peak_minus_z1_km": 78.26640318620665,
+      "efold_km": 14.501883005765476,
+      "balance_formed": false
+    },
+    "midlat_winter_noon": {
+      "hmF2_km": 216.650391,
+      "R_at_peak": 26.75945600339854,
+      "z_R1_km": 263.9599058428688,
+      "peak_minus_z1_km": -47.30951484286879,
+      "efold_km": 14.645468891914614,
+      "balance_formed": true
+    },
+    "midlat_summer_noon": {
+      "hmF2_km": 244.591583,
+      "R_at_peak": 5.136436762607581,
+      "z_R1_km": 271.537068388145,
+      "peak_minus_z1_km": -26.94548538814496,
+      "efold_km": 16.543100506821677,
+      "balance_formed": true
+    },
+    "equator_equinox_noon": {
+      "hmF2_km": 358.716431,
+      "R_at_peak": 0.003684143960928812,
+      "z_R1_km": 273.6210382743906,
+      "peak_minus_z1_km": 85.09539272560937,
+      "efold_km": 15.782153812352608,
+      "balance_formed": false
+    }
+  }
+}

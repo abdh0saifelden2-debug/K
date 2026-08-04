@@ -1,0 +1,120 @@
+{
+  "literature": {
+    "phi_diffusion_limit_H": 250000000.0,
+    "phi_observed_total_H": 100000000.0,
+    "phi_He_required": 1000000.0
+  },
+  "conditions": {
+    "equator_solstice_noon": {
+      "z_exobase_km": 373.0447403833861,
+      "T_exobase_K": 781.19775390625,
+      "species": {
+        "H": {
+          "n_exo_m3": 297152806912.0,
+          "lam": 9.170423856711828,
+          "phi_cm2s": 31851639.880917836,
+          "global_kg_s": 0.3047138376957373
+        },
+        "He": {
+          "n_exo_m3": 2273143947264.0,
+          "lam": 36.41422473102656,
+          "phi_cm2s": 0.0006625266934850892,
+          "global_kg_s": 2.516780960279905e-11
+        },
+        "O": {
+          "n_exo_m3": 45818493009920.0,
+          "lam": 145.55318579715535,
+          "phi_cm2s": 1.0453263096067053e-49,
+          "global_kg_s": 1.5872471922474241e-56
+        }
+      }
+    },
+    "equator_solstice_midnight": {
+      "z_exobase_km": 333.9939581277696,
+      "T_exobase_K": 660.1100463867188,
+      "species": {
+        "H": {
+          "n_exo_m3": 506794147840.0,
+          "lam": 10.917349771845162,
+          "phi_cm2s": 10199328.446327789,
+          "global_kg_s": 0.09644680685270426
+        },
+        "He": {
+          "n_exo_m3": 2216812085248.0,
+          "lam": 43.350976385701834,
+          "phi_cm2s": 6.839218359416662e-07,
+          "global_kg_s": 2.5680554980973374e-14
+        },
+        "O": {
+          "n_exo_m3": 55987490783232.0,
+          "lam": 173.28043551562575,
+          "phi_cm2s": 1.2682112000100638e-61,
+          "global_kg_s": 1.9034442739295918e-68
+        }
+      }
+    },
+    "midlat_equinox": {
+      "z_exobase_km": 391.7045867033381,
+      "T_exobase_K": 781.6951904296875,
+      "species": {
+        "H": {
+          "n_exo_m3": 256354172928.0,
+          "lam": 9.140196276478827,
+          "phi_cm2s": 28246559.55853595,
+          "global_kg_s": 0.2717226778746454
+        },
+        "He": {
+          "n_exo_m3": 4314588512256.0,
+          "lam": 36.29419604785135,
+          "phi_cm2s": 0.0014137946894114681,
+          "global_kg_s": 5.400429895740547e-11
+        },
+        "O": {
+          "n_exo_m3": 42808475910144.0,
+          "lam": 145.0734129239928,
+          "phi_cm2s": 1.5733222970712269e-49,
+          "global_kg_s": 2.40220646613545e-56
+        }
+      }
+    },
+    "highlat_winter": {
+      "z_exobase_km": 398.2216870014484,
+      "T_exobase_K": 760.638916015625,
+      "species": {
+        "H": {
+          "n_exo_m3": 174542602240.0,
+          "lam": 9.384892318438242,
+          "phi_cm2s": 15211871.900383795,
+          "global_kg_s": 0.14661541308972173
+        },
+        "He": {
+          "n_exo_m3": 9961104998400.0,
+          "lam": 37.26584324779853,
+          "phi_cm2s": 0.0012502994873954342,
+          "global_kg_s": 4.7851183193830266e-11
+        },
+        "O": {
+          "n_exo_m3": 33150396792832.0,
+          "lam": 148.9572343280689,
+          "phi_cm2s": 2.538173200397483e-51,
+          "global_kg_s": 3.88284924786782e-58
+        }
+      }
+    }
+  },
+  "series_H": {
+    "thermal_valve_range": [
+      10199328.446327789,
+      31851639.880917836
+    ],
+    "valve_over_pipe": 0.12740655952367133,
+    "observed_over_pipe": 0.4,
+    "rectifier_swing": 3.12291540061011
+  },
+  "parallel_He": {
+    "thermal_valve_max": 0.0014137946894114681,
+    "decades_short": 8.849613653997132,
+    "rectifier_swing": 2067.187528038007
+  },
+  "verdict": "H (series): thermal valve 1.0e+07-3.2e+07 cm-2s-1 = 13% of the diffusion-limit pipe 2.5e+08; observed total 1e+08 sits at the pipe, not the valve -> the SLOWEST stage rules (diffusion-limited, Hunten 1973) | He (parallel): thermal valve <= 1.4e-03 vs required 1e+06 -> 9 decades short (the helium problem); the plasma channel (polar wind) is the fast parallel clock (Axford 1968) | rectifier: valve swings x3.1 (H), x2067 (He) across one epoch's conditions"
+}

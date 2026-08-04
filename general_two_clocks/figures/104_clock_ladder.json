@@ -1,0 +1,135 @@
+{
+  "sigma_m2": 3e-19,
+  "Kzz_ref_m2s": [
+    100.0,
+    400.0,
+    1000.0
+  ],
+  "lambda_c": [
+    2.8,
+    3.3
+  ],
+  "verdict": "equator_solstice_noon: rung1 D=Kzz at 107-119 km (400: 114) < rung2 exobase Kn=1 at 373 km (T=781 K), ceilings 3222x apart | equator_solstice_midnight: rung1 D=Kzz at 107-119 km (400: 114) < rung2 exobase Kn=1 at 334 km (T=660 K), ceilings 3071x apart | midlat_equinox: rung1 D=Kzz at 107-119 km (400: 114) < rung2 exobase Kn=1 at 392 km (T=782 K), ceilings 3258x apart | highlat_winter: rung1 D=Kzz at 107-119 km (400: 114) < rung2 exobase Kn=1 at 398 km (T=761 K), ceilings 3449x apart | rung3 at exobase: lam_H=9.2 > lambda_c=2.8 (Jeans regime, no blow-off); H blow-off would need T > 2171 K vs actual 781 K",
+  "conditions": {
+    "equator_solstice_noon": {
+      "z_exobase_km": 373.0447403833861,
+      "T_exobase_K": 781.19775390625,
+      "z_turbopause_km": {
+        "Kzz=100": 107.0385551703418,
+        "Kzz=400": 113.7489416420101,
+        "Kzz=1000": 119.05024440507229
+      },
+      "ceiling_ratio_at_turbo": 3222.3808078631305,
+      "jeans_at_exobase": {
+        "H": 9.170423856711828,
+        "He": 36.41422473102656,
+        "O": 145.55318579715535,
+        "N2": 254.8559044321539
+      },
+      "T_blowoff_K": {
+        "H": {
+          "lc=2.8": 2558.5408997255613,
+          "lc=3.3": 2170.883187645931
+        },
+        "He": {
+          "lc=2.8": 10159.539489326917,
+          "lc=3.3": 8620.215324277384
+        }
+      },
+      "identity_residuals": {
+        "Kn_vs_3D_over_vH": 3.552713678800501e-15,
+        "Kn_vs_tau_ratio": 3.552713678800501e-15
+      }
+    },
+    "equator_solstice_midnight": {
+      "z_exobase_km": 333.9939581277696,
+      "T_exobase_K": 660.1100463867188,
+      "z_turbopause_km": {
+        "Kzz=100": 106.91611425738917,
+        "Kzz=400": 113.87049140812465,
+        "Kzz=1000": 119.27951474834614
+      },
+      "ceiling_ratio_at_turbo": 3070.905997255127,
+      "jeans_at_exobase": {
+        "H": 10.917349771845162,
+        "He": 43.350976385701834,
+        "O": 173.28043551562575,
+        "N2": 303.40484732004694
+      },
+      "T_blowoff_K": {
+        "H": {
+          "lc=2.8": 2573.804380111694,
+          "lc=3.3": 2183.83401948871
+        },
+        "He": {
+          "lc=2.8": 10220.148226026853,
+          "lc=3.3": 8671.640919053087
+        }
+      },
+      "identity_residuals": {
+        "Kn_vs_3D_over_vH": 3.552713678800501e-15,
+        "Kn_vs_tau_ratio": 3.552713678800501e-15
+      }
+    },
+    "midlat_equinox": {
+      "z_exobase_km": 391.7045867033381,
+      "T_exobase_K": 781.6951904296875,
+      "z_turbopause_km": {
+        "Kzz=100": 106.73121695924556,
+        "Kzz=400": 113.83097895041304,
+        "Kzz=1000": 119.30237883387387
+      },
+      "ceiling_ratio_at_turbo": 3258.452926428085,
+      "jeans_at_exobase": {
+        "H": 9.140196276478827,
+        "He": 36.29419604785135,
+        "O": 145.0734129239928,
+        "N2": 254.01584759078568
+      },
+      "T_blowoff_K": {
+        "H": {
+          "lc=2.8": 2551.731238895299,
+          "lc=3.3": 2165.105293608133
+        },
+        "He": {
+          "lc=2.8": 10132.499461113419,
+          "lc=3.3": 8597.272270035628
+        }
+      },
+      "identity_residuals": {
+        "Kn_vs_3D_over_vH": 1.7763568394002505e-15,
+        "Kn_vs_tau_ratio": 1.7763568394002505e-15
+      }
+    },
+    "highlat_winter": {
+      "z_exobase_km": 398.2216870014484,
+      "T_exobase_K": 760.638916015625,
+      "z_turbopause_km": {
+        "Kzz=100": 106.86889013904187,
+        "Kzz=400": 113.77628731300005,
+        "Kzz=1000": 119.18066231905885
+      },
+      "ceiling_ratio_at_turbo": 3448.982008857281,
+      "jeans_at_exobase": {
+        "H": 9.384892318438242,
+        "He": 37.26584324779853,
+        "O": 148.9572343280689,
+        "N2": 260.8162127711685
+      },
+      "T_blowoff_K": {
+        "H": {
+          "lc=2.8": 2549.469400007225,
+          "lc=3.3": 2163.186157581888
+        },
+        "He": {
+          "lc=2.8": 10123.518075862026,
+          "lc=3.3": 8589.651700731416
+        }
+      },
+      "identity_residuals": {
+        "Kn_vs_3D_over_vH": 1.3322676295501878e-15,
+        "Kn_vs_tau_ratio": 8.881784197001252e-16
+      }
+    }
+  }
+}

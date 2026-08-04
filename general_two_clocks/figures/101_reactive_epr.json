@@ -1,0 +1,211 @@
+{
+  "what": "NR66: the spin's EPR is reactive/housekeeping (Coriolis, heatless, = 2r\u00b2/\u03c4), not gyrator-dissipative \u2014 proved in closed form and confirmed on ANDRO: ocean spin tracks |f| while anisotropy carries no gradient signature",
+  "synthetic": {
+    "reactive": [
+      {
+        "tau": 20.0,
+        "f": 0.1,
+        "D0": 0.5,
+        "sigma": 0.4000000000000001,
+        "sigma_closed": 0.4000000000000001,
+        "sigma_err": 0.0,
+        "anisotropy": 0.0,
+        "sym_norm": 0.0,
+        "coriolis_power": 0.0,
+        "r_clock": 2.0
+      },
+      {
+        "tau": 17.0,
+        "f": 0.23,
+        "D0": 0.7,
+        "sigma": 1.7986,
+        "sigma_closed": 1.7986,
+        "sigma_err": 0.0,
+        "anisotropy": 1.9860273225978185e-15,
+        "sym_norm": 6.938893903907228e-18,
+        "coriolis_power": -4.3465523145740664e-16,
+        "r_clock": 3.91
+      },
+      {
+        "tau": 40.0,
+        "f": 0.05,
+        "D0": 1.1,
+        "sigma": 0.20000000000000004,
+        "sigma_closed": 0.20000000000000004,
+        "sigma_err": 0.0,
+        "anisotropy": 0.0,
+        "sym_norm": 0.0,
+        "coriolis_power": 0.0,
+        "r_clock": 2.0
+      },
+      {
+        "tau": 5.0,
+        "f": 0.25,
+        "D0": 1.3,
+        "sigma": 0.625,
+        "sigma_closed": 0.625,
+        "sigma_err": 0.0,
+        "anisotropy": 9.930136612989092e-16,
+        "sym_norm": 2.7755575615628914e-17,
+        "coriolis_power": 1.1102230246251565e-16,
+        "r_clock": 1.25
+      }
+    ],
+    "gyrator": [
+      {
+        "k": 1.0,
+        "u": 0.6,
+        "T1": 3.0,
+        "T2": 0.5,
+        "sigma": 0.7499999999999998,
+        "anisotropy": 4.125118369513778,
+        "sym_norm": 0.678841989185254
+      },
+      {
+        "k": 1.0,
+        "u": 0.6,
+        "T1": 1.0,
+        "T2": 1.0,
+        "sigma": 1.925929944387236e-31,
+        "anisotropy": 1.8750000000000004,
+        "sym_norm": 3.510833468576701e-16
+      },
+      {
+        "k": 1.0,
+        "u": 0.9,
+        "T1": 2.0,
+        "T2": 1.0,
+        "sigma": 0.2024999999999998,
+        "anisotropy": 14.245668049331513,
+        "sym_norm": 0.3910371509913156
+      }
+    ]
+  },
+  "ocean": {
+    "n_floats": 8280,
+    "spin_tracks_f": {
+      "rho": 0.15233998393069845,
+      "p": 3.546593019658236e-44
+    },
+    "anisotropy_vs_f": {
+      "rho": -0.39830018177648485,
+      "p": 0.0
+    },
+    "spin_vs_anisotropy_raw": {
+      "rho": -0.11506292151459602,
+      "p": 8.331195842829435e-26
+    },
+    "spin_vs_anisotropy_partial_f": {
+      "rho": -0.061257119321807135,
+      "p": 2.4265905831167458e-08
+    },
+    "signed_spin_vs_f": {
+      "rho": -0.12612334138629513,
+      "p": 1.0360936760792761e-30
+    },
+    "bands": [
+      {
+        "lat_lo": -75,
+        "lat_hi": -60,
+        "n": 233,
+        "mean_V": -0.030503304721030047,
+        "mean_absV": 0.08655018025751073,
+        "mean_P": 0.25121857211156756,
+        "mean_f": -0.9238795325112867
+      },
+      {
+        "lat_lo": -60,
+        "lat_hi": -45,
+        "n": 1086,
+        "mean_V": 0.01295350920810313,
+        "mean_absV": 0.07587357366482504,
+        "mean_P": 0.1635240986828886,
+        "mean_f": -0.7933533402912352
+      },
+      {
+        "lat_lo": -45,
+        "lat_hi": -30,
+        "n": 1278,
+        "mean_V": 0.03869453521126761,
+        "mean_absV": 0.10046997026604068,
+        "mean_P": 0.15616266341024115,
+        "mean_f": -0.6087614290087207
+      },
+      {
+        "lat_lo": -30,
+        "lat_hi": -15,
+        "n": 1031,
+        "mean_V": 0.024615198836081476,
+        "mean_absV": 0.08074116197866149,
+        "mean_P": 0.20372163260180712,
+        "mean_f": -0.3826834323650898
+      },
+      {
+        "lat_lo": -15,
+        "lat_hi": 0,
+        "n": 1068,
+        "mean_V": 0.02365414138576779,
+        "mean_absV": 0.0603955308988764,
+        "mean_P": 0.38950234091567704,
+        "mean_f": -0.13052619222005157
+      },
+      {
+        "lat_lo": 0,
+        "lat_hi": 15,
+        "n": 1103,
+        "mean_V": -0.024321900271985497,
+        "mean_absV": 0.05258565911151405,
+        "mean_P": 0.3739981350956731,
+        "mean_f": 0.13052619222005157
+      },
+      {
+        "lat_lo": 15,
+        "lat_hi": 30,
+        "n": 1067,
+        "mean_V": -0.021475245548266166,
+        "mean_absV": 0.05492778537956889,
+        "mean_P": 0.23049307117207468,
+        "mean_f": 0.3826834323650898
+      },
+      {
+        "lat_lo": 30,
+        "lat_hi": 45,
+        "n": 757,
+        "mean_V": -0.025830435931307797,
+        "mean_absV": 0.0761613289299868,
+        "mean_P": 0.20568167212188546,
+        "mean_f": 0.6087614290087207
+      },
+      {
+        "lat_lo": 45,
+        "lat_hi": 60,
+        "n": 429,
+        "mean_V": -0.023834701631701632,
+        "mean_absV": 0.08280368065268065,
+        "mean_P": 0.21113510775750752,
+        "mean_f": 0.7933533402912352
+      },
+      {
+        "lat_lo": 60,
+        "lat_hi": 75,
+        "n": 211,
+        "mean_V": 0.07507353080568721,
+        "mean_absV": 0.10065969194312797,
+        "mean_P": 0.24236669394164798,
+        "mean_f": 0.9238795325112867
+      }
+    ]
+  },
+  "verdict": {
+    "reactive_isotropic": true,
+    "reactive_antisymmetric": true,
+    "reactive_sigma_closed": true,
+    "reactive_heatless": true,
+    "gyrator_needs_gradient": true,
+    "gyrator_anisotropic": true,
+    "ocean_spin_tracks_coriolis": true,
+    "ocean_signed_spin_cyclonic": true,
+    "ocean_anisotropy_not_gyrator": true,
+    "ocean_epr_is_reactive": true
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "verdict": "midlat_noon: H lift x1.60 over the naive barometric clock; multiplier lift eE/(m g) = 0.95 vs static Te/(Te+Ti) = 0.63 (excess +0.33) | midlat_midnight: H lift x1.45 over the naive barometric clock; multiplier lift eE/(m g) = 0.79 vs static Te/(Te+Ti) = 0.53 (excess +0.26) | midlat_winter_noon: H lift x1.52 over the naive barometric clock; multiplier lift eE/(m g) = 1.05 vs static Te/(Te+Ti) = 0.66 (excess +0.39) | equator_noon: H lift x1.55 over the naive barometric clock; multiplier lift eE/(m g) = 0.67 vs static Te/(Te+Ti) = 0.55 (excess +0.12) | contrast: equatorial column statically supported (excess +0.12); high-dip columns carry +0.26 to +0.39 excess -> outflow-driving (polar-wind) configuration",
+  "conditions": {
+    "midlat_noon": {
+      "window_km": [
+        300.0,
+        595.0
+      ],
+      "n_window": 60,
+      "H_lift_over_neutral": 1.5983848253154245,
+      "H_over_static_DE": 0.7616679414502652,
+      "lift_measured": 0.9490394409677574,
+      "lift_static": 0.6300689461717691,
+      "lift_excess": 0.3349787386808591,
+      "Te_over_Ti": 1.7032259953728999
+    },
+    "midlat_midnight": {
+      "window_km": [
+        405.0,
+        505.0
+      ],
+      "n_window": 21,
+      "H_lift_over_neutral": 1.4519367701852692,
+      "H_over_static_DE": 0.6920243784667264,
+      "lift_measured": 0.7890535901777899,
+      "lift_static": 0.5332936571770059,
+      "lift_excess": 0.2557599330007839,
+      "Te_over_Ti": 1.1426749719132618
+    },
+    "midlat_winter_noon": {
+      "window_km": [
+        300.0,
+        595.0
+      ],
+      "n_window": 60,
+      "H_lift_over_neutral": 1.5184909549902432,
+      "H_over_static_DE": 0.7374926246332257,
+      "lift_measured": 1.0486495579749815,
+      "lift_static": 0.6619492079593035,
+      "lift_excess": 0.3861691337573124,
+      "Te_over_Ti": 1.9581400858319764
+    },
+    "equator_noon": {
+      "window_km": [
+        435.0,
+        590.0
+      ],
+      "n_window": 32,
+      "H_lift_over_neutral": 1.5547041749298671,
+      "H_over_static_DE": 0.9151820675176887,
+      "lift_measured": 0.6731038571742867,
+      "lift_static": 0.5482408307890829,
+      "lift_excess": 0.1248630263852038,
+      "Te_over_Ti": 1.2135772313867936
+    }
+  }
+}

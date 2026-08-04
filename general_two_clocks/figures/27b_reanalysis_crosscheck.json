@@ -1,0 +1,23 @@
+{
+  "what": "P0-R7: KE_div/KE_rot at 850/500/250 hPa from NCEP/NCAR R1 vs NCEP-DOE R2, same window (year 2021, t0=100, nt=24 daily means), same spherical-harmonic Helmholtz split",
+  "levels_hPa": {
+    "850": {
+      "R1": 0.03992334711789751,
+      "R2": 0.0446503124906198,
+      "rel_diff": 0.11840102882063229
+    },
+    "500": {
+      "R1": 0.006661023639233522,
+      "R2": 0.007690693073106925,
+      "rel_diff": 0.154581261025503
+    },
+    "250": {
+      "R1": 0.010437972786022057,
+      "R2": 0.011292521039363878,
+      "rel_diff": 0.08186917813066004
+    }
+  },
+  "minimum_at_500_in_both": true,
+  "max_rel_diff": 0.154581261025503,
+  "verdict": "the ordering (minimum at the ~500 hPa level of non-divergence) and the O(1-4%) magnitude reproduce in an independent assimilation system; the ratio is not an R1 artifact"
+}

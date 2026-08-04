@@ -1,0 +1,355 @@
+{
+  "what": "NR65: MSf phase-lag profile -> complex wavenumber of the subglacial bed; loss tangent k_i/k_r vs the parabolic-clock prediction 1; phase velocity + independent K_phase closure against NR64's amplitude-derived K",
+  "constituent": "MSf",
+  "omega_rad_s": 4.925201624236741e-06,
+  "references": {
+    "minchew2017_rutford_insar_km_day": 29.0,
+    "rosier2014_model_msf_m_s": 0.27,
+    "rosier2014_model_semidiurnal_m_s": 1.45,
+    "gudmundsson2006_modulation_m_s": [
+      1.0,
+      2.0
+    ]
+  },
+  "branches": {
+    "Evans": {
+      "stations": [
+        {
+          "name": "E3",
+          "d_gl_km": 7.950537216387079,
+          "A_disp_m": 0.2270345198619107,
+          "snr": 543.6039630577603,
+          "ph_rad": 1.4314098959412114,
+          "sig_ph_rad": 0.001839574521081528,
+          "used": true
+        },
+        {
+          "name": "EGPS",
+          "d_gl_km": 11.487455067339443,
+          "A_disp_m": 0.04420764769754296,
+          "snr": 70.67887480493064,
+          "ph_rad": 1.3684379351747196,
+          "sig_ph_rad": 0.014148499148577827,
+          "used": true
+        },
+        {
+          "name": "E2A",
+          "d_gl_km": 17.62433432098951,
+          "A_disp_m": 0.10787960853609872,
+          "snr": 340.6926842102952,
+          "ph_rad": 1.308661462691559,
+          "sig_ph_rad": 0.0029351965755235947,
+          "used": true
+        },
+        {
+          "name": "E1",
+          "d_gl_km": 31.40342761690952,
+          "A_disp_m": 0.07799283086021289,
+          "snr": 411.9018863105321,
+          "ph_rad": 1.2065716671954532,
+          "sig_ph_rad": 0.0024277626134639784,
+          "used": true
+        }
+      ],
+      "ordering": {
+        "tau": -1.0,
+        "p_one_sided": 0.041666666666666664,
+        "n": 4
+      },
+      "phase_fit": {
+        "slope_rad_km": -0.009629168212169442,
+        "intercept_rad": 1.502147915793427,
+        "n": 4,
+        "two_point": false,
+        "wrap_risk": false,
+        "sign_violation": false,
+        "err_rad_km": 0.003222530914725865
+      },
+      "derived": {
+        "delta_phase_km": 103.85113002140618,
+        "delta_phase_err_km": 34.75518026575189,
+        "c_m_s": 0.5114877542602507,
+        "c_km_day": 44.19254196808566,
+        "c_err_m_s": 0.17117627029552193,
+        "K_phase_m2_s": 26559.29063601917,
+        "K_phase_err_m2_s": 17776.849103039614
+      },
+      "amp_fit": {
+        "delta_km": 21.991523677742354,
+        "err_km": 27.383044300436627,
+        "n": 4,
+        "two_point": false
+      },
+      "K_amp_m2_s": 1190.9805228830105,
+      "loss_tangent": {
+        "k_i_over_k_r": 4.722325362408337,
+        "err": 6.08874587343076,
+        "parabolic_prediction": 1.0
+      },
+      "K_geometric_m2_s": 5624.197529344782
+    },
+    "Evans_XX": {
+      "stations": [
+        {
+          "name": "XX20",
+          "d_gl_km": 35.14774790775166,
+          "A_disp_m": 0.006865563943148375,
+          "snr": 56.484646891541075,
+          "ph_rad": 0.6463716064678681,
+          "sig_ph_rad": 0.017703925845905504,
+          "used": true
+        },
+        {
+          "name": "XX21",
+          "d_gl_km": 66.3896694226092,
+          "A_disp_m": 0.009647357695527107,
+          "snr": 13.105935395076845,
+          "ph_rad": 1.2789291577059836,
+          "sig_ph_rad": 0.07630130699222303,
+          "used": true
+        }
+      ],
+      "phase_fit": {
+        "slope_rad_km": 0.020247075742037622,
+        "intercept_rad": -0.06526750758242417,
+        "n": 2,
+        "two_point": true,
+        "wrap_risk": false,
+        "sign_violation": true,
+        "err_rad_km": NaN
+      }
+    },
+    "Foundation": {
+      "stations": [
+        {
+          "name": "H01",
+          "d_gl_km": 3.6066269604109595,
+          "A_disp_m": 0.15360102730216058,
+          "snr": 265.032008198739,
+          "ph_rad": 1.728173083413494,
+          "sig_ph_rad": 0.003773129165780354,
+          "used": true
+        },
+        {
+          "name": "H10",
+          "d_gl_km": 8.461346224352349,
+          "A_disp_m": 0.09964503245077498,
+          "snr": 500.6540968138497,
+          "ph_rad": 1.665346243823021,
+          "sig_ph_rad": 0.001997387031013978,
+          "used": true
+        },
+        {
+          "name": "H02",
+          "d_gl_km": 12.426362547359803,
+          "A_disp_m": 0.13193366920912736,
+          "snr": 986.3162705101055,
+          "ph_rad": 1.1284212097511022,
+          "sig_ph_rad": 0.0010138735716919863,
+          "used": true
+        },
+        {
+          "name": "H04",
+          "d_gl_km": 29.547612069613642,
+          "A_disp_m": 0.08455755303095452,
+          "snr": 713.0685739372451,
+          "ph_rad": 0.9850258307731884,
+          "sig_ph_rad": 0.0014023896670672894,
+          "used": true
+        },
+        {
+          "name": "H05",
+          "d_gl_km": 46.62937009289418,
+          "A_disp_m": 0.05768729411062872,
+          "snr": 414.69579958248505,
+          "ph_rad": 0.8922642633058404,
+          "sig_ph_rad": 0.0024114061464012852,
+          "used": true
+        }
+      ],
+      "ordering": {
+        "tau": -0.9999999999999999,
+        "p_one_sided": 0.008333333333333333,
+        "n": 5
+      },
+      "phase_fit": {
+        "slope_rad_km": -0.014425244103320977,
+        "intercept_rad": 1.4344842595337786,
+        "n": 5,
+        "two_point": false,
+        "wrap_risk": false,
+        "sign_violation": false,
+        "err_rad_km": 0.009374267654246014
+      },
+      "derived": {
+        "delta_phase_km": 69.32291702223466,
+        "delta_phase_err_km": 45.049607069727585,
+        "c_m_s": 0.341429343514739,
+        "c_km_day": 29.499495279673454,
+        "c_err_m_s": 0.22187839791104927,
+        "K_phase_m2_s": 11834.439024714155,
+        "K_phase_err_m2_s": 15381.257767414036
+      },
+      "amp_fit": {
+        "delta_km": 47.79742682377716,
+        "err_km": 14.874352727987455,
+        "n": 5,
+        "two_point": false
+      },
+      "K_amp_m2_s": 5626.0430667861565,
+      "loss_tangent": {
+        "k_i_over_k_r": 1.4503483059416393,
+        "err": 1.0450057213236303,
+        "parabolic_prediction": 1.0
+      },
+      "K_geometric_m2_s": 8159.722031068006
+    },
+    "Talutis": {
+      "stations": [
+        {
+          "name": "T+18",
+          "d_gl_km": 16.80252665243723,
+          "A_disp_m": 0.0413480156021619,
+          "snr": 239.63391401584343,
+          "ph_rad": 1.0304615430098525,
+          "sig_ph_rad": 0.004173032035581929,
+          "used": true
+        },
+        {
+          "name": "T+38",
+          "d_gl_km": 34.03516684053305,
+          "A_disp_m": 0.008457759369630034,
+          "snr": 48.979396144975226,
+          "ph_rad": 0.4299536396366041,
+          "sig_ph_rad": 0.020416748239199957,
+          "used": true
+        }
+      ],
+      "phase_fit": {
+        "slope_rad_km": -0.0348471213243386,
+        "intercept_rad": 1.6159812278227657,
+        "n": 2,
+        "two_point": true,
+        "wrap_risk": false,
+        "sign_violation": false,
+        "err_rad_km": NaN
+      },
+      "derived": {
+        "delta_phase_km": 28.696774998787653,
+        "delta_phase_err_km": NaN,
+        "c_m_s": 0.14133740283438526,
+        "c_km_day": 12.211551604890888,
+        "c_err_m_s": NaN,
+        "K_phase_m2_s": 2027.9638240256834,
+        "K_phase_err_m2_s": NaN
+      },
+      "amp_fit": {
+        "delta_km": 10.859036039358445,
+        "err_km": NaN,
+        "n": 2,
+        "two_point": true
+      },
+      "K_amp_m2_s": 290.3865970015941,
+      "loss_tangent": {
+        "k_i_over_k_r": 2.6426632064555764,
+        "err": NaN,
+        "parabolic_prediction": 1.0
+      },
+      "K_geometric_m2_s": 767.3939755439561
+    },
+    "Rutford": {
+      "stations": [
+        {
+          "name": "RUT_long",
+          "d_gl_km": 21.384236337154135,
+          "A_disp_m": 0.12925290560534158,
+          "snr": 546.3296102139901,
+          "ph_rad": 1.3967464781127117,
+          "sig_ph_rad": 0.0018303968543976834,
+          "used": true
+        },
+        {
+          "name": "R145",
+          "d_gl_km": 99.60487013651412,
+          "A_disp_m": 0.0036519993450907784,
+          "snr": 13.613448905287171,
+          "ph_rad": -0.5117504974229463,
+          "sig_ph_rad": 0.073456771091389,
+          "used": true
+        }
+      ],
+      "phase_fit": {
+        "slope_rad_km": -0.02439889429215126,
+        "intercept_rad": 1.9184982000213153,
+        "n": 2,
+        "two_point": true,
+        "wrap_risk": true,
+        "sign_violation": false,
+        "err_rad_km": NaN
+      },
+      "derived": {
+        "delta_phase_km": 40.98546385037146,
+        "delta_phase_err_km": NaN,
+        "c_m_s": 0.20186167312594575,
+        "c_km_day": 17.440848558081715,
+        "c_err_m_s": NaN,
+        "K_phase_m2_s": 4136.697153339474,
+        "K_phase_err_m2_s": NaN
+      },
+      "amp_fit": {
+        "delta_km": 21.932066989116073,
+        "err_km": NaN,
+        "n": 2,
+        "two_point": true
+      },
+      "K_amp_m2_s": 1184.5493146449385,
+      "loss_tangent": {
+        "k_i_over_k_r": 1.868746063501938,
+        "err": NaN,
+        "parabolic_prediction": 1.0
+      },
+      "K_geometric_m2_s": 2213.621868766647,
+      "alt_branch": {
+        "slope_rad_km": -0.10472533761011625,
+        "derived": {
+          "delta_phase_km": 9.54878755056314,
+          "delta_phase_err_km": NaN,
+          "c_m_s": 0.04702970395352516,
+          "c_km_day": 4.063366421584574,
+          "c_err_m_s": NaN,
+          "K_phase_m2_s": 224.5383258090456,
+          "K_phase_err_m2_s": NaN
+        }
+      }
+    }
+  },
+  "ocean_epoch_control": {
+    "stations": [
+      "C-16",
+      "E2B",
+      "E4B",
+      "E5",
+      "H08"
+    ],
+    "pairs": [
+      {
+        "pair": [
+          "E2B",
+          "E4B"
+        ],
+        "sep_km": 48.500971495909965,
+        "dphi_rad": 0.03429342730012186
+      },
+      {
+        "pair": [
+          "E4B",
+          "E5"
+        ],
+        "sep_km": 32.919474132132834,
+        "dphi_rad": 0.021409840551238624
+      }
+    ],
+    "max_dphi_rad": 0.03429342730012186
+  },
+  "verdict": "Evans: k_r=0.0096 rad/km (n=4) -> delta_phi=104 km, c=44 km/d (0.51 m/s), K_phi=26559 m2/s; ordering tau=-1.00 (exact one-sided p=0.042); k_i/k_r=4.72+/-6.09 vs 1 (parabolic), K_amp=1191 | Evans_XX: phase INCREASES upstream (sign violation, 2pt) \u2014 no transmission read-out | Foundation: k_r=0.0144 rad/km (n=5) -> delta_phi=69 km, c=29 km/d (0.34 m/s), K_phi=11834 m2/s; ordering tau=-1.00 (exact one-sided p=0.008); k_i/k_r=1.45+/-1.05 vs 1 (parabolic), K_amp=5626 | Talutis: k_r=0.0348 rad/km (2pt) -> delta_phi=29 km, c=12 km/d (0.14 m/s), K_phi=2028 m2/s; k_i/k_r=2.64 vs 1 (parabolic), K_amp=290 | Rutford: k_r=0.0244 rad/km (2pt+wrap-risk) -> delta_phi=41 km, c=17 km/d (0.20 m/s), K_phi=4137 m2/s; k_i/k_r=1.87 vs 1 (parabolic), K_amp=1185 | sign concordance: 4/5 branches accumulate lag upstream (registered direction) | ocean epoch control: max |dphi(M2,h)| = 0.034 rad across afloat neighbour pairs (2 pairs) \u2014 cross-epoch phase floor | references: Minchew-2017 Rutford InSAR 29 km/d; Rosier-2014 model MSf 0.27 m/s (= 23 km/d)"
+}
