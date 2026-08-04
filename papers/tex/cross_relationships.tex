@@ -1,0 +1,201 @@
+\documentclass[11pt]{article}
+\usepackage{preamble}
+% --- claim-tag macros (local to this internal cross-reference document) ---
+\definecolor{cVer}{RGB}{0,120,0}
+\definecolor{cDer}{RGB}{0,80,170}
+\definecolor{cHyp}{RGB}{180,100,0}
+\definecolor{cFal}{RGB}{180,0,0}
+\definecolor{cLit}{RGB}{90,90,90}
+\definecolor{cMea}{RGB}{120,0,140}
+\newcommand{\ctV}[1]{{\small\textbf{\textcolor{cVer}{[VERIFIED#1]}}}}
+\newcommand{\ctD}[1]{{\small\textbf{\textcolor{cDer}{[DERIVED#1]}}}}
+\newcommand{\ctH}[1]{{\small\textbf{\textcolor{cHyp}{[HYP#1]}}}}
+\newcommand{\ctF}[1]{{\small\textbf{\textcolor{cFal}{[FALSIFIED#1]}}}}
+\newcommand{\ctL}[1]{{\small\textbf{\textcolor{cLit}{[LIT#1]}}}}
+\newcommand{\ctM}[1]{{\small\textbf{\textcolor{cMea}{[MEASURED#1]}}}}
+\newcommand{\ctX}[1]{{\small\textbf{\textcolor{cLit}{[#1]}}}}
+\newcommand{\cmark}[1]{{\footnotesize\textsf{\textcolor{cLit}{[cite:\,#1]}}}}
+\newcommand{\cmarke}{{\footnotesize\textsf{\textcolor{cLit}{[cite]}}}}
+\title{New cross-cutting relationships: the four papers, each other, and the mainstream}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+This note answers a single question asked after the four drafts were finalised: \emph{what do the findings, taken together, imply — and can we derive new, useful relationships between them and the existing literature?} Each relationship is \textbf{derived} here and then \textbf{verified one-by-one} in \code{glaciers/\allowbreak{}validation/\allowbreak{}synthetic/\allowbreak{}cross\_\allowbreak{}relationships.\allowbreak{}py} (7 parametrised tests in \code{glaciers/\allowbreak{}tests/\allowbreak{}test\_\allowbreak{}validation\_\allowbreak{}synthetic.\allowbreak{}py}). No external data; CPU only.
+
+
+The unifying thread of all four papers is one operator-theoretic statement:
+
+
+\begin{quote}
+\textbf{A local, memoryless, down-gradient (eddy-diffusivity / ``K-theory'') closure is the real-even-positive, Markovian-delta \emph{projection} of an exact non-local operator. Each paper measures a different shadow that the projection throws away — a memory time, a migration, a backscatter, a fold.}
+\end{quote}
+
+
+The relationships below make that statement quantitative and tie it to mainstream results (Mori–Zwanzig/t-model, Kraichnan, Schoof MISI, Scheffer/Dakos early warning, Gilpin/Hanratty, Gudmundsson, rough Rayleigh–Bénard).
+
+
+\begin{center}\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+\# & Relationship & Links & Status \\
+\midrule
+NR1 & One memory number $Me=\tau _{fast}/\tau _{slow}$ governs Markovian-closure breakdown & P1 \ensuremath{\rightleftarrows} P4 \ensuremath{\rightleftarrows} MZ/t-model & \ctV{} \\
+NR2 & K-theory = real-even-positive projection of one complex admittance $Z$ & P3 \ensuremath{\rightleftarrows} P1 \ensuremath{\rightleftarrows} Kraichnan/Hanratty & \ctV{} \\
+NR3 & $s_{N}(N)$ flotation pole = Schoof MISI saddle-node; CSD scaling & P4 \ensuremath{\rightleftarrows} Schoof / Scheffer–Dakos & \ctV{} \\
+NR4 & $I = |tan \psi |/2\pi $, \ensuremath{\psi} the Gilpin/Hanratty flux-topography phase & P3 \ensuremath{\rightleftarrows} Gilpin/Hanratty & \ctV{} \\
+NR5 & Melt ceiling = rough-RB no-enhancement branch (suppression ↑ steepness) & P2 \ensuremath{\rightleftarrows} rough-RB & \ctV{} (decomp.); crossover $[CONJECTURE]$ \\
+NR6 & Tidal \code{2f/\allowbreak{}1f} velocity ratio = curvature of the sliding law & P4 \ensuremath{\rightleftarrows} Gudmundsson & \ctV{} \\
+NR7 & Intrusion residence $Ro$ is a Damköhler number & P4 \ensuremath{\rightleftarrows} transport theory & \ctD{} \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+
+\medskip\hrule\medskip
+
+
+\section*{NR1 — One memory number governs every ``local closure fails'' verdict \ctV{}}
+
+
+\textbf{Statement.} Paper 1 shows single-$K$ turbulence closure is the \emph{Markovian-delta collapse} of a Mori–Zwanzig (MZ) memory kernel; Paper 4 shows the literal thermal sliding-lag kernel is wrong and the replacement is an \emph{exact MZ memory kernel} $K(\tau )=M_{sq} M_{qs} e^{M_{qq} \tau }$ from eliminating the channel. These are the \textbf{same object} — the impedance Green's function of an eliminated fast variable — and the validity of the \emph{local} (Markovian) closure in both is set by \textbf{one} dimensionless number,
+
+
+\begin{quote}
+$Me = \tau _{fast} / \tau _{slow}$   (eliminated-variable relaxation time / resolved timescale).
+\end{quote}
+
+
+\textbf{Derivation.} For the lumped pair $\dot{x} = M x$, $M=[[-1/\tau _{1},-a],[b,-1/\tau _{2}]]$, eliminating $q$ gives the generalized Langevin equation $\dot{s} = M_{ss} s + \int K(t-\tau )s d\tau $ with $K(\tau )=-ab e^{-\tau /\tau _{2}}$ and DC gain $\int K = M_{sq} M_{qs}/(-M_{qq})$. Holding the DC gain fixed (so the Markovian closure $\dot{s}=(M_{ss}+\int K)s$ is the correct \emph{slow} limit), the residual is purely the finite-memory correction, which vanishes as $\tau _{2}\to 0$. This is the Chorin–Hald–Kupferman / Stinis statement that the Markovian approximation improves as the timescales separate.
+
+
+\textbf{Verification.} Sweeping $Me\in [0.02,0.5]$, the L\ensuremath{\infty} closure error rises monotonically $0.7\% \to  6.2\%$, vanishing as a positive power ($\approx Me^{0}.69$) — the same criterion in both systems. Paper 1's measured $\tau _{c}\approx 0.02–0.03$ and Paper 4's channel time $\tau _{2}$ are the two instances. (\code{nr1\_\allowbreak{}memory\_\allowbreak{}number}.)
+
+
+\medskip\hrule\medskip
+
+
+\section*{NR2 — K-theory is the real-even-positive projection of one complex admittance \ctV{}}
+
+
+\textbf{Statement.} A down-gradient closure is a \textbf{real, even, sign-definite} transport operator. Write the exact linear transport response to a sinusoid as one complex admittance $Z = a_{r} + i a_{i}$. Then:
+
+
+\begin{itemize}
+\item \textbf{Im Z = a\_i} is the \emph{quadrature} response: the scallop migration $E_{cos}$ (Paper 3) \textbf{and} the closure memory phase ($\tau _{c}$, Paper 1).
+\item \textbf{Re Z < 0} is \emph{backscatter} — negative eddy viscosity (Paper 1, Kraichnan 1976).
+\item \textbf{K-theory = the projection} $Z \mapsto  max(Re Z, 0) + 0\cdot i$. It zeroes the migration \textbf{and} the backscatter at once.
+\end{itemize}
+
+
+\textbf{Derivation.} For topography $y=a \sin(kx)$ the flux $e=Re[Z\cdot \hat{y}\cdot e^{ikx}]$ with $\hat{y}=-ia$ gives $e = a[a_{r} \sin(kx) + a_{i} \cos(kx)]$, so $E_{sin} = a a_{r}$ (amplitude rate, Re s) and $E_{cos} = a a_{i}$ (migration, Im s). A real diffusive flux of a sinusoid is in-phase \ensuremath{\to} $E_{cos}=0$ (Paper 3's keystone). The transfer sign $T\sim -Re Z$ is backscatter iff $a_{r}<0$ (Kraichnan's 2-D negative eddy viscosity).
+
+
+\textbf{Verification.} With $Z=-1-0.6i$: exact $E_{sin}=-1$, $E_{cos}=-0.6$, migration $I=0.0955$, backscatter present; the K-theory projection gives $E_{cos}=0$, $I=0$, no backscatter. The migration and the backscatter are independent components that vanish \emph{together} only for a genuine down-gradient closure. (\code{nr2\_\allowbreak{}admittance\_\allowbreak{}unification}.)
+
+
+\medskip\hrule\medskip
+
+
+\section*{NR3 — The $s_{N}$ flotation pole is the Schoof MISI saddle-node \ctV{}}
+
+
+\textbf{Statement.} Paper 4's effective-pressure master curve $|s_{N}|(N)=m/(1-(N_{c}/N)^{m})$ has a simple pole at the flotation threshold $N_{c}$. That pole is the loss of basal-drag restoring stiffness — i.e. the \textbf{Schoof (2007) grounding-line saddle-node} that underlies marine ice-sheet instability — and the velocity critical-slowing-down early-warning (Paper 4) is the \textbf{Scheffer (2009) / Dakos (2008)} generic precursor of that fold.
+
+
+\textbf{Derivation.} Near $N=N_{c}(1+\delta )$, $R=(N_{c}/N)^{m} \approx  1-m\delta $, so the sliding sensitivity $|s_{N}|=m/(1-R) \propto  \delta ^{-1}$ (the pole), while the restoring stiffness $d\tau _{b}/du \propto  (1-R)^{2}/R \propto  \delta ^{+2}$. The restoring eigenvalue $\lambda  \propto  \delta ^{2}$ \ensuremath{\to} 0 at the fold; by the standard CSD result $Var \propto  1/\lambda  \propto  \delta ^{-2}$ and $AC1 = e^{-\lambda \Delta t} \to  1$. Schoof's flux $q_{g} \propto  h_{g}^{(m+n+3)/(m+1)} \approx  h_{g}^{4.75}$ blows up at the same flotation thickness.
+
+
+\textbf{Verification.} Fitted near-fold exponents: $|s_{N}|: -0.997$, stiffness $+1.998$, variance $-1.998$; $AC1: 0.905 (far) \to  0.9999 (near)$. An OU realization with $N$ declining toward $N_{c}$ gives rising rolling variance and AC1 (Kendall $\tau =0.54, 0.55$) — the operational early-warning. (\code{nr3\_\allowbreak{}misi\_\allowbreak{}fold\_\allowbreak{}ews}.)
+
+
+\medskip\hrule\medskip
+
+
+\section*{NR4 — The constant-free field ratio is the Gilpin/Hanratty phase \ctV{}}
+
+
+\textbf{Statement.} Paper 3's $\Delta T$-free, constant-free field test $I = Im(s)/(2\pi |Re(s)|)$ is exactly
+
+
+\begin{quote}
+$I = |tan \psi | / (2\pi )$,   $\psi  = arg(s) = atan2(E_{cos}, E_{sin})$,
+\end{quote}
+
+
+where \ensuremath{\psi} is the \textbf{Gilpin–Hirata–Cheng (1980) / Hanratty (1981)} heat-flux-to-topography phase shift. Downstream migration \ensuremath{\Leftrightarrow} $\psi \in (\pi /2,\pi )$ (Gilpin's criterion) \ensuremath{\Leftrightarrow} damped ($Re s<0$) and migrating ($Im s\ne 0$). The K-theory limit is $\psi \to 0$ ($I\to 0$).
+
+
+\textbf{Verification.} On Paper 3's own measured $(E_{sin},E_{cos})$ table the two expressions for $I$ agree to machine precision ($0.168, 0.197, 0.248, 0.394$), and every point has $|\psi |\in (90^{\circ},180^{\circ})$ ($-133^{\circ}\ldots -112^{\circ}$) — the damped-downstream branch. (\code{nr4\_\allowbreak{}migration\_\allowbreak{}phase}.)
+
+
+\medskip\hrule\medskip
+
+
+\section*{NR5 — The melt ceiling is the rough-RB no-enhancement branch \ctV{} decomposition}
+
+
+\textbf{Statement.} Paper 2's melt ceiling $Nu/Nu_{flat} \le  1$ is the \textbf{no-enhancement} branch of rough Rayleigh–Bénard heat transfer. Writing $Nu/Nu_{flat} = A\cdot f_{loc}$ with $A$ the wetted-area gain and $f_{loc}$ the local-flux factor, the ceiling \emph{proves} the cold wall suppresses local flux faster than the geometry adds area.
+
+
+\textbf{Derivation.} For $y=a \sin(kx)$, $A=\langle \sqrt{1+y'^{2}}\rangle  \approx  1+\pi ^{2}(a/\lambda )^{2} > 1$ always. Since Paper 2 measures $Nu/Nu_{flat} \approx  0.96–0.97 \le  1$, the implied $f_{loc} = (Nu/Nu_{flat})/A < 1$ and the suppression $1-f_{loc}$ must \textbf{rise} with steepness — exactly cancelling the area gain. Enhancement ($Nu/Nu_{flat}>1$) requires $f_{loc}>1/A$, i.e. the Paper-2 §G.6 lee-flux growth term to overcome the deficit — a regime crossover flagged $[CONJECTURE]$ (it needs the lee/separation data to place).
+
+
+\textbf{Verification.} Across $a/\lambda \in [0.05,0.20]$: $A: 1.02\to 1.39$, $Nu/Nu_{flat}: 0.97\to 0.96$, implied $f_{loc}: 0.95\to 0.69$, suppression $0.05\to 0.31$ (monotone rising). (\code{nr5\_\allowbreak{}melt\_\allowbreak{}ceiling\_\allowbreak{}suppression}.)
+
+
+\medskip\hrule\medskip
+
+
+\section*{NR6 — The tidal \code{2f/\allowbreak{}1f} ratio measures the curvature of the sliding law \ctV{}}
+
+
+\textbf{Statement.} Under a tide $N(t)=N_{0}(1+\varepsilon  cos \omega t)$, the surface-velocity second-harmonic ratio is
+
+
+\begin{quote}
+$2f/1f = (\varepsilon /4) \cdot  |s_{N}'/s_{N} - 1 + s_{N}|$,   $s_{N}' = d s_{N}/d ln N$,
+\end{quote}
+
+
+i.e. it reads the \textbf{curvature} of the sliding law and diverges toward $N_{c}$. This is the sliding-law origin of Gudmundsson's observed nonlinear (MSf) tidal response, and answers the ``no knowledge of $N$'' objection (it is recovered from velocity alone).
+
+
+\textbf{Derivation.} Taylor-expanding $ln u_{b}(ln N)$ to second order and exponentiating (velocity, not log-velocity, is the observable — hence the $+s_{N}$ from $exp$) gives the fundamental amplitude $\propto  s_{N} \varepsilon $ and the second harmonic $\propto  (\varepsilon ^{2}/4)(s_{N}'-s_{N}+s_{N}^{2})$.
+
+
+\textbf{Verification.} Synthetic tide + FFT at $N_{0}/N_{c} = 20,8,3,1.5$: the measured \code{2f/\allowbreak{}1f} rises monotonically toward flotation and matches the closed-form to \ensuremath{\le}15\%. (\code{nr6\_\allowbreak{}tidal\_\allowbreak{}curvature}.)
+
+
+\medskip\hrule\medskip
+
+
+\section*{NR7 — The intrusion residence number is a Damköhler number \ctD{}}
+
+
+\textbf{Statement.} Paper 4's $Ro = v_{kin}\cdot \tau _{hyd}/\ell $ (with $v_{kin} = A\cdot dH/dt$) is a \textbf{Damköhler number}: the ratio of the kinematic intrusion-front advance to the hydraulic relaxation. $Ro=1$ at $\tau _{crit} = \ell /v_{kin}$ separates thinning-paced ($Ro<1$) from hydraulic-limited ($Ro>1$) intrusion — the transport-vs-process crossover familiar from reaction–transport theory.
+
+
+\textbf{Verification.} With Paper-4 runaway-tail numbers ($v_{kin}=1.05 km/yr$, $\ell =1 km$): $\tau _{crit}=0.95 yr$; sweeping $\tau _{hyd}$ gives $Ro=0.011,0.105,1.05,2.1$, flipping regime at $Ro=1$. (\code{nr7\_\allowbreak{}residence\_\allowbreak{}damkohler}.)
+
+
+\medskip\hrule\medskip
+
+
+\subsection*{What is genuinely new vs. a sharpening}
+
+
+\begin{itemize}
+\item \textbf{New unifications:} NR1 (one memory number across turbulence \emph{and} sliding), NR2 (one complex admittance whose two parts are Paper 3 migration and Paper 1 backscatter), NR3 (the $s_{N}$ pole \emph{is} the Schoof MISI saddle-node, with the CSD exponents derived).
+\item \textbf{Sharpenings of connections the papers already gesture at:} NR4 (the explicit $I=|tan \psi |/2\pi $ identity to Gilpin/Hanratty), NR6 (the closed-form tidal curvature ratio), NR5 (the area/flux decomposition of the melt ceiling), NR7 (naming $Ro$ a Damköhler number).
+\end{itemize}
+
+
+\subsection*{Honest limits}
+
+
+NR1's error exponent is metric-dependent ($\approx 0.69$ in L\ensuremath{\infty}); the claim is the \emph{monotone vanishing}, not a universal power. NR2's admittance is a linear, single-mode model of the discarded structure, not a turbulence closure. NR3 identifies the bifurcation and the local EWS scaling; it does not run a full grounding-line model. NR5's enhancement crossover is a conjecture pending lee-flux data. NR6 is single-mechanism (tidal $N$ modulation only). All references remain \cmarke{} slots — none invented.
+
+
+\end{document}

@@ -1,0 +1,46 @@
+% preamble.sty — shared preamble for the K manuscript LaTeX builds (xelatex + unicode-math)
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{preamble}[2026/06/14 K manuscripts]
+
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{amsmath}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+% arXiv registers almost no fonts with fontconfig; load every font by FILE NAME
+% (Extension + file stem) so the manuscripts compile under arXiv's xelatex processor.
+\setmainfont{lmroman10-regular}[
+  Extension      = .otf,
+  BoldFont       = lmroman10-bold,
+  ItalicFont     = lmroman10-italic,
+  BoldItalicFont = lmroman10-bolditalic,
+]
+\setmathfont{latinmodern-math.otf}
+% Unicode-rich monospace so stray glyphs in code spans / verbatim render
+\setmonofont{DejaVuSansMono}[
+  Extension      = .ttf,
+  BoldFont       = DejaVuSansMono-Bold,
+  ItalicFont     = DejaVuSansMono-Oblique,
+  BoldItalicFont = DejaVuSansMono-BoldOblique,
+  Scale          = 0.85,
+]
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{fvextra}
+\fvset{breaklines=true,breakanywhere=true,fontsize=\footnotesize}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\setlist{leftmargin=1.5em,topsep=0.2em,itemsep=0.1em}
+
+% --- inline code / file references ---
+\newcommand{\code}[1]{\texttt{\small #1}}
+
+% displayed-formula block
+\newenvironment{fblock}{\begin{quote}\ttfamily\small}{\end{quote}}
