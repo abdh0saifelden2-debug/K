@@ -1,0 +1,220 @@
+{
+ "description": "paper-3 field pin on the raw Bushuk 2019 exp-1b adjustment arrays: I = tau*c_mig/lam = |Im(s)|/(2pi|Re(s)|), plus the flux-parity quadrature.",
+ "used_raw_mat": true,
+ "meta": {
+  "nx": 166,
+  "dx_mm": 0.8950066666666666,
+  "Lx_mm": 148.57110666666665,
+  "dt_s": 300.0,
+  "n_frames": 12,
+  "timestring": [
+   "191702",
+   "192202",
+   "192702",
+   "193202",
+   "193702",
+   "194202",
+   "194702",
+   "195202",
+   "195702",
+   "200202",
+   "200702",
+   "201202"
+  ],
+  "exp_t0_min": 512.0,
+  "provenance": "melt_data_timestring_sub2.mat, M. Bushuk (GFDL), pers. comm. 2026-07; experiment 1b adjustment regime, fig 3(m-r), U cut 1.00->0.16 m/s"
+ },
+ "kinematic_pin": {
+  "bin1": {
+   "Re_s": -2.761501233901395e-05,
+   "dphi_dt": -0.0006307040665119279,
+   "c_phase": 1.4913518631031168e-05,
+   "I": 3.6349674076269887,
+   "downstream": true,
+   "tau_s": 36212.18733214975,
+   "lam_mm": 148.57110666666665
+  },
+  "bin2": {
+   "Re_s": -3.443971665955144e-05,
+   "dphi_dt": -0.001407390835304034,
+   "c_phase": 1.6639459421538614e-05,
+   "I": 6.503921345088847,
+   "downstream": true,
+   "tau_s": 29036.2435291018,
+   "lam_mm": 74.28555333333333
+  },
+  "bin3": {
+   "Re_s": -1.5592480919822417e-05,
+   "dphi_dt": -0.001543188631693033,
+   "c_phase": 1.2163323303763886e-05,
+   "I": 15.751572833090997,
+   "downstream": true,
+   "tau_s": 64133.475945365404,
+   "lam_mm": 49.52370222222222
+  }
+ },
+ "variants": {
+  "verbatim": {
+   "Re_s": -2.76150123390128e-05,
+   "dphi_dt": -0.0006307040665119279,
+   "k": 42.29076196676994,
+   "lam": 0.14857110666666665,
+   "c_phase": 1.4913518631031168e-05,
+   "tau": 36212.18733215126,
+   "c_mig": 1.4913518631031168e-05,
+   "I": 3.63496740762714,
+   "downstream": 1.0,
+   "k_index": 1.0
+  },
+  "bin1": {
+   "I": 3.63496740762714,
+   "Re_s": -2.76150123390128e-05,
+   "downstream": true
+  },
+  "bin2": {
+   "I": 6.5039213450889255,
+   "Re_s": -3.443971665955103e-05,
+   "downstream": true
+  },
+  "linear_detrended": {
+   "I": 0.5098766820330588,
+   "Re_s": 0.0002477246520632392,
+   "downstream": true
+  },
+  "hann": {
+   "I": 4.242632462187329,
+   "Re_s": -2.796263374464815e-05,
+   "downstream": true
+  },
+  "first_half": {
+   "I": 1.6988514936850656,
+   "Re_s": -6.166038084980395e-05,
+   "downstream": true
+  },
+  "second_half": {
+   "I": 0.6890527418856832,
+   "Re_s": -0.00016332689448795388,
+   "downstream": true
+  }
+ },
+ "migration_speeds": {
+  "bushuk_tracking": 0.953213006993007,
+  "xcorr": 0.930649493927854,
+  "modal_phase": 0.8948111178618702,
+  "flux_quadrature": 0.904234657593041,
+  "spread_frac": 0.06526728151376426,
+  "all_downstream": true
+ },
+ "flux_parity": {
+  "bin1": {
+   "Re_mean": -8.42598337885111e-05,
+   "Im_mean": -0.0006373462111061836,
+   "tau_flux_min": 197.8008490795193,
+   "p_Im_ge_0": 0.0,
+   "damping_frames": 7,
+   "n_frames": 11,
+   "I_flux": 1.2038571095813242,
+   "I_flux_ci16_84": [
+    0.5453944086711077,
+    4.086638418386241
+   ],
+   "arg_G_deg_mean": 87.06545157949718
+  },
+  "bin2": {
+   "Re_mean": 4.975112195121302e-05,
+   "Im_mean": -0.0015445617912189997,
+   "tau_flux_min": 335.00082034351595,
+   "p_Im_ge_0": 0.0,
+   "damping_frames": 5,
+   "n_frames": 11,
+   "I_flux": 4.941087443705019,
+   "I_flux_ci16_84": [
+    0.8228856819210991,
+    5.206962102576605
+   ],
+   "arg_G_deg_mean": 79.27706875951196
+  }
+ },
+ "controls": {
+  "advected_resid_mm_min": 0.0012566018776138546,
+  "advected_resid_frac": 0.0014043208142255482,
+  "phi_deg": 14.841458701414108,
+  "phi_pub_deg": 15.0,
+  "phi_agrees": true,
+  "mean_melt_rate_mm_min": 0.2525877663004387
+ },
+ "modal_power_top": [
+  [
+   1,
+   1.0
+  ],
+  [
+   2,
+   0.11875473335398021
+  ],
+  [
+   3,
+   0.007943076727689048
+  ],
+  [
+   4,
+   0.001996107343605957
+  ],
+  [
+   5,
+   0.0019621543468975877
+  ]
+ ],
+ "verdict": {
+  "downstream_sign_unanimous": true,
+  "damped_on_the_mean": true,
+  "parity_break_p": 0.0,
+  "parity_break": true,
+  "c_mig_mm_min": {
+   "bushuk_tracking": 0.953213006993007,
+   "xcorr": 0.930649493927854,
+   "modal_phase": 0.8948111178618702,
+   "flux_quadrature": 0.904234657593041,
+   "spread_frac": 0.06526728151376426,
+   "all_downstream": true
+  },
+  "I_pin": 3.63496740762714,
+  "I_battery": [
+   0.5098766820330588,
+   6.5039213450889255
+  ],
+  "I_flux": 1.2038571095813242,
+  "I_flux_ci": [
+   0.5453944086711077,
+   4.086638418386241
+  ],
+  "solver_frozen_band": [
+   0.33,
+   0.88
+  ],
+  "solver_moving_I": 0.16,
+  "digitized_superseded": {
+   "I": 10.3,
+   "battery": [
+    4.9,
+    17.4
+   ],
+   "c_mm_min": 0.17,
+   "lam_mm": 27.9
+  },
+  "vs_band": {
+   "pin_over_band_hi": 4.130644781394477,
+   "battery_overlaps_band": true,
+   "anchoring_mismatch_bin": true
+  },
+  "controls": {
+   "advected_resid_mm_min": 0.0012566018776138546,
+   "advected_resid_frac": 0.0014043208142255482,
+   "phi_deg": 14.841458701414108,
+   "phi_pub_deg": 15.0,
+   "phi_agrees": true,
+   "mean_melt_rate_mm_min": 0.2525877663004387
+  },
+  "reading": "Corrected-mode form observed on real ice: the train damps AND migrates downstream (all estimators); the flux quadrature Im(s_flux) != 0 at p<1e-3 (K-theory parity null rejected) and quantitatively accounts for the observed migration speed. I_obs = O(0.5-6.5) (pre-registered pin 3.6, flux 1.2): above the near-equilibrium solver band, in the pre-registered anchoring-mismatch bin (train formed at U=1.00 persisting under U=0.16; lam is anchored to the OLD flow's u*), and ~3-5x BELOW the superseded digitized 10.3."
+ }
+}

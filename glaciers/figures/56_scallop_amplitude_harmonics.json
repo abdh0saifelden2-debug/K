@@ -1,0 +1,1046 @@
+{
+  "description": "RESULT 14: wall-flux harmonic decomposition of the scallop amplitude law. Conduction beta is ~K-independent (the G.2 K^2 curvature ansatz is falsified); the in-phase flow excess is smoothing at every (a,U) (no +alpha a^1/2 growth term); the flow channel is a quadrature MIGRATION term that grows with drive. The mode is damped & downstream-migrating: s(K,U) = -beta(K,U) + i*omega_mig(U).",
+  "config": {
+    "nx": 128,
+    "ny": 128,
+    "spinup": 2000,
+    "measure": 400,
+    "afrac": 0.2,
+    "nwaves": [
+      6,
+      8,
+      10,
+      12,
+      16,
+      20
+    ],
+    "flow_nwaves": [
+      8,
+      12,
+      16
+    ],
+    "U_list": [
+      0.0,
+      1.0,
+      2.0,
+      3.0
+    ],
+    "seeds": [
+      0,
+      1
+    ]
+  },
+  "conduction_beta": [
+    {
+      "n_waves": 6,
+      "lam": 4.1887902047863905,
+      "K": 1.5,
+      "a": 0.8377580409572781,
+      "Ecos": -2.156037663941096e-17,
+      "Esin": -3.758559836753181e-05,
+      "beta_per_a": 4.4864503269445204e-05
+    },
+    {
+      "n_waves": 8,
+      "lam": 3.141592653589793,
+      "K": 2.0,
+      "a": 0.6283185307179586,
+      "Ecos": -8.283982224147057e-18,
+      "Esin": -5.256120844455864e-05,
+      "beta_per_a": 8.36537613883498e-05
+    },
+    {
+      "n_waves": 10,
+      "lam": 2.5132741228718345,
+      "K": 2.5,
+      "a": 0.5026548245743669,
+      "Ecos": -5.696084812048356e-18,
+      "Esin": -3.416132310060683e-05,
+      "beta_per_a": 6.796179292526162e-05
+    },
+    {
+      "n_waves": 12,
+      "lam": 2.0943951023931953,
+      "K": 3.0,
+      "a": 0.41887902047863906,
+      "Ecos": -4.253799461111096e-18,
+      "Esin": -2.652883477587208e-05,
+      "beta_per_a": 6.333292783572322e-05
+    },
+    {
+      "n_waves": 16,
+      "lam": 1.5707963267948966,
+      "K": 4.0,
+      "a": 0.3141592653589793,
+      "Ecos": -9.0801931945661e-19,
+      "Esin": -2.2123841529878366e-05,
+      "beta_per_a": 7.042237479323804e-05
+    },
+    {
+      "n_waves": 20,
+      "lam": 1.2566370614359172,
+      "K": 5.0,
+      "a": 0.25132741228718347,
+      "Ecos": 3.452082776534901e-18,
+      "Esin": -1.5213980368586147e-05,
+      "beta_per_a": 6.053450449408853e-05
+    }
+  ],
+  "conduction_beta_K_exponent": 0.12811461887249226,
+  "flow_excess": {
+    "8": [
+      {
+        "n_waves": 8,
+        "lam": 3.141592653589793,
+        "K": 2.0,
+        "a": 0.6283185307179586,
+        "U": 0.0,
+        "inphase_mean": -1.241001782817949e-07,
+        "inphase_std": 2.932688477402419e-07,
+        "migration_mean": -4.2828676558476004e-07,
+        "migration_std": 8.828540739129365e-07
+      },
+      {
+        "n_waves": 8,
+        "lam": 3.141592653589793,
+        "K": 2.0,
+        "a": 0.6283185307179586,
+        "U": 1.0,
+        "inphase_mean": -2.3369541344376457e-05,
+        "inphase_std": 2.3829429850385434e-06,
+        "migration_mean": -4.8564043875159546e-05,
+        "migration_std": 2.96319327557481e-07
+      },
+      {
+        "n_waves": 8,
+        "lam": 3.141592653589793,
+        "K": 2.0,
+        "a": 0.6283185307179586,
+        "U": 2.0,
+        "inphase_mean": -6.922620481902278e-05,
+        "inphase_std": 2.969528352231017e-07,
+        "migration_mean": -8.413189113418943e-05,
+        "migration_std": 1.2098139250718058e-06
+      },
+      {
+        "n_waves": 8,
+        "lam": 3.141592653589793,
+        "K": 2.0,
+        "a": 0.6283185307179586,
+        "U": 3.0,
+        "inphase_mean": -9.534032500056629e-05,
+        "inphase_std": 3.7749164618490857e-06,
+        "migration_mean": -0.0001094251685524824,
+        "migration_std": 1.8832206979995235e-06
+      }
+    ],
+    "12": [
+      {
+        "n_waves": 12,
+        "lam": 2.0943951023931953,
+        "K": 3.0,
+        "a": 0.41887902047863906,
+        "U": 0.0,
+        "inphase_mean": -5.168418195843727e-06,
+        "inphase_std": 1.1419821614309096e-07,
+        "migration_mean": 4.856797165218129e-08,
+        "migration_std": 2.9211090566806915e-06
+      },
+      {
+        "n_waves": 12,
+        "lam": 2.0943951023931953,
+        "K": 3.0,
+        "a": 0.41887902047863906,
+        "U": 1.0,
+        "inphase_mean": -4.041803162944798e-05,
+        "inphase_std": 1.413109888716499e-06,
+        "migration_mean": -4.5786160746772133e-05,
+        "migration_std": 1.3060127476990085e-06
+      },
+      {
+        "n_waves": 12,
+        "lam": 2.0943951023931953,
+        "K": 3.0,
+        "a": 0.41887902047863906,
+        "U": 2.0,
+        "inphase_mean": -7.656508834121834e-05,
+        "inphase_std": 8.576165163108037e-07,
+        "migration_mean": -8.203689669255502e-05,
+        "migration_std": 2.238342686018723e-06
+      },
+      {
+        "n_waves": 12,
+        "lam": 2.0943951023931953,
+        "K": 3.0,
+        "a": 0.41887902047863906,
+        "U": 3.0,
+        "inphase_mean": -9.187143542342427e-05,
+        "inphase_std": 3.4000547171820467e-06,
+        "migration_mean": -0.00011357094134789587,
+        "migration_std": 2.805003344836355e-06
+      }
+    ],
+    "16": [
+      {
+        "n_waves": 16,
+        "lam": 1.5707963267948966,
+        "K": 4.0,
+        "a": 0.3141592653589793,
+        "U": 0.0,
+        "inphase_mean": -4.860426972883596e-06,
+        "inphase_std": 2.1598569624848605e-06,
+        "migration_mean": -1.5971338175941624e-06,
+        "migration_std": 4.1350479008350914e-07
+      },
+      {
+        "n_waves": 16,
+        "lam": 1.5707963267948966,
+        "K": 4.0,
+        "a": 0.3141592653589793,
+        "U": 1.0,
+        "inphase_mean": -4.8714195700591625e-05,
+        "inphase_std": 1.2459408156009001e-07,
+        "migration_mean": -6.96050345718752e-05,
+        "migration_std": 3.6699162504515495e-07
+      },
+      {
+        "n_waves": 16,
+        "lam": 1.5707963267948966,
+        "K": 4.0,
+        "a": 0.3141592653589793,
+        "U": 2.0,
+        "inphase_mean": -9.149420159143653e-05,
+        "inphase_std": 1.825385933978423e-06,
+        "migration_mean": -0.00011032821715827275,
+        "migration_std": 6.129078370791121e-07
+      },
+      {
+        "n_waves": 16,
+        "lam": 1.5707963267948966,
+        "K": 4.0,
+        "a": 0.3141592653589793,
+        "U": 3.0,
+        "inphase_mean": -8.914696610586557e-05,
+        "inphase_std": 3.6339606461429055e-06,
+        "migration_mean": -0.00012217394318391758,
+        "migration_std": 5.219123376619107e-07
+      }
+    ]
+  },
+  "migration_U_exponent": {
+    "8": 0.745181762475021,
+    "12": 0.8284599013261605,
+    "16": 0.5285226094598746
+  },
+  "verdict": {
+    "curvature_K2_ansatz_falsified": true,
+    "no_autonomous_growth_term": true,
+    "migration_zero_at_U0": true,
+    "migration_grows_with_drive": true
+  },
+  "wall_time_s": 609.5,
+  "physical_bridge": {
+    "dT=0.03K,lam=0.02m": {
+      "inputs": {
+        "dT_K": 0.03,
+        "lam_phys_m": 0.02,
+        "k_th": 0.56,
+        "rhoL": 300000000.0,
+        "kappa_nd": 0.0008,
+        "note": "bridge via physical Stefan condition rho L v = q; solver St (2e-4) is a numerical accelerator and is NOT used"
+      },
+      "conduction_efold": [
+        {
+          "n_waves": 6,
+          "L0_m": 0.004774648292756861,
+          "smoothing_rate_per_s": 1.3775841299758355e-07,
+          "tau_amp_s": 7259084.786477188,
+          "tau_amp_yr": 0.23002651616337072
+        },
+        {
+          "n_waves": 8,
+          "L0_m": 0.006366197723675814,
+          "smoothing_rate_per_s": 1.444851680240738e-07,
+          "tau_amp_s": 6921125.633001874,
+          "tau_amp_yr": 0.2193172368304901
+        },
+        {
+          "n_waves": 10,
+          "L0_m": 0.007957747154594767,
+          "smoothing_rate_per_s": 7.51246731828416e-08,
+          "tau_amp_s": 13311205.994416213,
+          "tau_amp_yr": 0.4218066644616895
+        },
+        {
+          "n_waves": 12,
+          "L0_m": 0.009549296585513721,
+          "smoothing_rate_per_s": 4.8616628923436674e-08,
+          "tau_amp_s": 20569093.788358673,
+          "tau_amp_yr": 0.6517952502205071
+        },
+        {
+          "n_waves": 16,
+          "L0_m": 0.012732395447351628,
+          "smoothing_rate_per_s": 3.040804288350966e-08,
+          "tau_amp_s": 32886036.231628112,
+          "tau_amp_yr": 1.0420956039631692
+        },
+        {
+          "n_waves": 20,
+          "L0_m": 0.015915494309189534,
+          "smoothing_rate_per_s": 1.6728645135233353e-08,
+          "tau_amp_s": 59777704.16647975,
+          "tau_amp_yr": 1.8942411389484546
+        }
+      ],
+      "migration": {
+        "8": {
+          "U": 3.0,
+          "c_mig_m_per_s": 9.574702248342209e-10,
+          "c_mig_m_per_yr": 0.03021546236722841
+        },
+        "12": {
+          "U": 3.0,
+          "c_mig_m_per_s": 6.62497157862726e-10,
+          "c_mig_m_per_yr": 0.02090682030896876
+        },
+        "16": {
+          "U": 3.0,
+          "c_mig_m_per_s": 5.345110014296394e-10,
+          "c_mig_m_per_yr": 0.01686788437871599
+        }
+      }
+    },
+    "dT=0.03K,lam=0.05m": {
+      "inputs": {
+        "dT_K": 0.03,
+        "lam_phys_m": 0.05,
+        "k_th": 0.56,
+        "rhoL": 300000000.0,
+        "kappa_nd": 0.0008,
+        "note": "bridge via physical Stefan condition rho L v = q; solver St (2e-4) is a numerical accelerator and is NOT used"
+      },
+      "conduction_efold": [
+        {
+          "n_waves": 6,
+          "L0_m": 0.011936620731892153,
+          "smoothing_rate_per_s": 2.204134607961336e-08,
+          "tau_amp_s": 45369279.91548244,
+          "tau_amp_yr": 1.4376657260210675
+        },
+        {
+          "n_waves": 8,
+          "L0_m": 0.015915494309189534,
+          "smoothing_rate_per_s": 2.3117626883851814e-08,
+          "tau_amp_s": 43257035.2062617,
+          "tau_amp_yr": 1.3707327301905627
+        },
+        {
+          "n_waves": 10,
+          "L0_m": 0.019894367886486918,
+          "smoothing_rate_per_s": 1.2019947709254653e-08,
+          "tau_amp_s": 83195037.46510135,
+          "tau_amp_yr": 2.6362916528855598
+        },
+        {
+          "n_waves": 12,
+          "L0_m": 0.023873241463784306,
+          "smoothing_rate_per_s": 7.778660627749865e-09,
+          "tau_amp_s": 128556836.17724176,
+          "tau_amp_yr": 4.07372031387817
+        },
+        {
+          "n_waves": 16,
+          "L0_m": 0.03183098861837907,
+          "smoothing_rate_per_s": 4.865286861361546e-09,
+          "tau_amp_s": 205537726.44767568,
+          "tau_amp_yr": 6.513097524769807
+        },
+        {
+          "n_waves": 20,
+          "L0_m": 0.039788735772973836,
+          "smoothing_rate_per_s": 2.676583221637336e-09,
+          "tau_amp_s": 373610651.0404985,
+          "tau_amp_yr": 11.839007118427842
+        }
+      ],
+      "migration": {
+        "8": {
+          "U": 3.0,
+          "c_mig_m_per_s": 3.8298808993368846e-10,
+          "c_mig_m_per_yr": 0.012086184946891367
+        },
+        "12": {
+          "U": 3.0,
+          "c_mig_m_per_s": 2.6499886314509036e-10,
+          "c_mig_m_per_yr": 0.008362728123587503
+        },
+        "16": {
+          "U": 3.0,
+          "c_mig_m_per_s": 2.138044005718558e-10,
+          "c_mig_m_per_yr": 0.006747153751486396
+        }
+      }
+    },
+    "dT=0.03K,lam=0.1m": {
+      "inputs": {
+        "dT_K": 0.03,
+        "lam_phys_m": 0.1,
+        "k_th": 0.56,
+        "rhoL": 300000000.0,
+        "kappa_nd": 0.0008,
+        "note": "bridge via physical Stefan condition rho L v = q; solver St (2e-4) is a numerical accelerator and is NOT used"
+      },
+      "conduction_efold": [
+        {
+          "n_waves": 6,
+          "L0_m": 0.023873241463784306,
+          "smoothing_rate_per_s": 5.51033651990334e-09,
+          "tau_amp_s": 181477119.66192976,
+          "tau_amp_yr": 5.75066290408427
+        },
+        {
+          "n_waves": 8,
+          "L0_m": 0.03183098861837907,
+          "smoothing_rate_per_s": 5.7794067209629535e-09,
+          "tau_amp_s": 173028140.8250468,
+          "tau_amp_yr": 5.482930920762251
+        },
+        {
+          "n_waves": 10,
+          "L0_m": 0.039788735772973836,
+          "smoothing_rate_per_s": 3.0049869273136633e-09,
+          "tau_amp_s": 332780149.8604054,
+          "tau_amp_yr": 10.545166611542239
+        },
+        {
+          "n_waves": 12,
+          "L0_m": 0.04774648292756861,
+          "smoothing_rate_per_s": 1.9446651569374664e-09,
+          "tau_amp_s": 514227344.70896703,
+          "tau_amp_yr": 16.29488125551268
+        },
+        {
+          "n_waves": 16,
+          "L0_m": 0.06366197723675814,
+          "smoothing_rate_per_s": 1.2163217153403866e-09,
+          "tau_amp_s": 822150905.7907027,
+          "tau_amp_yr": 26.05239009907923
+        },
+        {
+          "n_waves": 20,
+          "L0_m": 0.07957747154594767,
+          "smoothing_rate_per_s": 6.69145805409334e-10,
+          "tau_amp_s": 1494442604.161994,
+          "tau_amp_yr": 47.35602847371137
+        }
+      ],
+      "migration": {
+        "8": {
+          "U": 3.0,
+          "c_mig_m_per_s": 1.9149404496684423e-10,
+          "c_mig_m_per_yr": 0.006043092473445684
+        },
+        "12": {
+          "U": 3.0,
+          "c_mig_m_per_s": 1.3249943157254518e-10,
+          "c_mig_m_per_yr": 0.0041813640617937515
+        },
+        "16": {
+          "U": 3.0,
+          "c_mig_m_per_s": 1.069022002859279e-10,
+          "c_mig_m_per_yr": 0.003373576875743198
+        }
+      }
+    },
+    "dT=0.1K,lam=0.02m": {
+      "inputs": {
+        "dT_K": 0.1,
+        "lam_phys_m": 0.02,
+        "k_th": 0.56,
+        "rhoL": 300000000.0,
+        "kappa_nd": 0.0008,
+        "note": "bridge via physical Stefan condition rho L v = q; solver St (2e-4) is a numerical accelerator and is NOT used"
+      },
+      "conduction_efold": [
+        {
+          "n_waves": 6,
+          "L0_m": 0.004774648292756861,
+          "smoothing_rate_per_s": 4.591947099919451e-07,
+          "tau_amp_s": 2177725.4359431565,
+          "tau_amp_yr": 0.06900795484901122
+        },
+        {
+          "n_waves": 8,
+          "L0_m": 0.006366197723675814,
+          "smoothing_rate_per_s": 4.816172267469127e-07,
+          "tau_amp_s": 2076337.6899005624,
+          "tau_amp_yr": 0.06579517104914703
+        },
+        {
+          "n_waves": 10,
+          "L0_m": 0.007957747154594767,
+          "smoothing_rate_per_s": 2.5041557727613865e-07,
+          "tau_amp_s": 3993361.798324864,
+          "tau_amp_yr": 0.12654199933850685
+        },
+        {
+          "n_waves": 12,
+          "L0_m": 0.009549296585513721,
+          "smoothing_rate_per_s": 1.6205542974478887e-07,
+          "tau_amp_s": 6170728.136507604,
+          "tau_amp_yr": 0.1955385750661522
+        },
+        {
+          "n_waves": 16,
+          "L0_m": 0.012732395447351628,
+          "smoothing_rate_per_s": 1.0136014294503219e-07,
+          "tau_amp_s": 9865810.869488435,
+          "tau_amp_yr": 0.3126286811889508
+        },
+        {
+          "n_waves": 20,
+          "L0_m": 0.015915494309189534,
+          "smoothing_rate_per_s": 5.576215045077784e-08,
+          "tau_amp_s": 17933311.249943927,
+          "tau_amp_yr": 0.5682723416845364
+        }
+      ],
+      "migration": {
+        "8": {
+          "U": 3.0,
+          "c_mig_m_per_s": 3.19156741611407e-09,
+          "c_mig_m_per_yr": 0.10071820789076139
+        },
+        "12": {
+          "U": 3.0,
+          "c_mig_m_per_s": 2.20832385954242e-09,
+          "c_mig_m_per_yr": 0.06968940102989588
+        },
+        "16": {
+          "U": 3.0,
+          "c_mig_m_per_s": 1.7817033380987979e-09,
+          "c_mig_m_per_yr": 0.05622628126238662
+        }
+      }
+    },
+    "dT=0.1K,lam=0.05m": {
+      "inputs": {
+        "dT_K": 0.1,
+        "lam_phys_m": 0.05,
+        "k_th": 0.56,
+        "rhoL": 300000000.0,
+        "kappa_nd": 0.0008,
+        "note": "bridge via physical Stefan condition rho L v = q; solver St (2e-4) is a numerical accelerator and is NOT used"
+      },
+      "conduction_efold": [
+        {
+          "n_waves": 6,
+          "L0_m": 0.011936620731892153,
+          "smoothing_rate_per_s": 7.347115359871119e-08,
+          "tau_amp_s": 13610783.974644734,
+          "tau_amp_yr": 0.4312997178063203
+        },
+        {
+          "n_waves": 8,
+          "L0_m": 0.015915494309189534,
+          "smoothing_rate_per_s": 7.705875627950604e-08,
+          "tau_amp_s": 12977110.561878514,
+          "tau_amp_yr": 0.4112198190571689
+        },
+        {
+          "n_waves": 10,
+          "L0_m": 0.019894367886486918,
+          "smoothing_rate_per_s": 4.006649236418218e-08,
+          "tau_amp_s": 24958511.239530403,
+          "tau_amp_yr": 0.790887495865668
+        },
+        {
+          "n_waves": 12,
+          "L0_m": 0.023873241463784306,
+          "smoothing_rate_per_s": 2.5928868759166214e-08,
+          "tau_amp_s": 38567050.85317253,
+          "tau_amp_yr": 1.2221160941634515
+        },
+        {
+          "n_waves": 16,
+          "L0_m": 0.03183098861837907,
+          "smoothing_rate_per_s": 1.6217622871205152e-08,
+          "tau_amp_s": 61661317.93430271,
+          "tau_amp_yr": 1.9539292574309424
+        },
+        {
+          "n_waves": 20,
+          "L0_m": 0.039788735772973836,
+          "smoothing_rate_per_s": 8.921944072124453e-09,
+          "tau_amp_s": 112083195.31214955,
+          "tau_amp_yr": 3.551702135528353
+        }
+      ],
+      "migration": {
+        "8": {
+          "U": 3.0,
+          "c_mig_m_per_s": 1.2766269664456282e-09,
+          "c_mig_m_per_yr": 0.04028728315630455
+        },
+        "12": {
+          "U": 3.0,
+          "c_mig_m_per_s": 8.833295438169678e-10,
+          "c_mig_m_per_yr": 0.027875760411958342
+        },
+        "16": {
+          "U": 3.0,
+          "c_mig_m_per_s": 7.126813352395193e-10,
+          "c_mig_m_per_yr": 0.02249051250495465
+        }
+      }
+    },
+    "dT=0.1K,lam=0.1m": {
+      "inputs": {
+        "dT_K": 0.1,
+        "lam_phys_m": 0.1,
+        "k_th": 0.56,
+        "rhoL": 300000000.0,
+        "kappa_nd": 0.0008,
+        "note": "bridge via physical Stefan condition rho L v = q; solver St (2e-4) is a numerical accelerator and is NOT used"
+      },
+      "conduction_efold": [
+        {
+          "n_waves": 6,
+          "L0_m": 0.023873241463784306,
+          "smoothing_rate_per_s": 1.8367788399677798e-08,
+          "tau_amp_s": 54443135.898578934,
+          "tau_amp_yr": 1.7251988712252813
+        },
+        {
+          "n_waves": 8,
+          "L0_m": 0.03183098861837907,
+          "smoothing_rate_per_s": 1.926468906987651e-08,
+          "tau_amp_s": 51908442.247514054,
+          "tau_amp_yr": 1.6448792762286757
+        },
+        {
+          "n_waves": 10,
+          "L0_m": 0.039788735772973836,
+          "smoothing_rate_per_s": 1.0016623091045545e-08,
+          "tau_amp_s": 99834044.95812161,
+          "tau_amp_yr": 3.163549983462672
+        },
+        {
+          "n_waves": 12,
+          "L0_m": 0.04774648292756861,
+          "smoothing_rate_per_s": 6.4822171897915535e-09,
+          "tau_amp_s": 154268203.41269013,
+          "tau_amp_yr": 4.888464376653806
+        },
+        {
+          "n_waves": 16,
+          "L0_m": 0.06366197723675814,
+          "smoothing_rate_per_s": 4.054405717801288e-09,
+          "tau_amp_s": 246645271.73721084,
+          "tau_amp_yr": 7.8157170297237695
+        },
+        {
+          "n_waves": 20,
+          "L0_m": 0.07957747154594767,
+          "smoothing_rate_per_s": 2.230486018031113e-09,
+          "tau_amp_s": 448332781.2485982,
+          "tau_amp_yr": 14.206808542113412
+        }
+      ],
+      "migration": {
+        "8": {
+          "U": 3.0,
+          "c_mig_m_per_s": 6.383134832228141e-10,
+          "c_mig_m_per_yr": 0.020143641578152276
+        },
+        "12": {
+          "U": 3.0,
+          "c_mig_m_per_s": 4.416647719084839e-10,
+          "c_mig_m_per_yr": 0.013937880205979171
+        },
+        "16": {
+          "U": 3.0,
+          "c_mig_m_per_s": 3.5634066761975963e-10,
+          "c_mig_m_per_yr": 0.011245256252477326
+        }
+      }
+    },
+    "dT=0.3K,lam=0.02m": {
+      "inputs": {
+        "dT_K": 0.3,
+        "lam_phys_m": 0.02,
+        "k_th": 0.56,
+        "rhoL": 300000000.0,
+        "kappa_nd": 0.0008,
+        "note": "bridge via physical Stefan condition rho L v = q; solver St (2e-4) is a numerical accelerator and is NOT used"
+      },
+      "conduction_efold": [
+        {
+          "n_waves": 6,
+          "L0_m": 0.004774648292756861,
+          "smoothing_rate_per_s": 1.3775841299758352e-06,
+          "tau_amp_s": 725908.4786477189,
+          "tau_amp_yr": 0.023002651616337078
+        },
+        {
+          "n_waves": 8,
+          "L0_m": 0.006366197723675814,
+          "smoothing_rate_per_s": 1.4448516802407382e-06,
+          "tau_amp_s": 692112.5633001874,
+          "tau_amp_yr": 0.021931723683049006
+        },
+        {
+          "n_waves": 10,
+          "L0_m": 0.007957747154594767,
+          "smoothing_rate_per_s": 7.512467318284159e-07,
+          "tau_amp_s": 1331120.5994416215,
+          "tau_amp_yr": 0.042180666446168955
+        },
+        {
+          "n_waves": 12,
+          "L0_m": 0.009549296585513721,
+          "smoothing_rate_per_s": 4.861662892343666e-07,
+          "tau_amp_s": 2056909.378835868,
+          "tau_amp_yr": 0.06517952502205072
+        },
+        {
+          "n_waves": 16,
+          "L0_m": 0.012732395447351628,
+          "smoothing_rate_per_s": 3.0408042883509653e-07,
+          "tau_amp_s": 3288603.6231628116,
+          "tau_amp_yr": 0.10420956039631694
+        },
+        {
+          "n_waves": 20,
+          "L0_m": 0.015915494309189534,
+          "smoothing_rate_per_s": 1.672864513523335e-07,
+          "tau_amp_s": 5977770.416647976,
+          "tau_amp_yr": 0.1894241138948455
+        }
+      ],
+      "migration": {
+        "8": {
+          "U": 3.0,
+          "c_mig_m_per_s": 9.57470224834221e-09,
+          "c_mig_m_per_yr": 0.30215462367228413
+        },
+        "12": {
+          "U": 3.0,
+          "c_mig_m_per_s": 6.62497157862726e-09,
+          "c_mig_m_per_yr": 0.20906820308968763
+        },
+        "16": {
+          "U": 3.0,
+          "c_mig_m_per_s": 5.345110014296394e-09,
+          "c_mig_m_per_yr": 0.16867884378715986
+        }
+      }
+    },
+    "dT=0.3K,lam=0.05m": {
+      "inputs": {
+        "dT_K": 0.3,
+        "lam_phys_m": 0.05,
+        "k_th": 0.56,
+        "rhoL": 300000000.0,
+        "kappa_nd": 0.0008,
+        "note": "bridge via physical Stefan condition rho L v = q; solver St (2e-4) is a numerical accelerator and is NOT used"
+      },
+      "conduction_efold": [
+        {
+          "n_waves": 6,
+          "L0_m": 0.011936620731892153,
+          "smoothing_rate_per_s": 2.2041346079613358e-07,
+          "tau_amp_s": 4536927.991548244,
+          "tau_amp_yr": 0.14376657260210673
+        },
+        {
+          "n_waves": 8,
+          "L0_m": 0.015915494309189534,
+          "smoothing_rate_per_s": 2.3117626883851812e-07,
+          "tau_amp_s": 4325703.520626171,
+          "tau_amp_yr": 0.13707327301905628
+        },
+        {
+          "n_waves": 10,
+          "L0_m": 0.019894367886486918,
+          "smoothing_rate_per_s": 1.2019947709254652e-07,
+          "tau_amp_s": 8319503.746510136,
+          "tau_amp_yr": 0.263629165288556
+        },
+        {
+          "n_waves": 12,
+          "L0_m": 0.023873241463784306,
+          "smoothing_rate_per_s": 7.778660627749864e-08,
+          "tau_amp_s": 12855683.617724178,
+          "tau_amp_yr": 0.40737203138781714
+        },
+        {
+          "n_waves": 16,
+          "L0_m": 0.03183098861837907,
+          "smoothing_rate_per_s": 4.865286861361545e-08,
+          "tau_amp_s": 20553772.64476757,
+          "tau_amp_yr": 0.6513097524769809
+        },
+        {
+          "n_waves": 20,
+          "L0_m": 0.039788735772973836,
+          "smoothing_rate_per_s": 2.6765832216373354e-08,
+          "tau_amp_s": 37361065.10404986,
+          "tau_amp_yr": 1.1839007118427847
+        }
+      ],
+      "migration": {
+        "8": {
+          "U": 3.0,
+          "c_mig_m_per_s": 3.8298808993368835e-09,
+          "c_mig_m_per_yr": 0.12086184946891364
+        },
+        "12": {
+          "U": 3.0,
+          "c_mig_m_per_s": 2.6499886314509035e-09,
+          "c_mig_m_per_yr": 0.08362728123587503
+        },
+        "16": {
+          "U": 3.0,
+          "c_mig_m_per_s": 2.1380440057185575e-09,
+          "c_mig_m_per_yr": 0.06747153751486396
+        }
+      }
+    },
+    "dT=0.3K,lam=0.1m": {
+      "inputs": {
+        "dT_K": 0.3,
+        "lam_phys_m": 0.1,
+        "k_th": 0.56,
+        "rhoL": 300000000.0,
+        "kappa_nd": 0.0008,
+        "note": "bridge via physical Stefan condition rho L v = q; solver St (2e-4) is a numerical accelerator and is NOT used"
+      },
+      "conduction_efold": [
+        {
+          "n_waves": 6,
+          "L0_m": 0.023873241463784306,
+          "smoothing_rate_per_s": 5.5103365199033394e-08,
+          "tau_amp_s": 18147711.966192976,
+          "tau_amp_yr": 0.5750662904084269
+        },
+        {
+          "n_waves": 8,
+          "L0_m": 0.03183098861837907,
+          "smoothing_rate_per_s": 5.779406720962953e-08,
+          "tau_amp_s": 17302814.082504682,
+          "tau_amp_yr": 0.5482930920762251
+        },
+        {
+          "n_waves": 10,
+          "L0_m": 0.039788735772973836,
+          "smoothing_rate_per_s": 3.004986927313663e-08,
+          "tau_amp_s": 33278014.986040544,
+          "tau_amp_yr": 1.054516661154224
+        },
+        {
+          "n_waves": 12,
+          "L0_m": 0.04774648292756861,
+          "smoothing_rate_per_s": 1.944665156937466e-08,
+          "tau_amp_s": 51422734.47089671,
+          "tau_amp_yr": 1.6294881255512685
+        },
+        {
+          "n_waves": 16,
+          "L0_m": 0.06366197723675814,
+          "smoothing_rate_per_s": 1.2163217153403863e-08,
+          "tau_amp_s": 82215090.57907028,
+          "tau_amp_yr": 2.6052390099079235
+        },
+        {
+          "n_waves": 20,
+          "L0_m": 0.07957747154594767,
+          "smoothing_rate_per_s": 6.691458054093339e-09,
+          "tau_amp_s": 149444260.41619945,
+          "tau_amp_yr": 4.735602847371139
+        }
+      ],
+      "migration": {
+        "8": {
+          "U": 3.0,
+          "c_mig_m_per_s": 1.9149404496684418e-09,
+          "c_mig_m_per_yr": 0.06043092473445682
+        },
+        "12": {
+          "U": 3.0,
+          "c_mig_m_per_s": 1.3249943157254518e-09,
+          "c_mig_m_per_yr": 0.04181364061793751
+        },
+        "16": {
+          "U": 3.0,
+          "c_mig_m_per_s": 1.0690220028592787e-09,
+          "c_mig_m_per_yr": 0.03373576875743198
+        }
+      }
+    }
+  },
+  "anchored_subglacial": {
+    "u_star_m_per_s": 0.05,
+    "Re_scallop": 2200.0,
+    "nu": 1.79e-06,
+    "lam_phys_m": 0.07875999999999998,
+    "dT_K": 0.1,
+    "nw": 12,
+    "L0_m": 0.03760512995375303,
+    "U_drive": 3.0,
+    "tau_amp_s": 95694689.3073706,
+    "tau_amp_yr": 3.032381718108177,
+    "c_mig_m_per_s": 5.607729455414983e-10,
+    "c_mig_m_per_yr": 0.017696648306220385
+  },
+  "amplitude_generalization": {
+    "note": "Generalises RESULT 14 beyond a0/lambda=0.20 (Caveat D): the K-independent beta and the smoothing-only (no +alpha growth) findings are re-checked at each relative amplitude.",
+    "flow_nw": 12,
+    "U_list": [
+      1.5,
+      3.0
+    ],
+    "afracs": [
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.4
+    ],
+    "rows": [
+      {
+        "afrac": 0.05,
+        "K_exponent": 0.5662313354766983,
+        "K_independent": true,
+        "beta_per_a_at_flow_nw": -3.870324144715934e-05,
+        "inphase_max_driven": -1.31433584222866e-05,
+        "all_inphase_smoothing": true,
+        "migration_grows_with_U": true
+      },
+      {
+        "afrac": 0.1,
+        "K_exponent": 0.6577016639890932,
+        "K_independent": false,
+        "beta_per_a_at_flow_nw": 6.238073710384367e-05,
+        "inphase_max_driven": -2.3241285770379843e-05,
+        "all_inphase_smoothing": true,
+        "migration_grows_with_U": true
+      },
+      {
+        "afrac": 0.2,
+        "K_exponent": 0.1372842654084894,
+        "K_independent": true,
+        "beta_per_a_at_flow_nw": 6.333292783572322e-05,
+        "inphase_max_driven": -6.228354508238546e-05,
+        "all_inphase_smoothing": true,
+        "migration_grows_with_U": true
+      },
+      {
+        "afrac": 0.3,
+        "K_exponent": 0.332948450612979,
+        "K_independent": true,
+        "beta_per_a_at_flow_nw": 5.9871613302097906e-05,
+        "inphase_max_driven": -8.749022272717023e-05,
+        "all_inphase_smoothing": true,
+        "migration_grows_with_U": true
+      },
+      {
+        "afrac": 0.4,
+        "K_exponent": -0.27076917745571505,
+        "K_independent": true,
+        "beta_per_a_at_flow_nw": 3.343743980124172e-05,
+        "inphase_max_driven": -0.0001047720799653906,
+        "all_inphase_smoothing": true,
+        "migration_grows_with_U": true
+      }
+    ],
+    "beta_per_a_amplitude_cv": 1.0810588906905545,
+    "verdict": {
+      "smoothing_only_all_amplitudes": true,
+      "curvature_ansatz_falsified_all_amplitudes": true,
+      "K_independent_all_amplitudes": false,
+      "beta_per_a_amplitude_flat": false
+    }
+  },
+  "drive_window_generalization": {
+    "note": "Generalises RESULT 14 beyond the swept drive window U in [1.5,3.0] (other half of Caveat D): the smoothing-only (no +alpha growth) and friction-velocity migration verdicts are re-checked out to U=6 at the a0/lambda=0.20, nw=12 operating point.",
+    "flow_nw": 12,
+    "afrac": 0.2,
+    "U_list": [
+      0.0,
+      1.5,
+      3.0,
+      4.5,
+      6.0
+    ],
+    "rows": [
+      {
+        "U": 0.0,
+        "inphase_mean": -5.168418195843727e-06,
+        "inphase_std": 1.1419821614309096e-07,
+        "migration_mean": 4.856797165218129e-08,
+        "smoothing": true
+      },
+      {
+        "U": 1.5,
+        "inphase_mean": -6.228354508238546e-05,
+        "inphase_std": 7.06124739070706e-07,
+        "migration_mean": -6.592450376298107e-05,
+        "smoothing": true
+      },
+      {
+        "U": 3.0,
+        "inphase_mean": -9.187143542342427e-05,
+        "inphase_std": 3.4000547171820467e-06,
+        "migration_mean": -0.00011357094134789587,
+        "smoothing": true
+      },
+      {
+        "U": 4.5,
+        "inphase_mean": -8.854603852686025e-05,
+        "inphase_std": 4.330628542045757e-06,
+        "migration_mean": -0.00013789458317078893,
+        "smoothing": true
+      },
+      {
+        "U": 6.0,
+        "inphase_mean": -4.813354125772307e-05,
+        "inphase_std": 1.0242008197933158e-06,
+        "migration_mean": -0.00011906639089441975,
+        "smoothing": true
+      }
+    ],
+    "migration_U_exponent": 0.4788082428522927,
+    "inphase_max_driven": -4.813354125772307e-05,
+    "verdict": {
+      "smoothing_only_all_drives": true,
+      "migration_sqrt_law_holds": true,
+      "migration_monotone_in_U": false,
+      "parity_control_at_U0": true
+    }
+  },
+  "constant_free_ratio": {
+    "note": "I = tau*c_mig/lam_phys; k_th, rho_L and dT cancel exactly. Not a universal constant: O(0.3-0.9), mildly wavelength-dependent.",
+    "ratios": [
+      {
+        "n_waves": 8,
+        "U": 3.0,
+        "lam_nd": 3.141592653589793,
+        "tau_cmig_over_lam": 0.3313385857968097
+      },
+      {
+        "n_waves": 12,
+        "U": 3.0,
+        "lam_nd": 2.0943951023931953,
+        "tau_cmig_over_lam": 0.6813483087299738
+      },
+      {
+        "n_waves": 16,
+        "U": 3.0,
+        "lam_nd": 1.5707963267948966,
+        "tau_cmig_over_lam": 0.8788974079609474
+      }
+    ]
+  }
+}

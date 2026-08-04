@@ -1,0 +1,53 @@
+{
+  "nw": 12,
+  "U": 3.0,
+  "lam": 2.0943951023931953,
+  "K": 3.0,
+  "a": 0.41887902047863906,
+  "nx": 128,
+  "ny": 128,
+  "spinup": 2000,
+  "measure": 400,
+  "f_amp": 0.4,
+  "seeds": [
+    0,
+    1
+  ],
+  "models": {
+    "resolved": {
+      "Ecos_mean": -0.00011357094134789587,
+      "Ecos_std": 2.805003344836355e-06,
+      "Esin_mean": -9.187143542342427e-05,
+      "Esin_std": 3.4000547171820467e-06,
+      "Ecos_ratio_to_resolved": 1.0
+    },
+    "uniform": {
+      "Ecos_mean": -1.2121041475209038e-18,
+      "Ecos_std": 0.0,
+      "Esin_mean": -9.745254950731055e-06,
+      "Esin_std": 0.0,
+      "Ecos_ratio_to_resolved": 1.0672660921317268e-14
+    },
+    "smagorinsky": {
+      "Ecos_mean": 1.98645781665964e-06,
+      "Ecos_std": 1.220366342223567e-08,
+      "Esin_mean": 5.944289049263504e-06,
+      "Esin_std": 3.8621701775987834e-08,
+      "Ecos_ratio_to_resolved": 0.017490898579194024
+    },
+    "mixing_length": {
+      "Ecos_mean": 2.955881969016585e-05,
+      "Ecos_std": 7.458488685647096e-07,
+      "Esin_mean": -4.819943854314619e-05,
+      "Esin_std": 3.7038936204219244e-08,
+      "Ecos_ratio_to_resolved": 0.26026745344673935
+    },
+    "mixing_length_capped": {
+      "Ecos_mean": 2.954182068409842e-05,
+      "Ecos_std": 7.428845781735146e-07,
+      "Esin_mean": -4.8140988544716744e-05,
+      "Esin_std": 3.77719741577176e-08,
+      "Ecos_ratio_to_resolved": 0.2601177760216367
+    }
+  }
+}

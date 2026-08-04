@@ -1,0 +1,165 @@
+{
+ "backend": "cupy(GPU)",
+ "n": 64,
+ "bs_tau": 0.05,
+ "nseeds": 3,
+ "spinup": 400,
+ "measure": 600,
+ "sample_every": 5,
+ "Ri_sweep": [
+  0.0,
+  0.25,
+  0.5,
+  0.75,
+  1.0,
+  1.5
+ ],
+ "R_values": [
+  1.000356117658275,
+  1.0003562689067749,
+  1.00035642095255,
+  1.0003564848665805,
+  1.00035653937512,
+  1.0003566491138254
+ ],
+ "max_counter_gradient_departure": 0.6744212765071271,
+ "has_melt_hump": false,
+ "verdict": "PARTIAL: counter-gradient flux present but no co-located melt hump",
+ "wall_time_s": 552.8918073177338,
+ "two_clocks": [
+  {
+   "Ri": 0.0,
+   "closure": "two_clocks",
+   "C_G_fluid_mean": -0.5979553514499275,
+   "C_G_fluid_std": 0.0033523569545120015,
+   "C_G_band_mean": -0.32558713116989585,
+   "C_G_band_std": 0.007903789992002468,
+   "melt_mean": 2.3679168538296693e-05,
+   "melt_std": 8.279509514642784e-08,
+   "sgs_dominance": 1.2353353969391276
+  },
+  {
+   "Ri": 0.25,
+   "closure": "two_clocks",
+   "C_G_fluid_mean": -0.5979578049170095,
+   "C_G_fluid_std": 0.0033549620357492724,
+   "C_G_band_mean": -0.3255838062152895,
+   "C_G_band_std": 0.007900949561141657,
+   "melt_mean": 2.369087549746258e-05,
+   "melt_std": 8.279370238653292e-08,
+   "sgs_dominance": 1.2353355724161148
+  },
+  {
+   "Ri": 0.5,
+   "closure": "two_clocks",
+   "C_G_fluid_mean": -0.5979602318929593,
+   "C_G_fluid_std": 0.0033575737924649946,
+   "C_G_band_mean": -0.3255804285854127,
+   "C_G_band_std": 0.007898114023979642,
+   "melt_mean": 2.3702582479350527e-05,
+   "melt_std": 8.27922845650242e-08,
+   "sgs_dominance": 1.2353357493000419
+  },
+  {
+   "Ri": 0.75,
+   "closure": "two_clocks",
+   "C_G_fluid_mean": -0.5979635214828131,
+   "C_G_fluid_std": 0.003358961289689125,
+   "C_G_band_mean": -0.32557980073297943,
+   "C_G_band_std": 0.007894657202380194,
+   "melt_mean": 2.3714287375851858e-05,
+   "melt_std": 8.279356988203141e-08,
+   "sgs_dominance": 1.2353358173383633
+  },
+  {
+   "Ri": 1.0,
+   "closure": "two_clocks",
+   "C_G_fluid_mean": -0.597966891515329,
+   "C_G_fluid_std": 0.0033602056855874937,
+   "C_G_band_mean": -0.3255794611631842,
+   "C_G_band_std": 0.007891134130679583,
+   "melt_mean": 2.372599205106595e-05,
+   "melt_std": 8.279514644432955e-08,
+   "sgs_dominance": 1.235335873975818
+  },
+  {
+   "Ri": 1.5,
+   "closure": "two_clocks",
+   "C_G_fluid_mean": -0.5979735881743599,
+   "C_G_fluid_std": 0.003362672149795726,
+   "C_G_band_mean": -0.32557872349287287,
+   "C_G_band_std": 0.007884101219203132,
+   "melt_mean": 2.3749401423329557e-05,
+   "melt_std": 8.279828718580108e-08,
+   "sgs_dominance": 1.2353359888802207
+  }
+ ],
+ "smagorinsky": [
+  {
+   "Ri": 0.0,
+   "closure": "smagorinsky",
+   "C_G_fluid_mean": -0.6038380636424386,
+   "C_G_fluid_std": 0.007008067364106859,
+   "C_G_band_mean": -0.3208311190011484,
+   "C_G_band_std": 0.02019495015089793,
+   "melt_mean": 2.3670738970165e-05,
+   "melt_std": 7.46619337133457e-08,
+   "sgs_dominance": 1.2341531749006298
+  },
+  {
+   "Ri": 0.25,
+   "closure": "smagorinsky",
+   "C_G_fluid_mean": -0.6038380831765432,
+   "C_G_fluid_std": 0.007008065843510648,
+   "C_G_band_mean": -0.3208311271860573,
+   "C_G_band_std": 0.02019494654277509,
+   "melt_mean": 2.3682438181102037e-05,
+   "melt_std": 7.46619365656586e-08,
+   "sgs_dominance": 1.2341532071671666
+  },
+  {
+   "Ri": 0.5,
+   "closure": "smagorinsky",
+   "C_G_fluid_mean": -0.6038381020450024,
+   "C_G_fluid_std": 0.007008062628803235,
+   "C_G_band_mean": -0.32083113703309557,
+   "C_G_band_std": 0.020194945305874408,
+   "melt_mean": 2.36941373923313e-05,
+   "melt_std": 7.466193941792888e-08,
+   "sgs_dominance": 1.2341532398539965
+  },
+  {
+   "Ri": 0.75,
+   "closure": "smagorinsky",
+   "C_G_fluid_mean": -0.6038381208292519,
+   "C_G_fluid_std": 0.007008061372660668,
+   "C_G_band_mean": -0.32083115398023315,
+   "C_G_band_std": 0.020194947299893917,
+   "melt_mean": 2.3705836603852957e-05,
+   "melt_std": 7.466194227016685e-08,
+   "sgs_dominance": 1.2341532729611224
+  },
+  {
+   "Ri": 1.0,
+   "closure": "smagorinsky",
+   "C_G_fluid_mean": -0.6038381390346014,
+   "C_G_fluid_std": 0.0070080594422689225,
+   "C_G_band_mean": -0.3208311598403823,
+   "C_G_band_std": 0.020194942744706783,
+   "melt_mean": 2.3717535815666847e-05,
+   "melt_std": 7.466194512247535e-08,
+   "sgs_dominance": 1.2341533064885475
+  },
+  {
+   "Ri": 1.5,
+   "closure": "smagorinsky",
+   "C_G_fluid_mean": -0.6038381768626339,
+   "C_G_fluid_std": 0.007008054164574459,
+   "C_G_band_mean": -0.32083118083061785,
+   "C_G_band_std": 0.02019494171679904,
+   "melt_mean": 2.3740934240171413e-05,
+   "melt_std": 7.466195082704649e-08,
+   "sgs_dominance": 1.2341533748043079
+  }
+ ]
+}

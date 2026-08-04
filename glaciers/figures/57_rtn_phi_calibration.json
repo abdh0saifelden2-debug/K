@@ -1,0 +1,124 @@
+{
+  "stride_km": 3.0,
+  "n_grounded": 1329743,
+  "description": "Two constant-free consequences of the gauge RTN (\u00a7G.3/\u00a7H.1.1) on real Bedmap2: (#2) RTN>1 intruded area is a monotone, sensitive inverse for the basal water fraction phi; (#3) H*=(rho_w/phi rho_i) d_base is a local critical thickness -> a hydrology-corrected MISI margin (grounded-but-intrudable band, inland of the flotation line).",
+  "phi_ref": 0.9,
+  "rho_ratio_w_i": 1.1210468920392584,
+  "calibration": [
+    {
+      "phi": 0.7,
+      "frac": 0.03854278608723641,
+      "area_km2": 461268.0,
+      "median_dist_km": 13.416407864998739,
+      "dfrac_dphi_per_0p01": -0.001543531344026626
+    },
+    {
+      "phi": 0.72,
+      "frac": 0.03545572339918315,
+      "area_km2": 424323.0,
+      "median_dist_km": 12.36931687685298,
+      "dfrac_dphi_per_0p01": -0.0014352397418147711
+    },
+    {
+      "phi": 0.74,
+      "frac": 0.03280182711997732,
+      "area_km2": 392562.0,
+      "median_dist_km": 12.0,
+      "dfrac_dphi_per_0p01": -0.0013151037456109926
+    },
+    {
+      "phi": 0.76,
+      "frac": 0.030195308416739175,
+      "area_km2": 361368.0,
+      "median_dist_km": 10.816653826391967,
+      "dfrac_dphi_per_0p01": -0.0012899109075964299
+    },
+    {
+      "phi": 0.78,
+      "frac": 0.027642183489591597,
+      "area_km2": 330813.0,
+      "median_dist_km": 9.486832980505138,
+      "dfrac_dphi_per_0p01": -0.0012641540508203464
+    },
+    {
+      "phi": 0.8,
+      "frac": 0.025138692213457787,
+      "area_km2": 300852.0,
+      "median_dist_km": 9.0,
+      "dfrac_dphi_per_0p01": -0.0012220406499601822
+    },
+    {
+      "phi": 0.82,
+      "frac": 0.022754020889750877,
+      "area_km2": 272313.0,
+      "median_dist_km": 9.0,
+      "dfrac_dphi_per_0p01": -0.0011981638557225006
+    },
+    {
+      "phi": 0.84,
+      "frac": 0.0203460367905678,
+      "area_km2": 243495.0,
+      "median_dist_km": 8.485281374238571,
+      "dfrac_dphi_per_0p01": -0.0011951557556610548
+    },
+    {
+      "phi": 0.86,
+      "frac": 0.017973397867106652,
+      "area_km2": 215100.0,
+      "median_dist_km": 6.708203932499369,
+      "dfrac_dphi_per_0p01": -0.0012100082497144165
+    },
+    {
+      "phi": 0.88,
+      "frac": 0.015506003791710127,
+      "area_km2": 185571.0,
+      "median_dist_km": 6.708203932499369,
+      "dfrac_dphi_per_0p01": -0.001277126482335308
+    },
+    {
+      "phi": 0.9,
+      "frac": 0.012864891937765417,
+      "area_km2": 153963.0,
+      "median_dist_km": 6.0,
+      "dfrac_dphi_per_0p01": -0.0012895348950887492
+    },
+    {
+      "phi": 0.92,
+      "frac": 0.010347864211355126,
+      "area_km2": 123840.0,
+      "median_dist_km": 6.0,
+      "dfrac_dphi_per_0p01": -0.0013339043709949996
+    },
+    {
+      "phi": 0.94,
+      "frac": 0.007529274453785431,
+      "area_km2": 90108.0,
+      "median_dist_km": 4.242640687119286,
+      "dfrac_dphi_per_0p01": -0.0014995378806280635
+    },
+    {
+      "phi": 0.96,
+      "frac": 0.0043497126888428815,
+      "area_km2": 52056.0,
+      "median_dist_km": 4.242640687119286,
+      "dfrac_dphi_per_0p01": -0.0016089575203629561
+    },
+    {
+      "phi": 0.98,
+      "frac": 0.0010934443723336013,
+      "area_km2": 13086.0,
+      "median_dist_km": 3.0,
+      "dfrac_dphi_per_0p01": -0.0016281341582546388
+    }
+  ],
+  "sensitivity_note": "dfrac_dphi_per_0p01 = change in RTN>1 area fraction per +0.01 in phi",
+  "critical_thinning": {
+    "band_cells": 16945,
+    "band_area_km2": 152505.0,
+    "band_frac_grounded": 0.01274306388527708,
+    "band_median_dist_km": 6.0,
+    "band_p90_dist_km": 42.1070065428546,
+    "median_margin_grounded": 1.0,
+    "frac_within_10pct_of_tipping": 0.011055519750808991
+  }
+}
