@@ -1,0 +1,194 @@
+{
+  "kfs": [
+    2.5,
+    10.0,
+    17.0
+  ],
+  "f_band": 1.5,
+  "kc": 24,
+  "dns_n": 192,
+  "n_les": 72,
+  "nu": 0.0035,
+  "runs": {
+    "2.5": {
+      "backend": "cupy",
+      "dns_n": 192,
+      "n_les": 72,
+      "kc": 24,
+      "nu": 0.0035,
+      "les_steps": 6000,
+      "dns_spinup": 4000,
+      "none_spec_err": 0.07334862447727637,
+      "best_closure": "smag",
+      "best_spec_err": 0.06903893302756167,
+      "any_closure_beats_none": true,
+      "dns_ke": 0.03322801822897467,
+      "dns_ens": 0.5268573223116791,
+      "summary": {
+        "none": {
+          "stable": true,
+          "ke_ratio": 1.022763894811686,
+          "ens_ratio": 0.9944838425151672,
+          "spec_err_all": 0.07334862447727637,
+          "beats_none": false
+        },
+        "smag": {
+          "stable": true,
+          "ke_ratio": 0.9792639104920347,
+          "ens_ratio": 0.874608129866242,
+          "spec_err_all": 0.06903893302756167,
+          "beats_none": true
+        },
+        "specEV": {
+          "stable": true,
+          "ke_ratio": 1.0187337470825193,
+          "ens_ratio": 0.981687004989353,
+          "spec_err_all": 0.07240022679044729,
+          "beats_none": true
+        },
+        "specEV_bs": {
+          "stable": true,
+          "ke_ratio": 1.018677134199199,
+          "ens_ratio": 0.9824074663690887,
+          "spec_err_all": 0.07238041176751743,
+          "beats_none": true
+        },
+        "cuspEV": {
+          "stable": true,
+          "ke_ratio": 1.0227026081858508,
+          "ens_ratio": 0.9933472586821385,
+          "spec_err_all": 0.07335441424664838,
+          "beats_none": false
+        },
+        "cuspEV_bs": {
+          "stable": true,
+          "ke_ratio": 1.022714695676551,
+          "ens_ratio": 0.9939624133726654,
+          "spec_err_all": 0.07336381398909618,
+          "beats_none": false
+        }
+      },
+      "margin_rel": 0.058756268170371155
+    },
+    "10.0": {
+      "backend": "cupy",
+      "dns_n": 192,
+      "n_les": 72,
+      "kc": 24,
+      "nu": 0.0035,
+      "les_steps": 6000,
+      "dns_spinup": 4000,
+      "none_spec_err": 0.010826542304217448,
+      "best_closure": "cuspEV_bs",
+      "best_spec_err": 0.01088534773201723,
+      "any_closure_beats_none": false,
+      "dns_ke": 0.004950612453083416,
+      "dns_ens": 0.5153804025395522,
+      "summary": {
+        "none": {
+          "stable": true,
+          "ke_ratio": 0.9990992690508069,
+          "ens_ratio": 1.0019705213233605,
+          "spec_err_all": 0.010826542304217448,
+          "beats_none": false
+        },
+        "smag": {
+          "stable": true,
+          "ke_ratio": 0.8899399520979875,
+          "ens_ratio": 0.8821212979531938,
+          "spec_err_all": 0.07906555877095144,
+          "beats_none": false
+        },
+        "specEV": {
+          "stable": true,
+          "ke_ratio": 0.980728520493769,
+          "ens_ratio": 0.9788855793046982,
+          "spec_err_all": 0.014651989055454452,
+          "beats_none": false
+        },
+        "specEV_bs": {
+          "stable": true,
+          "ke_ratio": 0.9810359321622015,
+          "ens_ratio": 0.980866001262326,
+          "spec_err_all": 0.01494434915696769,
+          "beats_none": false
+        },
+        "cuspEV": {
+          "stable": true,
+          "ke_ratio": 0.9984369756009593,
+          "ens_ratio": 0.9981000210307442,
+          "spec_err_all": 0.010890854567866372,
+          "beats_none": false
+        },
+        "cuspEV_bs": {
+          "stable": true,
+          "ke_ratio": 0.9988927251790785,
+          "ens_ratio": 0.9997810861055342,
+          "spec_err_all": 0.01088534773201723,
+          "beats_none": false
+        }
+      },
+      "margin_rel": -0.005431598209972776
+    },
+    "17.0": {
+      "backend": "cupy",
+      "dns_n": 192,
+      "n_les": 72,
+      "kc": 24,
+      "nu": 0.0035,
+      "les_steps": 6000,
+      "dns_spinup": 4000,
+      "none_spec_err": 0.006438875510497443,
+      "best_closure": "cuspEV_bs",
+      "best_spec_err": 0.012208520815280337,
+      "any_closure_beats_none": false,
+      "dns_ke": 0.0017534330077301848,
+      "dns_ens": 0.5053281585826334,
+      "summary": {
+        "none": {
+          "stable": true,
+          "ke_ratio": 1.0037066084460675,
+          "ens_ratio": 1.0043857195275705,
+          "spec_err_all": 0.006438875510497443,
+          "beats_none": false
+        },
+        "smag": {
+          "stable": true,
+          "ke_ratio": 0.884908556312315,
+          "ens_ratio": 0.8870354335991215,
+          "spec_err_all": 0.10840409064036793,
+          "beats_none": false
+        },
+        "specEV": {
+          "stable": true,
+          "ke_ratio": 0.9446968848863964,
+          "ens_ratio": 0.9448519497999893,
+          "spec_err_all": 0.05165192665742644,
+          "beats_none": false
+        },
+        "specEV_bs": {
+          "stable": true,
+          "ke_ratio": 0.9723825712277177,
+          "ens_ratio": 0.9728700882147795,
+          "spec_err_all": 0.02485129076879859,
+          "beats_none": false
+        },
+        "cuspEV": {
+          "stable": true,
+          "ke_ratio": 0.9696291246065285,
+          "ens_ratio": 0.9683070891154515,
+          "spec_err_all": 0.028239968666017648,
+          "beats_none": false
+        },
+        "cuspEV_bs": {
+          "stable": true,
+          "ke_ratio": 0.9857426093552736,
+          "ens_ratio": 0.9851317816780883,
+          "spec_err_all": 0.012208520815280337,
+          "beats_none": false
+        }
+      },
+      "margin_rel": -0.8960641179312306
+    }
+  }
+}

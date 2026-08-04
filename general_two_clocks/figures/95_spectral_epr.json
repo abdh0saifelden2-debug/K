@@ -1,0 +1,290 @@
+{
+ "description": "NR60 (theory + real data) -- Gonella's rotary coefficient is an",
+ "synthetic": {
+  "identity_max_err": 3.552713678800501e-15,
+  "stokes_max_err": 1.3322676295501878e-14,
+  "rotator": [
+   {
+    "nu": 0.7,
+    "f": 0.9,
+    "spectral": 2.3142857080863535,
+    "exact": 2.3142857142857145,
+    "current": 2.3142857142857145
+   },
+   {
+    "nu": 1.5,
+    "f": 0.4,
+    "spectral": 0.21333247437724048,
+    "exact": 0.21333333333333337,
+    "current": 0.21333333333333335
+   },
+   {
+    "nu": 0.35,
+    "f": 1.3,
+    "spectral": 9.657143505719276,
+    "exact": 9.657142857142858,
+    "current": 9.657142857142858
+   }
+  ],
+  "general_ou": [
+   {
+    "d": 2,
+    "spectral": 0.010263453964810801,
+    "current": 0.010263567993619776
+   },
+   {
+    "d": 3,
+    "spectral": 0.3415317385347639,
+    "current": 0.3415338925125302
+   }
+  ],
+  "reversible": {
+   "spectral": -2.0400243353258036e-14,
+   "current": 4.143355182784606e-31
+  },
+  "sampling": [
+   {
+    "dt": 1.6,
+    "rate": 0.20204462693474512
+   },
+   {
+    "dt": 0.8,
+    "rate": 1.143859915561063
+   },
+   {
+    "dt": 0.4,
+    "rate": 2.0237400717499674
+   },
+   {
+    "dt": 0.2,
+    "rate": 2.5256251537923227
+   },
+   {
+    "dt": 0.1,
+    "rate": 2.778217933161309
+   },
+   {
+    "dt": 0.05,
+    "rate": 2.9026845161077865
+   }
+  ],
+  "wave_Vmax": 0.0,
+  "wave_densmax": 0.0,
+  "ring": {
+   "biased_true": 0.6437751649736402,
+   "biased_gauss": 0.5517241379310343,
+   "fair_true": 0.0,
+   "fair_gauss": 1.7275130181374743e-33
+  },
+  "cont_exact": 3.0250000000000004
+ },
+ "real": {
+  "bands": {
+   "nh_polar": {
+    "n_floats": 135,
+    "lat_mean": 70.7117379157248,
+    "sigma_nats_per_step": 0.08194228271154903,
+    "peak_theta": 0.30543261909900765,
+    "peak_period_days": 205.71428571428572,
+    "frac_below_120d": 0.42848928187753316,
+    "peak_periods_tapers": {
+     "bartlett": 205.71428571428572,
+     "parzen": 132.11009174311926,
+     "tukey": 173.49397590361446
+    },
+    "min_det_margin": 0.4790170124929934,
+    "max_abs_CR": 0.3731502035247053,
+    "dens_lowbin": 0.00034237680739061566,
+    "dens_peak": 0.6470618903751133
+   },
+   "nh_subpolar": {
+    "n_floats": 291,
+    "lat_mean": 55.8675893891824,
+    "sigma_nats_per_step": 0.001778294155559173,
+    "peak_theta": 0.24870941840919197,
+    "peak_period_days": 252.6315789473684,
+    "frac_below_120d": 0.4159248719571024,
+    "peak_periods_tapers": {
+     "bartlett": 252.6315789473684,
+     "parzen": 37.59791122715405,
+     "tukey": 221.53846153846152
+    },
+    "min_det_margin": 0.33836314285481683,
+    "max_abs_CR": 0.06701707275415712,
+    "dens_lowbin": 1.3683829785939687e-05,
+    "dens_peak": 0.01804620285721365
+   },
+   "nh_mid": {
+    "n_floats": 473,
+    "lat_mean": 41.612951813971755,
+    "sigma_nats_per_step": 0.0018180005928956332,
+    "peak_theta": 0.3665191429188092,
+    "peak_period_days": 171.42857142857142,
+    "frac_below_120d": 0.3549865755612999,
+    "peak_periods_tapers": {
+     "bartlett": 171.42857142857142,
+     "parzen": 130.9090909090909,
+     "tukey": 161.79775280898878
+    },
+    "min_det_margin": 0.19998661629214531,
+    "max_abs_CR": 0.05542817750133171,
+    "dens_lowbin": 4.52382210362704e-06,
+    "dens_peak": 0.012327003486015582
+   },
+   "nh_sub": {
+    "n_floats": 701,
+    "lat_mean": 27.060758557024904,
+    "sigma_nats_per_step": 0.004652237253569059,
+    "peak_theta": 0.7374016089676042,
+    "peak_period_days": 85.20710059171597,
+    "frac_below_120d": 0.17048351969736106,
+    "peak_periods_tapers": {
+     "bartlett": 85.20710059171597,
+     "parzen": 80.89887640449439,
+     "tukey": 85.20710059171597
+    },
+    "min_det_margin": 0.060524108533282786,
+    "max_abs_CR": 0.07513363194332198,
+    "dens_lowbin": 4.150684723013339e-06,
+    "dens_peak": 0.022708441169038526
+   },
+   "nh_trop": {
+    "n_floats": 788,
+    "lat_mean": 12.015047028475255,
+    "sigma_nats_per_step": 0.012791342048988363,
+    "peak_theta": 1.6362461737446838,
+    "peak_period_days": 38.4,
+    "frac_below_120d": 0.0024265147004510043,
+    "peak_periods_tapers": {
+     "bartlett": 38.4,
+     "parzen": 28.91566265060241,
+     "tukey": 27.961165048543688
+    },
+    "min_det_margin": 0.028006980792588704,
+    "max_abs_CR": 0.11503724810746797,
+    "dens_lowbin": 1.7245200021221935e-07,
+    "dens_peak": 0.05364417770629149
+   },
+   "eq": {
+    "n_floats": 686,
+    "lat_mean": 0.17510167166325588,
+    "sigma_nats_per_step": 8.937224125328941e-05,
+    "peak_theta": 2.5830872929516078,
+    "peak_period_days": 24.324324324324323,
+    "frac_below_120d": 0.15525141137324652,
+    "peak_periods_tapers": {
+     "bartlett": 24.324324324324323,
+     "parzen": 24.53151618398637,
+     "tukey": 24.48979591836735
+    },
+    "min_det_margin": 0.046541005347153136,
+    "max_abs_CR": 0.014472141035311883,
+    "dens_lowbin": 1.6605422907341104e-07,
+    "dens_peak": 0.000837946966598195
+   },
+   "sh_trop": {
+    "n_floats": 1006,
+    "lat_mean": -12.479438590239514,
+    "sigma_nats_per_step": 0.008915024253364842,
+    "peak_theta": 2.2907446432425576,
+    "peak_period_days": 27.428571428571427,
+    "frac_below_120d": 0.0025853977339317354,
+    "peak_periods_tapers": {
+     "bartlett": 27.428571428571427,
+     "parzen": 27.852998065764023,
+     "tukey": 27.22117202268431
+    },
+    "min_det_margin": 0.033173114696731724,
+    "max_abs_CR": 0.10482384455992545,
+    "dens_lowbin": 5.689897710484233e-07,
+    "dens_peak": 0.0444404671119144
+   },
+   "sh_sub": {
+    "n_floats": 1073,
+    "lat_mean": -27.996510622496984,
+    "sigma_nats_per_step": 0.004777007974189234,
+    "peak_theta": 0.8726646259971648,
+    "peak_period_days": 72.0,
+    "frac_below_120d": 0.16827070275934494,
+    "peak_periods_tapers": {
+     "bartlett": 72.0,
+     "parzen": 64.28571428571428,
+     "tukey": 65.45454545454545
+    },
+    "min_det_margin": 0.14387673046309116,
+    "max_abs_CR": 0.07931881867956073,
+    "dens_lowbin": 5.6342458416394785e-06,
+    "dens_peak": 0.025325233057451213
+   },
+   "sh_mid": {
+    "n_floats": 1235,
+    "lat_mean": -42.2744439581452,
+    "sigma_nats_per_step": 0.010801364052572196,
+    "peak_theta": 0.34033920413889424,
+    "peak_period_days": 184.6153846153846,
+    "frac_below_120d": 0.37774378635031347,
+    "peak_periods_tapers": {
+     "bartlett": 184.6153846153846,
+     "parzen": 127.43362831858407,
+     "tukey": 160.0
+    },
+    "min_det_margin": 0.24259409785100297,
+    "max_abs_CR": 0.13686778433968694,
+    "dens_lowbin": 3.1941121357481266e-05,
+    "dens_peak": 0.07636162793007774
+   },
+   "sh_subpolar": {
+    "n_floats": 820,
+    "lat_mean": -55.85767285929111,
+    "sigma_nats_per_step": 0.00033839229660191346,
+    "peak_theta": 1.2042771838760873,
+    "peak_period_days": 52.173913043478265,
+    "frac_below_120d": 0.09161221495738628,
+    "peak_periods_tapers": {
+     "bartlett": 52.173913043478265,
+     "parzen": 54.54545454545454,
+     "tukey": 53.13653136531366
+    },
+    "min_det_margin": 0.28722120265592704,
+    "max_abs_CR": 0.022661707236507903,
+    "dens_lowbin": 4.501184153419808e-07,
+    "dens_peak": 0.0020552673881741356
+   },
+   "sh_polar": {
+    "n_floats": 50,
+    "lat_mean": -67.07960583213313,
+    "sigma_nats_per_step": 0.04154115319313413,
+    "peak_theta": 2.0682151636132806,
+    "peak_period_days": 30.379746835443036,
+    "frac_below_120d": 0.281386084011915,
+    "peak_periods_tapers": {
+     "bartlett": 30.379746835443036,
+     "parzen": 30.703624733475475,
+     "tukey": 30.508474576271183
+    },
+    "min_det_margin": 0.2220389263784327,
+    "max_abs_CR": 0.35163862313619426,
+    "dens_lowbin": 0.00028472442912931924,
+    "dens_peak": 0.5643849236261074
+   }
+  },
+  "eq_sigma": 8.937224125328941e-05,
+  "eq_null_q95": 0.00015956774867231918,
+  "nhtrop_sigma": 0.012791342048988363,
+  "nhtrop_null_q95": 0.0001038906224472402
+ },
+ "verdicts": {
+  "identity_exact": true,
+  "rotator_closes_on_nr57": true,
+  "spectral_equals_current_all_ou": true,
+  "reversible_null": true,
+  "sampling_lower_bound": true,
+  "waves_reversible": true,
+  "gaussian_lower_bounds_true": true,
+  "ocean_eddy_clock_carries_epr": true,
+  "ocean_polar_split": true,
+  "ocean_equator_reversible": true,
+  "ocean_hemispheric_mirror": true,
+  "ocean_no_clipping": true
+ }
+}

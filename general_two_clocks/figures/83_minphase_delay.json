@@ -1,0 +1,29 @@
+{
+ "description": "NR48 (theory) -- the two-clocks response is minimum-phase, so the memory",
+ "meta": {
+  "description": "NR48: minimum-phase two-clocks + delay-clock anchors",
+  "ocean_source": "80_andro_gser.json (NR45)",
+  "delay_source": "BiSON allsites-fill x GOLF 26y MEAN velocity"
+ },
+ "synthetic": {
+  "recon_median_deg": {
+   "debye": 0.016264303890345347,
+   "fractional": 0.011707886968005052,
+   "two_pole": 0.03892164992402171
+  },
+  "delay_tau_true": 0.3,
+  "delay_tau_recovered": 0.3,
+  "delay_bode_phase_max": 2.1651102178554555e-16
+ },
+ "ocean_minphase_median_deg": 3.0453294707116143,
+ "delay_tau_d_s": -10.252851914353663,
+ "delay_gain_log_std": 0.19259771235050552,
+ "delay_n_coherent": 123,
+ "verdicts": {
+  "two_clocks_response_is_minimum_phase": true,
+  "gser_is_minimum_phase_on_real_ocean": true,
+  "delay_is_allpass_excess": true,
+  "real_delay_clock_measured": true,
+  "reading": "The two-clocks response is minimum-phase: gain and phase are a Bode/Hilbert pair, so the memory phase is the amplitude spectrum's transform (reconstructed to ~0.01-0.04 deg on synthetics), and GSER's amplitude-only modulus inversion is legitimate exactly because the ocean modulus is minimum-phase (delta=pi*alpha/2 matches Bode[ln|G*|] to 3.0 deg on ANDRO).  A pure transport delay is the unique all-pass factor -- no amplitude signature, linear excess phase -- so the third clock is read model-free from the excess-phase slope: BiSON x GOLF gives tau_d = -10.3 s under the GOLFxconj(BiSON), chi=exp(-i w tau_d) convention (GOLF leads BiSON by 10 s) -- a pure time-base offset between two independent velocity instruments.  Three clocks: instantaneous (delta=0), relaxational (amplitude-determined phase), advective (all-pass delay)."
+ }
+}

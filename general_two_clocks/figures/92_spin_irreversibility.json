@@ -1,0 +1,45 @@
+{
+ "description": "NR57 (theory + real data) -- the spin is the irreversibility clock: the",
+ "synthetic": {
+  "m_identity_err": 0.0,
+  "iso_identity_err": 0.0,
+  "db_spin": 5.551115123125783e-17,
+  "db_sigma": 3.5921344791313917e-31,
+  "lag_slope_err": 2.999999624275773e-06,
+  "bound_min_ratio": 1.0056483909558784,
+  "bound_violations": 0,
+  "n_bound_tested": 788
+ },
+ "real": {
+  "nh": {
+   "n": 2388,
+   "rho1_mean": -0.023311764237855945,
+   "t": -9.652048076458994,
+   "cycling_rate_per_day": -0.0023311764237855946,
+   "irreversibility_floor": 0.0005434383518813794
+  },
+  "sh": {
+   "n": 4184,
+   "rho1_mean": 0.024338687858508606,
+   "t": 13.193441556331932,
+   "cycling_rate_per_day": 0.0024338687858508606,
+   "irreversibility_floor": 0.0005923717266739142
+  },
+  "eq": {
+   "n": 686,
+   "rho1_mean": 0.0032186151603498547,
+   "t": 1.0017574184900437,
+   "cycling_rate_per_day": 0.00032186151603498547,
+   "irreversibility_floor": 1.035948355043392e-05
+  }
+ },
+ "n_floats": 7258,
+ "verdicts": {
+  "current_identity_and_isotropic_law_exact": true,
+  "spin_squared_lower_bounds_entropy": true,
+  "detailed_balance_iff_zero_spin": true,
+  "ocean_is_time_irreversible_handed": true,
+  "equatorial_reversible_line": true,
+  "reading": "The spin is the thermodynamic arrow: the Lagrangian areal velocity is exactly the phase-space probability current (M = 2 Omega C), so entropy production is the spin squared over energy x diffusivity -- exact for the isotropic two-clocks response (sigma = m^2/2c nu) and a floor in general (min ratio 1.01, no violations), with detailed balance <=> zero spin <=> zero entropy (machine zero).  The deep ocean is time-irreversible with opposite handedness across the equator (NH t = -9.7, SH t = 13.2) and a statistically REVERSIBLE equatorial line (t = 1.0) where the phase-space current vanishes as f -> 0: the parity-odd face is how far each region sits from equilibrium, measured from single-float statistics."
+ }
+}

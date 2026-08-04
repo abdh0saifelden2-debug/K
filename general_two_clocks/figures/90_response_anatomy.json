@@ -1,0 +1,53 @@
+{
+ "description": "NR55 (theory capstone) -- the response anatomy is complete: a linear",
+ "matrix": {
+  "eeg": {
+   "memory_deg": 2.059969886286347,
+   "pole": "elliptic"
+  },
+  "ocean": {
+   "memory_deg": 88.32862563505472,
+   "minphase_median_deg": 3.0453294707116143,
+   "area_closure": 0.06393055240821431,
+   "spin_nh_t": -9.652048076458994,
+   "spin_sh_t": 13.193441556331932,
+   "spin_eq_t": 1.0017574184900437,
+   "eddy_period_nh_d": 60.9917723894648,
+   "eddy_period_sh_d": 48.88874855773011,
+   "compass_pooled_t": 5.22608182983923,
+   "pole": "parabolic + odd"
+  },
+  "solar": {
+   "tau_d_s": -10.252851914353663,
+   "gain_log_std": 0.19259771235050552,
+   "static_gain_veto_x": 3.5449558896221567,
+   "pole": "pure transport"
+  },
+  "scallops": {
+   "celerity_mm_hr": 48.24601713292506,
+   "boost_removable_frac": 0.929724149655133,
+   "growth_sigma_hr": -0.061684404594030635,
+   "t_shape_parity": 2.377134430915096,
+   "t_flux_parity": -4.696129230594418,
+   "pole": "transport + weak shape parity"
+  }
+ },
+ "sources": {
+  "nr47": "82_memory_phase.json",
+  "nr48": "83_minphase_delay.json",
+  "nr49": "84_dispersion_boost.json",
+  "nr50": "85_phase_area_budget.json",
+  "nr51": "86_triad_parity.json",
+  "nr52": "87_odd_spin.json",
+  "nr53": "88_spin_two_clocks.json",
+  "nr54": "89_spin_drift.json"
+ },
+ "verdicts": {
+  "eeg_at_elliptic_pole": true,
+  "ocean_parabolic_plus_odd": true,
+  "solar_pure_transport": true,
+  "scallops_transport_weak_shape": true,
+  "four_corners_distinct": true,
+  "reading": "Four phases, four guards, no fifth: memory (Bode-determined, waterbed-conserved), transport (all-pass, amplitude-blind), shape parity (closed-polygon, boost-blind), handedness (tensor-odd, scalar-blind).  The corpus realizes every corner: EEG sits at the elliptic pole (2.1 deg -- volume conduction's theorem-enforced zero); the ocean is parabolic (88 deg, minimum-phase to 3.0 deg, area budget 6%) PLUS the odd face (10-sigma mirrored spin, 50-60 d eddy clock, beta-drift compass); the solar pair is pure transport (tau_d = -10.3 s all-pass, its gain tilt vetoed x3.5 as static weighting); the scallops are transport (48 mm/hr, 93% boost-removable) with marginal growth and only weak triad parity -- their parity breaking lives in the flux, exactly as the polygon theorem demands.  Protocol for any new system: |chi| -> memory free; excess-phase slope -> transport; closed triad -> shape; antisymmetrized tensor -> handedness."
+ }
+}

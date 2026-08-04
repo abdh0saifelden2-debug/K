@@ -1,0 +1,140 @@
+{
+ "description": "NR53 (theory + real data) -- the two clocks of the spin: the ocean's",
+ "meta": {
+  "description": "NR53: banded Lagrangian spin correlation functions (odd/even) from ANDRO",
+  "provenance": "derived from the NR52 per-float accumulators; ANDRO SEANOE doi:10.17882/47077 (CC-BY), 700-1300 dbar, 10-day cycles, float-mean residuals",
+  "dt_days": 10.0,
+  "maxlag": 12,
+  "convention": "rho_odd = O/E[0]; positive = counterclockwise; cyclonic means sign(rho)=sign(f): NH +, SH -"
+ },
+ "synthetic": {
+  "fit": {
+   "A": 0.7858413451042048,
+   "f_e_rad_day": 0.4262970847167835,
+   "period_days": 14.738982583833312,
+   "tau_m_days": 5.021397383403174,
+   "g_per_day": 0.004034203363086031,
+   "cost": 2.894108477115323e-06
+  },
+  "f_e_true": 0.41887902047863906,
+  "g_true": 0.003122278516865421,
+  "f_e_rel_err": 0.01770932387510856,
+  "g_ratio": 1.2920703074036224,
+  "mixture_has_crossing": true,
+  "drift_has_crossing": false,
+  "drift_tail_same_sign": true
+ },
+ "bands": {
+  "nh_polar": {
+   "n_floats": 135,
+   "rho1": 0.11856570170869073,
+   "rho1_float": 0.1104518353464851,
+   "t_stat": 9.92797256303536,
+   "crossing_lag": null,
+   "tail_frac": 0.3144037027721605
+  },
+  "nh_subpolar": {
+   "n_floats": 291,
+   "rho1": -0.007780329392285958,
+   "rho1_float": -0.00977584783434565,
+   "t_stat": -1.2984284052319663,
+   "crossing_lag": 2,
+   "tail_frac": -2.0758193584202864
+  },
+  "nh_mid": {
+   "n_floats": 473,
+   "rho1": -0.007045335255018807,
+   "rho1_float": -0.0362297810995815,
+   "t_stat": -5.82931672851701,
+   "crossing_lag": 10,
+   "tail_frac": 0.05007311988175156
+  },
+  "nh_sub": {
+   "n_floats": 701,
+   "rho1": -0.03345653137596611,
+   "rho1_float": -0.03233900366969643,
+   "t_stat": -7.62770139845407,
+   "crossing_lag": null,
+   "tail_frac": 0.09345020494451518
+  },
+  "nh_trop": {
+   "n_floats": 788,
+   "rho1": -0.035667572759097196,
+   "rho1_float": -0.035442106592626844,
+   "t_stat": -11.335288823502673,
+   "crossing_lag": 3,
+   "tail_frac": -0.1188883477302479,
+   "fit": {
+    "A": 0.10194106477396196,
+    "f_e_rad_day": -0.10301693262917688,
+    "period_days": 60.9917723894648,
+    "tau_m_days": 11.240659731228822,
+    "g_per_day": 5.409411716080312e-05,
+    "cost": 2.2953509269218222e-05
+   }
+  },
+  "eq": {
+   "n_floats": 686,
+   "rho1": 0.00037426124957235543,
+   "rho1_float": 0.0032186086850170227,
+   "t_stat": 1.0017556899929358,
+   "crossing_lag": null,
+   "tail_frac": 10.277556441378149
+  },
+  "sh_trop": {
+   "n_floats": 1006,
+   "rho1": 0.028300352487163838,
+   "rho1_float": 0.02650125567850903,
+   "t_stat": 8.777341520769543,
+   "crossing_lag": 3,
+   "tail_frac": -0.18842687253679322,
+   "fit": {
+    "A": 0.04809282598469979,
+    "f_e_rad_day": 0.12852006837033492,
+    "period_days": 48.88874855773011,
+    "tau_m_days": 20.26507381753471,
+    "g_per_day": -6.057437146903269e-05,
+    "cost": 3.35048138781676e-05
+   }
+  },
+  "sh_sub": {
+   "n_floats": 1073,
+   "rho1": 0.03366991213920229,
+   "rho1_float": 0.027856093841682382,
+   "t_stat": 7.1577356841566635,
+   "crossing_lag": null,
+   "tail_frac": 0.19014416618871838
+  },
+  "sh_mid": {
+   "n_floats": 1235,
+   "rho1": 0.04856543952557001,
+   "rho1_float": 0.04435398613527628,
+   "t_stat": 11.968194906663971,
+   "crossing_lag": null,
+   "tail_frac": 0.3036463940011842
+  },
+  "sh_subpolar": {
+   "n_floats": 820,
+   "rho1": 0.0010620357518948693,
+   "rho1_float": -0.010242058293586636,
+   "t_stat": -2.845524502412123,
+   "crossing_lag": 3,
+   "tail_frac": -1.5303227954595846
+  },
+  "sh_polar": {
+   "n_floats": 50,
+   "rho1": -0.04650664844579454,
+   "rho1_float": -0.02191025964882596,
+   "t_stat": -0.8340975162995347,
+   "crossing_lag": null,
+   "tail_frac": 0.965418883795476
+  }
+ },
+ "verdicts": {
+  "two_spin_clocks_separable": true,
+  "deep_eddy_rotation_measured_and_mirrored": true,
+  "polar_reversal_is_circulation_clock": true,
+  "equatorial_null": true,
+  "reading": "The odd correlation itself has two clocks.  Tropics: a damped OSCILLATION (zero-crossing at 30 d NH / 30 d SH) -- the mean deep eddy rotates with period 61 d clockwise (NH) and 49 d counterclockwise (SH): anticyclonic, hemisphere-mirrored, measured from single-float statistics.  Poleward of ~50-65 deg the spin reverses to cyclonic (NH 65-85: rho1 = +0.119, t = +9.9) but with NO crossing and a 31% same-sign tail: a persistent circulation clock (subpolar/polar cyclonic circulation seen as trajectory curvature), not an eddy-population flip.  The equator is null at every lag.  Anticyclone dominance belongs to the eddy clock; the polar reversal belongs to the circulation clock."
+ }
+}

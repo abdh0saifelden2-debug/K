@@ -1,0 +1,53 @@
+{
+ "description": "NR59 (theory + real data) -- the spin is a skew (divergence-free)",
+ "synthetic": {
+  "closed_form_max_err": 7.105427357601002e-15,
+  "ratio_max_err": 1.2434497875801753e-14,
+  "skew_div_max": 1.1102230246251565e-15,
+  "skew_dot_grad_max": 0.0
+ },
+ "bands": {
+  "nh_all": {
+   "K_S": 1877.5903205886398,
+   "K_A": -17.03296813574109,
+   "skew_fraction": -0.009071717056147326
+  },
+  "sh_all": {
+   "K_S": 3234.012337412608,
+   "K_A": 386.9236814104382,
+   "skew_fraction": 0.11964199299251868
+  },
+  "eq": {
+   "K_S": 10125.987195855874,
+   "K_A": 135.55915333808,
+   "skew_fraction": 0.013387253086154252
+  },
+  "nh_mid": {
+   "K_S": 1660.4007714651705,
+   "K_A": -85.49254838049713,
+   "skew_fraction": -0.05148910422696131
+  },
+  "sh_mid": {
+   "K_S": 3666.597356243891,
+   "K_A": 552.5480870981158,
+   "skew_fraction": 0.15069778146138008
+  },
+  "nh_low": {
+   "K_S": 2269.187534685498,
+   "K_A": -1.2347851070253126,
+   "skew_fraction": -0.0005441529570170364
+  },
+  "sh_low": {
+   "K_S": 1936.8422790964269,
+   "K_A": -31.663803161038302,
+   "skew_fraction": -0.016348157773492047
+  }
+ },
+ "verdicts": {
+  "skew_ratio_is_clock_ratio": true,
+  "skew_flux_divergence_free": true,
+  "ocean_skew_transport_flips_at_equator": true,
+  "taylor_diffusivity_scale_reasonable": true,
+  "reading": "The spin is a skew diffusivity: the Green-Kubo integral of the odd correlation is the ANTISYMMETRIC eddy-transport tensor K_A, whose flux is divergence-free and everywhere parallel to tracer contours -- it advects, mixes nothing (the transport form of NR23's signed eddy viscosity, the rotational flux K-theory discards).  Its ratio to the Taylor diffusivity is EXACTLY the clock ratio K_A/K_S = f tau_L = tan(delta), so the skew fraction of eddy transport is the same memory coordinate as everywhere else in the corpus.  In the deep ocean the skew transport flips sign across the equator (NH K_A = -17, SH +387 m^2/s), a 15% rotational (non-mixing) share of the mid-latitude transport tensor on a Taylor background of ~3234 m^2/s, vanishing at the equator where f -> 0.  Memory phase, irreversibility, and skew transport are one object measured three ways: r = f tau_L."
+ }
+}

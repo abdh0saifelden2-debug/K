@@ -1,0 +1,67 @@
+{
+ "description": "NR49 (theory) -- the frame-pair transfer of an evolving interface",
+ "source": {
+  "mat": "glaciers/subglacial/data/bushuk/melt_data_timestring_sub2.mat",
+  "derived": "glaciers/subglacial/data/bushuk_raw_derived.json",
+  "dt_s": 300.0,
+  "pattern_mm": [
+   45.0,
+   200.0
+  ],
+  "rough_mm": [
+   15.0,
+   45.0
+  ]
+ },
+ "synthetic": {
+  "sigma_max_err": 2.0816681711721685e-16,
+  "celerity_max_err": 4.440892098500626e-16,
+  "boost_sigma_invariance": 8.526512829121202e-13,
+  "boost_residual_celerity": 6.640757545175676e-16,
+  "damping_fitted_celerity": 9.916937412151702e-17,
+  "pure_boost_fitted_gain": 2.220446049250313e-16,
+  "V_true": 3.0
+ },
+ "frames": {
+  "lab": {
+   "pattern": {
+    "sigma_hr": -0.061684404594030635,
+    "celerity_mm_hr": 48.24601713292506,
+    "n_bins": 3
+   },
+   "rough": {
+    "sigma_hr": -4.655176204059718,
+    "celerity_mm_hr": 15.058737292898204,
+    "n_bins": 6
+   },
+   "n_gated": 28
+  },
+  "adv": {
+   "pattern": {
+    "sigma_hr": -0.44807140975949133,
+    "celerity_mm_hr": 3.390529879769335,
+    "n_bins": 2
+   },
+   "rough": {
+    "sigma_hr": -5.936923177883628,
+    "celerity_mm_hr": -13.642332403458457,
+    "n_bins": 4
+   },
+   "n_gated": 17
+  }
+ },
+ "boost_speed_mm_hr": -57.19278041958043,
+ "trackers": {
+  "v_xcorr_mm_hr": 55.83896963567125,
+  "v_track_mm_hr": 57.19278041958043
+ },
+ "celerity_ratio_lab_vs_xcorr": 0.864020547795072,
+ "adv_residual_fraction": 0.0702758503448671,
+ "verdicts": {
+  "boost_identity_exact": true,
+  "migration_is_one_allpass_factor": true,
+  "gain_is_boost_invariant": true,
+  "marginal_pattern_damped_roughness": true,
+  "reading": "The two-snapshot transfer factorizes exactly into gain x all-pass, and the all-pass factor is kinematics: on the real scallop field the pattern-band phase celerity (48.2 mm/hr) matches the committed trackers (55.8 xcorr), and Bushuk's co-moving frame annihilates 93% of it, while the growth spectrum stays put (pattern -0.06 vs -0.45 /hr; roughness -4.7 vs -5.9 /hr) -- boosts move phase, never gain.  The developed scallop state is a marginal pattern riding on minutes-lifetime damped roughness: NR44's attractor, seen spectrally.  NR48's delay and this boost are the same all-pass clock in conjugate variables (omega <-> k)."
+ }
+}

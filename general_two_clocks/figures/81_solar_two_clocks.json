@@ -1,0 +1,257 @@
+{
+ "description": "NR46 (ledger E12) -- the Sun's two clocks in one cross-spectrum: NR28's",
+ "meta": {
+  "window_min": 16384,
+  "df_uhz": 1.0172526041666667,
+  "dt_cal_s": 55.0,
+  "dt_cal_method": "phase-slope timing self-calibration (Jimenez et al. 1999 S2.4) anchored to their Fig.2 raw <all> I-V = -121.3 deg at 2.9-3.3 mHz; coherences and phase separations are dt-invariant",
+  "bands": {
+   "gran": [
+    300.0,
+    1200.0
+   ],
+   "pband": [
+    2400.0,
+    4300.0
+   ],
+   "cutoff": [
+    5800.0,
+    8000.0
+   ]
+  },
+  "mode_gate_g2": 0.4,
+  "phase_convention": "I-V, V downward positive (adiabatic -90 deg); computed as angle(conj(Sxy)) with X=V, Y=I",
+  "provenance": "SOHO mission-long bundles: GOLF_26y_MEAN.fits (Appourchaux et al. 2018), VIRGO-SPM-GREEN/BLUE-L2-MISSIONLONG.fits; BiSON open data portal allsites-alldata-waverage-fill.fits (Davies et al. 2014, Hale et al. 2016)"
+ },
+ "golf_x_green": {
+  "nwin": 602,
+  "n_mode_bins": 395,
+  "n_back_bins": 1178,
+  "g2_mode_median": 0.6494742941184499,
+  "g2_pband_max": 0.959632962228219,
+  "g2_gran": 0.06457376773210553,
+  "g2_cutoff": 0.013794842638821823,
+  "phase_level_2900_3300": -118.84019029069039,
+  "gran_phase": 22.958883614176706,
+  "mode_curve": [
+   {
+    "uhz_mid": 2500,
+    "n": 15,
+    "ph": -108.06501005510087,
+    "g2_med": 0.5954011696992003
+   },
+   {
+    "uhz_mid": 2700,
+    "n": 24,
+    "ph": -110.48712080137656,
+    "g2_med": 0.7433981457980043
+   },
+   {
+    "uhz_mid": 2900,
+    "n": 35,
+    "ph": -117.45638960365577,
+    "g2_med": 0.669908907185721
+   },
+   {
+    "uhz_mid": 3100,
+    "n": 48,
+    "ph": -115.79006106748416,
+    "g2_med": 0.7226641634678848
+   },
+   {
+    "uhz_mid": 3300,
+    "n": 54,
+    "ph": -119.04920795760687,
+    "g2_med": 0.6928543864991079
+   },
+   {
+    "uhz_mid": 3500,
+    "n": 60,
+    "ph": -111.00123260319134,
+    "g2_med": 0.7285359216405648
+   },
+   {
+    "uhz_mid": 3700,
+    "n": 52,
+    "ph": -103.04597160208019,
+    "g2_med": 0.6958327600781578
+   },
+   {
+    "uhz_mid": 3900,
+    "n": 53,
+    "ph": -96.88609782014764,
+    "g2_med": 0.6088534507540634
+   },
+   {
+    "uhz_mid": 4100,
+    "n": 42,
+    "ph": -87.61975013583861,
+    "g2_med": 0.5187062304961161
+   },
+   {
+    "uhz_mid": 4300,
+    "n": 12,
+    "ph": -84.35559226410777,
+    "g2_med": 0.45355442090791953
+   }
+  ],
+  "back_curve": [
+   {
+    "uhz_mid": 2600,
+    "n": 328,
+    "ph": 111.12135237846249
+   },
+   {
+    "uhz_mid": 3000,
+    "n": 260,
+    "ph": 138.5972301075569
+   },
+   {
+    "uhz_mid": 3400,
+    "n": 217,
+    "ph": -174.5957508071341
+   },
+   {
+    "uhz_mid": 3800,
+    "n": 202,
+    "ph": -135.41926974929086
+   },
+   {
+    "uhz_mid": 4200,
+    "n": 171,
+    "ph": -101.52847182964823
+   }
+  ],
+  "epochs": [
+   {
+    "label": "1996-1997",
+    "nwin": 70,
+    "n_mode_bins": 487,
+    "ph": -107.43770708703097
+   },
+   {
+    "label": "1998-1999",
+    "nwin": 46,
+    "n_mode_bins": 460,
+    "ph": -110.67973163055058
+   },
+   {
+    "label": "2000-2001",
+    "nwin": 65,
+    "n_mode_bins": 516,
+    "ph": -110.11249093723607
+   },
+   {
+    "label": "2002-2003",
+    "nwin": 66,
+    "n_mode_bins": 439,
+    "ph": -110.54665390772236
+   },
+   {
+    "label": "2004-2005",
+    "nwin": 52,
+    "n_mode_bins": 441,
+    "ph": -102.63692203888962
+   },
+   {
+    "label": "2006-2007",
+    "nwin": 44,
+    "n_mode_bins": 424,
+    "ph": -104.66128800305
+   },
+   {
+    "label": "2008-2009",
+    "nwin": 57,
+    "n_mode_bins": 415,
+    "ph": -107.50973474781208
+   },
+   {
+    "label": "2010-2011",
+    "nwin": 38,
+    "n_mode_bins": 401,
+    "ph": -107.36222325284095
+   },
+   {
+    "label": "2012-2013",
+    "nwin": 27,
+    "n_mode_bins": 396,
+    "ph": -108.21508983766019
+   },
+   {
+    "label": "2014-2015",
+    "nwin": 41,
+    "n_mode_bins": 364,
+    "ph": -107.19164335131424
+   },
+   {
+    "label": "2016-2017",
+    "nwin": 25,
+    "n_mode_bins": 377,
+    "ph": -105.52836429970786
+   },
+   {
+    "label": "2018-2019",
+    "nwin": 36,
+    "n_mode_bins": 355,
+    "ph": -105.7848584980308
+   },
+   {
+    "label": "2020-2021",
+    "nwin": 34,
+    "n_mode_bins": 325,
+    "ph": -107.87534928614421
+   }
+  ]
+ },
+ "green_x_blue": {
+  "nwin": 187,
+  "g2_gran": 0.9877355031532215,
+  "g2_pband_mode": 0.9738391214357305,
+  "g2_cutoff": 0.8446134441861155,
+  "mode_phase": 0.6381701593449234,
+  "gran_phase": -1.2108377203572969
+ },
+ "bison_x_golf": {
+  "nwin": 439,
+  "g2_pband_median": 0.7237069547924293,
+  "g2_top_quintile": 0.9063485540842648,
+  "g2_pband_max": 0.9523544484853422,
+  "g2_gran": 0.03526431934179687,
+  "g2_cutoff": 0.032122240455064406,
+  "top_phase": -15.719907814998741
+ },
+ "verdicts": {
+  "fast_clock_cross_channel": true,
+  "slow_clock_channel_local": true,
+  "cutoff_cross_channel_collapse": true,
+  "mode_phase_nonadiabatic_convection_side": true,
+  "phase_shape_matches_literature": true,
+  "background_second_branch": true,
+  "branch_separation_deg": [
+   [
+    2600,
+    139.6025821932988
+   ],
+   [
+    3000,
+    104.77954455687313
+   ],
+   [
+    3400,
+    59.570530526734984
+   ],
+   [
+    3800,
+    35.453235038176956
+   ],
+   [
+    4200,
+    15.540800629675033
+   ]
+  ],
+  "epoch_stable_across_cycles": true,
+  "instrument_controls_pass": true,
+  "epoch_circ_std_deg": 2.240081481620136,
+  "reading": "NR28's protocol at stellar scale: cross-channel coherence is a resonance detector -- only the global p-modes (fast clock) are coherent across V and I (and across two independent velocity instruments), while the convective slow clock is channel-local (V-I and V-V decohere in the granulation band where I-I holds 0.99) and the above-cutoff field collapses cross-channel only. Inside the coupled band the coherence-gated I-V phase is one-sided, bounded, 29 deg below adiabatic -90 -- the convection-coupled nonadiabatic side, reproducing Jimenez et al. 1999 across 26 years with 2.4-deg epoch stability -- and the inter-mode background forms a second, distinct phase branch in the same band.  The protocol transfers; the arctan first-order-lag form does not (opposite departure sign): that boundary is the E12 result."
+ }
+}

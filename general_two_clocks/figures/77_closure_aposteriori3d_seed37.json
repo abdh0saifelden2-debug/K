@@ -1,0 +1,59 @@
+{
+  "backend": "cupy",
+  "dns_n": 192,
+  "n_les": 72,
+  "kc": 24,
+  "nu": 0.0035,
+  "les_steps": 6000,
+  "dns_spinup": 4000,
+  "none_spec_err": 0.08857367895137278,
+  "best_closure": "cuspEV",
+  "best_spec_err": 0.08856712239167391,
+  "any_closure_beats_none": true,
+  "dns_ke": 0.034143005473857076,
+  "dns_ens": 0.5408858364013217,
+  "summary": {
+    "none": {
+      "stable": true,
+      "ke_ratio": 0.9178950064962648,
+      "ens_ratio": 0.8918742134749685,
+      "spec_err_all": 0.08857367895137278,
+      "beats_none": false
+    },
+    "smag": {
+      "stable": true,
+      "ke_ratio": 0.8803217201752475,
+      "ens_ratio": 0.7866446212026713,
+      "spec_err_all": 0.11007109325493078,
+      "beats_none": false
+    },
+    "specEV": {
+      "stable": true,
+      "ke_ratio": 0.9144084727194851,
+      "ens_ratio": 0.8810386235462805,
+      "spec_err_all": 0.09033097898413615,
+      "beats_none": false
+    },
+    "specEV_bs": {
+      "stable": true,
+      "ke_ratio": 0.9143223492908361,
+      "ens_ratio": 0.8817506710987598,
+      "spec_err_all": 0.09044163390937152,
+      "beats_none": false
+    },
+    "cuspEV": {
+      "stable": true,
+      "ke_ratio": 0.917857209894721,
+      "ens_ratio": 0.8909803081947032,
+      "spec_err_all": 0.08856712239167391,
+      "beats_none": true
+    },
+    "cuspEV_bs": {
+      "stable": true,
+      "ke_ratio": 0.9178620156619358,
+      "ens_ratio": 0.8915281741840221,
+      "spec_err_all": 0.0885933087530947,
+      "beats_none": false
+    }
+  }
+}

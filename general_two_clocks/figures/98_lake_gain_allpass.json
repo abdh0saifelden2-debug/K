@@ -1,0 +1,119 @@
+{
+ "description": "NR63 (theory + real data) -- active subglacial lake systems are",
+ "synthetic": {
+  "sync_gain": 0.5698289426400799,
+  "sync_netlead_absmax": 1.3202607228364927,
+  "sync_allpass": 0.2545179053382955,
+  "cascade_order_rho": 1.0,
+  "cascade_allpass": 0.6652195119413442,
+  "sync_gain_vs_surrogate": [
+   0.5698289426400799,
+   0.37589951662503
+  ]
+ },
+ "real": {
+  "n_lakes": 131,
+  "n_multi_systems": 22,
+  "within_median": 0.4418278107682171,
+  "between_median": 0.3047884521952613,
+  "mwu_within_gt_between_p": 4.735251358722546e-21,
+  "surrogate_within_mean": 0.2179100473399683,
+  "surrogate_within_q95": 0.2347047536467459,
+  "within_p_vs_surrogate": 0.0,
+  "systems": {
+   "Bindschadler": {
+    "n": 6,
+    "gain": 0.9224715750508996,
+    "along_axis_rho": 0.0,
+    "axis_var_frac": 0.8657289148896237
+   },
+   "Byrd_s": {
+    "n": 15,
+    "gain": 0.35150440157317286,
+    "along_axis_rho": 0.021428571428571425,
+    "axis_var_frac": 0.7087135493250637
+   },
+   "David_s": {
+    "n": 5,
+    "gain": 0.4741967848049357,
+    "along_axis_rho": 0.9746794344808963,
+    "axis_var_frac": 0.9094999952830044
+   },
+   "EAP": {
+    "n": 9,
+    "gain": 0.47082203239881715,
+    "along_axis_rho": 0.11666666666666665,
+    "axis_var_frac": 0.8575529220098354
+   },
+   "Foundation": {
+    "n": 16,
+    "gain": 0.3806671840533691,
+    "along_axis_rho": 0.08823529411764705,
+    "axis_var_frac": 0.9346810593697649
+   },
+   "Foundation_N": {
+    "n": 3,
+    "gain": 0.2781367229773134,
+    "along_axis_rho": 1.0,
+    "axis_var_frac": 0.9886698820224177
+   },
+   "KT": {
+    "n": 3,
+    "gain": 0.45281216748231506,
+    "along_axis_rho": 0.5,
+    "axis_var_frac": 0.9991969103417773
+   },
+   "Kamb": {
+    "n": 12,
+    "gain": 0.7256466075555068,
+    "along_axis_rho": 0.10489510489510491,
+    "axis_var_frac": 0.8642910397219202
+   },
+   "Lake": {
+    "n": 3,
+    "gain": 0.5039665893606843,
+    "along_axis_rho": 1.0,
+    "axis_var_frac": 0.9992547144167603
+   },
+   "Mac": {
+    "n": 8,
+    "gain": 0.4037055425130362,
+    "along_axis_rho": 0.19047619047619052,
+    "axis_var_frac": 0.8252901642313765
+   },
+   "Rec": {
+    "n": 9,
+    "gain": 0.45967521277725565,
+    "along_axis_rho": 0.03333333333333333,
+    "axis_var_frac": 0.9007008761474422
+   },
+   "Slessor": {
+    "n": 6,
+    "gain": 0.3597080590557537,
+    "along_axis_rho": 0.7142857142857143,
+    "axis_var_frac": 0.9424396245988904
+   },
+   "Thw": {
+    "n": 4,
+    "gain": 0.35907451633102927,
+    "along_axis_rho": 0.19999999999999998,
+    "axis_var_frac": 0.9845565825099535
+   },
+   "Whillans": {
+    "n": 3,
+    "gain": 0.2596801527096277,
+    "along_axis_rho": 1.0,
+    "axis_var_frac": 0.9447534209091311
+   }
+  },
+  "max_along_axis_rho_large": 0.10489510489510491
+ },
+ "verdicts": {
+  "method_detects_synchronous_gain": true,
+  "method_detects_cascade_direction": true,
+  "surrogate_calibrated": true,
+  "real_connected_lakes_synchronized": true,
+  "real_within_exceeds_between": true,
+  "real_transport_below_floor": true
+ }
+}

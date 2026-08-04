@@ -1,0 +1,105 @@
+{
+ "description": "NR52 (theory) -- the odd completion of the two-clocks response: rotation",
+ "meta": {
+  "description": "NR52: Lagrangian odd (spin) correlations from ANDRO deep displacements",
+  "provenance": "ANDRO deep displacements, SEANOE doi:10.17882/47077 (CC-BY); 700-1300 dbar, 10-day cycles, float-mean residuals, segments >=12 cycles (gap 7-13 d)",
+  "dt_days": 10.0,
+  "maxlag": 12,
+  "n_floats": 7258,
+  "odd_def": "O(m)=sum u_i v_{i+m} - v_i u_{i+m}; E(m)=sum u_i u_{i+m}+v_i v_{i+m}; rho_odd=O/E[0]"
+ },
+ "synthetic": {
+  "expm_factorization_err": 2.220446049250313e-16,
+  "sign_anchor_ccw_positive": 0.01546063091321808,
+  "mirrored_msd_diff": 0.0,
+  "mirrored_spin_flip_err": 0.0,
+  "mirrored_even_same_err": 0.0,
+  "rho_odd_vs_analytic_err": 0.01857843242341989,
+  "lag_reversal_err": 0.0,
+  "f_true": 0.31,
+  "tau_L_true": 3.7
+ },
+ "stats": {
+  "nh_all": {
+   "n_floats": 2388,
+   "rho1_mean": -0.023311764237855945,
+   "t_stat": -9.652048076458994
+  },
+  "sh_all": {
+   "n_floats": 4184,
+   "rho1_mean": 0.024338687858508606,
+   "t_stat": 13.193441556331932
+  },
+  "eq": {
+   "n_floats": 686,
+   "rho1_mean": 0.0032186151603498547,
+   "t_stat": 1.0017574184900437
+  },
+  "nh_mid": {
+   "n_floats": 1413,
+   "rho1_mean": -0.03162590658174098,
+   "t_stat": -9.608295784092947
+  },
+  "nh_low": {
+   "n_floats": 788,
+   "rho1_mean": -0.03544212563451777,
+   "t_stat": -11.335297454796745
+  },
+  "sh_low": {
+   "n_floats": 1006,
+   "rho1_mean": 0.026501274353876742,
+   "t_stat": 8.777347571806752
+  },
+  "sh_mid": {
+   "n_floats": 2972,
+   "rho1_mean": 0.027688315275908478,
+   "t_stat": 12.1331085502778
+  }
+ },
+ "decay": {
+  "nh_all": {
+   "rho": [
+    0.0,
+    -0.018923040559023493,
+    -0.014011143667508786,
+    -0.005805191759894173,
+    -0.0023360800286527173,
+    0.0018218351158341044,
+    0.0031852984649078453,
+    0.003380668334350736,
+    0.0027849813045953443,
+    0.0024868152382792512,
+    0.005101589132132092,
+    0.005973319207763725,
+    0.003627637396516407
+   ],
+   "halflife_days": 30.0
+  },
+  "sh_all": {
+   "rho": [
+    0.0,
+    0.03031960151976306,
+    0.026705024372440635,
+    0.01496719677738766,
+    0.010932948352305261,
+    0.0120709707752232,
+    0.010625811013377381,
+    0.008974699983808539,
+    0.007204288974558987,
+    0.005391338533666451,
+    0.006971126182376722,
+    0.007314846747269913,
+    0.006371308723634209
+   ],
+   "halflife_days": 30.0
+  }
+ },
+ "n_floats": 7258,
+ "verdicts": {
+  "odd_completion_exact": true,
+  "msd_is_chirality_blind": true,
+  "ocean_chirality_flips_at_equator": true,
+  "anticyclonic_dominance_both_hemispheres": true,
+  "reading": "The two-clocks response has a third, parity-odd face: the antisymmetric (spin) correlation, exactly e^(-tau/tau_L) sin(f tau) for the damped rotator, invisible to every scalar contraction (mirroring a realization preserves the MSD sample-by-sample while flipping the spin exactly).  The deep ocean measures it decisively: NH rho_odd(10 d) = -0.023 (t = -9.7, clockwise), SH +0.024 (t = +13.2, counterclockwise), equatorial null +0.003 (t = +1.0) -- chirality flips with the sign of f, and both hemispheres are ANTICYCLONE-dominated at depth, with the odd memory decaying on the same 10-30 d eddy timescale as NR45's scalar VAC."
+ }
+}

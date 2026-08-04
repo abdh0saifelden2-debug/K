@@ -1,0 +1,86 @@
+{
+  "grid": {
+    "nx": 32,
+    "ny": 49,
+    "nz": 32
+  },
+  "filter": {
+    "kc_h": 6.0,
+    "ny_keep": 10
+  },
+  "seed": 1,
+  "residuals": {
+    "wall_div_interior": 8.53562569357894e-15,
+    "wall_div_full": 0.009709721538336036,
+    "wall_no_penetration": 6.233176148237139e-15,
+    "wall_idempotency": 5.13715436467629e-15,
+    "fourier_no_penetration": 0.5131797635922691,
+    "input_div": 1.9248116489515577,
+    "input_no_penetration": 0.7932382521305666
+  },
+  "commutator": {
+    "periodic": 3.0595769451974643e-16,
+    "channel": 0.022557873870557722,
+    "ratio": 73728735294486.42
+  },
+  "localisation": {
+    "near_over_bulk": 33.809556417588354,
+    "peak_index": 0
+  },
+  "sweep": [
+    {
+      "kc_h": 4.0,
+      "ny_keep": 6,
+      "commutator": 0.041740143723944474,
+      "near_over_bulk": 13.049998334632267
+    },
+    {
+      "kc_h": 4.0,
+      "ny_keep": 10,
+      "commutator": 0.019300898798940213,
+      "near_over_bulk": 32.802199573604874
+    },
+    {
+      "kc_h": 4.0,
+      "ny_keep": 16,
+      "commutator": 0.01052773166613099,
+      "near_over_bulk": 71.53561327203704
+    },
+    {
+      "kc_h": 6.0,
+      "ny_keep": 6,
+      "commutator": 0.0478530023096852,
+      "near_over_bulk": 13.60708879701681
+    },
+    {
+      "kc_h": 6.0,
+      "ny_keep": 10,
+      "commutator": 0.022557873870557722,
+      "near_over_bulk": 33.809556417588354
+    },
+    {
+      "kc_h": 6.0,
+      "ny_keep": 16,
+      "commutator": 0.012384277463751722,
+      "near_over_bulk": 72.1841070880063
+    },
+    {
+      "kc_h": 8.0,
+      "ny_keep": 6,
+      "commutator": 0.04814273954583689,
+      "near_over_bulk": 13.637957874165936
+    },
+    {
+      "kc_h": 8.0,
+      "ny_keep": 10,
+      "commutator": 0.022719126715882308,
+      "near_over_bulk": 33.86070678994041
+    },
+    {
+      "kc_h": 8.0,
+      "ny_keep": 16,
+      "commutator": 0.012479370419721355,
+      "near_over_bulk": 72.23626149261486
+    }
+  ]
+}

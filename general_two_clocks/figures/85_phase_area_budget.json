@@ -1,0 +1,39 @@
+{
+ "description": "NR50 (theory) -- the phase-area budget: Bode's area theorem makes the",
+ "meta": {
+  "description": "NR48: minimum-phase two-clocks + delay-clock anchors",
+  "ocean_source": "80_andro_gser.json (NR45)",
+  "delay_source": "BiSON allsites-fill x GOLF 26y MEAN velocity"
+ },
+ "synthetic": {
+  "leadlag_area": -4.253795234000863,
+  "leadlag_pred": -4.253795308667533,
+  "leadlag_err": 7.466666929190069e-08,
+  "waterbed_area": -4.25379522484069,
+  "waterbed_diff": 9.16017306451522e-09,
+  "shapes_differ": 0.1655993205010911,
+  "mid_phase_1": -1.0516502125483735,
+  "mid_phase_2": -0.9421225218535281
+ },
+ "ocean": {
+  "area_meas": 6.03936257268875,
+  "area_pred_minphase": 5.653262787223264,
+  "rel_closure": 0.06393055240821431
+ },
+ "solar": {
+  "area_meas": 0.21314542947874512,
+  "area_transport": 0.2074187608649498,
+  "tau_d_s": -10.252851914353663,
+  "phi0_rad": 0.07954371157370856,
+  "rel_closure_transport": 0.026867423935854905,
+  "area_minphase_naive": 0.7555911455767216,
+  "naive_overshoot": 3.5449558896221567,
+  "n_coherent": 123
+ },
+ "verdicts": {
+  "area_theorem_and_waterbed_exact": true,
+  "ocean_gain_is_causal_memory": true,
+  "solar_gain_is_static_weighting": true,
+  "reading": "The integrated memory phase is a conserved quantity: over the full line it equals (pi/2) ln[chi(inf)/chi(0)] exactly (lead-lag to 7e-08; waterbed redistribution changes the phase shape by 0.17 rad pointwise yet moves the area by only 9e-09).  On real data the banded budget classifies the gain: the ocean modulus pays its full Bode phase (area 6.04 vs endpoint prediction 5.65, 6% closure) -- causal memory; the solar pair's phase area (0.213) is pure transport (0.207, tau_d = -10.3 s), while a causal reading of its gain tilt would demand 0.76 -- 3.5x too much -- so that tilt is static per-mode weighting, gain without phase, the elliptic continuum."
+ }
+}

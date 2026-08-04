@@ -1,0 +1,49 @@
+{
+ "description": "NR62 (theory + real data) -- the reversible reference phase is set by",
+ "synthetic": {
+  "closed_form_max_err": 2.984279490192421e-13,
+  "osc_re_carrier_max": 0.0,
+  "osc_im_carrier_min": 0.9803921568627447,
+  "two_temp_epr": 0.3333340634500396,
+  "two_temp_equal_epr": -2.211600908233566e-12,
+  "nonrecip_epr": 5.999999999999865,
+  "nonrecip_epr_a0": 0.6000000000000373,
+  "positivity_min": 0.003614133136544853
+ },
+ "solar": {
+  "n_mode_bins": 395,
+  "mode_phase_med_deg": -104.14567079103529,
+  "mode_g2_med": 0.6494742941184499,
+  "nonadiab_departure_med_deg": 15.751074178628784,
+  "epr_parity_med": 0.19062473581847156,
+  "epr_naive_med": 1.62426594224952,
+  "naive_overcount": 8.520751177833914,
+  "n_epochs": 13,
+  "epoch_phase_std_deg": 2.2400234740629497,
+  "epoch_cos2_mean": 0.0901834696869474,
+  "epoch_cos2_std": 0.021889235680650855,
+  "back_departure_from_ref_deg": [
+   158.87864762153754,
+   131.40276989244308,
+   84.5957508071341,
+   45.41926974929086,
+   11.528471829648225
+  ],
+  "back_median_departure_deg": 84.5957508071341,
+  "vv_top_phase_deg": -15.719907814998741,
+  "vv_top_g2": 0.9063485540842648,
+  "vv_quad_carrier": 0.25793638708077615
+ },
+ "verdicts": {
+  "closed_form_exact": true,
+  "equilibrium_oscillator_reversible_with_parity": true,
+  "two_temperature_irreversible": true,
+  "nonreciprocal_increases_epr": true,
+  "parity_epr_nonnegative": true,
+  "solar_pmodes_near_reference": true,
+  "naive_overcounts_solar": true,
+  "solar_irreversibility_epoch_stable": true,
+  "solar_background_is_irreversible": true,
+  "vv_control_flags_instrument_delay": true
+ }
+}

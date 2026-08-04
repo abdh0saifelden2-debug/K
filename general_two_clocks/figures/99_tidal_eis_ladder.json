@@ -1,0 +1,240 @@
+{
+  "what": "NR64: tidal constituent ladder as an in-situ EIS of the subglacial drainage system \u2014 attenuation lengths delta(omega), the parabolic-clock test, and per-branch hydraulic diffusivities",
+  "branches": {
+    "Evans": {
+      "stations": [
+        "E3",
+        "EGPS",
+        "E2A",
+        "E1"
+      ],
+      "d_gl_km": [
+        7.950537216387079,
+        11.487455067339443,
+        17.62433432098951,
+        31.40342761690952
+      ],
+      "spans_d": [
+        75.99809027777519,
+        45.34583333344199,
+        308.99826388887595,
+        105.99826388887595
+      ],
+      "fits": {
+        "MSf": {
+          "delta_km": 21.99152367765508,
+          "err_km": 27.383044298838442,
+          "n": 4,
+          "two_point": false
+        },
+        "Mm": {
+          "delta_km": 21.92742366450416,
+          "err_km": 32.174601292300885,
+          "n": 4,
+          "two_point": false
+        }
+      },
+      "semidiurnal": {
+        "nearest_station": "E3",
+        "nearest_d_km": 7.950537216387079,
+        "A_M2_mm": 2.5385445180529733,
+        "at_floor": true,
+        "floating_ref": "E4A",
+        "delta_M2_upper_bound_km": 2.2869510540315394
+      },
+      "K_MSf_m2_s": 1190.980522873558,
+      "K_MSf_err_m2_s": 2965.9311373715454,
+      "K_Mm_m2_s": 634.4782399728197,
+      "K_Mm_err_m2_s": 1861.9683472265228,
+      "ratio_Mm_over_MSf": {
+        "measured": 0.9970852400183599,
+        "err": 1.9188302610003418,
+        "parabolic_prediction": 1.3660803704254054,
+        "maxwell_saturation_prediction": 1.0
+      }
+    },
+    "Evans_XX": {
+      "stations": [
+        "XX20",
+        "XX21"
+      ],
+      "d_gl_km": [
+        35.14774790775166,
+        66.3896694226092
+      ],
+      "spans_d": [
+        89.26319444458932,
+        286.10243055562023
+      ],
+      "fits": {
+        "MSf": {
+          "delta_km": Infinity,
+          "err_km": NaN,
+          "n": 2,
+          "two_point": true
+        },
+        "Mm": {
+          "delta_km": Infinity,
+          "err_km": NaN,
+          "n": 2,
+          "two_point": true
+        }
+      },
+      "semidiurnal": {
+        "nearest_station": "XX20",
+        "nearest_d_km": 35.14774790775166,
+        "A_M2_mm": 1.430916762832815,
+        "at_floor": true,
+        "floating_ref": "E4A",
+        "delta_M2_upper_bound_km": 8.678982330757933
+      }
+    },
+    "Foundation": {
+      "stations": [
+        "H01",
+        "H10",
+        "H02",
+        "H04",
+        "H05"
+      ],
+      "d_gl_km": [
+        3.6066269604109595,
+        8.461346224352349,
+        12.426362547359803,
+        29.547612069613642,
+        46.62937009289418
+      ],
+      "spans_d": [
+        361.7909722221084,
+        347.845833333442,
+        78.99646989814937,
+        63.99646989814937,
+        59.99646989814937
+      ],
+      "fits": {
+        "MSf": {
+          "delta_km": 47.79742682339949,
+          "err_km": 14.874352728202082,
+          "n": 5,
+          "two_point": false
+        },
+        "Mm": {
+          "delta_km": 61.90170406705457,
+          "err_km": 59.7512131226903,
+          "n": 5,
+          "two_point": false
+        },
+        "Mf": {
+          "delta_km": Infinity,
+          "err_km": NaN,
+          "n": 2,
+          "two_point": true
+        }
+      },
+      "semidiurnal": {
+        "nearest_station": "H01",
+        "nearest_d_km": 3.6066269604109595,
+        "A_M2_mm": 3.733699514458865,
+        "at_floor": true,
+        "floating_ref": "H11",
+        "delta_M2_upper_bound_km": 1.4496859662373662
+      },
+      "K_MSf_m2_s": 5626.043066697249,
+      "K_MSf_err_m2_s": 3501.6005923207063,
+      "K_Mm_m2_s": 5056.461745973785,
+      "K_Mm_err_m2_s": 9761.596323846934,
+      "ratio_Mm_over_MSf": {
+        "measured": 1.2950844466118885,
+        "err": 1.3134536880988141,
+        "parabolic_prediction": 1.3660803704254054,
+        "maxwell_saturation_prediction": 1.0
+      }
+    },
+    "Talutis": {
+      "stations": [
+        "T+18",
+        "T+38"
+      ],
+      "d_gl_km": [
+        16.80252665243723,
+        34.03516684053305
+      ],
+      "spans_d": [
+        62.81145833316259,
+        64.98454861110076
+      ],
+      "fits": {
+        "MSf": {
+          "delta_km": 10.859036039365126,
+          "err_km": NaN,
+          "n": 2,
+          "two_point": true
+        },
+        "Mm": {
+          "delta_km": 11.852938302181794,
+          "err_km": NaN,
+          "n": 2,
+          "two_point": true
+        }
+      },
+      "semidiurnal": {
+        "nearest_station": "T+18",
+        "nearest_d_km": 16.80252665243723,
+        "A_M2_mm": 1.0348051102936826,
+        "at_floor": true,
+        "floating_ref": "T-02",
+        "delta_M2_upper_bound_km": 3.8760729702656636
+      },
+      "ratio_Mm_over_MSf": {
+        "measured": 1.09152766960287,
+        "err": null,
+        "parabolic_prediction": 1.3660803704254054,
+        "maxwell_saturation_prediction": 1.0
+      }
+    },
+    "Rutford": {
+      "stations": [
+        "RUT_long",
+        "R145"
+      ],
+      "d_gl_km": [
+        21.384236337154135,
+        99.60487013651412
+      ],
+      "spans_d": [
+        744.1319440000007,
+        72.58940972236451
+      ],
+      "fits": {
+        "MSf": {
+          "delta_km": 21.93206698919371,
+          "err_km": NaN,
+          "n": 2,
+          "two_point": true
+        },
+        "Mm": {
+          "delta_km": 38.54753090763491,
+          "err_km": NaN,
+          "n": 2,
+          "two_point": true
+        }
+      },
+      "semidiurnal": {
+        "nearest_station": "RUT_long",
+        "nearest_d_km": 21.384236337154135,
+        "A_M2_mm": 2.8293644447312283,
+        "at_floor": true,
+        "floating_ref": null,
+        "delta_M2_upper_bound_km": null
+      },
+      "ratio_Mm_over_MSf": {
+        "measured": 1.7575876877737018,
+        "err": null,
+        "parabolic_prediction": 1.3660803704254054,
+        "maxwell_saturation_prediction": 1.0
+      }
+    }
+  },
+  "parabolic_ratio_MSf_over_M2": 5.341403269712068,
+  "verdict": "LONG-BAND ATTENUATION MEASURED on real GPS: Evans: delta_MSf=22 \u00b1 27 km, K=1191 m^2/s; Foundation: delta_MSf=48 \u00b1 15 km, K=5626 m^2/s; Talutis: delta_MSf=11 (two-point) km; Rutford: delta_MSf=22 (two-point) km | in-situ hydraulic diffusivity K ~ 1191-5626 m^2/s (the parameter Rosier 2015 must leave free; their fit needs a 'highly conductive' system \u2014 measured here from GPS alone) | semidiurnal band is dead by the first grounded station on every branch (delta_M2 <= 1.4-8.7 km taking the last floating station as the forcing scale) vs delta_MSf 10-45 km: the short/long ratio >= 5-30 EXCEEDS the single-diffusion prediction 5.3 \u2014 the two bands ride DIFFERENT mechanisms (elastic/flexural vs hydraulic-parabolic), the field face of NR30's two constraint pressures | the within-long-band discriminant delta_Mm/delta_MSf = 1.00, 1.30, 1.09, 1.76 vs 1.37 (parabolic) / 1.00 (Maxwell saturation): mean 1.29 \u2014 CANNOT yet separate the two long-band clocks at n=3-4 branches; the decisive datum is two more multi-season stations at 40-70 km on Foundation"
+}

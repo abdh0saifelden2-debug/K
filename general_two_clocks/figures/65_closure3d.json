@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "n": 128,
+    "kc": 24,
+    "nu": 0.0012,
+    "steps": 2500,
+    "backend": "cupy",
+    "ke": 0.03490705074914602
+  },
+  "div_scores": {
+    "truth": 1.0491972036446905e-14,
+    "Smagorinsky": 9.117030031179015e-15,
+    "surrogate": 9.854712737375786,
+    "projected-FDT": 8.852631338094533e-15
+  },
+  "transfer_corrs": {
+    "Smagorinsky": -0.6414802369589394,
+    "surrogate": 0.26832545320737655,
+    "projected-FDT": 0.9997222850131601
+  },
+  "net_transfer": -452255916.4560504,
+  "enstrophy_norm": 0.1679250798713031,
+  "alignment": {
+    "cos_extensional": 0.47855341103669646,
+    "cos_intermediate": 0.6535814566200705,
+    "cos_compressive": 0.3254259117627024,
+    "n_points": 400000
+  },
+  "flux": {
+    "mean_flux_true": 0.0001028310899655596,
+    "mean_flux_smag": 0.0012418508446798136,
+    "backscatter_fraction_true": 0.48015499114990234,
+    "backscatter_fraction_smag": 0.0,
+    "pi_true_std": 0.0017660660167359234
+  }
+}

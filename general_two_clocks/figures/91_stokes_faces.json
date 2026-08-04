@@ -1,0 +1,113 @@
+{
+ "description": "NR56 (theory + real data) -- the Lagrangian velocity has Stokes",
+ "meta": {
+  "description": "NR56: Stokes faces (zero-lag Q,U anisotropy + lag-1 V spin) per ANDRO float",
+  "provenance": "ANDRO SEANOE doi:10.17882/47077 (CC-BY), 700-1300 dbar, 10-day cycles, float-mean residuals",
+  "columns": [
+   "lat_mean",
+   "Q_norm (A2=<u2-v2>/E)",
+   "U_norm (2<uv>/E)",
+   "V_lag1 (rho_odd)"
+  ],
+  "n_floats": 8280
+ },
+ "synthetic": {
+  "wave_Q": -0.5504587155963302,
+  "wave_U": -0.8348623853211008,
+  "wave_V": 4.2323790510035733e-20,
+  "wave_angle_deg": 118.30075576600638,
+  "wave_angle_pred_deg": 118.30075576600638,
+  "wave_angle_err_deg": 0.0,
+  "rotation_2theta_err_deg": 0.0,
+  "vortex_QU": 4.999750012508736e-05,
+  "vortex_V": 0.028270566770273252,
+  "vortex_V_pred": 0.028270566770273255,
+  "vortex_V_err": 3.469446951953614e-18,
+  "mirror_Q_err": 0.0,
+  "mirror_U_flip_err": 0.0,
+  "mirror_V_flip_err": 0.0
+ },
+ "bands": {
+  "0-5": {
+   "stretch": {
+    "n": 758,
+    "mean": 0.43558892216358847,
+    "t": 48.071870132169536
+   },
+   "spin_abs": {
+    "n": 758,
+    "mean": 0.05405070448548812,
+    "t": 28.1828522600481
+   }
+  },
+  "5-20": {
+   "stretch": {
+    "n": 2110,
+    "mean": 0.16255314170616117,
+    "t": 29.754092112967772
+   },
+   "spin_abs": {
+    "n": 2110,
+    "mean": 0.05887327772511849,
+    "t": 44.72429737646746
+   }
+  },
+  "20-35": {
+   "stretch": {
+    "n": 2072,
+    "mean": 0.03446791361003861,
+    "t": 9.696869454805572
+   },
+   "spin_abs": {
+    "n": 2072,
+    "mean": 0.07693882625482626,
+    "t": 43.94379617987423
+   }
+  },
+  "35-50": {
+   "stretch": {
+    "n": 1917,
+    "mean": 0.04902671257172665,
+    "t": 14.211320337984866
+   },
+   "spin_abs": {
+    "n": 1917,
+    "mean": 0.09116032185706834,
+    "t": 47.16601787678494
+   }
+  },
+  "50-65": {
+   "stretch": {
+    "n": 1185,
+    "mean": 0.050771383122362866,
+    "t": 11.84839875171168
+   },
+   "spin_abs": {
+    "n": 1185,
+    "mean": 0.0732028658227848,
+    "t": 36.97701149870003
+   }
+  },
+  "65-85": {
+   "stretch": {
+    "n": 238,
+    "mean": -0.03177235294117647,
+    "t": -2.313737937301854
+   },
+   "spin_abs": {
+    "n": 238,
+    "mean": 0.1065166680672269,
+    "t": 17.144610190209825
+   }
+  }
+ },
+ "n_floats": 8280,
+ "verdicts": {
+  "polarization_theorems_exact": true,
+  "equator_is_wave_polarized": true,
+  "vortex_polarization_grows_poleward": true,
+  "wave_vortex_crossover_20_35": true,
+  "polar_meridional_flip": true,
+  "reading": "The Lagrangian velocity has Stokes parameters: plane waves are rectilinearly polarized (stretch Q,U with exact 2-theta covariance; spin V = 0 to machine precision) and vortices circularly polarized (V maximal, Q,U -> 0).  The deep ocean is wave-polarized at the equator -- Q/I = +0.44 (t = +48), the equatorial deep jets as the extreme linear limit, with the smallest spin -- and vortex-polarizes poleward: |V| grows monotonically from 0.054 to 0.107 while the stretch collapses, crossing at ~20-35 deg; at 65-85 deg the stretch flips MERIDIONAL (-0.032, t = -2.3) as boundary steering replaces beta.  Wave/vortex partition is polarimetry: two moments per float, no spectra, no maps."
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "description": "NR47 (theory) -- the memory phase is the universal two-clocks coordinate.",
+ "meta": {
+  "description": "memory phase delta = arg chi assembled across the four real-data two-clocks closures",
+  "poles": {
+   "elliptic_deg": 0.0,
+   "parabolic_deg": 90.0
+  },
+  "provenance": "reads assembled from committed NR39/NR45/NR46 caches"
+ },
+ "reads": {
+  "eeg": {
+   "source": "nr39_eeg_gate_cache.json",
+   "n_pairs": 2016,
+   "delta_deg_near": 2.059969886286347,
+   "delta_deg_far": 6.352268335214909,
+   "delta_deg_all": 7.769514091029628,
+   "interpretation": "elliptic pole: volume conduction near delta=0"
+  },
+  "ocean": {
+   "source": "80_andro_gser.json",
+   "ens": {
+    "alpha": 0.9814291737228302,
+    "delta_deg": 88.32862563505472,
+    "clock_ratio": 34.27091375407307
+   },
+   "loop": {
+    "alpha": 0.9091737202168844,
+    "delta_deg": 81.82563481951959,
+    "clock_ratio": 6.961581148139361
+   },
+   "rest": {
+    "alpha": 1.00056038529425,
+    "delta_deg": 90.0504346764825,
+    "clock_ratio": 999.9996666666933
+   },
+   "interpretation": "parabolic pole: liquid near delta=90; loopers pulled off it"
+  },
+  "solar": {
+   "source": "81_solar_two_clocks.json",
+   "delta_deg_min": -119.04920795760687,
+   "delta_deg_max": -84.35559226410777,
+   "n_bins": 10,
+   "interpretation": "one-sided about the -90 loss pole"
+  }
+ },
+ "verdicts": {
+  "eeg_instantaneous_at_elliptic_pole": true,
+  "ocean_liquid_at_parabolic_pole": true,
+  "ocean_loopers_carry_phase_deficit": true,
+  "solar_phase_one_sided_bounded": true,
+  "reading": "The memory phase delta = arg chi is the universal two-clocks coordinate: EEG volume conduction sits at the elliptic pole (delta=2.1 deg, below the 6.4-deg genuine-coupling pairs); the untrapped ocean is at the parabolic pole (delta=90.1 deg, a pure-loss liquid) while the eddy-trapped loopers are pulled off it to 81.8 deg (a measurable storage G'/G''); the solar p-mode I-V phase is one-sided and bounded about the -90-deg loss pole (-119..-84). One number, five faces, two poles: instantaneous coupling is delta=0 (invisible to phase), pure memory is delta=90, and any delta between certifies genuine lagged dynamics."
+ }
+}

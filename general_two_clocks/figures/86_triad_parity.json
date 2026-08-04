@@ -1,0 +1,41 @@
+{
+ "description": "NR51 (theory) -- closed spectral polygons are shape, open ones are",
+ "source": {
+  "mat": "glaciers/subglacial/data/bushuk/melt_data_timestring_sub2.mat",
+  "derived": "glaciers/subglacial/data/bushuk_raw_derived.json"
+ },
+ "synthetic": {
+  "leaning": {
+   "skewness": -3.449256484300056e-17,
+   "asymmetry": 0.559226527826364,
+   "sum_rule_re_err": 2.199206621032833e-17,
+   "sum_rule_im_err": 2.7755575615628914e-17
+  },
+  "skewed_symmetric": {
+   "skewness": 0.5592265278263643,
+   "asymmetry": 0.0,
+   "sum_rule_re_err": 0.0,
+   "sum_rule_im_err": 4.5309627296854564e-17
+  },
+  "boost_biphase_spread_deg": 0.0,
+  "mirror_flip_err_deg": 0.0
+ },
+ "data_sum_rule_re_max_err": 1.2434497875801753e-14,
+ "data_sum_rule_im_max_err": 6.217248937900877e-15,
+ "shape_skewness_mean": 0.19383904157227974,
+ "shape_asymmetry_mean": 0.17312884098625983,
+ "shape_asymmetry_std": 0.25229363972341995,
+ "t_shape_asymmetry": 2.377134430915096,
+ "biphase_weighted_deg": 30.343936706671734,
+ "biphase_frame_circ_std_deg": 46.79202589796195,
+ "boost_blind_err_deg": 3.552713678800501e-15,
+ "mirror_flip_err_deg": 2.4868995751603507e-14,
+ "t_flux_quadrature": -4.696129230594418,
+ "n_frames": 12,
+ "verdicts": {
+  "closed_polygons_boost_blind_and_parity_odd": true,
+  "asymmetry_detector_separates_parities": true,
+  "scallops_break_parity_in_flux_not_shape": true,
+  "reading": "Closed spectral polygons are shape, open ones are motion: random boosts move the dominant scallop biphase by 3.6e-15 deg while the mirror flips it exactly, and the bulk skewness/asymmetry are closed-triad sums to machine precision.  On the real scallops the parity breaking is dynamic, not stored: the flux quadrature is decisive (t = -4.7) while the shape asymmetry is weak (0.17 +- 0.25, t = 2.4) with an unstable biphase (30 deg, frame circ-std 47 deg) -- the same frames that migrate decisively (NR49).  Migration and flux parity live at the pair level, invisible to every closed polygon; strong Im B (dunes) would certify asymmetric nonlinear coupling, which these scallops barely have."
+ }
+}
