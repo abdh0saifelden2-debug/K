@@ -1,0 +1,120 @@
+{
+  "sliding_law": "regularized-Coulomb tau_b = C N (u/(u+u0))^(1/m) (Schoof 2005; Joughin 2019)",
+  "params": {
+    "tau_d_Pa": 30000.0,
+    "C": 0.5,
+    "u0_mpyr": 100.0,
+    "m": 3.0,
+    "f_drain": 0.1
+  },
+  "N_c_Pa": 60000.0,
+  "N_c_MPa": 0.06,
+  "amplitude_law": "du/u = |s_N(N)| * (dN/N);  s_N from RC law, grows toward flotation",
+  "s_N_wellgrounded": 3.0013732756436484,
+  "typeII_N_band_MPa": [
+    0.06008284638778804,
+    0.08628641063584803
+  ],
+  "amp_at_2MPa": 0.3000082002457827,
+  "amp_near_Nc": 91.95956434630982,
+  "cavity_coupling_vs_N": [
+    {
+      "N_MPa": 0.01,
+      "tstar_yr": 0.043752633104723465,
+      "hs_fill": 0.999996970479578,
+      "J21_per_s": 7.19997818745296e-17,
+      "peak_resp": 3.6755015747714394e-11,
+      "in_band": true
+    },
+    {
+      "N_MPa": 0.02,
+      "tstar_yr": 0.042097052416171864,
+      "hs_fill": 0.999975764350581,
+      "J21_per_s": 2.879930201329673e-16,
+      "peak_resp": 1.441355039025238e-10,
+      "in_band": true
+    },
+    {
+      "N_MPa": 0.05,
+      "tstar_yr": 0.034541127586902545,
+      "hs_fill": 0.9996214521527386,
+      "J21_per_s": 1.7993186138749294e-15,
+      "peak_resp": 8.065471476548705e-10,
+      "in_band": true
+    },
+    {
+      "N_MPa": 0.1,
+      "tstar_yr": 0.024235316265186456,
+      "hs_fill": 0.9969796207284066,
+      "J21_per_s": 7.178253269244526e-15,
+      "peak_resp": 2.5561344023853756e-09,
+      "in_band": true
+    },
+    {
+      "N_MPa": 0.2,
+      "tstar_yr": 0.014635597309684473,
+      "hs_fill": 0.9763372589943501,
+      "J21_per_s": 2.8118513059037284e-14,
+      "peak_resp": 6.819961766878481e-09,
+      "in_band": false
+    },
+    {
+      "N_MPa": 0.5,
+      "tstar_yr": 0.007712428310233021,
+      "hs_fill": 0.7253255841482126,
+      "J21_per_s": 1.3055860514667824e-13,
+      "peak_resp": 1.8139595015512057e-08,
+      "in_band": false
+    },
+    {
+      "N_MPa": 1.0,
+      "tstar_yr": 0.0070339590327499635,
+      "hs_fill": 0.24816792510967042,
+      "J21_per_s": 1.786809060789627e-13,
+      "peak_resp": 2.04200497049052e-08,
+      "in_band": false
+    },
+    {
+      "N_MPa": 2.0,
+      "tstar_yr": 0.005551683852618978,
+      "hs_fill": 0.03962555938609674,
+      "J21_per_s": 1.1412161103195863e-13,
+      "peak_resp": 5.195057666991858e-09,
+      "in_band": false
+    }
+  ],
+  "J21_loglog_slope_vs_N": 1.5303689548236878,
+  "kernel_shape": {
+    "typeII_peaked": true,
+    "typeIII_monotone": true,
+    "typeII_peak_yr": 0.8013355592654424
+  },
+  "field_overlay": [
+    {
+      "lake": "Thw_142",
+      "rel": 0.3453512142045124,
+      "du_u": 0.0235,
+      "dist_km": 25.0,
+      "lag": 1.375
+    },
+    {
+      "lake": "Thw_170",
+      "rel": 0.35513905180038235,
+      "du_u": 0.0913,
+      "dist_km": 15.0,
+      "lag": 1.875
+    },
+    {
+      "lake": "Rutford_1",
+      "rel": -0.08043839914068901,
+      "du_u": 0.2167,
+      "dist_km": 15.0,
+      "lag": 0.125
+    }
+  ],
+  "verdict": "Type III is the N<N_c=0.060 MPa regime where the regularized-Coulomb bed cannot support the driving stress: |s_N| diverges toward flotation (amplitude law du/u=|s_N|f grows toward N_c) and the cavity discrete-lag mechanism turns off (J21 \u221d N^{1.5} -> 0, cavities saturate), so the response collapses from the Type II peaked kernel to a continuous single-relaxation Type III kernel. The Type II amplified band is N ~ 0.060-0.086 MPa.",
+  "obs_band_yr": [
+    0.02,
+    2.0
+  ]
+}

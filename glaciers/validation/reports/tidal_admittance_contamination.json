@@ -1,0 +1,183 @@
+{
+  "what": "P4b-R2/R3: tidal-admittance inversion robustness to flexure leakage, lagged GL-migration rectification, and red noise; phase-closure discriminant for the dangerous (2f-faking) contaminant",
+  "operating_point": {
+    "N0_Pa": 100000.0,
+    "eps": 0.05,
+    "R_true": 0.21599999999999997,
+    "m_true": 3.0,
+    "s_N_true": 3.826530612244898
+  },
+  "phase_closure_principle": "memoryless u=u_b(N(t)) under cosine forcing is a Chebyshev expansion: every harmonic is a pure cosine, phase in {0, pi}; clean closure residual = 1.0e-15 rad",
+  "clean": {
+    "A1": 3.8341637496400973,
+    "ratio_2f_1f": 0.022932693913627494,
+    "phi1": -3.141592653589793,
+    "phi2": 1.0115915286409702e-15,
+    "closure_residual_1f": 0.0,
+    "closure_residual_2f": 1.0115915286409702e-15,
+    "R_rec": 0.2176786302276585,
+    "m_rec": 2.9995482365498978
+  },
+  "flexure": {
+    "truth": {
+      "R_true": 0.21599999999999997,
+      "m_true": 3.0,
+      "s_N_true": 3.826530612244898
+    },
+    "rows": [
+      {
+        "flex_amp": 0.0,
+        "A1": 3.8341637496400973,
+        "ratio_2f_1f": 0.022932693913627494,
+        "R_rec": 0.2176786302276585,
+        "m_rec": 2.9995482365498978,
+        "closure_residual_1f": 0.0,
+        "closure_residual_2f": 1.0115915286409702e-15,
+        "R_bias_rel": 0.007771436239159804,
+        "m_bias_rel": 0.0001505878167007424
+      },
+      {
+        "flex_amp": 0.005,
+        "A1": 3.7851843145697974,
+        "ratio_2f_1f": 0.02324595701984877,
+        "R_rec": 0.22711616929164183,
+        "m_rec": 2.925507752981896,
+        "closure_residual_1f": 0.022867172899617927,
+        "closure_residual_2f": 0.001229532553731214,
+        "R_bias_rel": 0.05146374672056417,
+        "m_bias_rel": 0.024830749006034658
+      },
+      {
+        "flex_amp": 0.01,
+        "A1": 3.7382337141453768,
+        "ratio_2f_1f": 0.02358831163043912,
+        "R_rec": 0.23729520363547613,
+        "m_rec": 2.8511687837102477,
+        "closure_residual_1f": 0.04632214603793683,
+        "closure_residual_2f": 0.004907825350687681,
+        "R_bias_rel": 0.09858890571979703,
+        "m_bias_rel": 0.049610405429917424
+      },
+      {
+        "flex_amp": 0.02,
+        "A1": 3.650723750686493,
+        "ratio_2f_1f": 0.024363423820614773,
+        "R_rec": 0.2599686994861539,
+        "m_rec": 2.701649845037312,
+        "closure_residual_1f": 0.09498096659824729,
+        "closure_residual_2f": 0.01946641367132513,
+        "R_bias_rel": 0.20355879391737944,
+        "m_bias_rel": 0.09945005165422938
+      }
+    ]
+  },
+  "gl_migration": {
+    "truth": {
+      "R_true": 0.21599999999999997,
+      "m_true": 3.0,
+      "s_N_true": 3.826530612244898
+    },
+    "rows": [
+      {
+        "gl_amp": 0.0,
+        "lag_cycles": 0.15,
+        "A1": 3.8341637496400973,
+        "ratio_2f_1f": 0.022932693913627494,
+        "R_rec": 0.2176786302276585,
+        "m_rec": 2.9995482365498978,
+        "closure_residual_1f": 0.0,
+        "closure_residual_2f": 1.0115915286409702e-15,
+        "R_bias_rel": 0.007771436239159804,
+        "m_bias_rel": 0.0001505878167007424
+      },
+      {
+        "gl_amp": 0.005,
+        "lag_cycles": 0.15,
+        "A1": 3.805068646724534,
+        "ratio_2f_1f": 0.022034097451566124,
+        "R_rec": 0.20045046934484576,
+        "m_rec": 3.0423408505992438,
+        "closure_residual_1f": 0.010601851827519493,
+        "closure_residual_2f": 0.24222235725604296,
+        "R_bias_rel": 0.07198856784793618,
+        "m_bias_rel": 0.014113616866414583
+      },
+      {
+        "gl_amp": 0.01,
+        "lag_cycles": 0.15,
+        "A1": 3.776527696256963,
+        "ratio_2f_1f": 0.022496440399700498,
+        "R_rec": 0.21175939812877922,
+        "m_rec": 2.9768124642809233,
+        "closure_residual_1f": 0.021320131957311972,
+        "closure_residual_2f": 0.49159080279183753,
+        "R_bias_rel": 0.019632416070466414,
+        "m_bias_rel": 0.007729178573025575
+      },
+      {
+        "gl_amp": 0.02,
+        "lag_cycles": 0.15,
+        "A1": 3.721121341133056,
+        "ratio_2f_1f": 0.02714750674852156,
+        "R_rec": 0.3149052214257864,
+        "m_rec": 2.549320801251332,
+        "closure_residual_1f": 0.043104010866120035,
+        "closure_residual_2f": 0.9097572531033538,
+        "R_bias_rel": 0.4578945436379003,
+        "m_bias_rel": 0.15022639958288928
+      }
+    ]
+  },
+  "red_noise": {
+    "sigma_1pct": {
+      "truth": {
+        "R_true": 0.21599999999999997,
+        "m_true": 3.0,
+        "s_N_true": 3.826530612244898
+      },
+      "sigma": 0.01,
+      "tau_cycles": 1.0,
+      "n_mc": 200,
+      "R_median": 0.21917252976208165,
+      "R_ci68": [
+        0.18828695161813155,
+        0.24627459360655576
+      ],
+      "m_median": 2.9956026531821296,
+      "m_ci68": [
+        2.8855365701081523,
+        3.113707332047019
+      ]
+    },
+    "sigma_3pct": {
+      "truth": {
+        "R_true": 0.21599999999999997,
+        "m_true": 3.0,
+        "s_N_true": 3.826530612244898
+      },
+      "sigma": 0.03,
+      "tau_cycles": 1.0,
+      "n_mc": 200,
+      "R_median": 0.22519720965649162,
+      "R_ci68": [
+        0.13517345584370577,
+        0.3148139309228023
+      ],
+      "m_median": 2.954729009856171,
+      "m_ci68": [
+        2.6371362934961704,
+        3.318239031412074
+      ]
+    }
+  },
+  "verdict": {
+    "clean_phase_closed": true,
+    "flexure_2f_phase_closed": true,
+    "flexure_flagged_at_1f_when_lagged": true,
+    "flexure_R_bias_at_2pct": 0.20355879391737944,
+    "gl_2f_fakes_proximity": true,
+    "gl_flagged_by_phase": true,
+    "red_noise_R_ci68_halfwidth_1pct": 0.028993820994212105,
+    "mitigation": "flexure: lagged (viscoelastic) flexure is flagged at the fundamental (|phi_1 - {0,pi}| > 0.05 rad); exactly in-phase flexure is phase-invisible and must be capped by station placement upstream of the flexure zone; GL migration: breaks 2f phase closure -> screen records with |phi_2 - {0,pi}| > 0.2 rad before inverting; red noise: 68% scatter quantified, shrink with record length"
+  }
+}

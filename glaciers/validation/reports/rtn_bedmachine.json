@@ -1,0 +1,183 @@
+{
+ "dataset": "NSIDC-0756 BedMachine Antarctica v4 (thickness+bed+mask)",
+ "test": "\u00a7V.1 / \u00a7H.1 RTN directional: RTN>1 concentration vs distance-to-grounding-line (independent-dataset cross-check of the open-data Bedmap2 result)",
+ "provenance": "NSIDC-0756 via NASA Earthdata (earthaccess search_data(short_name='NSIDC-0756')); BedMachineAntarctica V04.1.nc, 500 m native posting",
+ "stride": 4,
+ "stride_km": 2.0,
+ "generated_utc": "2026-06-15T17:31:09.132096Z",
+ "by": "reproduction run",
+ "backend": "cpu",
+ "phi_runs": {
+  "0.8": {
+   "phi": 0.8,
+   "grid": [
+    3334,
+    3334
+   ],
+   "cellsize_km": 2.0,
+   "n_grounded": 2999854,
+   "rtn_gt1_frac_grounded": 0.025266896322287683,
+   "median_dist_pred": 10.0,
+   "median_dist_notpred": 203.65657367244495,
+   "backend": "cpu",
+   "bins": [
+    {
+     "lo_km": 0,
+     "hi_km": 5,
+     "n": 138817,
+     "rtn_gt1_frac": 0.1928510196877904
+    },
+    {
+     "lo_km": 5,
+     "hi_km": 10,
+     "n": 97703,
+     "rtn_gt1_frac": 0.10076456198888468
+    },
+    {
+     "lo_km": 10,
+     "hi_km": 25,
+     "n": 215918,
+     "rtn_gt1_frac": 0.06572402486128993
+    },
+    {
+     "lo_km": 25,
+     "hi_km": 50,
+     "n": 235841,
+     "rtn_gt1_frac": 0.04691720269164395
+    },
+    {
+     "lo_km": 50,
+     "hi_km": 100,
+     "n": 343865,
+     "rtn_gt1_frac": 0.030104837654312013
+    },
+    {
+     "lo_km": 100,
+     "hi_km": 250,
+     "n": 700007,
+     "rtn_gt1_frac": 0.005104234671938995
+    },
+    {
+     "lo_km": 250,
+     "hi_km": null,
+     "n": 1267703,
+     "rtn_gt1_frac": 0.0
+    }
+   ]
+  },
+  "0.9": {
+   "phi": 0.9,
+   "grid": [
+    3334,
+    3334
+   ],
+   "cellsize_km": 2.0,
+   "n_grounded": 2999854,
+   "rtn_gt1_frac_grounded": 0.013986013986013986,
+   "median_dist_pred": 6.0,
+   "median_dist_notpred": 199.69977466186586,
+   "backend": "cpu",
+   "bins": [
+    {
+     "lo_km": 0,
+     "hi_km": 5,
+     "n": 138817,
+     "rtn_gt1_frac": 0.13983878055281412
+    },
+    {
+     "lo_km": 5,
+     "hi_km": 10,
+     "n": 97703,
+     "rtn_gt1_frac": 0.05298711400878171
+    },
+    {
+     "lo_km": 10,
+     "hi_km": 25,
+     "n": 215918,
+     "rtn_gt1_frac": 0.036314712066617884
+    },
+    {
+     "lo_km": 25,
+     "hi_km": 50,
+     "n": 235841,
+     "rtn_gt1_frac": 0.02440203357346687
+    },
+    {
+     "lo_km": 50,
+     "hi_km": 100,
+     "n": 343865,
+     "rtn_gt1_frac": 0.009913774300961133
+    },
+    {
+     "lo_km": 100,
+     "hi_km": 250,
+     "n": 700007,
+     "rtn_gt1_frac": 0.0005171376857659995
+    },
+    {
+     "lo_km": 250,
+     "hi_km": null,
+     "n": 1267703,
+     "rtn_gt1_frac": 0.0
+    }
+   ]
+  },
+  "0.95": {
+   "phi": 0.95,
+   "grid": [
+    3334,
+    3334
+   ],
+   "cellsize_km": 2.0,
+   "n_grounded": 2999854,
+   "rtn_gt1_frac_grounded": 0.007933052741900105,
+   "median_dist_pred": 4.0,
+   "median_dist_notpred": 197.6866206904251,
+   "backend": "cpu",
+   "bins": [
+    {
+     "lo_km": 0,
+     "hi_km": 5,
+     "n": 138817,
+     "rtn_gt1_frac": 0.098438952001556
+    },
+    {
+     "lo_km": 5,
+     "hi_km": 10,
+     "n": 97703,
+     "rtn_gt1_frac": 0.030930472963982682
+    },
+    {
+     "lo_km": 10,
+     "hi_km": 25,
+     "n": 215918,
+     "rtn_gt1_frac": 0.020368843727711448
+    },
+    {
+     "lo_km": 25,
+     "hi_km": 50,
+     "n": 235841,
+     "rtn_gt1_frac": 0.009413121552232223
+    },
+    {
+     "lo_km": 50,
+     "hi_km": 100,
+     "n": 343865,
+     "rtn_gt1_frac": 0.001392988527474445
+    },
+    {
+     "lo_km": 100,
+     "hi_km": 250,
+     "n": 700007,
+     "rtn_gt1_frac": 1.999980000199998e-05
+    },
+    {
+     "lo_km": 250,
+     "hi_km": null,
+     "n": 1267703,
+     "rtn_gt1_frac": 0.0
+    }
+   ]
+  }
+ }
+}

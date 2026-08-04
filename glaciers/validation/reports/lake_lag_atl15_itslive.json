@@ -1,0 +1,2229 @@
+{
+  "n_lakes": 131,
+  "n_lakes_with_modern_drainage": 29,
+  "n_drained_well_resolved": 13,
+  "n_testable_events": 19,
+  "n_significant_inband_events": 1,
+  "significant_events": [
+    {
+      "lake": "Thw_142",
+      "t_peak": 2021.75,
+      "drop_m": 1.0199999809265137,
+      "peak_sigma": 4.47,
+      "sustained_sigma": 9.13,
+      "detrend_sigma": 6.33,
+      "sustained_detrend_sigma": 12.91,
+      "resp_frac": 0.0852,
+      "lag_to_peak": 1.125,
+      "speed": 249.8,
+      "noise_floor": 0.0385
+    }
+  ],
+  "lags_in_band_yr": [
+    1.125
+  ],
+  "obs_lag_band_yr": [
+    0.02,
+    2.0
+  ],
+  "median_amplitude_bound_frac": 0.0307,
+  "min_drop_m": 1.0,
+  "k_sigma": 2.0,
+  "in_band_field_detection": true,
+  "universal_response": false,
+  "verdict": "SUPPORTED at 1/19 testable event(s) (Thw_142): a sustained, secular-trend-robust, in-band (0.02-2 yr) post-drainage speed-up \u2014 a data-side confirmation of the \u00a7G.4 hydraulic lag at a dynamically-active outlet. It is NOT a universal response: the other 18 testable drained lakes show no surge (amplitude bound ~3.1% of trunk speed), so most drainages do not produce a detectable sliding response. Thermal H^2/kappa kernel remains FALSIFIED (orders of magnitude off).",
+  "lakes": {
+    "Bindschadler_1": {
+      "lon": -131.488,
+      "lat": -80.347,
+      "atl15_pixels": 181,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Bindschadler_2": {
+      "lon": -130.188,
+      "lat": -79.942,
+      "atl15_pixels": 102,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Bindschadler_3": {
+      "lon": -126.653,
+      "lat": -80.024,
+      "atl15_pixels": 135,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Bindschadler_4": {
+      "lon": -125.559,
+      "lat": -80.725,
+      "atl15_pixels": 270,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Bindschadler_5": {
+      "lon": -123.988,
+      "lat": -80.608,
+      "atl15_pixels": 374,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Bindschadler_6": {
+      "lon": -122.618,
+      "lat": -80.564,
+      "atl15_pixels": 119,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Byrd_1": {
+      "lon": 148.307,
+      "lat": -81.027,
+      "atl15_pixels": 398,
+      "n_modern_drainages": 1,
+      "drainages": [
+        {
+          "t_peak": 2025.5,
+          "t_trough": 2026.0,
+          "drop_m": 4.860000133514404
+        }
+      ],
+      "median_speed_mpyr": 63.0,
+      "modern_noise_floor_qtr": 0.0405,
+      "n_modern_qtr_bins": 29,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2025.5,
+            "t_trough": 2026.0,
+            "drop_m": 4.860000133514404
+          },
+          "response": {
+            "t0": 2025.5,
+            "n_pre_bins": 7,
+            "n_post_bins": 0,
+            "pre_pairs": 9084,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ],
+      "well_resolved": true
+    },
+    "Byrd_2": {
+      "lon": 146.883,
+      "lat": -80.686,
+      "atl15_pixels": 696,
+      "n_modern_drainages": 1,
+      "drainages": [
+        {
+          "t_peak": 2025.25,
+          "t_trough": 2026.0,
+          "drop_m": 4.179999828338623
+        }
+      ],
+      "median_speed_mpyr": 49.1,
+      "modern_noise_floor_qtr": 0.0367,
+      "n_modern_qtr_bins": 29,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2025.25,
+            "t_trough": 2026.0,
+            "drop_m": 4.179999828338623
+          },
+          "response": {
+            "t0": 2025.25,
+            "n_pre_bins": 8,
+            "n_post_bins": 0,
+            "pre_pairs": 9599,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ],
+      "well_resolved": true
+    },
+    "Byrd_s1": {
+      "lon": 152.193,
+      "lat": -80.34,
+      "atl15_pixels": 167,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Byrd_s10": {
+      "lon": 139.023,
+      "lat": -81.832,
+      "atl15_pixels": 147,
+      "n_modern_drainages": 1,
+      "drainages": [
+        {
+          "t_peak": 2020.0,
+          "t_trough": 2022.25,
+          "drop_m": 1.090000033378601
+        }
+      ],
+      "median_speed_mpyr": 15.7,
+      "modern_noise_floor_qtr": 0.1094,
+      "n_modern_qtr_bins": 29,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2020.0,
+            "t_trough": 2022.25,
+            "drop_m": 1.090000033378601
+          },
+          "response": {
+            "t0": 2020.0,
+            "n_pre_bins": 8,
+            "n_post_bins": 10,
+            "pre_pairs": 1057,
+            "post_pairs": 3773,
+            "testable": true,
+            "baseline": 15.6,
+            "sigma_bin_mpyr": 1.82,
+            "resp_frac": 0.6889,
+            "peak_sigma": 5.94,
+            "sustained_sigma": 0.59,
+            "detrend_sigma": 4.47,
+            "sustained_detrend_sigma": -4.52,
+            "lag_to_peak": 1.125,
+            "in_band": false
+          }
+        }
+      ],
+      "well_resolved": false
+    },
+    "Byrd_s11": {
+      "lon": 138.596,
+      "lat": -81.468,
+      "atl15_pixels": 154,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Byrd_s12": {
+      "lon": 138.237,
+      "lat": -80.903,
+      "atl15_pixels": 243,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Byrd_s13": {
+      "lon": 142.837,
+      "lat": -78.935,
+      "atl15_pixels": 171,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Byrd_s14": {
+      "lon": 139.871,
+      "lat": -78.822,
+      "atl15_pixels": 171,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Byrd_s15": {
+      "lon": 138.954,
+      "lat": -78.807,
+      "atl15_pixels": 126,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Byrd_s2": {
+      "lon": 149.542,
+      "lat": -80.765,
+      "atl15_pixels": 104,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Byrd_s3": {
+      "lon": 149.61,
+      "lat": -81.807,
+      "atl15_pixels": 69,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Byrd_s4": {
+      "lon": 143.716,
+      "lat": -80.753,
+      "atl15_pixels": 173,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Byrd_s5": {
+      "lon": 143.379,
+      "lat": -80.579,
+      "atl15_pixels": 79,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Byrd_s6": {
+      "lon": 143.657,
+      "lat": -80.326,
+      "atl15_pixels": 116,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Byrd_s7": {
+      "lon": 143.747,
+      "lat": -80.037,
+      "atl15_pixels": 151,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Byrd_s8": {
+      "lon": 142.412,
+      "lat": -80.014,
+      "atl15_pixels": 89,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Byrd_s9": {
+      "lon": 142.322,
+      "lat": -81.47,
+      "atl15_pixels": 167,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "ConwaySubglacialLake": {
+      "lon": -148.497,
+      "lat": -84.383,
+      "atl15_pixels": 254,
+      "n_modern_drainages": 3,
+      "drainages": [
+        {
+          "t_peak": 2019.5,
+          "t_trough": 2020.5,
+          "drop_m": 2.759999990463257
+        },
+        {
+          "t_peak": 2023.0,
+          "t_trough": 2024.0,
+          "drop_m": 2.759999990463257
+        },
+        {
+          "t_peak": 2025.0,
+          "t_trough": 2025.75,
+          "drop_m": 2.5399999618530273
+        }
+      ],
+      "median_speed_mpyr": NaN,
+      "modern_noise_floor_qtr": null,
+      "n_modern_qtr_bins": 0,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2019.5,
+            "t_trough": 2020.5,
+            "drop_m": 2.759999990463257
+          },
+          "response": {
+            "t0": 2019.5,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        },
+        {
+          "drainage": {
+            "t_peak": 2023.0,
+            "t_trough": 2024.0,
+            "drop_m": 2.759999990463257
+          },
+          "response": {
+            "t0": 2023.0,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        },
+        {
+          "drainage": {
+            "t_peak": 2025.0,
+            "t_trough": 2025.75,
+            "drop_m": 2.5399999618530273
+          },
+          "response": {
+            "t0": 2025.0,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ],
+      "well_resolved": false
+    },
+    "Cook_E1": {
+      "lon": 155.333,
+      "lat": -71.874,
+      "atl15_pixels": 258,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Cook_E2": {
+      "lon": 155.658,
+      "lat": -72.835,
+      "atl15_pixels": 263,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "David_1": {
+      "lon": 157.225,
+      "lat": -75.272,
+      "atl15_pixels": 938,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "David_s1": {
+      "lon": 155.521,
+      "lat": -75.335,
+      "atl15_pixels": 191,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "David_s2": {
+      "lon": 152.925,
+      "lat": -75.244,
+      "atl15_pixels": 213,
+      "n_modern_drainages": 1,
+      "drainages": [
+        {
+          "t_peak": 2025.0,
+          "t_trough": 2026.0,
+          "drop_m": 1.5
+        }
+      ],
+      "median_speed_mpyr": 24.8,
+      "modern_noise_floor_qtr": 0.0865,
+      "n_modern_qtr_bins": 29,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2025.0,
+            "t_trough": 2026.0,
+            "drop_m": 1.5
+          },
+          "response": {
+            "t0": 2025.0,
+            "n_pre_bins": 8,
+            "n_post_bins": 1,
+            "pre_pairs": 3692,
+            "post_pairs": 305,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ],
+      "well_resolved": false
+    },
+    "David_s3": {
+      "lon": 152.255,
+      "lat": -75.735,
+      "atl15_pixels": 125,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "David_s4": {
+      "lon": 152.465,
+      "lat": -74.881,
+      "atl15_pixels": 167,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "David_s5": {
+      "lon": 145.241,
+      "lat": -75.395,
+      "atl15_pixels": 135,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "EAP_1": {
+      "lon": 140.693,
+      "lat": -85.84,
+      "atl15_pixels": 66,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "EAP_2": {
+      "lon": 135.488,
+      "lat": -85.682,
+      "atl15_pixels": 144,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "EAP_3": {
+      "lon": 132.806,
+      "lat": -85.901,
+      "atl15_pixels": 91,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "EAP_4": {
+      "lon": 128.351,
+      "lat": -85.913,
+      "atl15_pixels": 111,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "EAP_5": {
+      "lon": 124.437,
+      "lat": -85.663,
+      "atl15_pixels": 97,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "EAP_6": {
+      "lon": 104.027,
+      "lat": -85.491,
+      "atl15_pixels": 193,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "EAP_7": {
+      "lon": 122.437,
+      "lat": -83.967,
+      "atl15_pixels": 58,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "EAP_8": {
+      "lon": 109.855,
+      "lat": -75.195,
+      "atl15_pixels": 145,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "EAP_9": {
+      "lon": 135.559,
+      "lat": -75.811,
+      "atl15_pixels": 181,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "EngelhardtSubglacialLake": {
+      "lon": -157.328,
+      "lat": -83.735,
+      "atl15_pixels": 340,
+      "n_modern_drainages": 1,
+      "drainages": [
+        {
+          "t_peak": 2022.25,
+          "t_trough": 2024.5,
+          "drop_m": 4.670000076293945
+        }
+      ],
+      "median_speed_mpyr": 116.2,
+      "modern_noise_floor_qtr": null,
+      "n_modern_qtr_bins": 1,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2022.25,
+            "t_trough": 2024.5,
+            "drop_m": 4.670000076293945
+          },
+          "response": {
+            "t0": 2022.25,
+            "n_pre_bins": 1,
+            "n_post_bins": 0,
+            "pre_pairs": 7,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ],
+      "well_resolved": false
+    },
+    "Foundation_1": {
+      "lon": -61.316,
+      "lat": -84.135,
+      "atl15_pixels": 186,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Foundation_10": {
+      "lon": -50.999,
+      "lat": -85.766,
+      "atl15_pixels": 85,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Foundation_11": {
+      "lon": -48.396,
+      "lat": -85.794,
+      "atl15_pixels": 179,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Foundation_12": {
+      "lon": -45.396,
+      "lat": -85.71,
+      "atl15_pixels": 350,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Foundation_13": {
+      "lon": -42.441,
+      "lat": -85.644,
+      "atl15_pixels": 177,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Foundation_14": {
+      "lon": -39.596,
+      "lat": -85.774,
+      "atl15_pixels": 79,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Foundation_15": {
+      "lon": -37.735,
+      "lat": -86.024,
+      "atl15_pixels": 18,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Foundation_16": {
+      "lon": -35.7,
+      "lat": -85.991,
+      "atl15_pixels": 39,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Foundation_2": {
+      "lon": -57.43,
+      "lat": -84.534,
+      "atl15_pixels": 67,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Foundation_3": {
+      "lon": -59.052,
+      "lat": -84.607,
+      "atl15_pixels": 20,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Foundation_4": {
+      "lon": -55.742,
+      "lat": -84.809,
+      "atl15_pixels": 74,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Foundation_5": {
+      "lon": -53.689,
+      "lat": -84.832,
+      "atl15_pixels": 83,
+      "n_modern_drainages": 1,
+      "drainages": [
+        {
+          "t_peak": 2022.75,
+          "t_trough": 2024.75,
+          "drop_m": 1.3200000524520874
+        }
+      ],
+      "velocity_error": "RuntimeError: empty box series (centroid outside cube coverage)"
+    },
+    "Foundation_6": {
+      "lon": -55.243,
+      "lat": -85.316,
+      "atl15_pixels": 81,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Foundation_7": {
+      "lon": -53.713,
+      "lat": -85.563,
+      "atl15_pixels": 94,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Foundation_8": {
+      "lon": -52.931,
+      "lat": -85.648,
+      "atl15_pixels": 100,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Foundation_9": {
+      "lon": -52.227,
+      "lat": -85.863,
+      "atl15_pixels": 96,
+      "n_modern_drainages": 1,
+      "drainages": [
+        {
+          "t_peak": 2025.0,
+          "t_trough": 2026.0,
+          "drop_m": 1.440000057220459
+        }
+      ],
+      "velocity_error": "RuntimeError: no datacube"
+    },
+    "Foundation_N1": {
+      "lon": -73.673,
+      "lat": -84.519,
+      "atl15_pixels": 191,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Foundation_N2": {
+      "lon": -73.948,
+      "lat": -84.981,
+      "atl15_pixels": 106,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Foundation_N3": {
+      "lon": -72.789,
+      "lat": -85.254,
+      "atl15_pixels": 292,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Institute_E1": {
+      "lon": -74.49,
+      "lat": -82.13,
+      "atl15_pixels": 439,
+      "n_modern_drainages": 1,
+      "drainages": [
+        {
+          "t_peak": 2025.75,
+          "t_trough": 2026.0,
+          "drop_m": 1.1399999856948853
+        }
+      ],
+      "median_speed_mpyr": 101.5,
+      "modern_noise_floor_qtr": 0.0457,
+      "n_modern_qtr_bins": 24,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2025.75,
+            "t_trough": 2026.0,
+            "drop_m": 1.1399999856948853
+          },
+          "response": {
+            "t0": 2025.75,
+            "n_pre_bins": 5,
+            "n_post_bins": 0,
+            "pre_pairs": 1540,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ],
+      "well_resolved": true
+    },
+    "Institute_E2": {
+      "lon": -79.01,
+      "lat": -82.621,
+      "atl15_pixels": 75,
+      "n_modern_drainages": 1,
+      "drainages": [
+        {
+          "t_peak": 2025.0,
+          "t_trough": 2026.0,
+          "drop_m": 3.7200000286102295
+        }
+      ],
+      "median_speed_mpyr": 66.6,
+      "modern_noise_floor_qtr": 0.1391,
+      "n_modern_qtr_bins": 28,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2025.0,
+            "t_trough": 2026.0,
+            "drop_m": 3.7200000286102295
+          },
+          "response": {
+            "t0": 2025.0,
+            "n_pre_bins": 8,
+            "n_post_bins": 1,
+            "pre_pairs": 1171,
+            "post_pairs": 177,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ],
+      "well_resolved": false
+    },
+    "Institute_W1": {
+      "lon": -77.537,
+      "lat": -81.4,
+      "atl15_pixels": 77,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Institute_W2": {
+      "lon": -83.587,
+      "lat": -81.625,
+      "atl15_pixels": 61,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "KT1": {
+      "lon": -140.454,
+      "lat": -81.935,
+      "atl15_pixels": 45,
+      "n_modern_drainages": 1,
+      "drainages": [
+        {
+          "t_peak": 2023.75,
+          "t_trough": 2026.0,
+          "drop_m": 1.6699999570846558
+        }
+      ],
+      "median_speed_mpyr": 11.8,
+      "modern_noise_floor_qtr": 0.4811,
+      "n_modern_qtr_bins": 29,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2023.75,
+            "t_trough": 2026.0,
+            "drop_m": 1.6699999570846558
+          },
+          "response": {
+            "t0": 2023.75,
+            "n_pre_bins": 8,
+            "n_post_bins": 6,
+            "pre_pairs": 2913,
+            "post_pairs": 2262,
+            "testable": true,
+            "baseline": 16.9,
+            "sigma_bin_mpyr": 10.08,
+            "resp_frac": 2.4732,
+            "peak_sigma": 4.15,
+            "sustained_sigma": 0.13,
+            "detrend_sigma": 1.11,
+            "sustained_detrend_sigma": -5.37,
+            "lag_to_peak": 1.375,
+            "in_band": false
+          }
+        }
+      ],
+      "well_resolved": false
+    },
+    "KT2": {
+      "lon": -148.013,
+      "lat": -82.325,
+      "atl15_pixels": 33,
+      "n_modern_drainages": 1,
+      "drainages": [
+        {
+          "t_peak": 2024.5,
+          "t_trough": 2026.0,
+          "drop_m": 1.9199999570846558
+        }
+      ],
+      "median_speed_mpyr": 6.9,
+      "modern_noise_floor_qtr": 0.9933,
+      "n_modern_qtr_bins": 29,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2024.5,
+            "t_trough": 2026.0,
+            "drop_m": 1.9199999570846558
+          },
+          "response": {
+            "t0": 2024.5,
+            "n_pre_bins": 8,
+            "n_post_bins": 3,
+            "pre_pairs": 2453,
+            "post_pairs": 655,
+            "testable": true,
+            "baseline": 9.9,
+            "sigma_bin_mpyr": 9.33,
+            "resp_frac": 1.5505,
+            "peak_sigma": 1.65,
+            "sustained_sigma": 1.71,
+            "detrend_sigma": 1.42,
+            "sustained_detrend_sigma": 1.35,
+            "lag_to_peak": 0.625,
+            "in_band": false
+          }
+        }
+      ],
+      "well_resolved": false
+    },
+    "KT3": {
+      "lon": -150.523,
+      "lat": -82.471,
+      "atl15_pixels": 40,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Kamb_1": {
+      "lon": -131.186,
+      "lat": -82.008,
+      "atl15_pixels": 156,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Kamb_10": {
+      "lon": -120.146,
+      "lat": -81.444,
+      "atl15_pixels": 39,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Kamb_11": {
+      "lon": -120.132,
+      "lat": -81.249,
+      "atl15_pixels": 104,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Kamb_12": {
+      "lon": -117.084,
+      "lat": -80.853,
+      "atl15_pixels": 136,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Kamb_2": {
+      "lon": -129.82,
+      "lat": -82.184,
+      "atl15_pixels": 66,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Kamb_3": {
+      "lon": -128.605,
+      "lat": -81.935,
+      "atl15_pixels": 77,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Kamb_4": {
+      "lon": -127.434,
+      "lat": -81.967,
+      "atl15_pixels": 42,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Kamb_5": {
+      "lon": -127.493,
+      "lat": -82.271,
+      "atl15_pixels": 206,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Kamb_6": {
+      "lon": -124.321,
+      "lat": -82.056,
+      "atl15_pixels": 100,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Kamb_7": {
+      "lon": -123.434,
+      "lat": -81.918,
+      "atl15_pixels": 101,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Kamb_8": {
+      "lon": -123.12,
+      "lat": -82.374,
+      "atl15_pixels": 154,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Kamb_9": {
+      "lon": -121.617,
+      "lat": -82.319,
+      "atl15_pixels": 59,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Lake10": {
+      "lon": -158.137,
+      "lat": -84.33,
+      "atl15_pixels": 24,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Lake12": {
+      "lon": -159.917,
+      "lat": -84.038,
+      "atl15_pixels": 64,
+      "n_modern_drainages": 2,
+      "drainages": [
+        {
+          "t_peak": 2021.0,
+          "t_trough": 2022.0,
+          "drop_m": 1.6799999475479126
+        },
+        {
+          "t_peak": 2024.75,
+          "t_trough": 2026.0,
+          "drop_m": 1.2200000286102295
+        }
+      ],
+      "median_speed_mpyr": 272.4,
+      "modern_noise_floor_qtr": null,
+      "n_modern_qtr_bins": 0,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2021.0,
+            "t_trough": 2022.0,
+            "drop_m": 1.6799999475479126
+          },
+          "response": {
+            "t0": 2021.0,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        },
+        {
+          "drainage": {
+            "t_peak": 2024.75,
+            "t_trough": 2026.0,
+            "drop_m": 1.2200000286102295
+          },
+          "response": {
+            "t0": 2024.75,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ],
+      "well_resolved": false
+    },
+    "Lake78": {
+      "error": "ATL15: RuntimeError: no ATL15 region"
+    },
+    "Lambert_1": {
+      "lon": 68.272,
+      "lat": -74.002,
+      "atl15_pixels": 620,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "LennoxKing_1": {
+      "lon": 157.142,
+      "lat": -84.775,
+      "atl15_pixels": 34,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Mac1": {
+      "lon": -145.284,
+      "lat": -79.959,
+      "atl15_pixels": 147,
+      "n_modern_drainages": 2,
+      "drainages": [
+        {
+          "t_peak": 2019.75,
+          "t_trough": 2020.5,
+          "drop_m": 3.609999895095825
+        },
+        {
+          "t_peak": 2023.0,
+          "t_trough": 2023.5,
+          "drop_m": 1.1699999570846558
+        }
+      ],
+      "median_speed_mpyr": 419.0,
+      "modern_noise_floor_qtr": 0.022,
+      "n_modern_qtr_bins": 26,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2019.75,
+            "t_trough": 2020.5,
+            "drop_m": 3.609999895095825
+          },
+          "response": {
+            "t0": 2019.75,
+            "n_pre_bins": 7,
+            "n_post_bins": 8,
+            "pre_pairs": 271,
+            "post_pairs": 1034,
+            "testable": true,
+            "baseline": 425.0,
+            "sigma_bin_mpyr": 6.15,
+            "resp_frac": 0.009,
+            "peak_sigma": 0.62,
+            "sustained_sigma": -1.94,
+            "detrend_sigma": -2.88,
+            "sustained_detrend_sigma": -8.97,
+            "lag_to_peak": 2.375,
+            "in_band": false
+          }
+        },
+        {
+          "drainage": {
+            "t_peak": 2023.0,
+            "t_trough": 2023.5,
+            "drop_m": 1.1699999570846558
+          },
+          "response": {
+            "t0": 2023.0,
+            "n_pre_bins": 8,
+            "n_post_bins": 8,
+            "pre_pairs": 1139,
+            "post_pairs": 1188,
+            "testable": true,
+            "baseline": 422.6,
+            "sigma_bin_mpyr": 5.58,
+            "resp_frac": 0.0472,
+            "peak_sigma": 3.58,
+            "sustained_sigma": -6.07,
+            "detrend_sigma": 1.86,
+            "sustained_detrend_sigma": -14.94,
+            "lag_to_peak": 0.125,
+            "in_band": false
+          }
+        }
+      ],
+      "well_resolved": true
+    },
+    "Mac2": {
+      "lon": -144.111,
+      "lat": -79.838,
+      "atl15_pixels": 142,
+      "n_modern_drainages": 1,
+      "drainages": [
+        {
+          "t_peak": 2025.25,
+          "t_trough": 2026.0,
+          "drop_m": 2.430000066757202
+        }
+      ],
+      "median_speed_mpyr": 397.3,
+      "modern_noise_floor_qtr": 0.0122,
+      "n_modern_qtr_bins": 22,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2025.25,
+            "t_trough": 2026.0,
+            "drop_m": 2.430000066757202
+          },
+          "response": {
+            "t0": 2025.25,
+            "n_pre_bins": 5,
+            "n_post_bins": 0,
+            "pre_pairs": 1027,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ],
+      "well_resolved": true
+    },
+    "Mac3": {
+      "lon": -143.009,
+      "lat": -80.011,
+      "atl15_pixels": 143,
+      "n_modern_drainages": 2,
+      "drainages": [
+        {
+          "t_peak": 2019.5,
+          "t_trough": 2020.0,
+          "drop_m": 1.0399999618530273
+        },
+        {
+          "t_peak": 2022.5,
+          "t_trough": 2023.5,
+          "drop_m": 1.1299999952316284
+        }
+      ],
+      "median_speed_mpyr": 390.4,
+      "modern_noise_floor_qtr": 0.0191,
+      "n_modern_qtr_bins": 29,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2019.5,
+            "t_trough": 2020.0,
+            "drop_m": 1.0399999618530273
+          },
+          "response": {
+            "t0": 2019.5,
+            "n_pre_bins": 6,
+            "n_post_bins": 10,
+            "pre_pairs": 301,
+            "post_pairs": 1059,
+            "testable": true,
+            "baseline": 395.3,
+            "sigma_bin_mpyr": 6.45,
+            "resp_frac": 0.0026,
+            "peak_sigma": 0.16,
+            "sustained_sigma": -2.86,
+            "detrend_sigma": -1.96,
+            "sustained_detrend_sigma": -10.24,
+            "lag_to_peak": 1.375,
+            "in_band": false
+          }
+        },
+        {
+          "drainage": {
+            "t_peak": 2022.5,
+            "t_trough": 2023.5,
+            "drop_m": 1.1299999952316284
+          },
+          "response": {
+            "t0": 2022.5,
+            "n_pre_bins": 8,
+            "n_post_bins": 10,
+            "pre_pairs": 1041,
+            "post_pairs": 1594,
+            "testable": true,
+            "baseline": 392.8,
+            "sigma_bin_mpyr": 10.12,
+            "resp_frac": 0.0342,
+            "peak_sigma": 1.33,
+            "sustained_sigma": -2.36,
+            "detrend_sigma": 1.04,
+            "sustained_detrend_sigma": -4.51,
+            "lag_to_peak": 0.375,
+            "in_band": false
+          }
+        }
+      ],
+      "well_resolved": true
+    },
+    "Mac4": {
+      "lon": -139.229,
+      "lat": -79.634,
+      "atl15_pixels": 73,
+      "n_modern_drainages": 3,
+      "drainages": [
+        {
+          "t_peak": 2019.25,
+          "t_trough": 2020.0,
+          "drop_m": 3.1700000762939453
+        },
+        {
+          "t_peak": 2022.75,
+          "t_trough": 2023.25,
+          "drop_m": 3.140000104904175
+        },
+        {
+          "t_peak": 2024.5,
+          "t_trough": 2024.75,
+          "drop_m": 1.7200000286102295
+        }
+      ],
+      "median_speed_mpyr": 241.3,
+      "modern_noise_floor_qtr": 0.02,
+      "n_modern_qtr_bins": 29,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2019.25,
+            "t_trough": 2020.0,
+            "drop_m": 3.1700000762939453
+          },
+          "response": {
+            "t0": 2019.25,
+            "n_pre_bins": 5,
+            "n_post_bins": 10,
+            "pre_pairs": 134,
+            "post_pairs": 511,
+            "testable": true,
+            "baseline": 249.3,
+            "sigma_bin_mpyr": 4.28,
+            "resp_frac": -0.0046,
+            "peak_sigma": -0.27,
+            "sustained_sigma": -4.26,
+            "detrend_sigma": -3.79,
+            "sustained_detrend_sigma": -15.79,
+            "lag_to_peak": 1.125,
+            "in_band": false
+          }
+        },
+        {
+          "drainage": {
+            "t_peak": 2022.75,
+            "t_trough": 2023.25,
+            "drop_m": 3.140000104904175
+          },
+          "response": {
+            "t0": 2022.75,
+            "n_pre_bins": 8,
+            "n_post_bins": 10,
+            "pre_pairs": 1308,
+            "post_pairs": 2148,
+            "testable": true,
+            "baseline": 244.5,
+            "sigma_bin_mpyr": 4.47,
+            "resp_frac": -0.0067,
+            "peak_sigma": -0.37,
+            "sustained_sigma": -7.91,
+            "detrend_sigma": -2.1,
+            "sustained_detrend_sigma": -17.63,
+            "lag_to_peak": 0.125,
+            "in_band": false
+          }
+        },
+        {
+          "drainage": {
+            "t_peak": 2024.5,
+            "t_trough": 2024.75,
+            "drop_m": 1.7200000286102295
+          },
+          "response": {
+            "t0": 2024.5,
+            "n_pre_bins": 8,
+            "n_post_bins": 3,
+            "pre_pairs": 1763,
+            "post_pairs": 563,
+            "testable": true,
+            "baseline": 234.9,
+            "sigma_bin_mpyr": 4.98,
+            "resp_frac": 0.018,
+            "peak_sigma": 0.85,
+            "sustained_sigma": -0.47,
+            "detrend_sigma": 3.41,
+            "sustained_detrend_sigma": 2.93,
+            "lag_to_peak": 0.625,
+            "in_band": false
+          }
+        }
+      ],
+      "well_resolved": true
+    },
+    "Mac5": {
+      "lon": -139.089,
+      "lat": -79.713,
+      "atl15_pixels": 57,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Mac6": {
+      "lon": -132.65,
+      "lat": -78.677,
+      "atl15_pixels": 103,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Mac7": {
+      "lon": -131.488,
+      "lat": -80.346,
+      "atl15_pixels": 183,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Mac8": {
+      "lon": -130.188,
+      "lat": -79.941,
+      "atl15_pixels": 102,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "MercerSubglacialLake": {
+      "lon": -149.47,
+      "lat": -84.655,
+      "atl15_pixels": 135,
+      "n_modern_drainages": 2,
+      "drainages": [
+        {
+          "t_peak": 2020.0,
+          "t_trough": 2020.75,
+          "drop_m": 1.9600000381469727
+        },
+        {
+          "t_peak": 2023.0,
+          "t_trough": 2024.75,
+          "drop_m": 4.090000152587891
+        }
+      ],
+      "velocity_error": "RuntimeError: empty box series (centroid outside cube coverage)"
+    },
+    "Mertz_1": {
+      "lon": 144.28,
+      "lat": -70.891,
+      "atl15_pixels": 324,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Mulock_1": {
+      "lon": 149.114,
+      "lat": -78.094,
+      "atl15_pixels": 216,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Nimrod_1": {
+      "lon": 150.293,
+      "lat": -83.491,
+      "atl15_pixels": 75,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Nimrod_2": {
+      "lon": 140.984,
+      "lat": -84.325,
+      "atl15_pixels": 1197,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Ninnis_1": {
+      "lon": 149.714,
+      "lat": -69.66,
+      "atl15_pixels": 192,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Ninnis_2": {
+      "lon": 149.381,
+      "lat": -70.841,
+      "atl15_pixels": 228,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Raymond_1": {
+      "lon": -128.44,
+      "lat": -81.349,
+      "atl15_pixels": 74,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Rec1": {
+      "lon": -28.709,
+      "lat": -81.169,
+      "atl15_pixels": 1005,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Rec10": {
+      "lon": 8.596,
+      "lat": -81.727,
+      "atl15_pixels": 280,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Rec2": {
+      "lon": -24.019,
+      "lat": -80.901,
+      "atl15_pixels": 681,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Rec3": {
+      "lon": -20.002,
+      "lat": -81.32,
+      "atl15_pixels": 60,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Rec4": {
+      "lon": -9.749,
+      "lat": -81.273,
+      "atl15_pixels": 222,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Rec5": {
+      "lon": -7.232,
+      "lat": -81.428,
+      "atl15_pixels": 270,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Rec6": {
+      "lon": -5.903,
+      "lat": -81.644,
+      "atl15_pixels": 391,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Rec8": {
+      "lon": 2.217,
+      "lat": -82.899,
+      "atl15_pixels": 225,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Rec9": {
+      "lon": 5.96,
+      "lat": -83.489,
+      "atl15_pixels": 227,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Rutford_1": {
+      "lon": -84.161,
+      "lat": -78.181,
+      "atl15_pixels": 110,
+      "n_modern_drainages": 2,
+      "drainages": [
+        {
+          "t_peak": 2024.0,
+          "t_trough": 2024.5,
+          "drop_m": 1.9700000286102295
+        },
+        {
+          "t_peak": 2025.5,
+          "t_trough": 2026.0,
+          "drop_m": 1.9199999570846558
+        }
+      ],
+      "median_speed_mpyr": 383.2,
+      "modern_noise_floor_qtr": 0.0386,
+      "n_modern_qtr_bins": 15,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2024.0,
+            "t_trough": 2024.5,
+            "drop_m": 1.9700000286102295
+          },
+          "response": {
+            "t0": 2024.0,
+            "n_pre_bins": 4,
+            "n_post_bins": 3,
+            "pre_pairs": 632,
+            "post_pairs": 740,
+            "testable": true,
+            "baseline": 331.6,
+            "sigma_bin_mpyr": 72.37,
+            "resp_frac": 0.2332,
+            "peak_sigma": 1.07,
+            "sustained_sigma": 1.05,
+            "detrend_sigma": 1.55,
+            "sustained_detrend_sigma": 2.5,
+            "lag_to_peak": 0.125,
+            "in_band": false
+          }
+        },
+        {
+          "drainage": {
+            "t_peak": 2025.5,
+            "t_trough": 2026.0,
+            "drop_m": 1.9199999570846558
+          },
+          "response": {
+            "t0": 2025.5,
+            "n_pre_bins": 4,
+            "n_post_bins": 0,
+            "pre_pairs": 934,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ],
+      "well_resolved": true
+    },
+    "Slessor_1": {
+      "lon": -25.286,
+      "lat": -80.035,
+      "atl15_pixels": 246,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Slessor_23": {
+      "lon": -21.581,
+      "lat": -79.817,
+      "atl15_pixels": 261,
+      "n_modern_drainages": 1,
+      "drainages": [
+        {
+          "t_peak": 2023.5,
+          "t_trough": 2024.75,
+          "drop_m": 7.369999885559082
+        }
+      ],
+      "median_speed_mpyr": 297.5,
+      "modern_noise_floor_qtr": 0.0187,
+      "n_modern_qtr_bins": 28,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2023.5,
+            "t_trough": 2024.75,
+            "drop_m": 7.369999885559082
+          },
+          "response": {
+            "t0": 2023.5,
+            "n_pre_bins": 8,
+            "n_post_bins": 7,
+            "pre_pairs": 1263,
+            "post_pairs": 1970,
+            "testable": true,
+            "baseline": 299.6,
+            "sigma_bin_mpyr": 9.98,
+            "resp_frac": 0.0593,
+            "peak_sigma": 1.78,
+            "sustained_sigma": -2.01,
+            "detrend_sigma": 1.14,
+            "sustained_detrend_sigma": -4.73,
+            "lag_to_peak": 0.375,
+            "in_band": false
+          }
+        }
+      ],
+      "well_resolved": true
+    },
+    "Slessor_4": {
+      "lon": -17.098,
+      "lat": -79.336,
+      "atl15_pixels": 221,
+      "n_modern_drainages": 1,
+      "drainages": [
+        {
+          "t_peak": 2019.5,
+          "t_trough": 2020.0,
+          "drop_m": 2.799999952316284
+        }
+      ],
+      "median_speed_mpyr": 123.3,
+      "modern_noise_floor_qtr": 0.0276,
+      "n_modern_qtr_bins": 27,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2019.5,
+            "t_trough": 2020.0,
+            "drop_m": 2.799999952316284
+          },
+          "response": {
+            "t0": 2019.5,
+            "n_pre_bins": 4,
+            "n_post_bins": 10,
+            "pre_pairs": 155,
+            "post_pairs": 611,
+            "testable": true,
+            "baseline": 125.0,
+            "sigma_bin_mpyr": 8.63,
+            "resp_frac": 0.0663,
+            "peak_sigma": 0.96,
+            "sustained_sigma": -1.27,
+            "detrend_sigma": 2.9,
+            "sustained_detrend_sigma": 4.73,
+            "lag_to_peak": 1.625,
+            "in_band": false
+          }
+        }
+      ],
+      "well_resolved": true
+    },
+    "Slessor_5": {
+      "lon": -17.049,
+      "lat": -79.199,
+      "atl15_pixels": 102,
+      "n_modern_drainages": 1,
+      "drainages": [
+        {
+          "t_peak": 2019.25,
+          "t_trough": 2020.0,
+          "drop_m": 1.3899999856948853
+        }
+      ],
+      "median_speed_mpyr": 77.7,
+      "modern_noise_floor_qtr": 0.1139,
+      "n_modern_qtr_bins": 27,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2019.25,
+            "t_trough": 2020.0,
+            "drop_m": 1.3899999856948853
+          },
+          "response": {
+            "t0": 2019.25,
+            "n_pre_bins": 5,
+            "n_post_bins": 8,
+            "pre_pairs": 158,
+            "post_pairs": 211,
+            "testable": true,
+            "baseline": 71.0,
+            "sigma_bin_mpyr": 18.2,
+            "resp_frac": 0.4628,
+            "peak_sigma": 1.81,
+            "sustained_sigma": 1.53,
+            "detrend_sigma": 1.84,
+            "sustained_detrend_sigma": 1.37,
+            "lag_to_peak": 1.875,
+            "in_band": false
+          }
+        }
+      ],
+      "well_resolved": false
+    },
+    "Slessor_6": {
+      "lon": -14.291,
+      "lat": -78.769,
+      "atl15_pixels": 128,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Slessor_7": {
+      "lon": -11.059,
+      "lat": -79.247,
+      "atl15_pixels": 397,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Thw_124": {
+      "lon": -106.86,
+      "lat": -76.461,
+      "atl15_pixels": 555,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Thw_142": {
+      "lon": -106.192,
+      "lat": -76.617,
+      "atl15_pixels": 151,
+      "n_modern_drainages": 3,
+      "drainages": [
+        {
+          "t_peak": 2021.75,
+          "t_trough": 2022.0,
+          "drop_m": 1.0199999809265137
+        },
+        {
+          "t_peak": 2023.25,
+          "t_trough": 2024.25,
+          "drop_m": 1.1299999952316284
+        },
+        {
+          "t_peak": 2024.5,
+          "t_trough": 2025.25,
+          "drop_m": 1.1299999952316284
+        }
+      ],
+      "median_speed_mpyr": 249.8,
+      "modern_noise_floor_qtr": 0.0385,
+      "n_modern_qtr_bins": 16,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2021.75,
+            "t_trough": 2022.0,
+            "drop_m": 1.0199999809265137
+          },
+          "response": {
+            "t0": 2021.75,
+            "n_pre_bins": 4,
+            "n_post_bins": 6,
+            "pre_pairs": 45,
+            "post_pairs": 316,
+            "testable": true,
+            "baseline": 233.4,
+            "sigma_bin_mpyr": 4.45,
+            "resp_frac": 0.0852,
+            "peak_sigma": 4.47,
+            "sustained_sigma": 9.13,
+            "detrend_sigma": 6.33,
+            "sustained_detrend_sigma": 12.91,
+            "lag_to_peak": 1.125,
+            "in_band": true
+          }
+        },
+        {
+          "drainage": {
+            "t_peak": 2023.25,
+            "t_trough": 2024.25,
+            "drop_m": 1.1299999952316284
+          },
+          "response": {
+            "t0": 2023.25,
+            "n_pre_bins": 4,
+            "n_post_bins": 4,
+            "pre_pairs": 191,
+            "post_pairs": 257,
+            "testable": true,
+            "baseline": 250.0,
+            "sigma_bin_mpyr": 6.9,
+            "resp_frac": 0.0102,
+            "peak_sigma": 0.37,
+            "sustained_sigma": -2.32,
+            "detrend_sigma": 0.51,
+            "sustained_detrend_sigma": -1.93,
+            "lag_to_peak": 0.625,
+            "in_band": false
+          }
+        },
+        {
+          "drainage": {
+            "t_peak": 2024.5,
+            "t_trough": 2025.25,
+            "drop_m": 1.1299999952316284
+          },
+          "response": {
+            "t0": 2024.5,
+            "n_pre_bins": 4,
+            "n_post_bins": 3,
+            "pre_pairs": 254,
+            "post_pairs": 209,
+            "testable": true,
+            "baseline": 250.0,
+            "sigma_bin_mpyr": 13.8,
+            "resp_frac": 0.0287,
+            "peak_sigma": 0.52,
+            "sustained_sigma": -0.64,
+            "detrend_sigma": 1.77,
+            "sustained_detrend_sigma": 0.71,
+            "lag_to_peak": 1.375,
+            "in_band": false
+          }
+        }
+      ],
+      "well_resolved": true
+    },
+    "Thw_170": {
+      "lon": -106.011,
+      "lat": -76.867,
+      "atl15_pixels": 187,
+      "n_modern_drainages": 2,
+      "drainages": [
+        {
+          "t_peak": 2021.0,
+          "t_trough": 2022.5,
+          "drop_m": 2.2200000286102295
+        },
+        {
+          "t_peak": 2025.0,
+          "t_trough": 2026.0,
+          "drop_m": 2.25
+        }
+      ],
+      "median_speed_mpyr": 161.6,
+      "modern_noise_floor_qtr": 0.0471,
+      "n_modern_qtr_bins": 13,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2021.0,
+            "t_trough": 2022.5,
+            "drop_m": 2.2200000286102295
+          },
+          "response": {
+            "t0": 2021.0,
+            "n_pre_bins": 3,
+            "n_post_bins": 4,
+            "pre_pairs": 32,
+            "post_pairs": 248,
+            "testable": true,
+            "baseline": 169.6,
+            "sigma_bin_mpyr": 5.95,
+            "resp_frac": 0.0932,
+            "peak_sigma": 2.66,
+            "sustained_sigma": -3.12,
+            "detrend_sigma": 4.64,
+            "sustained_detrend_sigma": 1.26,
+            "lag_to_peak": 1.125,
+            "in_band": false
+          }
+        },
+        {
+          "drainage": {
+            "t_peak": 2025.0,
+            "t_trough": 2026.0,
+            "drop_m": 2.25
+          },
+          "response": {
+            "t0": 2025.0,
+            "n_pre_bins": 4,
+            "n_post_bins": 1,
+            "pre_pairs": 284,
+            "post_pairs": 33,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ],
+      "well_resolved": true
+    },
+    "Thw_70": {
+      "lon": -106.995,
+      "lat": -75.987,
+      "atl15_pixels": 344,
+      "n_modern_drainages": 1,
+      "drainages": [
+        {
+          "t_peak": 2020.5,
+          "t_trough": 2022.25,
+          "drop_m": 1.350000023841858
+        }
+      ],
+      "median_speed_mpyr": 406.6,
+      "modern_noise_floor_qtr": 0.0168,
+      "n_modern_qtr_bins": 15,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2020.5,
+            "t_trough": 2022.25,
+            "drop_m": 1.350000023841858
+          },
+          "response": {
+            "t0": 2020.5,
+            "n_pre_bins": 4,
+            "n_post_bins": 4,
+            "pre_pairs": 61,
+            "post_pairs": 155,
+            "testable": true,
+            "baseline": 395.1,
+            "sigma_bin_mpyr": 12.14,
+            "resp_frac": 0.0573,
+            "peak_sigma": 1.86,
+            "sustained_sigma": 0.21,
+            "detrend_sigma": 5.61,
+            "sustained_detrend_sigma": 5.72,
+            "lag_to_peak": 2.375,
+            "in_band": false
+          }
+        }
+      ],
+      "well_resolved": true
+    },
+    "Totten_1": {
+      "lon": 107.504,
+      "lat": -70.111,
+      "atl15_pixels": 566,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Totten_2": {
+      "lon": 110.513,
+      "lat": -70.83,
+      "atl15_pixels": 712,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "UpperSubglacialLakeConway": {
+      "lon": -146.041,
+      "lat": -84.081,
+      "atl15_pixels": 181,
+      "n_modern_drainages": 1,
+      "drainages": [
+        {
+          "t_peak": 2024.0,
+          "t_trough": 2025.0,
+          "drop_m": 1.2599999904632568
+        }
+      ],
+      "median_speed_mpyr": 292.0,
+      "modern_noise_floor_qtr": null,
+      "n_modern_qtr_bins": 1,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2024.0,
+            "t_trough": 2025.0,
+            "drop_m": 1.2599999904632568
+          },
+          "response": {
+            "t0": 2024.0,
+            "n_pre_bins": 1,
+            "n_post_bins": 0,
+            "pre_pairs": 12,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ],
+      "well_resolved": false
+    },
+    "Vostok_1": {
+      "lon": 106.836,
+      "lat": -77.172,
+      "atl15_pixels": 64,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "WhillansSubglacialLake": {
+      "lon": -153.496,
+      "lat": -84.238,
+      "atl15_pixels": 59,
+      "n_modern_drainages": 2,
+      "drainages": [
+        {
+          "t_peak": 2021.0,
+          "t_trough": 2022.0,
+          "drop_m": 2.2699999809265137
+        },
+        {
+          "t_peak": 2024.25,
+          "t_trough": 2025.0,
+          "drop_m": 1.4500000476837158
+        }
+      ],
+      "median_speed_mpyr": NaN,
+      "modern_noise_floor_qtr": null,
+      "n_modern_qtr_bins": 0,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2021.0,
+            "t_trough": 2022.0,
+            "drop_m": 2.2699999809265137
+          },
+          "response": {
+            "t0": 2021.0,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        },
+        {
+          "drainage": {
+            "t_peak": 2024.25,
+            "t_trough": 2025.0,
+            "drop_m": 1.4500000476837158
+          },
+          "response": {
+            "t0": 2024.25,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ],
+      "well_resolved": false
+    },
+    "Whillans_6": {
+      "lon": -136.926,
+      "lat": -83.847,
+      "atl15_pixels": 73,
+      "n_modern_drainages": 1,
+      "drainages": [
+        {
+          "t_peak": 2023.75,
+          "t_trough": 2025.25,
+          "drop_m": 3.180000066757202
+        }
+      ],
+      "median_speed_mpyr": 100.2,
+      "modern_noise_floor_qtr": null,
+      "n_modern_qtr_bins": 0,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2023.75,
+            "t_trough": 2025.25,
+            "drop_m": 3.180000066757202
+          },
+          "response": {
+            "t0": 2023.75,
+            "n_pre_bins": 0,
+            "n_post_bins": 0,
+            "pre_pairs": 0,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ],
+      "well_resolved": false
+    },
+    "Whillans_7": {
+      "lon": -132.989,
+      "lat": -83.235,
+      "atl15_pixels": 74,
+      "n_modern_drainages": 2,
+      "drainages": [
+        {
+          "t_peak": 2019.75,
+          "t_trough": 2020.25,
+          "drop_m": 2.240000009536743
+        },
+        {
+          "t_peak": 2023.0,
+          "t_trough": 2023.75,
+          "drop_m": 1.7699999809265137
+        }
+      ],
+      "median_speed_mpyr": 165.4,
+      "modern_noise_floor_qtr": null,
+      "n_modern_qtr_bins": 1,
+      "events": [
+        {
+          "drainage": {
+            "t_peak": 2019.75,
+            "t_trough": 2020.25,
+            "drop_m": 2.240000009536743
+          },
+          "response": {
+            "t0": 2019.75,
+            "n_pre_bins": 0,
+            "n_post_bins": 1,
+            "pre_pairs": 0,
+            "post_pairs": 6,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        },
+        {
+          "drainage": {
+            "t_peak": 2023.0,
+            "t_trough": 2023.75,
+            "drop_m": 1.7699999809265137
+          },
+          "response": {
+            "t0": 2023.0,
+            "n_pre_bins": 1,
+            "n_post_bins": 0,
+            "pre_pairs": 6,
+            "post_pairs": 0,
+            "testable": false,
+            "baseline": null,
+            "peak_sigma": null,
+            "resp_frac": null,
+            "lag_to_peak": null,
+            "sustained_sigma": null,
+            "in_band": null
+          }
+        }
+      ],
+      "well_resolved": false
+    },
+    "Whillans_8": {
+      "lon": -113.586,
+      "lat": -83.502,
+      "atl15_pixels": 154,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Wilkes_1": {
+      "lon": 106.716,
+      "lat": -68.814,
+      "atl15_pixels": 597,
+      "n_modern_drainages": 0,
+      "drainages": []
+    },
+    "Wilkes_2": {
+      "lon": 121.569,
+      "lat": -68.706,
+      "atl15_pixels": 178,
+      "n_modern_drainages": 0,
+      "drainages": []
+    }
+  }
+}

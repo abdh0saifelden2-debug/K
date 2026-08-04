@@ -1,0 +1,102 @@
+{
+  "what": "ocean intrusion (RTN) and sliding-law divergence (s_N) are ordered crossings of one declining normalized effective pressure n_hat toward the grounding line",
+  "identities": {
+    "RTN": "(1 - n_hat)/phi",
+    "intrusion_threshold": "n_hat < 1 - phi",
+    "sliding_fold": "n_hat_c = N_c/(rho_i g H)",
+    "s_N": "m/(1 - (N_c/N)^m), N = n_hat rho_i g H"
+  },
+  "phi": 0.9,
+  "N_c_MPa": 0.06,
+  "m": 3.0,
+  "thresholds_by_thickness": [
+    {
+      "H_m": 500.0,
+      "n_surge_onset": 0.013352942549665008,
+      "n_RTN1_intrusion": 0.09999999999999998,
+      "n_fold_ungrounding": 0.013339602946718291,
+      "ordering_intrusion_inland_of_fold": true,
+      "sN_at_intrusion": 3.007138091009191
+    },
+    {
+      "H_m": 1000.0,
+      "n_surge_onset": 0.006676471274832504,
+      "n_RTN1_intrusion": 0.09999999999999998,
+      "n_fold_ungrounding": 0.006669801473359146,
+      "ordering_intrusion_inland_of_fold": true,
+      "sN_at_intrusion": 3.000890407598095
+    },
+    {
+      "H_m": 2000.0,
+      "n_surge_onset": 0.003338235637416252,
+      "n_RTN1_intrusion": 0.09999999999999998,
+      "n_fold_ungrounding": 0.003334900736679573,
+      "ordering_intrusion_inland_of_fold": true,
+      "sN_at_intrusion": 3.0001112720521634
+    },
+    {
+      "H_m": 3000.0,
+      "n_surge_onset": 0.002225490424944168,
+      "n_RTN1_intrusion": 0.09999999999999998,
+      "n_fold_ungrounding": 0.0022232671577863817,
+      "ordering_intrusion_inland_of_fold": true,
+      "sN_at_intrusion": 3.0000329686364275
+    }
+  ],
+  "intrusion_inland_of_fold": true,
+  "field_overlay": [
+    {
+      "domain": "MARINE_WEST",
+      "tercile": "low_rel_near_flotation",
+      "n_hat": 0.043,
+      "RTN": 1.064,
+      "RTN_gt_1": true,
+      "TF_slope": 0.62
+    },
+    {
+      "domain": "MARINE_WEST",
+      "tercile": "mid_rel",
+      "n_hat": 0.232,
+      "RTN": 0.853,
+      "RTN_gt_1": false,
+      "TF_slope": 0.616
+    },
+    {
+      "domain": "MARINE_WEST",
+      "tercile": "high_rel_well_grounded",
+      "n_hat": 1.0,
+      "RTN": 0.0,
+      "RTN_gt_1": false,
+      "TF_slope": 0.464
+    },
+    {
+      "domain": "CONTINENTAL",
+      "tercile": "low_rel_near_flotation",
+      "n_hat": 0.035,
+      "RTN": 1.072,
+      "RTN_gt_1": true,
+      "TF_slope": 0.386
+    },
+    {
+      "domain": "CONTINENTAL",
+      "tercile": "mid_rel",
+      "n_hat": 0.198,
+      "RTN": 0.891,
+      "RTN_gt_1": false,
+      "TF_slope": 0.474
+    },
+    {
+      "domain": "CONTINENTAL",
+      "tercile": "high_rel_well_grounded",
+      "n_hat": 1.0,
+      "RTN": 0.0,
+      "RTN_gt_1": false,
+      "TF_slope": 0.378
+    }
+  ],
+  "field_consistent": true,
+  "prediction": "along a flowline approaching the GL (n_hat falling): Type II surge band opens, then RTN=1 ocean intrusion at n_hat=1-phi, then the sliding fold (ungrounding) at n_hat_c<<1-phi. Intrusion is an upstream precursor of the sliding-instability zone.",
+  "falsification": "if mapped RTN=1 lines do NOT sit inland of the high-s_N / Type-III band, or the near-flotation (low n_hat) bins are not simultaneously RTN>1 and high-s_N, the unification fails.",
+  "references": "RTN: this repo \u00a7G.3/\u00a7H.1; sliding law: Schoof 2005, Joughin et al. 2019; flotation/MISI: Schoof 2007",
+  "verdict": "In n_hat, RTN=(1-n_hat)/phi (intrusion at n_hat<0.10) and |s_N| diverges at n_hat_c=N_c/(rho_i g H)~0.0033 (H=2km); since n_hat_c<<1-phi, the RTN=1 intrusion line sits INLAND of the ungrounding fold for all H tested. Ocean intrusion and basal-sliding instability are the same N->0 condition, crossed in a fixed spatial order \u2014 unifying \u00a7G.3 with \u00a7G.4/\u00a7I. Committed ocean-gating terciles are consistent: near-flotation bins RTN>1 with higher TF-slope, well-grounded bins RTN<1."
+}

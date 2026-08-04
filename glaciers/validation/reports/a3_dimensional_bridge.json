@@ -1,0 +1,76 @@
+{
+  "what": "dimensional bridge for \u00a7A.3 scallop channelisation: derived magnitudes + isolated calibration",
+  "constants": {
+    "rho_i_L_J_m3": 300000000.0,
+    "n_glen": 3,
+    "V_scallop_over_V_o": 0.33,
+    "g_band": [
+      0.1,
+      0.9
+    ]
+  },
+  "bands": {
+    "Q_m3_s": [
+      1.0,
+      100.0
+    ],
+    "dphi_ds_Pa_m": [
+      10.0,
+      500.0
+    ],
+    "A_Pa3_s": [
+      1e-25,
+      5e-24
+    ],
+    "N_Pa": [
+      100000.0,
+      3000000.0
+    ]
+  },
+  "central": {
+    "V_o_m2_yr": 52.596,
+    "k_creep_per_yr": 5.610239999999998,
+    "S_star_m2": 9.375000000000002,
+    "R_star_m": 2.4430125595146,
+    "tau_yr": 0.1782454939539129
+  },
+  "R_star_median_m": 13.20400546207226,
+  "tau_median_yr": 3.690759253005478,
+  "R_star_band_m": [
+    0.540563134225749,
+    322.52570310677913
+  ],
+  "R_star_full_range_m": [
+    0.046065886596178066,
+    3784.6987830302396
+  ],
+  "tau_band_yr": [
+    0.016317398554220028,
+    830.7587285213359
+  ],
+  "tau_full_range_yr": [
+    0.0031688087814028955,
+    4277.891854893906
+  ],
+  "metre_scale_fraction": 0.7287808641975309,
+  "subseasonal_to_annual_fraction": 0.4930555555555556,
+  "flotation_tail_note": "the large-R / long-\u03c4 tail is the low-N (near-flotation) limit where creep closure k_creep\u221dN^3->0 and the R-channel model passes into the cavity/flotation regime (\u00a7G.3/\u00a7I)",
+  "scallop_fraction": {
+    "dS_over_S": 0.33,
+    "dR_over_R": 0.15325625946707966,
+    "note": "rho_iL cancels in V_scallop/V_o -> calibration-free"
+  },
+  "calibration": {
+    "knob": "concentration gain g (network competition / drainage capture)",
+    "band": [
+      0.1,
+      0.9
+    ],
+    "affects": "magnitude of competitive margin, NOT direction",
+    "calibrated_by": "observed channel spacing / size distribution or tracer/borehole drainage timing; not derivable from the solver",
+    "derived_does_not_need_g": true
+  },
+  "verdict": "DERIVED: with \u03c1_iL=3.0e8 and literature subglacial inputs the steady R-channel is metre-scale (central R*=2.4 m, median 13.2 m; 73%% of the literature band gives 0.1-50 m) with \u03c4 central 0.18 yr (median 3.69 yr) \u2014 the R-channel regime, no free fudge factor. The wide upper tail is the low-N near-flotation limit (creep\u221dN^3->0), the same \u00a7G.3/\u00a7I flotation fold. \u03c1_iL CANCELS in the scallop fraction: a scalloped reach grows channels +33%% in area (+15%% radius) over a smooth reach (calibration-free). The only genuine calibration is the concentration gain g\u2208[0.1,0.9], which sets the network competitive margin (not direction, already shown g-invariant) and is pinned by channel-spacing/drainage data, not code.",
+  "references": "this repo \u00a7A.3/\u00a7D.1 (scallop_channel_feedback, REPORT_CHANNEL), \u00a7G.2 dimensional bridge; R\u00f6thlisberger 1972; Nye 1976; Werder et al. 2013; Cuffey & Paterson 2010",
+  "N_points": 20736
+}

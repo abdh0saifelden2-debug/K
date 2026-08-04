@@ -1,0 +1,70 @@
+{
+ "field_point": {
+  "source": "Blumberg & Curl (1974) JFM 65:735-751, friction factor of stable dissolution scallop trains, pp. 742-744",
+  "constant": {
+   "B_L": 9.4,
+   "roughness_scale": "Sauter mean L32",
+   "Re_star": 2200.0
+  },
+  "corroborating_usage": [
+   "Curl 1974, NSS Bulletin 36(2):1-5 (paleo-velocity law)",
+   "Woodward & Sasowsky 2009, Acta Carsologica 38 (ScallopEx)",
+   "Springer & Hall 2020, Int. J. Speleology 49 (Sauter-mean caveat)",
+   "Roberts 1983, OUCC Proc. 11 (B_L=9.4 'for scalloped surfaces')"
+  ],
+  "dissent": "Goodchild & Ford 1971 (natural-cave constants differ; flume-controlled B&C adopted as primary)"
+ },
+ "conversion": {
+  "z0_over_L32_kappa0.40": 0.023283740374897,
+  "z0_over_L32_kappa0.41": 0.02119478750375811,
+  "ks_over_L32": 0.69851221124691,
+  "identity": "z_0 = L32 * exp(-kappa*B_L); k_s = 30*z_0"
+ },
+ "amplitude_form": {
+  "a_over_L_range": [
+   0.08333333333333333,
+   0.1,
+   0.125
+  ],
+  "c_z_range": [
+   0.279404884498764,
+   0.23283740374897,
+   0.186269922999176
+  ],
+  "alpha_s_range": [
+   8.38214653496292,
+   6.985122112469099,
+   5.58809768997528
+  ],
+  "assumed_alpha_band": [
+   0.3,
+   3.0
+  ],
+  "exceeds_assumed_band": true
+ },
+ "anchor_update": {
+  "H_m": 2.4,
+  "lambda_m": 0.079,
+  "a_m": 0.0079,
+  "z0_old_band_m": [
+   7.900000000000001e-05,
+   0.0007900000000000001
+  ],
+  "z0_new_m": 0.001839415489616863,
+  "z0_shift_factor_vs_band_top": 2.3283740374896995,
+  "C_d_old_band": [
+   0.0015018677885951747,
+   0.002488200465012223
+  ],
+  "C_d_new": 0.0031090258948268117,
+  "C_d_shift_factor_vs_band": [
+   2.0701062493223517,
+   1.2495078023432242
+  ],
+  "buffering_note": "~20x prefactor correction -> <=2x C_d shift (the \u00a7A.2 log-law compression, now used in anger)"
+ },
+ "b_l_systematic": {
+  "B_L_pm1_z0_factor": 1.4918246976412703,
+  "note": "B_L 9.4 +/- 1 moves z_0 by e^{kappa} ~ 1.5x"
+ }
+}

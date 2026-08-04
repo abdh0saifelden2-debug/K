@@ -1,0 +1,318 @@
+{
+  "model": "velocity admittance to an N-forcing A(omega,N)=s_N0(N)/(1+i omega/lambda(N)); linear response of the RC-sliding OU model (sn_master_curve)",
+  "params": {
+    "m": 3.0,
+    "N_c_MPa": 0.06,
+    "lam_ref_per_yr": 1.0,
+    "N_ref_Pa": 500000.0
+  },
+  "omega_per_yr": {
+    "secular_ocean": 0.12566370614359174,
+    "decadal_ocean": 0.6283185307179586,
+    "lake_step": 6.283185307179586,
+    "fortnightly_MSf": 155.37802528418038,
+    "semidiurnal_M2": 4434.653977676027
+  },
+  "quasi_static_limit": {
+    "max_reldiff": 1.4801334048321192e-16,
+    "ok": true
+  },
+  "divergence_dimensionless": {
+    "omega_over_lambda": [
+      0.0,
+      0.1,
+      0.3,
+      1.0,
+      3.0,
+      10.0,
+      100.0
+    ],
+    "gain_suppression": [
+      1.0,
+      0.9950371902099893,
+      0.9578262852211513,
+      0.7071067811865475,
+      0.31622776601683794,
+      0.09950371902099892,
+      0.009999500037496875
+    ],
+    "phase_lag_deg": [
+      0.0,
+      5.710593137499643,
+      16.69924423399362,
+      45.0,
+      71.56505117707799,
+      84.28940686250037,
+      89.42706130231652
+    ],
+    "finding": "The measured gain is s_N0 x 1/sqrt(1+(omega/lambda)^2): a probe reads the full quasi-static s_N0 only for omega<<lambda(N). Since lambda->0 at N_c, every periodic probe is driven into rolloff toward flotation while the omega->0 limit diverges \u2014 the probes agree only well-grounded."
+  },
+  "highfreq_prefactor": {
+    "N_MPa": [
+      0.0612,
+      0.06762296958091957,
+      0.07472003292388836,
+      0.08256193649505579,
+      0.09122685163638847,
+      0.10080115380997634,
+      0.1113802836244057,
+      0.12306969822626447,
+      0.1359859225406477,
+      0.15025771083986098,
+      0.16602733021932248,
+      0.18345197877487807,
+      0.20270535261851416,
+      0.22397937735312692,
+      0.2474861212664022,
+      0.2734599093153214,
+      0.3021596589743629,
+      0.3338714612320979,
+      0.36891143246462965,
+      0.4076288656145275,
+      0.4504097120875157,
+      0.49768042907589605,
+      0.5499122306604293,
+      0.6076257850674159,
+      0.6713964049051677,
+      0.7418597821183146,
+      0.8197183248283406,
+      0.9057481592285828,
+      1.0008068663315075,
+      1.1058420306913563,
+      1.2219006863193458,
+      1.350139753952251,
+      1.4918375737173752,
+      1.6484066481562578,
+      1.8214077226349066,
+      2.012565343499871,
+      2.22378504907034,
+      2.457172364833128,
+      2.7150537921925975,
+      3.0
+    ],
+    "s0_times_lam": [
+      0.0003184017175935696,
+      0.0022452917300388375,
+      0.0048447651097849416,
+      0.008351587921863206,
+      0.013082471619742603,
+      0.01946467618558911,
+      0.028074597232384597,
+      0.03968982198226983,
+      0.05535935544919511,
+      0.07649835915840116,
+      0.10501595853435298,
+      0.14348766161717622,
+      0.19538796074757872,
+      0.26540412416063053,
+      0.35985951692755624,
+      0.4872846826013847,
+      0.6591877616248294,
+      0.8910938252463688,
+      1.203946990238852,
+      1.6260019435131339,
+      2.1953757057624106,
+      2.9634900913960047,
+      3.999715763415907,
+      5.397637301452761,
+      7.283505099630376,
+      9.82763740994422,
+      13.259802283133052,
+      17.889968595237253,
+      24.136300245915116,
+      32.56292176667222,
+      43.93086606184573,
+      59.266805522261265,
+      79.95577382002057,
+      107.86625236165175,
+      145.51891832408282,
+      196.31429440348995,
+      264.83985999353195,
+      357.2843599041993,
+      481.996728056842,
+      650.2401041935456
+    ],
+    "value_1pct_above_Nc": 0.0003184017175935696,
+    "vanishes_at_Nc": true
+  },
+  "corner_vs_frequency": {
+    "rows": [
+      {
+        "probe": "secular_ocean",
+        "omega_per_yr": 0.12566370614359174,
+        "N_corner_MPa": 0.25241955786259135,
+        "N_corner_over_Nc": 4.206992631043189
+      },
+      {
+        "probe": "decadal_ocean",
+        "omega_per_yr": 0.6283185307179586,
+        "N_corner_MPa": 0.4285399667693716,
+        "N_corner_over_Nc": 7.142332779489527
+      },
+      {
+        "probe": "lake_step",
+        "omega_per_yr": 6.283185307179586,
+        "N_corner_MPa": 0.9217461761696225,
+        "N_corner_over_Nc": 15.362436269493708
+      },
+      {
+        "probe": "fortnightly_MSf",
+        "omega_per_yr": 155.37802528418038,
+        "N_corner_MPa": 2.684967842018327,
+        "N_corner_over_Nc": 44.74946403363878
+      },
+      {
+        "probe": "semidiurnal_M2",
+        "omega_per_yr": 4434.653977676027,
+        "N_corner_MPa": 8.20517411585741,
+        "N_corner_over_Nc": 136.75290193095682
+      }
+    ],
+    "N_corner_increases_with_frequency": true,
+    "finding": "N_corner rises with frequency, so as N falls toward N_c a site crosses the M2/S2 corners first (loses high-frequency admittance), then MSf, then decadal, then secular \u2014 an ordered ungrounding precursor in constituent admittance ratios. Absolute N_corner uses the repo's lambda normalization; the ORDERING is calibration-free."
+  },
+  "spectroscopy": {
+    "truth": {
+      "N_MPa": 0.078,
+      "s_N0": 5.506265664160401,
+      "lam_per_yr": 0.0011308479160892905,
+      "tau_h_yr": 884.2922074421907
+    },
+    "straddle_factors": [
+      0.1,
+      0.3,
+      1.0,
+      3.0,
+      10.0
+    ],
+    "noise": 0.05,
+    "recovered": {
+      "s_N0_hat": 6.123006453066937,
+      "lam_hat": 0.0009890918826324449,
+      "tau_h_hat_yr": 1011.0284166305394
+    },
+    "recovery": {
+      "s_N0_relerr": 0.11200708910956202,
+      "lam_relerr": 0.12535375574380306,
+      "N_relerr": 0.03723751976202281,
+      "N_rec_MPa": 0.07509547345856223
+    },
+    "note": "Probes straddling the corner over-determine (s_N0, lambda): sensitivity (-> proximity to N_c) and basal relaxation time tau_h are recovered SEPARATELY, which no single-frequency probe can do. Practically: pair a slow probe (ocean drift, omega<lambda) with a fast one (tidal, omega>lambda)."
+  },
+  "spectroscopy_robustness": {
+    "per_noise": [
+      {
+        "noise": 0.03,
+        "s_N0_median_relerr": 0.07899851335410416,
+        "lam_median_relerr": 0.10687023001612422,
+        "N_median_relerr": 0.035924685760968154
+      },
+      {
+        "noise": 0.05,
+        "s_N0_median_relerr": 0.12315304388215464,
+        "lam_median_relerr": 0.17724726431008342,
+        "N_median_relerr": 0.0610865440245351
+      },
+      {
+        "noise": 0.1,
+        "s_N0_median_relerr": 0.2311174503235664,
+        "lam_median_relerr": 0.3470672888241498,
+        "N_median_relerr": 0.11471095578558443
+      }
+    ],
+    "finding": "With corner-straddling frequencies the sensitivity s_N0 (-> N) and the relaxation time tau_h=1/lambda are both recovered to a few percent and, crucially, DISENTANGLED \u2014 the new content of the multi-frequency probe."
+  },
+  "phase_vs_N": {
+    "probe": "fortnightly_MSf",
+    "omega_per_yr": 155.37802528418038,
+    "N_MPa": [
+      0.0612,
+      0.06674301309831739,
+      0.07278806858565635,
+      0.07938063750022369,
+      0.08657030928807544,
+      0.09441116481600342,
+      0.10296218316898566,
+      0.11228768529214,
+      0.12245781781426546,
+      0.1335490806923021,
+      0.1456449026456629,
+      0.15883626870886675,
+      0.17322240462293725,
+      0.18891152321357424,
+      0.2060216383703706,
+      0.22468145274984416,
+      0.2450313258796052,
+      0.267224329945761,
+      0.2914274012052129,
+      0.31782259568379234,
+      0.3466084586056306,
+      0.37800151785462777,
+      0.4122379127018838,
+      0.4495751700504063,
+      0.49029414155804824,
+      0.5347011162097568,
+      0.5831301242299469,
+      0.6359454496650786,
+      0.693544370536139,
+      0.7563601471725138,
+      0.8248652812055618,
+      0.8995750697361127,
+      0.9810514814104115,
+      1.0699073835604382,
+      1.1668111522052427,
+      1.272491699589826,
+      1.387743957078823,
+      1.5134348546474305,
+      1.6505098419474442,
+      1.8
+    ],
+    "lag_deg": [
+      89.99999774267103,
+      89.9999341654942,
+      89.99977910065896,
+      89.99952199784776,
+      89.99914536427251,
+      89.99862357449845,
+      89.99792112693832,
+      89.99699022839184,
+      89.99576754228741,
+      89.99416987938334,
+      89.99208853773214,
+      89.98938190681288,
+      89.9858658326341,
+      89.9813010882777,
+      89.97537709742387,
+      89.96769080348346,
+      89.9577192467351,
+      89.94478398388938,
+      89.92800492974145,
+      89.90624048144643,
+      89.87800985390726,
+      89.84139234718697,
+      89.79389670335213,
+      89.73229168818114,
+      89.65238642354545,
+      89.54874563972976,
+      89.41432072502364,
+      89.23997201757025,
+      89.01385103164996,
+      88.72060319049197,
+      88.34034249452786,
+      87.84734070841435,
+      87.2083686889314,
+      86.38063501627136,
+      85.30930651497629,
+      83.92470799999023,
+      82.13956836800698,
+      79.84726182275986,
+      76.92312700136321,
+      73.23285314945436
+    ],
+    "lag_near_Nc": 89.99999774267103,
+    "lag_well_grounded": 73.23285314945436,
+    "monotone_rising_toward_flotation": true,
+    "note": "Phase lag rises toward flotation, -> 90 deg at N_c. The repo's n=3 lake-step time-to-peak lags trending the other way (marginal Rutford point) remain an open low-n discriminator (sn_master_curve.field_overlay); the periodic phase lag here is the cleaner, higher-cadence version of the same clock."
+  },
+  "verdict": "The three s_N probes are one frequency-resolved admittance A(omega,N)=s_N0/(1+i omega/lambda). The same N_c fold that diverges s_N0 collapses the corner lambda->0, so toward flotation every periodic probe is driven into rolloff (gain ~ s_N0*lambda/omega -> 0) while the quasi-static limit diverges \u2014 the probes coincide only well-grounded, and the rolloff sweeps DOWN through the forcing band (M2->MSf->decadal->secular), an ordered ungrounding precursor. Admittance at corner-straddling frequencies inverts s_N0 and tau_h=1/lambda SEPARATELY (s_N0 to 12%, N to 6% at 5% noise) \u2014 a new measurement disentangling sliding sensitivity from basal relaxation time, with phase lag rising to 90 deg at N_c. Calibration-free in omega/lambda; the spectroscopy measures the absolute scale the repo carries as a normalization."
+}

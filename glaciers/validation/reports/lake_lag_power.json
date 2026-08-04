@@ -1,0 +1,93 @@
+{
+  "what": "P4a-R2 power analysis of the matched-lag detector: false-positive calibration, aliasing attenuation, and 95%-power minimum detectable amplitude per route",
+  "detector": "peak post-drainage bin anomaly vs pre-baseline (median), long-baseline MAD scale, pre 2.0 yr, post 2.0 yr; thresholds FP-calibrated to 5% per config (nominal 2.0-sigma floor is multiple-comparison inflated)",
+  "committed_noise_floors": "quarterly 2.3%, annual 1.0% of trunk speed (ITS_LIVE, 5-lake test); GPS route 0.5% daily",
+  "false_positive": {
+    "quarterly_per_lake": {
+      "nominal_2sigma_fp_rate": 0.24575,
+      "median_noise_peak_sigma": 1.4169720586433883,
+      "calibrated_5pct_threshold_sigma": 3.012815102025128
+    },
+    "annual_per_lake": {
+      "nominal_2sigma_fp_rate": 0.11075,
+      "median_noise_peak_sigma": 0.5440052169021452,
+      "calibrated_5pct_threshold_sigma": 2.5606309116891213
+    },
+    "quarterly_stacked5": {
+      "nominal_2sigma_fp_rate": 0.256,
+      "median_noise_peak_sigma": 1.4268389237567956,
+      "calibrated_5pct_threshold_sigma": 3.0078809473694257
+    },
+    "gps_daily": {
+      "nominal_2sigma_fp_rate": 0.99175,
+      "median_noise_peak_sigma": 3.206371879800626,
+      "calibrated_5pct_threshold_sigma": 4.777727928289781
+    }
+  },
+  "observed_peak_sigma": 0.56,
+  "noise_max_context": "the observed +0.56 sigma peak is BELOW the median noise maximum of the quarterly detector (1.42 sigma over 8 post bins) - the null is cleaner than nominal",
+  "aliasing_attenuation": {
+    "tau_0.05": {
+      "quarterly": 0.31799344911571603,
+      "annual": 0.09188778425923952
+    },
+    "tau_0.1": {
+      "quarterly": 0.3839244507640781,
+      "annual": 0.14793992768198527
+    },
+    "tau_0.25": {
+      "quarterly": 0.5189915691560251,
+      "annual": 0.26517585726214477
+    },
+    "tau_0.5": {
+      "quarterly": 0.7298863314248721,
+      "annual": 0.3523407433183388
+    },
+    "tau_1.0": {
+      "quarterly": 0.862823911951364,
+      "annual": 0.42382705713337215
+    }
+  },
+  "a95_fraction_of_trunk_speed": {
+    "quarterly_per_lake": {
+      "sustained": 0.07498942093324558,
+      "transient_tau_0.05": 0.4216965034285822,
+      "transient_tau_0.1": 0.31622776601683794,
+      "transient_tau_0.25": 0.23713737056616552,
+      "transient_tau_0.5": 0.1778279410038923,
+      "transient_tau_1.0": 0.1333521432163324
+    },
+    "annual_per_lake": {
+      "sustained": 0.056234132519034905,
+      "transient_tau_0.05": 0.5623413251903491,
+      "transient_tau_0.1": 0.31622776601683794,
+      "transient_tau_0.25": 0.1778279410038923,
+      "transient_tau_0.5": 0.1333521432163324,
+      "transient_tau_1.0": 0.1
+    },
+    "quarterly_stacked5": {
+      "sustained": 0.03162277660168379,
+      "transient_tau_0.05": 0.1778279410038923,
+      "transient_tau_0.1": 0.1333521432163324,
+      "transient_tau_0.25": 0.1,
+      "transient_tau_0.5": 0.07498942093324558,
+      "transient_tau_1.0": 0.056234132519034905
+    },
+    "gps_daily": {
+      "sustained": 0.01778279410038923,
+      "transient_tau_0.05": 0.03162277660168379,
+      "transient_tau_0.1": 0.023713737056616554,
+      "transient_tau_0.25": 0.023713737056616554,
+      "transient_tau_0.5": 0.023713737056616554,
+      "transient_tau_1.0": 0.023713737056616554
+    }
+  },
+  "routes_verdict": {
+    "per_lake_quarterly_sustained": 0.07498942093324558,
+    "per_lake_quarterly_tau01": 0.31622776601683794,
+    "annual_tau01": 0.31622776601683794,
+    "stacked5_sustained": 0.03162277660168379,
+    "gps_daily_tau01": 0.023713737056616554,
+    "which_route_first": "sub-annual GPS: a tau=0.1 yr transient needs only 2.4% peak amplitude at 95% power vs 31.6% for the quarterly ITS_LIVE detector (aliasing x noise); stacking the 5 lakes only reaches 3.2% for a sustained step - so the GPS route crosses first for the physically expected sub-annual transient, the trunk route for sustained responses"
+  }
+}

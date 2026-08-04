@@ -1,0 +1,134 @@
+{
+  "what": "\u00a7I s_N/early-warning framework applied to real CryoSat-2 + ITS_LIVE lake data",
+  "scope": "3 open-velocity MacAyeal lakes (Mac1/2/3); full 131-lake/ATL15 population gated",
+  "sources": {
+    "cs2_elevation": "mrsiegfried/Siegfried2021-GRL data/cs2/proc_out/<lake>/<lake>_elevs.dat (CryoSat-2 monthly in-lake mean elevation, 2010.6-2020.5)",
+    "lake_outlines": "Siegfried & Fricker (2018) outlines (same repo), EPSG:3031",
+    "velocity": "ITS_LIVE datacubes (anon S3), box-mean surface speed at lake centroid",
+    "drainage_dates_note": "The vetted full 131-lake volume-change catalogue remains USAP-DC-gated; these 5 marquee lakes have OPEN CS2 series."
+  },
+  "lag_band_yr": [
+    0.02,
+    2.0
+  ],
+  "lakes": {
+    "Mac1": {
+      "has_velocity": true,
+      "v_med_m_yr": 421.8,
+      "noise_floor_frac": 0.0097,
+      "realistic_noise_frac": 0.009735700906627093,
+      "ews": {
+        "trend_slope_m_yr2": 0.039285714285695966,
+        "resid_std_m_yr": 4.108587478857967,
+        "resid_std_frac": 0.009735700906627093,
+        "var_ratio_2nd_over_1st": 1.1170440929522136,
+        "lag1_autocorr": -0.21964689050881397,
+        "joint_csd_signature": false,
+        "n": 8
+      },
+      "events": [
+        {
+          "drop_m": 6.43,
+          "t_trough": 2012.708,
+          "resolved": false,
+          "pre_n": 0,
+          "post_n": 2
+        },
+        {
+          "drop_m": 4.24,
+          "t_trough": 2015.958,
+          "resolved": true,
+          "pre_n": 2,
+          "post_n": 2,
+          "dv_over_v": 0.011132164850781457,
+          "two_sigma": 0.019471401813254186,
+          "surge_detection": false
+        },
+        {
+          "drop_m": 6.05,
+          "t_trough": 2020.292,
+          "resolved": true,
+          "pre_n": 7,
+          "post_n": 1,
+          "dv_over_v": -0.008960573476702358,
+          "two_sigma": 0.020815804121544584,
+          "surge_detection": false
+        }
+      ]
+    },
+    "Mac2": {
+      "has_velocity": true,
+      "v_med_m_yr": 402.0,
+      "noise_floor_frac": 0.0105,
+      "realistic_noise_frac": 0.010490329622883526,
+      "ews": {
+        "trend_slope_m_yr2": -0.008333333333347254,
+        "resid_std_m_yr": 4.213309763910882,
+        "resid_std_frac": 0.010490329622883526,
+        "var_ratio_2nd_over_1st": 0.36275409429298755,
+        "lag1_autocorr": 0.04829949348277503,
+        "joint_csd_signature": false,
+        "n": 8
+      },
+      "events": [
+        {
+          "drop_m": 1.48,
+          "t_trough": 2014.958,
+          "resolved": true,
+          "pre_n": 1,
+          "post_n": 2,
+          "dv_over_v": -0.019653893695921004,
+          "two_sigma": 0.02569595480966772,
+          "surge_detection": false
+        }
+      ]
+    },
+    "Mac3": {
+      "has_velocity": true,
+      "v_med_m_yr": 394.1,
+      "noise_floor_frac": 0.0105,
+      "realistic_noise_frac": 0.007999451072076206,
+      "ews": {
+        "trend_slope_m_yr2": -1.1750000000000245,
+        "resid_std_m_yr": 3.145284168401963,
+        "resid_std_frac": 0.007999451072076206,
+        "var_ratio_2nd_over_1st": 3.2603554317170254,
+        "lag1_autocorr": -0.17035621174182353,
+        "joint_csd_signature": false,
+        "n": 8
+      },
+      "events": [
+        {
+          "drop_m": 3.11,
+          "t_trough": 2012.625,
+          "resolved": false,
+          "pre_n": 0,
+          "post_n": 2
+        }
+      ]
+    },
+    "Mercer": {
+      "has_velocity": false,
+      "n_drainage": 1,
+      "note": "open drainage, no ITS_LIVE velocity coverage"
+    },
+    "Conway": {
+      "has_velocity": false,
+      "n_drainage": 1,
+      "note": "open drainage, no ITS_LIVE velocity coverage"
+    }
+  },
+  "summary": {
+    "n_velocity_lakes": 3,
+    "n_resolved_events": 3,
+    "max_abs_dv_over_v": 0.019653893695921004,
+    "n_surge_detections": 0,
+    "n_lakes_with_joint_csd": 0,
+    "any_universal_surge": false,
+    "any_csd_precursor": false
+  },
+  "interpretation": "Master curve (\u00a7I.1): small mixed-sign responses bound |s_N|\u00b7(\u0394N/N) at the ~1-2%% level -> these trunk lakes sit far from the N_c flotation pole. EWS (\u00a7I.3/\u00a7I.6): no lake shows the joint rising-variance + high-AC1 CSD signature -> the early-warning returns a true negative on stable ice (no false ungrounding alarm). Both \u00a7I probes agree: far from ungrounding.",
+  "honest_limits": "n=8 annual velocity points per lake is statistically weak for a CSD trend; post-event sample counts are small (1-7). A strong test needs the dense quarterly series and a lake actually approaching flotation. The full 131-lake volume-change catalogue (and an ATL15 re-download, ~7.6 GB) remains USAP-DC/ATL15-gated and would mostly reproduce the existing 1/19 detection.",
+  "verdict": "REAL DATA (no new download): across 3 resolved drainage events at 3 open-velocity MacAyeal lakes, |\u0394v/v|\u22642.0%% (mixed sign, near the ~1%% noise floor) \u2014 no clean universal post-drainage surge; and 0 lakes show the \u00a7I joint CSD signature. Via the \u00a7I master curve the bounded response places these trunk lakes far from the N_c fold, and the \u00a7I early-warning correctly does NOT false-alarm on them. A genuinely-new cross-framework check on real CryoSat-2/ITS_LIVE data; the full ATL15 population extension stays gated.",
+  "references": "this repo \u00a7I (sn_master_curve, spatial_ews), \u00a7H.2 (lake_lag_atl15_itslive); ITS_LIVE (Gardner 2022); CryoSat-2; Siegfried & Fricker 2018"
+}

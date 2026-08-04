@@ -1,0 +1,35 @@
+{
+  "what": "real-Bedmap2 reordering of RTN by a hydraulic-routing connectivity phi(x,y)",
+  "stride_km": 10.0,
+  "n_grounded": 119738,
+  "phi_const": 0.9,
+  "phi_map": {
+    "PHI_LO": 0.8,
+    "PHI_HI": 0.97,
+    "source": "Shreve hydraulic-potential D8 flow accumulation"
+  },
+  "anchor_constant_phi": {
+    "spearman_rtn_flotfrac": -0.9999999999793653,
+    "rtn_gt1_cells": 1541,
+    "flotthresh_cells": 1541,
+    "disagree_cells": 0,
+    "note": "reproduces committed baseline: Spearman -1, identical to thickness-above-flotation"
+  },
+  "variable_phi_routed": {
+    "spearman_rtn_flotfrac_global": -0.9998192947464748,
+    "spearman_rtn_flotfrac_nearflot_band": -0.9880462529916011,
+    "spearman_rtn_flotfrac_nearflot_band_constphi": -0.9999999979833801,
+    "n_nearflot_band": 21021,
+    "spearman_phiRouted_vs_flotfrac_band": -0.027519775467937883,
+    "degeneracy_broken_global": false,
+    "degeneracy_broken_in_band": true,
+    "rtn_gt1_cells": 845,
+    "n_classification_changed": 974,
+    "newly_flagged_by_phiRTN": 139,
+    "dropped_vs_flotation": 835,
+    "median_distGL_changed_km": 10.0,
+    "median_distGL_all_grounded_km": 233.45235059857504,
+    "frac_changed_within_10km_of_GL": 0.5102669404517454
+  },
+  "verdict": "constant-phi: Spearman(RTN, H_af/H)=-1.0000, 0 disagreeing cells (identical to thickness-above-flotation, as committed). hydraulic-routing phi(x,y): the GLOBAL Spearman stays -0.9998 (the continent is dominated by inland f=0 cells where RTN=0 for any phi), but in the near-flotation band it moves to -0.9880 (vs -1.0000 at constant phi); there phi_routed is nearly independent of the flotation fraction (Spearman -0.028), so it genuinely reorders the flotation signal -- the intrusion class CHANGES on 974 cells (139 newly flagged, 835 dropped), concentrated at the grounding line (median 10 vs 233 km). A geometry-only connectivity field already turns RTN into a different screen from plain flotation in the band that matters; whether the reordering is *correct* is the open test, needing a radar bed-specularity / basal-water phi (--specularity-npy) or a gridded intrusion survey to score against."
+}

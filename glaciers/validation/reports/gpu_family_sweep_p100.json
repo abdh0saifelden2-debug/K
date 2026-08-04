@@ -1,0 +1,139 @@
+{
+  "backend": "cupy",
+  "smoke": false,
+  "n_pass": 13,
+  "n_total": 13,
+  "cases": [
+    {
+      "case": "scallop_probe",
+      "pass": true,
+      "returncode": 0,
+      "elapsed_s": 12.4,
+      "timed_out": false,
+      "implicit_conversion": false,
+      "stderr_tail": "",
+      "stdout_tail": "021668617135753103, \"corr_excess_slope\": -0.13630231050807504, \"m_cond_mean\": 0.00029386199473147614, \"m_flow_mean\": 0.0002936322765058495, \"umax\": 0.04368608598385422, \"umean\": 0.013789545227317975}"
+    },
+    {
+      "case": "scallop_doublediff",
+      "pass": true,
+      "returncode": 0,
+      "elapsed_s": 10.6,
+      "timed_out": false,
+      "implicit_conversion": false,
+      "stderr_tail": "",
+      "stdout_tail": ")\nlocal Turner gamma(x): range=0.037  frac_enhanced=0.90  frac_suppressed=0.10   -> BOTH regimes in one geometry: True\nwrote figures/50_scallop_doublediff.png\nwrote figures/50_scallop_doublediff.json"
+    },
+    {
+      "case": "scallop_channel_feedback",
+      "pass": true,
+      "returncode": 0,
+      "elapsed_s": 7.6,
+      "timed_out": false,
+      "implicit_conversion": false,
+      "stderr_tail": "",
+      "stdout_tail": "(scallop)=1.000 @ 4.71 rad  vs  R(noise)=0.571\nPREFERRED NUCLEATION SITE (phase-locked, beats noise): True\nwrote figures/49_scallop_channel_feedback.json\nwrote figures/49_scallop_channel_feedback.png"
+    },
+    {
+      "case": "scallop_amplitude_band",
+      "pass": true,
+      "returncode": 0,
+      "elapsed_s": 11.6,
+      "timed_out": false,
+      "implicit_conversion": false,
+      "stderr_tail": "",
+      "stdout_tail": "69\n\n--> a_crit (separation onset, rev_frac>0.005) = 0.1\n--> ke_cv_detr floor (small a) = 1.452e-02; shedding flagged if ke_cv_detr>4.355e-02\n--> a_shed (suggestive; solver has no laminar mode) = None"
+    },
+    {
+      "case": "scallop_amplitude_closure",
+      "pass": true,
+      "returncode": 0,
+      "elapsed_s": 27.9,
+      "timed_out": false,
+      "implicit_conversion": false,
+      "stderr_tail": "",
+      "stdout_tail": "); pinned p=2: \u03b6=4.75 (R\u00b2=0.878); pinned p=1: \u03b6=1.20 (R\u00b2=0.961)\n  VERDICT: exponent p\u22481.13 in [0.5,1.5) \u2014 the \u00a7G.6 quadratic (a/\u03bb)^2 ansatz is NOT supported; roll-off is closer to linear (\u03b6_lin\u22481.20)"
+    },
+    {
+      "case": "scallop_g1_populations",
+      "pass": true,
+      "returncode": 0,
+      "elapsed_s": 5.3,
+      "timed_out": false,
+      "implicit_conversion": false,
+      "stderr_tail": "",
+      "stdout_tail": "hickened+reversed deficit. 'top10%' is the share of <1/\u03b4_T> carried by the top conductance decile (the thin-sublayer fat tail); 'pred1+CV\u00b2' is the falsified two-moment truncation, shown for contrast."
+    },
+    {
+      "case": "scallop_shedding_det",
+      "pass": true,
+      "returncode": 0,
+      "elapsed_s": 56.2,
+      "timed_out": false,
+      "implicit_conversion": false,
+      "stderr_tail": "",
+      "stdout_tail": "iodic box does not equilibrate); a_shed is NOT testable here -> confirms \u00a7D.5 [NULL], needs a constant-flux / inflow-outflow DNS.\nwrote figures/51_shedding_deterministic.json\nwrote REPORT_SHEDDING.md"
+    },
+    {
+      "case": "scallop_sweep",
+      "pass": true,
+      "returncode": 0,
+      "elapsed_s": 59.7,
+      "timed_out": false,
+      "implicit_conversion": false,
+      "stderr_tail": "",
+      "stdout_tail": "===\n  none         R_mean=1.0010 Nu_bump=2.9491e-04\n  smagorinsky  R_mean=1.0010 Nu_bump=2.9491e-04\n  backscatter  R_mean=1.0010 Nu_bump=2.9491e-04\nWROTE /kaggle/working/_src/K/scallop_sweep_gpu.json"
+    },
+    {
+      "case": "scallop3d_probe",
+      "pass": true,
+      "returncode": 0,
+      "elapsed_s": 8.2,
+      "timed_out": false,
+      "implicit_conversion": false,
+      "stderr_tail": "",
+      "stdout_tail": "7 umax=0.886 (4s)\n[ridge] a/lam=0.10 a=0.209  Nu=2.395838e-06  Nu/Nu_flat=1.1179  ti=0.035 div=6.95e-07 umax=1.123 (3s)\nWROTE /tmp/s3d.json\nVERDICT max Nu/Nu_flat=1.1179 -> GATE PASS (channelization)"
+    },
+    {
+      "case": "subglacial.slip_gate",
+      "pass": true,
+      "returncode": 0,
+      "elapsed_s": 14.8,
+      "timed_out": false,
+      "implicit_conversion": false,
+      "stderr_tail": "",
+      "stdout_tail": "e+00\n\nbaseline(no-slip) flat_melt=+2.575002e-06  ridge_melt=+2.129683e-06\nGate: if ridge/ridge(noslip) stays ~1 while u_tang grows, the bed stagnant layer is NOT the bottleneck (thermal sublayer is)."
+    },
+    {
+      "case": "subglacial.wall_flux_gate",
+      "pass": true,
+      "returncode": 0,
+      "elapsed_s": 7.3,
+      "timed_out": false,
+      "implicit_conversion": false,
+      "stderr_tail": "",
+      "stdout_tail": "00)\n[wall_flux] geometry gate (ridge ON / flat ON)   = 1.0095\n\n[melt_flux] channelization delta (ridge ON-OFF) = -5.508854e-08 (ratio 0.9838)\n[melt_flux] geometry gate (ridge ON / flat ON)   = 0.8610"
+    },
+    {
+      "case": "candidate4_anchor",
+      "pass": true,
+      "returncode": 0,
+      "elapsed_s": 1.8,
+      "timed_out": false,
+      "implicit_conversion": false,
+      "stderr_tail": "",
+      "stdout_tail": "candidate4 0.9464285714285715 0.00021407621969251066 0.03317266214822841"
+    },
+    {
+      "case": "scallop_battery",
+      "pass": true,
+      "returncode": 0,
+      "elapsed_s": 31.6,
+      "timed_out": false,
+      "implicit_conversion": false,
+      "stderr_tail": "",
+      "stdout_tail": "R_max=1.003 | BUMP(none) R_mean=0.9992 R_max=1.005 corr_slope=-0.550\n[U1.5_Ri1.0] (8s) umean=0.138 umax=0.248 | FLAT R_mean=0.9996 R_max=1.003 | BUMP(none) R_mean=0.9992 R_max=1.007 corr_slope=-0.761"
+    }
+  ],
+  "device": "cupy 14.0.1 on Tesla P100-PCIE-16GB"
+}

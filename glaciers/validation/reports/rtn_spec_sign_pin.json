@@ -1,0 +1,341 @@
+{
+  "inputs": {
+    "spec_dataset": "USAP-DC 601371 (Young et al. 2020) ICECAP IRSPC2",
+    "lake_dataset": "USAP-DC 601470 (Stubblefield et al. 2021; Siegfried & Fricker 2018 outlines)",
+    "n_profiles": 432,
+    "n_points": 3196371,
+    "stride_km": 5.0,
+    "min_pts_per_cell": 3,
+    "seed": 0,
+    "PHI_LO": 0.8,
+    "PHI_HI": 0.97
+  },
+  "coverage": {
+    "n_covered_grounded": 14126,
+    "n_lake_cells_covered": 74,
+    "n_ctrl_cells": 13410
+  },
+  "line1_lake_anchor": {
+    "n_lake": 74,
+    "n_ctrl": 13410,
+    "median_spec_lake": 0.10809621523027788,
+    "median_spec_ctrl": 0.04964878015350871,
+    "lake_median_percentile_in_ctrl": 74.16107382550335,
+    "prob_lake_gt_ctrl": 0.692193703770885,
+    "mw_p_onesided_iid": 5.597042532551624e-09,
+    "p_perm_stratified": 0.0004997501249375312,
+    "n_perm": 2000,
+    "n_strata": 10,
+    "n_lakes_total": 131,
+    "n_lakes_covered": 15,
+    "median_dist_km_lake_cells": 208.05209099983153,
+    "median_dist_km_ctrl_cells": 212.33815531519565,
+    "per_covered_lake": [
+      {
+        "lake_index": 6,
+        "x": 512732.7186372204,
+        "y": -830080.0888924645,
+        "eqdiam_km": 23.0217706219,
+        "n_cells": 4,
+        "mean_spec": 0.09266664498334301,
+        "percentile_in_ctrl": 69.79865771812081,
+        "H_bedmap2": 2189.5,
+        "H_bedmachine_catalog": 2355.79144937
+      },
+      {
+        "lake_index": 7,
+        "x": 554041.5121571978,
+        "y": -849114.3444085945,
+        "eqdiam_km": 30.3857153687,
+        "n_cells": 4,
+        "mean_spec": 0.07395539582600602,
+        "percentile_in_ctrl": 63.32587621178225,
+        "H_bedmap2": 2020.75,
+        "H_bedmachine_catalog": 2309.3274991
+      },
+      {
+        "lake_index": 8,
+        "x": 490847.5605628638,
+        "y": -930741.3255514288,
+        "eqdiam_km": 14.7926994727,
+        "n_cells": 4,
+        "mean_spec": 0.07272534911893726,
+        "percentile_in_ctrl": 62.759134973900075,
+        "H_bedmap2": 1647.5,
+        "H_bedmachine_catalog": 1725.27716859
+      },
+      {
+        "lake_index": 9,
+        "x": 582918.3272032897,
+        "y": -671229.5365665522,
+        "eqdiam_km": 14.0117859045,
+        "n_cells": 3,
+        "mean_spec": 0.2946782024873627,
+        "percentile_in_ctrl": 92.9082774049217,
+        "H_bedmap2": 2804.6666666666665,
+        "H_bedmachine_catalog": 2823.7857515
+      },
+      {
+        "lake_index": 10,
+        "x": 614530.3724080299,
+        "y": -696379.1872493979,
+        "eqdiam_km": 14.3002503407,
+        "n_cells": 3,
+        "mean_spec": 0.16904245283018882,
+        "percentile_in_ctrl": 84.11633109619687,
+        "H_bedmap2": 2853.3333333333335,
+        "H_bedmachine_catalog": 3003.21621322
+      },
+      {
+        "lake_index": 11,
+        "x": 659639.6539476314,
+        "y": -738811.585742342,
+        "eqdiam_km": 17.9645457945,
+        "n_cells": 4,
+        "mean_spec": 0.13830401779404497,
+        "percentile_in_ctrl": 80.0,
+        "H_bedmap2": 2772.25,
+        "H_bedmachine_catalog": 2896.06262329
+      },
+      {
+        "lake_index": 15,
+        "x": 509965.7155966387,
+        "y": -866933.1644936509,
+        "eqdiam_km": 11.8407583015,
+        "n_cells": 2,
+        "mean_spec": 0.0629448839153643,
+        "percentile_in_ctrl": 57.956748695003725,
+        "H_bedmap2": 1755.5,
+        "H_bedmachine_catalog": 1702.31524594
+      },
+      {
+        "lake_index": 16,
+        "x": 451200.3362415465,
+        "y": -769348.0120350652,
+        "eqdiam_km": 9.6363934321,
+        "n_cells": 1,
+        "mean_spec": 0.12187499999999996,
+        "percentile_in_ctrl": 77.19612229679343,
+        "H_bedmap2": 1185.0,
+        "H_bedmachine_catalog": 1788.12340199
+      },
+      {
+        "lake_index": 18,
+        "x": 612373.7564574173,
+        "y": -823352.7490070895,
+        "eqdiam_km": 10.249059054,
+        "n_cells": 2,
+        "mean_spec": 0.08221343873517784,
+        "percentile_in_ctrl": 66.4131245339299,
+        "H_bedmap2": 2755.0,
+        "H_bedmachine_catalog": 2805.71607754
+      },
+      {
+        "lake_index": 20,
+        "x": 641976.2611172539,
+        "y": -875191.4850847927,
+        "eqdiam_km": 14.044909325,
+        "n_cells": 1,
+        "mean_spec": 0.0,
+        "percentile_in_ctrl": 4.668158090976883,
+        "H_bedmap2": 2556.0,
+        "H_bedmachine_catalog": 2580.54370632
+      },
+      {
+        "lake_index": 25,
+        "x": 622751.529451081,
+        "y": -1483292.865294233,
+        "eqdiam_km": 34.9600932197,
+        "n_cells": 8,
+        "mean_spec": 0.03434909303027474,
+        "percentile_in_ctrl": 38.03131991051455,
+        "H_bedmap2": 1875.0,
+        "H_bedmachine_catalog": 2049.28784616
+      },
+      {
+        "lake_index": 26,
+        "x": 663831.3301929742,
+        "y": -1457957.1223175393,
+        "eqdiam_km": 15.6725786919,
+        "n_cells": 4,
+        "mean_spec": 0.039110942946248256,
+        "percentile_in_ctrl": 42.281879194630875,
+        "H_bedmap2": 2018.0,
+        "H_bedmachine_catalog": 2072.5159167
+      },
+      {
+        "lake_index": 94,
+        "x": 388090.8383627435,
+        "y": -480566.2389727125,
+        "eqdiam_km": 40.019612227,
+        "n_cells": 9,
+        "mean_spec": 0.3853200032784443,
+        "percentile_in_ctrl": 96.60700969425801,
+        "H_bedmap2": 2804.222222222222,
+        "H_bedmachine_catalog": 2683.60588126
+      },
+      {
+        "lake_index": 122,
+        "x": 2083616.6183627509,
+        "y": -656753.3371233962,
+        "eqdiam_km": 26.7979690107,
+        "n_cells": 3,
+        "mean_spec": 0.11698097165991901,
+        "percentile_in_ctrl": 76.15958240119313,
+        "H_bedmap2": 4123.0,
+        "H_bedmachine_catalog": 3508.45057116
+      },
+      {
+        "lake_index": 123,
+        "x": 1968966.5132267177,
+        "y": -738479.2369112949,
+        "eqdiam_km": 30.063530421,
+        "n_cells": 22,
+        "mean_spec": 0.22933799222667958,
+        "percentile_in_ctrl": 89.07531692766592,
+        "H_bedmap2": 3885.8636363636365,
+        "H_bedmachine_catalog": 3912.57248518
+      }
+    ],
+    "frac_covered_lakes_above_ctrl_median": 0.8
+  },
+  "line1b_lake_anchor_far_from_gl": {
+    "n_lake": 70,
+    "n_ctrl": 10400,
+    "median_spec_lake": 0.1175375,
+    "median_spec_ctrl": 0.05851790218609866,
+    "lake_median_percentile_in_ctrl": 72.0673076923077,
+    "prob_lake_gt_ctrl": 0.6644581043956044,
+    "mw_p_onesided_iid": 1.0154344483567788e-06,
+    "p_perm_stratified": 0.0004997501249375312,
+    "n_perm": 2000,
+    "n_strata": 10
+  },
+  "line2_creep_floor": {
+    "t_obs_yr": 4.0,
+    "glen_A": 2.4e-24,
+    "glen_n": 3.0,
+    "N_max_Pa": 354529.89016439766,
+    "N_max_bar": 3.5452989016439767,
+    "spec_thresh": 0.2,
+    "n_cells_seen_both_epochs": 259,
+    "n_persistent_specular": 7,
+    "median_phi_floor_persistent": 0.9898373560952022,
+    "p10_phi_floor_persistent": 0.9811337489290728,
+    "mean_violation_conn": 0.07039243270966335,
+    "mean_violation_pres": 0.13431683083581938,
+    "required_floor_p10": 0.9811337489290728,
+    "claimed_range_both_conventions": 0.16999999999999993,
+    "max_admissible_range_decreasing_map": 0.01886625107092721,
+    "max_admissible_range_increasing_map": 1.0,
+    "decreasing_map_inadmissible": true,
+    "per_persistent_cell": [
+      {
+        "spec": 0.37840789473684305,
+        "phi_floor": 0.9898687061535203,
+        "phi_conn": 0.9056706578947367,
+        "phi_pres": 0.8643293421052634,
+        "H_m": 3890.0
+      },
+      {
+        "spec": 0.27940559440559504,
+        "phi_floor": 0.9900099535962469,
+        "phi_conn": 0.9225010489510488,
+        "phi_pres": 0.8474989510489512,
+        "H_m": 3945.0
+      },
+      {
+        "spec": 0.4041922290388559,
+        "phi_floor": 0.989858277647245,
+        "phi_conn": 0.9012873210633945,
+        "phi_pres": 0.8687126789366055,
+        "H_m": 3886.0
+      },
+      {
+        "spec": 0.27635036496350385,
+        "phi_floor": 0.9898373560952022,
+        "phi_conn": 0.9230204379562044,
+        "phi_pres": 0.8469795620437957,
+        "H_m": 3878.0
+      },
+      {
+        "spec": 0.3087962962962965,
+        "phi_floor": 0.9898137159310401,
+        "phi_conn": 0.9175046296296296,
+        "phi_pres": 0.8524953703703704,
+        "H_m": 3869.0
+      },
+      {
+        "spec": 0.26068965517241377,
+        "phi_floor": 0.9806144943124417,
+        "phi_conn": 0.9256827586206896,
+        "phi_pres": 0.8443172413793104,
+        "H_m": 2033.0
+      },
+      {
+        "spec": 0.27606741573033716,
+        "phi_floor": 0.9814799186734935,
+        "phi_conn": 0.9230685393258427,
+        "phi_pres": 0.8469314606741574,
+        "H_m": 2128.0
+      }
+    ],
+    "thresh_sensitivity": [
+      {
+        "spec_thresh": 0.1,
+        "n_persistent": 14,
+        "median_phi_floor": 0.9896082920791519,
+        "mean_violation_conn": 0.062008260345551236,
+        "mean_violation_pres": 0.143928740658346
+      },
+      {
+        "spec_thresh": 0.15,
+        "n_persistent": 9,
+        "median_phi_floor": 0.9898373560952022,
+        "mean_violation_conn": 0.07037719810751157,
+        "mean_violation_pres": 0.13516534520974816
+      },
+      {
+        "spec_thresh": 0.2,
+        "n_persistent": 7,
+        "median_phi_floor": 0.9898373560952022,
+        "mean_violation_conn": 0.07039243270966335,
+        "mean_violation_pres": 0.13431683083581938
+      },
+      {
+        "spec_thresh": 0.3,
+        "n_persistent": 2,
+        "median_phi_floor": 0.9898634919003826,
+        "mean_violation_conn": 0.08638450242131707,
+        "mean_violation_pres": 0.1233424813794482
+      }
+    ],
+    "note": "floor conservative for sheets (Walder 1986; a wide thin sheet sags ~w/h faster, sharpening N_max by (2h/(w n^n))^(1/n) to ~0.1 bar); assumes melt-opening << closure (quiescent distributed water); R-channels evade the bound but are low-specularity objects at the 1-km footprint (Schroeder 2013, 2015). The floor constrains only the persistent high-spec cells, so it is an ORIENTATION constraint: an increasing map keeps a free low end, while a decreasing map is squeezed entirely above the floor (max range 1-floor ~0.02) - the connectivity convention's claimed 0.17 range is inadmissible. Both conventions' absolute values also sit below the floor at PHI_HI=0.97: that is a top-of-scale calibration note (PHI_HI should be >=0.98 for persistent cells), not a sign discriminator."
+  },
+  "line3_lubrication": {
+    "n": 14115,
+    "rho_partial": 0.15242086001649807,
+    "rho_plain": -0.21531954098653408,
+    "rho_partial_ci95": [
+      0.10649785297515411,
+      0.20587742037415835
+    ],
+    "n_blocks": 805,
+    "n_boot": 500,
+    "skipped": false,
+    "velocity_product": "NSIDC-0754 phase-based 450m (Mouginot 2019)",
+    "controls": [
+      "log10 tau_d (3-cell-smoothed Bedmap2 surface)",
+      "H",
+      "flotation fraction"
+    ],
+    "scope": "consistency evidence, not proof: sliding and hydrology are mutually causal; sign is the claim"
+  },
+  "verdict": {
+    "lake_anchor_supports_pressure": true,
+    "creep_floor_supports_pressure": true,
+    "lubrication_supports_pressure": true,
+    "pinned_convention": "pressure_highspec_highphi",
+    "remaining_gold_standard": "co-located borehole p_w / gridded intrusion survey (unchanged)"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "inputs": {
+    "spec_dataset": "USAP-DC 601371 (Young et al. 2020) ICECAP IRSPC2",
+    "n_profiles": 432,
+    "n_points": 3196371,
+    "stride_km": 5.0,
+    "min_pts_per_cell": 3,
+    "phi_const": 0.9,
+    "PHI_LO": 0.8,
+    "PHI_HI": 0.97
+  },
+  "coverage": {
+    "n_grounded": 478767,
+    "n_covered_grounded": 14126,
+    "covered_frac_of_grounded": 0.02950495752631238,
+    "n_nearflot_band_covered": 2392,
+    "median_dist_km_covered": 210.05951537600004,
+    "spec_mean_covered": 0.09336583142733358,
+    "spec_p10_p90": [
+      0.0043887978405475776,
+      0.2494458049203181
+    ]
+  },
+  "anchor_const_phi": {
+    "spearman_rtn_flotfrac_coverage": -0.9999999997604145
+  },
+  "conventions": {
+    "pressure_highspec_highphi": {
+      "spearman_rtn_flotfrac_coverage": -0.9998092203980758,
+      "spearman_rtn_flotfrac_band": -0.9955878025828345,
+      "spearman_phiSpec_vs_flotfrac_band": 0.16761117903974732,
+      "degeneracy_broken": false,
+      "n_rtn_gt1_specphi": 350,
+      "n_rtn_gt1_constphi_coverage": 188,
+      "n_classification_changed": 162,
+      "newly_flagged": 162,
+      "newly_dropped": 0,
+      "median_dist_km_changed": 10.0
+    },
+    "connectivity_highspec_lowphi": {
+      "spearman_rtn_flotfrac_coverage": -0.9998463287090238,
+      "spearman_rtn_flotfrac_band": -0.9961037207190985,
+      "spearman_phiSpec_vs_flotfrac_band": -0.16761117903974732,
+      "degeneracy_broken": false,
+      "n_rtn_gt1_specphi": 99,
+      "n_rtn_gt1_constphi_coverage": 188,
+      "n_classification_changed": 89,
+      "newly_flagged": 0,
+      "newly_dropped": 89,
+      "median_dist_km_changed": 5.0
+    }
+  },
+  "routing_vs_radar": {
+    "spearman_spec_vs_phiRouted_coverage": 0.03839015938894565,
+    "spearman_spec_vs_logflux_coverage": -0.03818686590043053,
+    "spearman_spec_vs_logflux_band": 0.01673808053846632,
+    "note": "routing phi is DEcreasing in flux; a negative spec-vs-phiRouted Spearman = specular (wet) cells sit on high-flux routed axes"
+  },
+  "routed_phi_same_coverage": {
+    "spearman_rtn_flotfrac_coverage": -0.9993938087197862,
+    "spearman_rtn_flotfrac_band": -0.9827584565816987,
+    "spearman_phiRouted_vs_flotfrac_band": -0.07939613074111364,
+    "n_classification_changed": 96
+  }
+}

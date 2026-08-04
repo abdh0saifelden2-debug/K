@@ -1,0 +1,85 @@
+{
+  "what": "local lee-flux law R_max(a/\u03bb) for \u00a7G.6 unified melt rate (growth term)",
+  "source": "59_scallop_amplitude_closure.json",
+  "a_over_lam": [
+    0.05,
+    0.075,
+    0.1,
+    0.125,
+    0.15,
+    0.2,
+    0.25,
+    0.3
+  ],
+  "R_max": [
+    1.9217276421009009,
+    2.118575048622343,
+    2.1226298694831724,
+    2.218254923299801,
+    2.597173018319173,
+    2.807903569690255,
+    3.6174337830445666,
+    4.2883547060365474
+  ],
+  "R_mean": [
+    0.9998305341507178,
+    1.0631154003286722,
+    1.1247086206171006,
+    1.1932500937302084,
+    1.23606560218108,
+    1.233811054738507,
+    1.242461305652184,
+    1.2836367965369635
+  ],
+  "R_min": [
+    0.20239915929493127,
+    0.13642349947031754,
+    0.055008323098541784,
+    -0.12987127017380948,
+    -0.33672239874713805,
+    -0.3378635956545943,
+    -0.4392079105840717,
+    -0.3073550294628092
+  ],
+  "Nu_ratio": [
+    0.8946967425955176,
+    0.8670767111752387,
+    0.9373245154409081,
+    0.9504639322222749,
+    0.8878842912405641,
+    0.8968366629642458,
+    0.8985532843826228,
+    0.8931457715706816
+  ],
+  "R_max_range": [
+    1.9217276421009009,
+    4.2883547060365474
+  ],
+  "fits": {
+    "linear": {
+      "slope": 9.303629001680509,
+      "intercept": 1.2578145385620163,
+      "r2": 0.9449442153735783
+    },
+    "free_power": {
+      "coef": 6.279928054117909,
+      "exponent": 0.6935787751752699,
+      "r2": 0.8873015823330113
+    },
+    "slope_proportional": {
+      "coef_b": 1.686911801662834,
+      "r2": 0.9216073183851423
+    },
+    "quadratic_G6": {
+      "zeta": 41.85384789925582,
+      "r2": 0.3997374044965506
+    }
+  },
+  "separation_onset_a_over_lam": 0.10743839843609829,
+  "R_mean_saturation": 1.2836367965369635,
+  "Nu_ratio_mean": 0.9032477389490068,
+  "Nu_ratio_std": 0.0254295189236513,
+  "verdict": "\u00a7G.6 growth term: the local peak lee flux R_max rises ROUGHLY LINEARLY with a/\u03bb (linear R\u00b2=0.945; free exponent p=0.69, sub-quadratic), from 1.92 to 4.29 over a/\u03bb\u2208[0.05,0.30]. The \u00a7G.6 (a/\u03bb)\u00b2 closure is REJECTED for the local term too (quadratic R\u00b2=0.40); the origin-respecting slope-proportional law R_max\u22481+1.69\u00b7(2\u03c0 a/\u03bb) holds to R\u00b2=0.92. R_mean saturates near 1.28 and R_min turns negative at a/\u03bb\u22480.11 (lee reversal). Honest \u00a7G.6: mean conductance amplitude-flat (C\u22481.11), growth carried by a linear-in-steepness, bounded local lee flux \u2014 not a quadratic ansatz.",
+  "quadratic_rejected": true,
+  "references": "this repo \u00a7G.6, \u00a7G.1 (scallop_amplitude_closure / g1_populations); figures/59 committed sweep; Curl 1966; Werder et al. 2013"
+}

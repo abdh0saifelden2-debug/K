@@ -1,0 +1,81 @@
+{
+  "thesis": "a subglacial lake drainage is an in-situ step experiment whose surge amplitude measures the sliding-law N-sensitivity s_N=d ln u_b/d ln N; ocean thermal forcing measures the same s_N(N) continuously; both grow toward flotation and match the regularized-Coulomb prediction",
+  "probe1_drainage_step": [
+    {
+      "lake": "Thw_142",
+      "N_MPa": 6.671327778000002,
+      "rel": 0.3453512142045124,
+      "du_u": 0.0235,
+      "dN_over_N": 3.047,
+      "s_N": 0.008,
+      "lag_yr": 1.375,
+      "dist_km": 25.0
+    },
+    {
+      "lake": "Thw_170",
+      "N_MPa": 7.225564329000002,
+      "rel": 0.35513905180038235,
+      "du_u": 0.0913,
+      "dN_over_N": 5.0,
+      "s_N": 0.018,
+      "lag_yr": 1.875,
+      "dist_km": 15.0
+    },
+    {
+      "lake": "Rutford_1",
+      "N_MPa": 0.01,
+      "rel": -0.08043839914068901,
+      "du_u": 0.2167,
+      "dN_over_N": 5.0,
+      "s_N": 0.043,
+      "lag_yr": 0.125,
+      "dist_km": 15.0
+    }
+  ],
+  "probe1_logamp_vs_logN_slope": -0.23389537332976687,
+  "probe1_logsN_vs_logN_slope": -0.1939101841096717,
+  "probe1_abs_sN_caveat": "per-event |s_N| absolute value is uncalibrated: dN/N here is a lumped-storage estimate that OVERestimates the true fractional N step (the points sit ~1-2 decades below the RCF curve), so these s_N are lower bounds. Only the SIGN of the N-trend and the directly-measured du/u amplitude are robust; a calibrated s_N needs co-located GPS + a hydrology-constrained dN.",
+  "probe2_ocean_gating": {
+    "terciles": [
+      {
+        "bin": "near flotation",
+        "median_N_proxy": 0.042563881472886034,
+        "TF_slope": 0.6203644812159449,
+        "r": 0.5532766745476168
+      },
+      {
+        "bin": "mid",
+        "median_N_proxy": 0.23189441378302666,
+        "TF_slope": 0.6163562305867271,
+        "r": 0.6326594768416327
+      },
+      {
+        "bin": "well grounded",
+        "median_N_proxy": 1.0,
+        "TF_slope": 0.463938441749289,
+        "r": 0.4665191804781412
+      }
+    ],
+    "interaction_d": -0.03508042456771511,
+    "interaction_ci": [
+      -0.05212636446135426,
+      -0.01888117755253088
+    ],
+    "median_N_MPa": 0.3099,
+    "steepens_toward_flotation": true
+  },
+  "rcf_prediction": {
+    "law": "regularized-Coulomb tau_b = C N (u/(u+u0))^(1/m) (Schoof 2005; Joughin 2019)",
+    "N_c_MPa": 0.06,
+    "s_N_wellgrounded": 3.0013732756436484,
+    "note": "|s_N|->m far from flotation, diverges at N_c=tau_d/mu"
+  },
+  "new_measurement": "pair a direct N (BedMachine ocean-connected, HYP2) with a drainage step (HYP1) -> a field value of s_N, which models currently subsume/tune (Joughin 2019); ocean gating (HYP2) is the independent cross-check",
+  "consistency": {
+    "probe1_grows_toward_flotation": true,
+    "probe1_basis": "directly-measured du/u vs N slope (robust); abs s_N not used",
+    "probe2_grows_toward_flotation": true,
+    "both_consistent": true
+  },
+  "falsifiable": "if drainage-amplitude s_N and ocean-gating s_N disagree in sign of their N-dependence, or neither grows toward flotation, the unified RCF s_N(N) reading is falsified"
+}

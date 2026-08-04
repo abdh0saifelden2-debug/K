@@ -1,0 +1,163 @@
+{
+  "dataset": "NSIDC BedMachine Antarctica (Morlighem 2020)",
+  "backend": "gpu",
+  "grid": [
+    13333,
+    13333
+  ],
+  "cellsize_km": 0.5,
+  "n_grounded": 47996988,
+  "rho_ratio_w_i": 1.1210468920392584,
+  "phi_inversion": {
+    "monotone_decreasing_in_phi": true,
+    "calibration": [
+      {
+        "phi": 0.7,
+        "frac": 0.0390818690539498,
+        "area_km2": 468953.0,
+        "median_dist_km": 15.0,
+        "dfrac_dphi_per_0p01": -0.0016239873218711121
+      },
+      {
+        "phi": 0.72,
+        "frac": 0.035833894410207574,
+        "area_km2": 429979.75,
+        "median_dist_km": 13.5,
+        "dfrac_dphi_per_0p01": -0.0015688849058611743
+      },
+      {
+        "phi": 0.74,
+        "frac": 0.0328063294305051,
+        "area_km2": 393651.25,
+        "median_dist_km": 12.165525060596439,
+        "dfrac_dphi_per_0p01": -0.001425605081718877
+      },
+      {
+        "phi": 0.76,
+        "frac": 0.030131474083332062,
+        "area_km2": 361555.0,
+        "median_dist_km": 11.10180165558726,
+        "dfrac_dphi_per_0p01": -0.001300149292701449
+      },
+      {
+        "phi": 0.78,
+        "frac": 0.027605732259699298,
+        "area_km2": 331248.0,
+        "median_dist_km": 10.198039027185569,
+        "dfrac_dphi_per_0p01": -0.0012195817370873351
+      },
+      {
+        "phi": 0.8,
+        "frac": 0.02525314713498272,
+        "area_km2": 303018.75,
+        "median_dist_km": 9.340770846134703,
+        "dfrac_dphi_per_0p01": -0.0011636042661677037
+      },
+      {
+        "phi": 0.82,
+        "frac": 0.022951315195028486,
+        "area_km2": 275398.5,
+        "median_dist_km": 8.514693182963201,
+        "dfrac_dphi_per_0p01": -0.0011460667073525555
+      },
+      {
+        "phi": 0.84,
+        "frac": 0.02066888030557251,
+        "area_km2": 248011.0,
+        "median_dist_km": 7.648529270389178,
+        "dfrac_dphi_per_0p01": -0.0011191327255785284
+      },
+      {
+        "phi": 0.86,
+        "frac": 0.018474784292714368,
+        "area_km2": 221683.5,
+        "median_dist_km": 6.96419413859206,
+        "dfrac_dphi_per_0p01": -0.0010875317842861305
+      },
+      {
+        "phi": 0.88,
+        "frac": 0.016318753168427985,
+        "area_km2": 195812.75,
+        "median_dist_km": 6.18465843842649,
+        "dfrac_dphi_per_0p01": -0.0011240444921252135
+      },
+      {
+        "phi": 0.9,
+        "frac": 0.013978606324213511,
+        "area_km2": 167732.75,
+        "median_dist_km": 5.315072906367325,
+        "dfrac_dphi_per_0p01": -0.0011614843414757597
+      },
+      {
+        "phi": 0.92,
+        "frac": 0.011672815802524942,
+        "area_km2": 140065.0,
+        "median_dist_km": 4.47213595499958,
+        "dfrac_dphi_per_0p01": -0.0011901892677098848
+      },
+      {
+        "phi": 0.94,
+        "frac": 0.009217849253373982,
+        "area_km2": 110607.25,
+        "median_dist_km": 3.5355339059327378,
+        "dfrac_dphi_per_0p01": -0.001245088545972929
+      },
+      {
+        "phi": 0.96,
+        "frac": 0.006692461618633236,
+        "area_km2": 80304.5,
+        "median_dist_km": 2.5495097567963922,
+        "dfrac_dphi_per_0p01": -0.0012797000928474916
+      },
+      {
+        "phi": 0.98,
+        "frac": 0.004099048881984011,
+        "area_km2": 49185.5,
+        "median_dist_km": 1.8027756377319946,
+        "dfrac_dphi_per_0p01": -0.0012967063683246114
+      }
+    ],
+    "sensitivity_note": "dfrac_dphi_per_0p01 = change in RTN>1 area fraction per +0.01 in phi"
+  },
+  "misi_band": {
+    "phi_ref": 0.9,
+    "band_cells": 627721,
+    "band_area_km2": 156930.25,
+    "band_frac_grounded": 0.013078341499262411,
+    "band_median_dist_km": 6.041522986797286,
+    "band_p90_dist_km": 48.023431780746364,
+    "median_margin_grounded": 1.0,
+    "frac_within_10pct_of_tipping": 0.01011621812602074,
+    "consistency_checks": {
+      "band_width_ratio_measured": 0.1111111119389534,
+      "band_width_ratio_expected_1mphi_over_phi": 0.11111111111111108,
+      "H_star_inland_of_flotation": true
+    }
+  },
+  "intrusion_clock": {
+    "near_tip_rel_margin": 0.2,
+    "n_front_cells": 1031886,
+    "front_dist_to_GL_km": {
+      "median": 25.04495957273639,
+      "p90": 130.21616643105418
+    },
+    "amplification_km_per_m": {
+      "p25": 0.032544948160648346,
+      "median": 0.06291958689689636,
+      "p75": 0.12780097126960754,
+      "p90": 0.24632953107357025
+    },
+    "front_advance_km_per_yr": {
+      "dHdt_0.5_m_yr": 0.03145979344844818,
+      "dHdt_1.0_m_yr": 0.06291958689689636,
+      "dHdt_2.0_m_yr": 0.12583917379379272,
+      "dHdt_5.0_m_yr": 0.3145979344844818
+    },
+    "tau_ice_yr": {
+      "front_median": 28569.9765625,
+      "interior_median": 158867.25,
+      "ratio_interior_over_front": 5.560636343276665
+    },
+    "runaway_frac_within_25km": 0.27839121763450614
+  }
+}

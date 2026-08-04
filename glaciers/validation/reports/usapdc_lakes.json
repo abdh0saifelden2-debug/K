@@ -1,0 +1,107 @@
+{
+  "datasets": {
+    "601470": "Stubblefield 2021 / Siegfried&Fricker 2018 lake stats (131 lakes, BedMachine thickness)",
+    "601439": "Smith et al. 2009 ICESat volume-change series (124 lakes)"
+  },
+  "R2_thermal_kernel": {
+    "n_lakes": 131,
+    "thickness_bedmachine_m": {
+      "p5": 855.37791036,
+      "p50": 2309.3274991,
+      "p95": 3329.8788635250003
+    },
+    "tau_ice_yr": {
+      "p5": 21281.757619326338,
+      "p50": 155038.8681462579,
+      "p95": 322349.0962181728
+    },
+    "obs_surge_lag_yr": [
+      0.02,
+      2.0
+    ],
+    "median_overshoot_factor": 77519.43407312896,
+    "verdict": "FALSIFIED as written (tau_ice >> observed surge lag)",
+    "bedmachine_vs_bedmap2": {
+      "n": 131,
+      "median_bedmachine_m": 2309.3274991,
+      "median_bedmap2_m": 2279.0,
+      "median_abs_diff_m": 35.287902120000126,
+      "corr": 0.970050271367129
+    }
+  },
+  "R1_drainage_forcing_601439": {
+    "drop_thresh_km3": 0.05,
+    "n_events": 58,
+    "n_lakes_total": 124,
+    "n_lakes_with_event": 52,
+    "drained_volume_km3": {
+      "p5": 0.053000000000000005,
+      "p50": 0.1275,
+      "p95": 1.4501499999999992,
+      "max": 2.916
+    },
+    "largest_events": [
+      {
+        "lake": "Cook_E2",
+        "t_peak": 2005.42,
+        "drop_km3": 2.916,
+        "rate_km3_per_yr": 1.061
+      },
+      {
+        "lake": "Recovery_7",
+        "t_peak": 2005.2,
+        "drop_km3": 2.271,
+        "rate_km3_per_yr": 0.871
+      },
+      {
+        "lake": "Whillans_1",
+        "t_peak": 2003.83,
+        "drop_km3": 1.944,
+        "rate_km3_per_yr": 0.491
+      },
+      {
+        "lake": "Byrd_2",
+        "t_peak": 2005.85,
+        "drop_km3": 1.363,
+        "rate_km3_per_yr": 0.979
+      },
+      {
+        "lake": "Whillans_4",
+        "t_peak": 2006.44,
+        "drop_km3": 1.117,
+        "rate_km3_per_yr": 0.646
+      },
+      {
+        "lake": "Byrd_1",
+        "t_peak": 2006.42,
+        "drop_km3": 0.948,
+        "rate_km3_per_yr": 1.185
+      },
+      {
+        "lake": "Totten_1",
+        "t_peak": 2003.83,
+        "drop_km3": 0.874,
+        "rate_km3_per_yr": 0.435
+      },
+      {
+        "lake": "Lambert_1",
+        "t_peak": 2003.83,
+        "drop_km3": 0.839,
+        "rate_km3_per_yr": 0.212
+      }
+    ]
+  },
+  "R3_q_water_forcing": {
+    "drain_rate_km3_per_yr": {
+      "p5": 0.014519319860132697,
+      "p50": 0.0791239330772878,
+      "p95": 0.991622235999795
+    },
+    "q_water_m3_per_s": {
+      "p5": 0.46008948272785943,
+      "p50": 2.5072861395444455,
+      "p95": 31.422612492705245
+    },
+    "note": "q_water = drained_volume / drain_duration; literature subglacial-flood discharges are O(10-100) m^3/s."
+  }
+}
