@@ -468,7 +468,7 @@ All claims remain open to stronger tests with three-dimensional simulations, hig
 
 \subsection{Reproducibility}
 
-All figures and numerical results regenerate from the public repository at \url{https://github.com/abdh0saifelden2-debug/K}. Each analysis is a single command with fixed seeds, runnable on CPU. The repository's test suite (656 passing tests at draft time) covers the analysis modules. Input datasets are public: NEON DP4.00200.001 (data.neonscience.org), ASOS one-minute data via the Iowa Environmental Mesonet (mesonet.agron.iastate.edu), The Well Rayleigh--B\'enard dataset (polymathic-ai), and NCEP/NCAR Reanalysis 1 via NOAA PSL OPeNDAP (psl.noaa.gov). See Appendix~\ref{app:reproducibility} for the full command table.
+All figures and numerical results regenerate from the public repository at \url{https://github.com/abdh0saifelden2-debug/}\allowbreak\url{K}. Each analysis is a single command with fixed seeds, runnable on CPU. The repository's test suite (656 passing tests at draft time) covers the analysis modules. Input datasets are public: NEON DP4.00200.001 (data.\allowbreak neonscience.org), ASOS one-minute data via the Iowa Environmental Mesonet (mesonet.\allowbreak agron.\allowbreak iastate.edu), The Well Rayleigh--B\'enard dataset (polymathic-ai), and NCEP/NCAR Reanalysis 1 via NOAA PSL OPeNDAP (psl.\allowbreak noaa.gov). See Appendix~\ref{app:reproducibility} for the full command table.
 
 \medskip\hrule\medskip
 
@@ -495,30 +495,30 @@ Table~\ref{tab:commands} lists the commands that regenerate each result in this 
 Result & Command \\
 \midrule
 \S\ref{sec:neon} NEON diurnal composites &
-\texttt{python general\_two\_clocks/run\_analysis.py} \\
+\texttt{python general\_two\_clocks/\allowbreak run\_analysis.py} \\
 \S\ref{sec:neon} Seasonal cross-check &
-\texttt{python general\_two\_clocks/run\_neon\_compare.py} \\
+\texttt{python general\_two\_clocks/\allowbreak run\_neon\_compare.py} \\
 \S\ref{sec:asos} ASOS latitude sweep &
-\texttt{python general\_two\_clocks/asos/fetch\_iem.py \&\&
-python general\_two\_clocks/run\_asos\_ci.py} \\
+\texttt{python general\_two\_clocks/asos/\allowbreak fetch\_iem.py \&\&
+python general\_two\_clocks/\allowbreak run\_asos\_ci.py} \\
 \S\ref{sec:spatial} RB DNS split &
-\texttt{python general\_two\_clocks/run\_rb.py} \\
+\texttt{python general\_two\_clocks/\allowbreak run\_rb.py} \\
 \S\ref{sec:spatial} $Ra$ sweep &
-\texttt{python general\_two\_clocks/run\_rb\_ra\_sweep.py} \\
+\texttt{python general\_two\_clocks/\allowbreak run\_rb\_ra\_sweep.py} \\
 \S\ref{sec:spatial} Green's function &
-\texttt{python general\_two\_clocks/run\_elliptic\_demo.py} \\
+\texttt{python general\_two\_clocks/\allowbreak run\_elliptic\_demo.py} \\
 \S\ref{sec:phenomenology} Stability bins (E3) &
-\texttt{python general\_two\_clocks/run\_stability.py} \\
+\texttt{python general\_two\_clocks/\allowbreak run\_stability.py} \\
 \S\ref{sec:crossover} Linear crossover &
-\texttt{python general\_two\_clocks/run\_compressible.py} \\
+\texttt{python general\_two\_clocks/\allowbreak run\_compressible.py} \\
 \S\ref{sec:nonlinear} Nonlinear Mach sweep &
-\texttt{python general\_two\_clocks/run\_compressible\_ns.py} \\
+\texttt{python general\_two\_clocks/\allowbreak run\_compressible\_ns.py} \\
 \S\ref{sec:surrogate} Projection / surrogate &
-\texttt{python general\_two\_clocks/run\_boussinesq.py} \\
+\texttt{python general\_two\_clocks/\allowbreak run\_boussinesq.py} \\
 \S\ref{sec:reanalysis} Reanalysis split &
-\texttt{python general\_two\_clocks/run\_reanalysis.py} \\
+\texttt{python general\_two\_clocks/\allowbreak run\_reanalysis.py} \\
 R2 cross-check &
-\texttt{python general\_two\_clocks/run\_reanalysis\_r2.py} \\
+\texttt{python general\_two\_clocks/\allowbreak run\_reanalysis\_r2.py} \\
 \bottomrule
 \end{tabular}
 \end{table}
