@@ -7,7 +7,7 @@
 \maketitle
 
 \begin{abstract}
-Weather and climate models rely on stochastic parameterizations to represent subgrid processes. A standard assumption in these schemes is that matching the energy spectrum---the variance on each wavenumber---captures the essential effect of unresolved dynamics. We show this assumption fails for the pressure field. The fast (elliptic) pressure correction in incompressible flows is a global, boundary-aware constraint; a spectrum-matched, phase-randomized surrogate with the identical power spectrum leaves the divergence constraint unrepaired by four orders of magnitude (RMS divergence $3.7\times10^{-2}$ versus machine zero $2\times10^{-15}$). We establish the operator split driving this failure across five independent settings: field data show temperature tracking local diurnal heating while pressure carries a planetary-scale semidiurnal tide; direct numerical simulation shows pressure and buoyancy share the integral scale but differ by a factor of 2.4--4.5 in Taylor microscale, with the gap widening with Rayleigh number; controlled compressible solvers show the hyperbolic-to-elliptic crossover scales as $t_{90}\approx2.3L/c$ and the fast-clock energy fraction scales as $M^{2}$; and NCEP/NCAR reanalysis shows the divergent (fast) wind carries $\leq4\%$ of kinetic energy, with a minimum at the classical level of non-divergence. These measurements establish that the operator split is a robust, measurable property of real flows. The surrogate test then proves that spectrum-matching alone cannot reconstruct the elliptic geometry---a hard constraint that stochastic closures must respect. Scope is explicit: the demonstrations are two-dimensional and periodic; no 3-D regularity claim and no forecast-skill claim is made; reanalysis is a model-assimilated confirmation at $l \leq 35$.
+Weather and climate models rely on stochastic parameterizations to represent subgrid processes. A standard assumption in these schemes is that matching the energy spectrum---the variance on each wavenumber---captures the essential effect of unresolved dynamics. We show this assumption fails for the pressure field. The fast (elliptic) pressure correction in incompressible flows is a global, boundary-aware constraint; a spectrum-matched, phase-randomized surrogate with the identical power spectrum leaves the divergence constraint unrepaired by four orders of magnitude (RMS divergence $3.7\times10^{-2}$ versus machine zero $2\times10^{-15}$). The surrogate test thus demonstrates that spectral equivalence is not dynamical equivalence for elliptic constraints: matching the power spectrum of an elliptic correction does not reproduce its action as a constraint. We establish the operator split driving this failure across five independent settings: field data show temperature tracking local diurnal heating while pressure carries a planetary-scale semidiurnal tide; direct numerical simulation shows pressure and buoyancy share the integral scale but differ by a factor of 2.4--4.5 in Taylor microscale, with the gap widening with Rayleigh number; a controlled linear-acoustics solver shows the hyperbolic-to-elliptic crossover scaling as $t_{90}\approx2.3L/c$; a nonlinear compressible solver shows the fast-clock energy fraction scaling as $M^{2}$; and NCEP/NCAR reanalysis shows the divergent (fast) wind carries $\leq4\%$ of kinetic energy, with a minimum at the classical level of non-divergence. These measurements establish that the operator split is a robust, measurable property of real flows. The surrogate test then proves that spectrum-matching alone cannot reconstruct the elliptic geometry---a hard constraint that stochastic closures must respect. Scope is explicit: the demonstrations are two-dimensional and periodic; no 3-D regularity claim and no forecast-skill claim is made; reanalysis is a model-assimilated confirmation at $l \leq 35$.
 \end{abstract}
 
 \section{Introduction}
@@ -20,9 +20,25 @@ The reason is rooted in a fundamental operator-level distinction. A fluid heated
 
 This distinction is elementary at the level of the governing equations. Its consequences for stochastic closure schemes have not been stated explicitly. A stochastic parameterization that only matches the energy spectrum of the unresolved pressure correction necessarily discards the phase coherence and boundary-awareness enforced by the elliptic operator---a global, non-local constraint that randomization destroys.
 
-This paper shows that the operator split imposes a hard constraint on stochastic closures that spectrum-matching cannot satisfy. We introduce a spectrum-matched surrogate test that isolates the geometric requirement of the elliptic operator. We apply it to a Boussinesq projection method, and show that a phase-randomized field with the identical power spectrum---the structural move of spectrum-matched stochastic closures---fails to repair the divergence constraint by four orders of magnitude. The construction of a closure that respects this constraint is the subject of the companion paper (Saifelden 2026).
+This paper shows that the operator split imposes a hard constraint on stochastic closures that spectrum-matching cannot satisfy. We introduce a spectrum-matched surrogate test that isolates the geometric requirement of the elliptic operator. We apply it to a Boussinesq projection method, and show that a phase-randomized field with the identical power spectrum---the structural move of spectrum-matched stochastic closures---fails to repair the divergence constraint by four orders of magnitude. Figure~\ref{fig:surrogate_schematic} shows the construction in one glance---the true correction, its spectrum, the surrogate, and the divergence ledger---so that the paper's central result is visible before the supporting measurements. The construction of a closure that respects this constraint is the subject of the companion paper (Saifelden 2026).
 
-We establish the operator split across five independent settings before delivering the surrogate test: field data, direct numerical simulation, controlled compressible solvers, and reanalysis. The measurements show that the split is large enough to matter in real flows. The surrogate test then proves that any closure that discards elliptic geometry is structurally incomplete.
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/fig01_preview_surrogate.png}
+\caption{The surrogate test in one figure. (a) The true projection correction: the
+{\emph{divergent}} part of the intermediate velocity $\mathbf{u}^*$ that a single
+elliptic solve removes. (b) Power spectra of the true correction and of a
+phase-randomized surrogate---identical by construction (Parseval-exact). (c) The
+surrogate correction field: the same spectrum, scrambled phases. (d) RMS
+divergence left by no correction ($2.7\times10^{-2}$), by the surrogate
+(ensemble median $3.7\times10^{-2}$, $n=100$), and by the true projection
+($2\times10^{-15}$). Spectral equivalence is not dynamical equivalence: a field
+that matches the correction's power spectrum does not reproduce its action as a
+constraint.}
+\label{fig:surrogate_schematic}
+\end{figure}
+
+We establish the operator split across five independent settings before delivering the surrogate test: field data, direct numerical simulation, a controlled linear-acoustics crossover demonstration, a nonlinear Mach-number sweep, and reanalysis. The measurements show that the split is large enough to matter in real flows. The surrogate test then proves that any closure that discards elliptic geometry is structurally incomplete.
 
 % ============================================================
 \section{Phenomenological evidence: the two-clock fingerprint in nature}
@@ -146,7 +162,7 @@ $10^8$ & 4.45 [3.27--5.88] & 1.75 [1.42--2.11] \\
 
 To isolate the operator contrast from turbulence statistics, we apply a single localized source to both the elliptic and parabolic operators in a developed cavity flow. The elliptic response spreads over the entire domain: 79\% of its magnitude lies beyond one source-width from the origin. The parabolic response at matched time remains a confined Gaussian blob. Boundary geometry edits the global pressure field instantly and only the local temperature field (Fig.~\ref{fig:green}).
 
-The closure-relevant consequence of this operator split is directly measurable in the field data. Using the same NEON tower, we bin the transport-efficiency correlations for momentum and heat by Monin--Obukhov stability classes. Table~\ref{tab:stability} shows the momentum-to-heat transport-efficiency ratio swings by a factor of 4.3 in winter (0.77 to 3.28) and 6.0 in summer (0.43 to 2.60), demonstrating that momentum transport (shaped by the global pressure field) and heat transport (shaped by local buoyant plumes) respond differently to changes in the shear-to-buoyancy ratio. A single fixed-$Pr_t$ diffusivity is structurally unable to reproduce this variation.
+The closure-relevant consequence of this operator split is directly measurable in the field data. Using the same NEON tower, we bin the transport-efficiency correlations for momentum and heat by Monin--Obukhov stability classes. Table~\ref{tab:stability} shows the momentum-to-heat transport-efficiency ratio swings by a factor of 4.3 in winter (0.77 to 3.28) and 6.0 in summer (0.43 to 2.60), demonstrating that momentum transport (shaped by the global pressure field) and heat transport (shaped by local buoyant plumes) respond differently to changes in the shear-to-buoyancy ratio. A single fixed-$Pr_t$ diffusivity is structurally unable to reproduce this variation. Just as one eddy diffusivity cannot capture this stability-dependent transport split, one spectrum cannot capture the phase-dependent elliptic split: the surrogate test of Section~\ref{sec:surrogate} shows that matching power spectra is not enough to reproduce constraint-preserving action.
 
 \begin{table}[t]
 \centering
@@ -186,13 +202,11 @@ Strongly stable & $>1.0$ & 160 & 0.156 [0.12--0.20] & 0.203 [0.18--0.23] & 0.77 
 \label{fig:green}
 \end{figure}
 
-The closure-relevant consequence of this operator split is directly measurable in the field data. Using the same NEON tower, we bin the transport-efficiency correlations for momentum and heat by Monin--Obukhov stability classes. The momentum-to-heat transport-efficiency ratio swings by a factor of 4.3 in winter (0.77 to 3.28) and 6.0 in summer, demonstrating that momentum transport (shaped by the global pressure field) and heat transport (shaped by local buoyant plumes) respond differently to changes in the shear-to-buoyancy ratio. A single fixed-$Pr_t$ diffusivity is structurally unable to reproduce this variation.
-
 % ============================================================
 \section{Dynamical mechanism: why the fast clock is not just ``fast noise''}
 \label{sec:mechanism}
 
-The phenomenological evidence establishes that the operator split is large enough to matter. Before delivering the surrogate test, we demonstrate the mechanism in controlled settings where every parameter is known. These demonstrations serve a specific purpose: they show that the fast clock converges to a deterministic global field with a unique geometry. Randomizing its phases is therefore guaranteed to fail.
+The phenomenological evidence establishes that the operator split is large enough to matter. Before delivering the surrogate test, we demonstrate the mechanism in controlled settings where every parameter is known. We define the slow clock by the advective timescale $\tau_{\mathrm{slow}} \sim L/U$ and the fast clock by the acoustic adjustment timescale $\tau_{\mathrm{fast}} \sim L/c$; in the incompressible limit $c \to \infty$ the fast clock becomes instantaneous and the hyperbolic wave equation degenerates into the elliptic constraint. These demonstrations serve a specific purpose: they show that the fast clock converges to a deterministic global field with a unique geometry. Randomizing its phases is therefore guaranteed to fail.
 
 \subsection{The hyperbolic-to-elliptic crossover: deterministic relaxation to a global field}
 \label{sec:crossover}
@@ -264,8 +278,6 @@ line).}
 \label{fig:mach}
 \end{figure}
 
-Two clocks coexist in one flow: the vortical energy decays on the slow advective timescale while the acoustic energy oscillates on the fast period (Fig.~\ref{fig:two_clocks}). Averaging over the fast clock acts as a low-pass filter that recovers the elliptic limit.
-
 This justifies why stochastic closures try to model the fast clock as a small random forcing---its energy is $O(M^2)$. But as we show next, energy level alone is not enough.
 
 % ============================================================
@@ -327,9 +339,9 @@ the true projection).}
 
 \subsection{The target: stochastic parameterization schemes}
 
-The surrogate test directly targets the structural assumption underlying spectrum-matched stochastic parameterizations (Hasselmann 1976; Berner et al. 2017). These schemes assume that matching variance on each wavenumber---the energy spectrum---is sufficient to capture the essential effect of unresolved dynamics. Our test shows it is not, because the phase coherence enforced by the elliptic operator $\nabla^2$ is a global, boundary-aware constraint that randomization destroys.
+The surrogate test establishes a general principle: spectral equivalence is not dynamical equivalence. Two fields can share identical power spectra while producing radically different outcomes under a constrained operator. The test targets the specific hypothesis that matching the power spectrum of an unresolved correction is sufficient to reproduce its constraint-preserving action. We do not claim that all stochastic parameterizations fail; rather, we show that spectrum-matching alone is insufficient for elliptic constraints: the phase coherence enforced by the elliptic operator $\nabla^2$ is destroyed by randomization, and no spectral surrogate restores it.
 
-The failure is not subtle. A field that shares the exact power spectrum with the true projection correction but has scrambled phases fails to satisfy the divergence constraint by four orders of magnitude. The phase structure is not a second-order correction; it is the essential geometric requirement of the elliptic operator.
+The failure is not subtle. A field that shares the exact power spectrum with the true projection correction but has scrambled phases fails to satisfy the divergence constraint by four orders of magnitude. The phase structure is not a second-order correction; it is the essential geometric requirement of the elliptic operator. The surrogate test is performed in a two-dimensional periodic geometry, where the Poisson solve is a global inversion over the entire box; the structural conclusion---that phase coherence enforced by the elliptic operator is destroyed by randomization---holds for any domain in which incompressibility is imposed by a global Poisson solve, including bounded geometries with nontrivial boundary conditions (Section~\ref{sec:scope}).
 
 % ============================================================
 \section{The two clocks in the real atmospheric wind field}
@@ -373,9 +385,7 @@ Four features emerge.
 
 \emph{Third}, the cross-check with Reanalysis 2 reproduces the same ordering and the same 500-hPa minimum, with relative differences of 15\% or less. The ratio is a property of the analyzed atmosphere, not of one assimilation system.
 
-\emph{Fourth}, the divergent fraction is smaller in the daily mean than in the 6-hourly data at all levels. At 500 hPa, the 6-hourly ratio is 1.1\% compared to 0.7\% in the daily mean. This confirms that averaging scrubs the fast divergent clock, consistent with the mechanism demonstrated in Section~\ref{sec:mechanism}.
-
-\emph{Fourth}, time-averaging acts as a low-pass filter on the fast clock: the six-hourly ratio at 500~hPa (1.1\%) exceeds the daily-mean ratio (0.7\%). Averaging scrubs the divergent component, exactly as acoustic averaging recovered the elliptic pressure in Section~\ref{sec:nonlinear}.
+\emph{Fourth}, time-averaging acts as a low-pass filter on the fast clock: the divergent fraction is smaller in the daily mean than in the 6-hourly data at every level (at 500~hPa, 0.7\% versus 1.1\%). Averaging scrubs the fast divergent clock---exactly as acoustic averaging recovered the elliptic pressure in Section~\ref{sec:nonlinear}---consistent with the mechanism of Section~\ref{sec:mechanism}.
 
 \begin{figure}[t]
 \centering
@@ -411,7 +421,7 @@ as a low-pass filter on the fast clock.}
 
 \subsection{Summary of measurements}
 
-Five independent measurements, spanning field observation, direct numerical simulation, controlled solvers, and reanalysis, consistently reveal the same structure: pressure and temperature respond to the same forcing through different operators with different timescales and different spatial footprints. The temporal signatures differ (local diurnal versus planetary semidiurnal); the spatial signatures differ (filamentary versus smooth, with a $1/k^4$ spectral gap); the dynamical demonstrations show the mechanism (hyperbolic-to-elliptic crossover, $M^2$ energy scaling, projection as synthesis); and the real atmosphere exhibits the expected energy partition with the correct vertical structure.
+Five independent measurements---field observation, direct numerical simulation, a controlled linear-acoustics crossover demonstration, a nonlinear Mach-number sweep, and reanalysis---consistently reveal the same structure: pressure and temperature respond to the same forcing through different operators with different timescales and different spatial footprints. The temporal signatures differ (local diurnal versus planetary semidiurnal); the spatial signatures differ (filamentary versus smooth, with a $1/k^4$ spectral gap); the dynamical demonstrations show the mechanism (hyperbolic-to-elliptic crossover, $M^2$ energy scaling, projection as synthesis); and the real atmosphere exhibits the expected energy partition with the correct vertical structure.
 
 The surrogate test then proves that spectrum-matching alone cannot reconstruct the elliptic geometry. This is a hard constraint that any stochastic closure must respect.
 
@@ -428,8 +438,9 @@ The surrogate test identifies three non-negotiable requirements for any closure 
 The construction of a closure that respects these constraints is the subject of the companion paper (Saifelden 2026).
 
 \subsection{Scope and limitations}
+\label{sec:scope}
 
-All numerical demonstrations are two-dimensional and periodic. No three-dimensional regularity claim is made. The reanalysis diagnostics are limited to spherical-harmonic degree $l \leq 35$ and are based on model-assimilated products, not raw observations. The field measurements span two months at the seasonal extremes (NEON) and one season at eight sites (ASOS); they establish the fingerprint of the operator split but do not constitute a global climatology.
+All numerical demonstrations are two-dimensional and periodic; in particular, the surrogate test of Section~\ref{sec:surrogate} is performed in a periodic geometry, and the structural conclusion---that phase coherence enforced by the elliptic operator is destroyed by randomization---is argued to hold for any domain where incompressibility is imposed via a global Poisson solve, including bounded geometries with nontrivial boundary conditions. No three-dimensional regularity claim is made. The reanalysis diagnostics are limited to spherical-harmonic degree $l \leq 35$ and are based on model-assimilated products, not raw observations. The field measurements span two months at the seasonal extremes (NEON) and one season at eight sites (ASOS); they establish the fingerprint of the operator split but do not constitute a global climatology.
 
 \subsection{Falsification criteria}
 
@@ -464,7 +475,7 @@ All figures and numerical results regenerate from the public repository at \url{
 % ============================================================
 \section*{Acknowledgments}
 
-[To be added.]
+This study used open data throughout. The author thanks the National Ecological Observatory Network (NEON), the Iowa Environmental Mesonet (IEM) for one-minute ASOS archives, the Polymathic AI collaboration for the open Rayleigh--B\'enard dataset (The Well), and the NOAA Physical Sciences Laboratory for the NCEP/NCAR and NCEP--DOE reanalyses, together with the developers of the open-source Python scientific stack on which the analysis depends.
 
 % ============================================================
 \appendix
@@ -512,6 +523,7 @@ R2 cross-check &
 \end{tabular}
 \end{table}
 
+\begingroup\sloppy
 \section*{References}
 
 Berner, J., et al. (2017). Stochastic parameterization: toward a new view of weather and climate models. \emph{Bulletin of the American Meteorological Society} 98, 565--588. doi:10.1175/BAMS-D-15-00268.1
@@ -530,7 +542,7 @@ Dai, A., \& Wang, J. (1999). Diurnal and semidiurnal tides in global surface pre
 
 Foken, T. (2008). \emph{Micrometeorology}. Springer, Berlin.
 
-Hasselmann, K. (1976). Stochastic climate models. Part I: Theory. \emph{Tellus} 28, 473--485. doi:10.1111/j.2153-3490.1976.tb00696.x
+Hasselmann, K. (1976). Stochastic climate models. Part I: Theory. \emph{Tellus} 28, 473--485. doi:10.1111/\hspace{0pt}j.2153-3490.1976.tb00696.x
 
 Haurwitz, B. (1956). The geographical distribution of the semidiurnal solar pressure oscillation. \emph{New York University Meteorological Papers} 2(5), 36 pp.
 
@@ -552,12 +564,13 @@ NEON (National Ecological Observatory Network) (2020). Bundled data products ---
 
 Ohana, R., et al. (2024). The Well: a large-scale collection of diverse physics simulations for machine learning. \emph{Advances in Neural Information Processing Systems (Datasets and Benchmarks Track)}.
 
-Parish, E. J., \& Duraisamy, K. (2017). Non-Markovian closure models for large eddy simulations using the Mori--Zwanzig formalism. \emph{Physical Review Fluids} 2, 014604. doi:10.1103/PhysRevFluids.2.014604
+Parish, E. J., \& Duraisamy, K. (2017). Non-Markovian closure models for large eddy simulations using the Mori--Zwanzig formalism. \emph{Physical Review Fluids} 2, 014604. doi:10.1103/\hspace{0pt}PhysRevFluids.2.014604
 
 Saifelden, A. (2026). What single-eddy-diffusivity closure discards: a Mori--Zwanzig audit, a scalar-independent memory time, and a divergence-cleaning design window. Companion manuscript, under editorial consideration at Physical Review (permanent submission ID assigned). \textbf{[P1]}
 
 Smagorinsky, J. (1963). General circulation experiments with the primitive equations: I. The basic experiment. \emph{Monthly Weather Review} 91, 99--164.
 
 Stull, R. B. (1988). \emph{An Introduction to Boundary Layer Meteorology}. Kluwer, Dordrecht.
+\endgroup
 
 \end{document}

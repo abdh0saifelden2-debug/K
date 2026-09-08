@@ -23,8 +23,10 @@ elliptic crossover occurs on a timescale $t_{90} \approx 2.3\,L/c$, and the
 fast-clock energy fraction scales as $M^{2}$. In the projection method, a single
 elliptic solve reduces the divergence of the intermediate velocity field from
 $2.7\times 10^{-2}$ to machine zero, while a spectrum-matched phase-randomized
-surrogate leaves it unrepaired. In NCEP/NCAR reanalysis, the divergent (fast)
-component of the wind carries $\leq 4\%$ of the kinetic energy, with a minimum at
+surrogate leaves it unrepaired. Spectral equivalence is therefore not dynamical
+equivalence: a field that matches an elliptic correction's power spectrum does
+not reproduce its action as a constraint. In NCEP/NCAR reanalysis, the divergent
+(fast) component of the wind carries $\leq 4\%$ of the kinetic energy, with a minimum at
 the classical level of non-divergence. These measurements establish that the
 two-operator structure is a robust, measurable property of real flows, with direct
 implications for single-diffusivity turbulence closures.
@@ -70,6 +72,30 @@ simulation. Section~\ref{sec:demonstrations} demonstrates the mechanism in
 controlled compressible and incompressible solvers. Section~\ref{sec:reanalysis}
 confirms the energy split in the real atmospheric wind field.
 Section~\ref{sec:discussion} discusses implications and limitations.
+
+One result carries the paper's structural conclusion, so we preview it in
+Fig.~\ref{fig:preview}: a phase-randomized surrogate that exactly matches the
+power spectrum of the deterministic elliptic correction fails both pointwise and
+as a constraint. The demonstration is developed in
+Section~\ref{sec:projection}.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.82\linewidth]{figures/fig01_preview_surrogate.png}
+\caption{Preview of the central demonstration, developed in
+Section~\ref{sec:projection}. (a) The correction that one elliptic projection
+removes from the slow, locally integrated drift $\mathbf{u}^*$. (b) Its power
+spectrum and that of a phase-randomized surrogate: identical by construction
+(Parseval-exact). (c) The surrogate field --- the same spectrum with scrambled
+phases --- whose pointwise correlation with the true correction has ensemble
+median $|r| = 0.07$ ($n = 100$). (d) RMS divergence of the velocity left by no
+correction, by the surrogate, and by the true projection:
+$2.7\times 10^{-2}$, $3.7\times 10^{-2}$, and $2\times 10^{-15}$,
+respectively. Matching the energy content of an elliptic correction does not
+reproduce its action as a constraint: spectral equivalence is not dynamical
+equivalence.}
+\label{fig:preview}
+\end{figure}
 
 % ============================================================
 \section{The two operators}
@@ -122,12 +148,20 @@ scale $\ell$:
 For air at laboratory-to-mesoscale $L$,
 $\tau_p/\tau_{\mathrm{adv}} = M(L/\ell)^{-1} \ll 1$. Pressure equilibrates before
 the flow moves; scalars integrate their history as the flow evolves. We refer to
-the parabolic timescale as the \emph{slow clock} and the elliptic/acoustic
-timescale as the \emph{fast clock}.
+the parabolic evolution of transported scalars as the \emph{slow clock} and the
+elliptic/acoustic adjustment of pressure as the \emph{fast clock}. This
+identification is an asymptotic statement rather than a metaphor: the slow clock
+carries the scalar on the advective and diffusive timescales
+$\tau_{\mathrm{adv}} \sim \ell/U$ and $\tau_\kappa$, while the fast clock
+adjusts pressure on $\tau_p \sim L/c$. As $c \to \infty$ ($M \to 0$) the
+fast-clock timescale vanishes and the hyperbolic wave equation degenerates into
+the elliptic constraint of Eq.~\eqref{eq:poisson}: the fast clock stops
+propagating and acts instantaneously, which is the limit in which the
+measurements and simulations of this paper are taken.
 
-% TODO: Figure 1 --- schematic of the two operators (parabolic vs elliptic Green's
-% functions and the three timescales of Eq.~\eqref{eq:timescales}). Image to be
-% created; none exists in the repository yet.
+% TODO (optional): schematic of the two operators (parabolic vs elliptic Green's
+% functions and the three timescales of Eq.~\eqref{eq:timescales}). If created it
+% would appear after Fig.~\ref{fig:preview}; none exists in the repository yet.
 % \begin{figure}[t]
 % \centering
 % \includegraphics[width=0.85\linewidth]{figures/schematic_two_operators.png}
@@ -262,7 +296,7 @@ lines, where both fields are phase-locked to the same astronomical forcing, and
 above the phase-randomized surrogate 95\% level at all eight stations. In the
 off-line sub-diurnal band (9--11~h and 13--20~h), coherence collapses to the
 surrogate noise floor. Away from the shared solar clock, nothing locks the two
-fields together.
+fields together (Fig.~\ref{fig:tide}).
 
 \begin{figure}[t]
 \centering
@@ -425,7 +459,7 @@ Table~\ref{tab:mach} summarizes the Mach-number sweep. The dilatational energy
 fraction scales as $\sim M^2$, vanishing in the incompressible limit. The
 time-averaged pressure (averaged over the fast acoustic period) converges to the
 elliptic Poisson pressure with correlation approaching unity and residual shrinking
-as $M^2$.
+as $M^2$ (Fig.~\ref{fig:mach}).
 
 \begin{table}[t]
 \centering
@@ -506,13 +540,22 @@ yields a pointwise correlation with the true correction of median $|r| = 0.07$
 (95th percentile 0.20, over an ensemble of $n = 100$ surrogates). The RMS
 divergence after the surrogate correction is $3.7\times 10^{-2}$
 [$3.5$--$3.8\times 10^{-2}$, 95\% interval] --- no better than applying no
-correction at all ($2.7\times 10^{-2}$).
+correction at all ($2.7\times 10^{-2}$; Fig.~\ref{fig:spde}).
 
-\emph{Third}, the physical interpretation is that the fast clock's action on the
-slow dynamics is a global elliptic correction with a definite geometric structure,
-not a stochastic variance to be re-injected with the correct energy. Matching a
-power spectrum does not reconstruct a boundary-aware, globally coupled elliptic
-operator.
+\emph{Third}, the surrogate test establishes a general principle: spectral
+equivalence is not dynamical equivalence. Two fields can share an identical
+power spectrum and behave completely differently under a constrained operator,
+because the elliptic correction acts through its phase geometry --- where fluid
+must be moved --- not through how much energy it carries. The test targets the
+specific hypothesis that matching the power spectrum of an unresolved correction
+is sufficient to reproduce its constraint-preserving action; we do not claim that
+all stochastic parameterizations fail, only that spectrum-matching alone does not
+reconstruct a boundary-aware, globally coupled elliptic operator. The surrogate
+test is performed in a two-dimensional periodic geometry; the structural
+conclusion --- that randomization destroys the phase coherence through which the
+elliptic operator enforces incompressibility --- holds in any domain in which the
+constraint is imposed by a global Poisson solve, including bounded geometries
+with nontrivial boundary conditions.
 
 \begin{figure}[t]
 \centering
@@ -584,9 +627,9 @@ R2 cross-check \\
 Four features emerge.
 
 \emph{First}, the rotational wind dominates the kinetic energy at every level and
-every resolved scale. Splitting by spherical-harmonic degree $l$, the divergent
-branch sits one to two decades below the rotational branch for all $l \leq 35$
-(Fig.~\ref{fig:ke_spectrum}).
+every resolved scale (Fig.~\ref{fig:reanalysis_wind}). Splitting by
+spherical-harmonic degree $l$, the divergent branch sits one to two decades below
+the rotational branch for all $l \leq 35$ (Fig.~\ref{fig:ke_spectrum}).
 
 \emph{Second}, the vertical structure is physically meaningful: the divergent
 fraction is smallest near 500~hPa --- the classical level of non-divergence
@@ -636,8 +679,9 @@ as a low-pass filter on the fast clock.}
 
 \subsection{Summary of measurements}
 
-Six independent measurements, spanning field observation, direct numerical
-simulation, controlled solvers, and reanalysis, consistently reveal the same
+The measurements, taken across the five settings examined in this paper ---
+field observation, Rayleigh--B\'enard simulation, the controlled compressible
+solvers, the projection method, and reanalysis --- consistently reveal the same
 structure: pressure and temperature respond to the same forcing through different
 operators with different timescales and different spatial footprints. The temporal
 signatures differ (local diurnal versus planetary semidiurnal); the spatial
@@ -653,19 +697,29 @@ turbulence closures. A closure that models both momentum transport (shaped by th
 global pressure field) and heat transport (shaped by local buoyant plumes) with a
 single eddy diffusivity and a fixed turbulent Prandtl number assumes that the two
 transport processes respond identically to changes in the shear-to-buoyancy ratio.
-The field data show otherwise: binned by Monin--Obukhov stability, the ratio of
-momentum to heat transport efficiency varies by a factor of 4.3 in winter and 6.0
-in summer at the NEON WREF site (Appendix~\ref{app:reproducibility}). This
-variation is consistent with the two-operator structure: momentum transport is
-mediated by the global pressure field (fast clock), while heat transport is
-mediated by local buoyant plumes (slow clock), and their relative importance
-shifts with stability.
+The field data show otherwise: binned by Monin--Obukhov stability (Monin \&
+Obukhov 1954), the ratio of momentum to heat transport efficiency varies by a
+factor of 4.3 in winter and 6.0 in summer at the NEON WREF site
+(Table~\ref{tab:stability}). Stability-dependent variation of the individual
+transport efficiencies is itself classical (Businger et al. 1971; Foken 2008;
+Li 2019; Stull 1988); what is structural is that a single
+fixed-Prandtl-number diffusivity cannot represent a 4--6$\times$ swing in their
+ratio. This variation is consistent with the two-operator structure: momentum
+transport is mediated by the global pressure field (fast clock), while heat
+transport is mediated by local buoyant plumes (slow clock), and their relative
+importance shifts with stability.
 
 The spectrum-matched surrogate test of Section~\ref{sec:projection} further
 constrains the class of admissible closure corrections: stochastic augmentations
 that match the energy spectrum of the fast-clock correction but not its elliptic
-geometry cannot repair the divergence constraint. A constructive closure that
-addresses this limitation is developed in the companion paper (Saifelden 2026).
+geometry cannot repair the divergence constraint. The two failures are the same
+failure: just as a single eddy diffusivity cannot represent the
+stability-dependent split between momentum and heat transport
+(Table~\ref{tab:stability}), a single spectrum cannot represent the
+phase-dependent action of the elliptic split. A constructive closure that
+addresses this limitation, building on optimal-prediction and Mori--Zwanzig
+formulations of subgrid closure (Chorin, Hald, \& Kupferman 2000; Parish \&
+Duraisamy 2017), is developed in the companion paper (Saifelden 2026).
 
 \subsection{Scope and limitations}
 
@@ -689,7 +743,11 @@ dataset (polymathic-ai), and NCEP/NCAR Reanalysis 1 via NOAA PSL OPeNDAP
 % ============================================================
 \section*{Acknowledgments}
 
-[To be added.]
+The author thanks the National Ecological Observatory Network (NEON), the Iowa
+Environmental Mesonet at Iowa State University, the Polymathic AI collaboration
+for The Well dataset, and the NOAA Physical Sciences Laboratory for open access
+to the data products used in this study, and the developers of the open-source
+scientific Python ecosystem on which the analysis relies.
 
 % ============================================================
 \appendix
@@ -697,8 +755,33 @@ dataset (polymathic-ai), and NCEP/NCAR Reanalysis 1 via NOAA PSL OPeNDAP
 \section{Reproducibility}
 \label{app:reproducibility}
 
-Table~\ref{tab:commands} lists the commands that regenerate each result in this
-paper.
+Table~\ref{tab:stability} reports the Monin--Obukhov transport-efficiency
+statistics behind the closure-relevant measurement of
+Section~\ref{sec:discussion}, and Table~\ref{tab:commands} lists the commands
+that regenerate each result in this paper.
+
+\begin{table}[h]
+\centering
+\caption{Transport-efficiency statistics binned by Monin--Obukhov stability at
+NEON WREF, January 2020 (602 usable 30-min periods). $r_{uw}$ and $r_{wT}$ are
+the momentum and heat flux correlation coefficients (transport efficiencies);
+the ratio is their median quotient. A July 2020 cross-check over 1{,}030 usable
+periods shows the same ordering, with the ratio spanning 0.44--2.60 across the
+classes --- a $\sim 6\times$ swing (artifact
+\code{01b\_neon\_seasonal.json}).}
+\label{tab:stability}
+\begin{tabular}{lcccc}
+\toprule
+Stability class & $n$ & median $r_{uw}$ & median $|r_{wT}|$ & ratio \\
+\midrule
+strongly unstable & 95 & 0.182 & 0.209 & 0.87 \\
+unstable & 73 & 0.324 & 0.150 & 2.17 \\
+near-neutral & 121 & 0.312 & 0.095 & 3.28 \\
+stable & 153 & 0.225 & 0.200 & 1.13 \\
+strongly stable & 160 & 0.156 & 0.203 & 0.77 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \begin{table}[h]
 \centering
@@ -723,7 +806,7 @@ python general\_two\_clocks/run\_asos\_ci.py} \\
 \texttt{python general\_two\_clocks/run\_rb\_ra\_sweep.py} \\
 \S\ref{sec:spatial} Green's function &
 \texttt{python general\_two\_clocks/run\_elliptic\_demo.py} \\
-\S\ref{sec:discussion} Stability bins (E3) &
+\S\ref{sec:discussion} Stability bins (Table~\ref{tab:stability}) &
 \texttt{python general\_two\_clocks/run\_stability.py} \\
 \S\ref{sec:crossover} Linear crossover &
 \texttt{python general\_two\_clocks/run\_compressible.py} \\
