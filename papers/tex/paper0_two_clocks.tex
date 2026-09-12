@@ -348,7 +348,7 @@ The failure is not subtle. A field that shares the exact power spectrum with the
 \subsection{The verdict beyond the periodic box}
 \label{sec:beyond}
 
-Two structural objections can be raised against the surrogate test as presented: vortex stretching, which is identically zero in two dimensions, might rescue spectrum-matching; and real turbulence has walls. Both are addressed by repository checks whose commands appear in Appendix~\ref{app:reproducibility}.
+Two structural objections can be raised against the surrogate test as presented: vortex stretching, which is identically zero in two dimensions, might rescue spectrum-matching; and real turbulence has walls. Both are addressed by repository checks whose commands appear in Appendix~\ref{app:reproducibility} and whose results are presented in full in the companion paper (Saifelden 2026).
 
 \emph{Three dimensions.} The identical benchmark---sharp spectral filter, exact subgrid force, Leray projection, spectrum-matched surrogate---run in a forced three-dimensional incompressible DNS at $128^3$, where the stretching term $\boldsymbol{\omega}\cdot\nabla\mathbf{u}$, the engine of the forward cascade, is active, reproduces the verdict: the true projection and the projected-FDT closure are solenoidal to machine precision (relative RMS divergence $1.05\times10^{-14}$ and $8.85\times10^{-15}$), while the spectrum-matched surrogate leaves a relative RMS divergence of $9.85$---a failure of the same kind and magnitude as in two dimensions. Vortex stretching does not rescue spectrum-matching.
 
