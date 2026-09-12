@@ -22,7 +22,7 @@ This distinction is elementary at the level of the governing equations. Its cons
 
 This paper shows that the operator split imposes a hard constraint on stochastic closures that spectrum-matching cannot satisfy. We introduce a spectrum-matched surrogate test that isolates the geometric requirement of the elliptic operator. We apply it to a Boussinesq projection method, and show that a phase-randomized field with the identical power spectrum---the structural move of spectrum-matched stochastic closures---leaves the divergence essentially no better than applying no correction at all (ensemble median $3.7\times10^{-2}$ versus $2.7\times10^{-2}$ for the uncorrected drift), while the true projection reaches machine precision ($\sim2\times10^{-15}$). Figure~\ref{fig:surrogate_schematic} shows the construction in one glance---the true correction, its spectrum, the surrogate, and the divergence ledger---so that the paper's central result is visible before the supporting measurements. The construction of a closure that respects this constraint is the subject of the companion paper (Saifelden 2026).
 
-\begin{figure}[t]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.95\linewidth]{figures/fig01_preview_surrogate.png}
 \caption{The surrogate test in one figure. (a) The true projection correction: the
@@ -58,7 +58,7 @@ We use the NEON bundled eddy-covariance product (DP4.00200.001) at the Wind Rive
 
 Figure~\ref{fig:neon} shows diurnal composites of incoming shortwave radiation, air temperature, sensible heat flux, and barometric pressure. Three features are apparent.
 
-\begin{figure}[t]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.86\linewidth]{figures/01_diurnal_composites.png}
 \caption{NEON WREF, January 2020: diurnal composites of incoming shortwave radiation, air temperature, sensible heat flux, and barometric pressure. Temperature exhibits a single clean 24-hour signal driven by local solar heating. Pressure shows a twin-peak semidiurnal tide superimposed on multi-day synoptic variability. Confidence intervals are computed via daily moving-block bootstrap ($n=500$).}
@@ -110,7 +110,7 @@ The interpretation is direct: pressure at a fixed site carries the signature of 
 
 Band-resolved coherence sharpens this statement. The magnitude-squared coherence between hourly pressure and temperature is high (0.82--0.98) at the solar harmonic lines, where both fields are phase-locked to the same astronomical forcing, and above the phase-randomized surrogate 95\% level at all eight stations. In the off-line sub-diurnal band (9--11~h and 13--20~h), coherence collapses to the surrogate noise floor. Away from the shared solar clock, nothing locks the two fields together.
 
-\begin{figure}[t]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.95\linewidth]{figures/11b_tide_vs_latitude_ci.png}
 \caption{Left: semidiurnal pressure-tide amplitude versus latitude at eight ASOS stations with bootstrap 95\% confidence intervals, compared to the Haurwitz migrating-tide climatology (dashed curve). The monotonic equator-to-pole decay is the signature of a global resonance. Right: band-resolved coherence between hourly pressure and temperature---high at the shared solar lines, at the surrogate noise floor off-line.}
@@ -181,21 +181,21 @@ Strongly stable & $>1.0$ & 160 & 0.156 [0.12--0.20] & 0.203 [0.18--0.23] & 0.77 
 \end{tabular}
 \end{table}
 
-\begin{figure}[t]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.86\linewidth]{figures/13_rb_fields.png}
 \caption{Rayleigh--B\'enard DNS snapshot at $Ra = 10^6$: buoyancy (left) is filamentary and sharp, organized into thin plumes; pressure (right) is smooth and domain-spanning. Both fields are from the same simulation at the same instant.}
 \label{fig:rb_fields}
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\linewidth]{figures/15_rb_spectra.png}
 \caption{Spatial spectra of buoyancy and pressure from the Rayleigh--B\'enard DNS. The energy-containing scales coincide; at high wavenumber, buoyancy exceeds pressure by $\sim 10^4$, consistent with the $1/k^4$ suppression of the inverse Laplacian.}
 \label{fig:rb_spectra}
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\linewidth]{figures/39_elliptic_pressure.png}
 \caption{Response to an identical localized source applied to both operators. The elliptic (pressure) response spreads globally, with 79\% of its magnitude beyond one source-width. The parabolic (heat-kernel) response remains confined.}
@@ -252,7 +252,7 @@ Pressure residual \\
 
 Two clocks coexist in one flow: the vortical energy decays on the slow advective timescale while the acoustic energy oscillates on the fast period (Fig.~\ref{fig:two_clocks}). Averaging over the fast clock acts as a low-pass filter that recovers the elliptic limit---an operation we will repeat on the real atmosphere in Section~\ref{sec:reanalysis}.
 
-\begin{figure}[t]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.82\linewidth]{figures/17_crossover.png}
 \caption{Relaxation of the compressible pressure field to the elliptic (Poisson)
@@ -261,7 +261,7 @@ $ct/L$, with $t_{90} \approx 2.3\,L/c$.}
 \label{fig:crossover}
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.82\linewidth]{figures/20_ns_two_clocks.png}
 \caption{Nonlinear compressible box at $M = 0.1$: slow vortical energy decay with
@@ -269,7 +269,7 @@ fast acoustic oscillation superimposed. Both clocks are present in one flow.}
 \label{fig:two_clocks}
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\linewidth]{figures/21_ns_mach_sweep.png}
 \caption{Mach-number sweep: dilatational energy fraction (circles) and
@@ -314,7 +314,7 @@ Three results follow.
 
 \emph{Third}, the physical interpretation is that the fast clock's action on the slow dynamics is a global elliptic correction with a definite geometric structure, not a stochastic variance to be re-injected with the correct energy. Matching a power spectrum does not reconstruct a boundary-aware, globally coupled elliptic operator.
 
-\begin{figure}[t]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.82\linewidth]{figures/23_projection_step.png}
 \caption{One projection time step, dissected. Top: the divergent intermediate
@@ -325,7 +325,7 @@ $\mathbf{u}^{n+1}$ (RMS $\nabla\cdot\mathbf{u}^{n+1} = 2\times 10^{-15}$).}
 \label{fig:projection}
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.82\linewidth]{figures/24_spde_limit.png}
 \caption{Spectrum-matched surrogate test. A phase-randomized field with the
@@ -398,7 +398,7 @@ Four features emerge.
 
 \emph{Fourth}, time-averaging acts as a low-pass filter on the fast clock: the divergent fraction is smaller in the daily mean than in the 6-hourly data at every level (at 500~hPa, 0.7\% versus 1.1\%). Averaging scrubs the fast divergent clock---exactly as acoustic averaging recovered the elliptic pressure in Section~\ref{sec:nonlinear}---consistent with the mechanism of Section~\ref{sec:mechanism}.
 
-\begin{figure}[t]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.86\linewidth]{figures/25_reanalysis_two_clocks.png}
 \caption{NCEP/NCAR winds, one analysis day. Left: rotational wind (synoptic highs,
@@ -407,7 +407,7 @@ overturning zones).}
 \label{fig:reanalysis_wind}
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\linewidth]{figures/26_reanalysis_ke_spectrum.png}
 \caption{Kinetic-energy spectra by spherical-harmonic degree $l$: the divergent
@@ -416,7 +416,7 @@ scale.}
 \label{fig:ke_spectrum}
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\linewidth]{figures/27_reanalysis_levels.png}
 \caption{Vertical structure of $KE_{\mathrm{div}}/KE_{\mathrm{rot}}$: minimum at
