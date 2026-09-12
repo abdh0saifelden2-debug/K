@@ -13,7 +13,7 @@
 
 \begin{document}
 
-\title{Two clocks, not one: measured pressure--temperature decoupling, its operator origin, and the structural blind spot of single-diffusivity closure}
+\title{Two clocks: operator-level pressure--temperature decoupling measured across scales}
 
 \author{Abdelrahman Saifelden}
 \email[Correspondence: ]{Abdulrahman.Saifelden22011411@aiet.edu.eg}
@@ -22,238 +22,439 @@
 \date{\today}
 
 \begin{abstract}
-Pressure and temperature in a fluid are driven by the same source yet evolve under different operators: temperature obeys a local, parabolic advection--diffusion equation, while pressure in the incompressible limit obeys a global elliptic constraint --- the finite-Mach hyperbolic acoustic adjustment degenerating into it as $M\to 0$. This paper assembles the direct observational and computational case that this operator split is measurable as \emph{two clocks} running in one flow, and that single-eddy-diffusivity (``K-theory'') closure is structurally blind to it. \textbf{Temporally}: in NEON eddy-covariance data (WREF, 30-min, winter and summer months) temperature is a clean diurnal (24 h) signal while barometric pressure is synoptic-plus-tidal, and the bulk daily $P$--$T$ correlation is regime-dependent but never gas-law-locked ($r\approx +0.07$ in winter, $-0.49$ in the summer thermal-low regime, against a constant-density lock slope of $+0.33$ kPa/K); in ASOS 1-minute data at eight stations spanning $24.6^{\circ}$--$47.4^{\circ}$N the 12-h pressure tide amplitude falls monotonically $1.10\to 0.34$ hPa toward the pole (daily-block-bootstrap 95\% CIs; trend correlation $0.98$ with the Haurwitz/Dai--Wang migrating-tide climatology $1.16\cos^{3}\varphi$, station totals $0.9$--$1.4\times$ the migrating-only formula as non-migrating components require) while the 24-h temperature amplitude stays local --- pressure carries a planetary-scale resonance where temperature carries the sun overhead; band-resolved coherence completes the split: $0.8$--$1.0$ at the solar lines (the shared astronomical clock, above a phase-randomized surrogate 95\% level at all eight stations) collapsing to the surrogate noise floor in the off-line sub-diurnal band. \textbf{Spatially}: in a $Ra=10^{6}$ Rayleigh--B\'enard DNS the two fields share one integral scale (ratio $1.06\times$) yet the pressure Taylor microscale is $2.40\times$ the buoyancy's and the high-wavenumber pressure spectrum sits $\sim 10^{4}\times$ below buoyancy --- the $1/k^{2}$ footprint of the inverse Laplacian; sweeping $Ra=10^{6}\to 10^{8}$ \emph{widens} the microscale ratio to $4.5\times$ while the shared integral scale stays order one, so the split strengthens with turbulence intensity; correspondingly, a localized boundary bump projects 79\% of its elliptic pressure response beyond one bump-width while the matched parabolic response stays confined. The \textbf{closure-relevant consequence} is measured directly: across Monin--Obukhov stability classes the momentum-to-heat transport-efficiency ratio swings $4.3\times$ ($0.77\to 3.28$) in the winter month and $6.0\times$ in the summer month, structurally outside any fixed-turbulent-Prandtl single-diffusivity closure. Three \textbf{controlled demonstrations} isolate the mechanism: (i) a compressible pressure field relaxes to the elliptic Poisson field with $t_{90}\approx 2.3\,L/c$, all sound speeds collapsing onto one curve in $ct/L$; (ii) in a fully nonlinear compressible box the dilatational (fast-clock) energy fraction scales as $M^{2}$ and the acoustic-averaged pressure converges to the elliptic field (correlation $\approx 1$, residual $\sim M^{2}$); (iii) the projection method is exhibited as the two-clocks structure made literal --- one Leray solve reduces the local drift's divergence from $2.7\times 10^{-2}$ to machine zero ($2\times 10^{-15}$), whereas phase-randomized surrogates with the \emph{exactly} matched power spectrum leave it at $3.7\times 10^{-2}$ [$3.5$--$3.8\times 10^{-2}$, 95\% over $n=100$ surrogates] --- no better than applying no correction at all ($2.7\times 10^{-2}$) --- with pointwise correlation to the true correction of median $|r|=0.07$ (95th percentile $0.20$; the seed ensemble replaces a single-realization anecdote) --- a structural ceiling of spectrum-matching stochastic closures. Finally, the same decomposition applied to \textbf{real winds} (NCEP/NCAR reanalysis, spherical-harmonic Helmholtz split) yields $KE_{div}/KE_{rot}=4.0\%,\,0.7\%,\,1.0\%$ at 850/500/250 hPa with the minimum at the classical level of non-divergence --- reproduced in the independent NCEP--DOE Reanalysis 2 ($4.5\%,\,0.8\%,\,1.1\%$, same ordering, same 500-hPa minimum; $\le 15\%$ relative differences), so the ratio is not an assimilation-system artifact --- and daily averaging scrubs the fast clock exactly as acoustic averaging does in the box. Scope is explicit: the demonstrations are two-dimensional and periodic; no 3-D regularity claim and no forecast-skill claim is made; reanalysis is a model-assimilated confirmation at $l\le 35$. A companion paper derives, audits, and benchmarks the closure repair; this paper establishes the phenomenon it repairs.
+Pressure and temperature in a fluid are driven by the same source but evolve under
+different operators: temperature obeys a local parabolic advection--diffusion
+equation, while pressure in the incompressible limit obeys a global elliptic
+constraint. We show that this operator split is measurable as distinct temporal and
+spatial signatures across five independent settings. In field data, temperature
+tracks the local diurnal cycle while pressure carries a planetary-scale semidiurnal
+tide whose amplitude follows latitude, not local heating. In Rayleigh--B\'enard
+direct numerical simulation, pressure and buoyancy share the same integral scale
+but differ by a factor of 2.4 in Taylor microscale and $\sim 10^{4}$ in
+high-wavenumber spectral power, with the gap widening as $Ra$ increases from
+$10^{6}$ to $10^{8}$. In controlled compressible solvers, the hyperbolic-to-
+elliptic crossover occurs on a timescale $t_{90} \approx 2.3\,L/c$, and the
+fast-clock energy fraction scales as $M^{2}$. In the projection method, a single
+elliptic solve reduces the divergence of the intermediate velocity field from
+$2.7\times 10^{-2}$ to machine zero, while a spectrum-matched phase-randomized
+surrogate leaves it unrepaired. In NCEP/NCAR reanalysis, the divergent (fast)
+component of the wind carries $\leq 4\%$ of the kinetic energy, with a minimum at
+the classical level of non-divergence. These measurements establish that the
+two-operator structure is a robust, measurable property of real flows, with direct
+implications for single-diffusivity turbulence closures.
 \end{abstract}
 
 \maketitle
 
-\section*{1. Introduction}
+% ============================================================
+\section{Introduction}
+\label{sec:intro}
 
-\subsection*{1.1 One source, two responses}
+A fluid heated from below or beside responds in its temperature field and in its
+pressure field. These two responses are coupled through the equation of state and
+the momentum balance, yet they are governed by different mathematical operators
+with different Green's functions, different characteristic times, and different
+spatial footprints. Temperature is transported: it is advected, diffused, and
+filamented by the flow. Pressure, in the incompressible limit, is not transported
+at all; it is the Lagrange multiplier of the divergence-free constraint,
+determined instantaneously by a global elliptic solve. At finite compressibility,
+that instantaneous adjustment is replaced by acoustic waves propagating at speed
+$c$, but the adjustment remains fast compared to the advective timescale whenever
+the Mach number is small.
 
-Turn on the sun over a fluid layer and two of its most basic state variables respond in ways that could hardly be more different. Temperature responds \emph{locally}: it is advected, it diffuses, it remembers the surface that heated it, and its anomalies are torn into filaments by whatever strain the flow supplies. Pressure responds \emph{globally}: in the incompressible limit it is not a prognostic field at all but the multiplier of the divergence-free constraint, resolved instantaneously over the whole domain and its boundaries; at finite compressibility that instantaneous adjustment is replaced by acoustic waves running at a speed far faster than the flow. The two fields are coupled --- through buoyancy, through the equation of state, through the momentum balance --- and driven by the same heating; yet they carry different histories, different geometries, and different characteristic times. We call this the \emph{two clocks} structure: a slow, local, memory-bearing clock (temperature and other transported scalars) and a fast, global, constraint-like clock (pressure).
+This distinction is elementary at the level of the governing equations. Its
+consequences for turbulence modeling, however, are rarely stated explicitly. The
+standard closure assumption --- a single scalar eddy diffusivity acting on
+resolved gradients, optionally with a fixed turbulent Prandtl number (Boussinesq
+1877; Smagorinsky 1963) --- treats all transported quantities as if they respond
+to stirring in the same way, on the same timescale, with the same spatial
+structure. If pressure and temperature genuinely evolve under different operators,
+this assumption is not merely approximate; it is structurally incomplete.
 
-The distinction is elementary at the level of the equations. It stops being elementary the moment one builds a turbulence closure, a subgrid parameterization, or a statistical forecast model, because the workhorse of all three --- a single scalar eddy diffusivity acting on resolved gradients (Boussinesq 1877; Smagorinsky 1963), optionally with a fixed turbulent Prandtl number to relate momentum and heat --- assumes \emph{one} clock. Everything transported is assumed stirred by the same eddies at the same rate with no memory and no action at a distance. The premise of this paper is that the two-clocks structure is not a metaphor but a measurable property of real data and simple flows, with a quantifiable failure mode for one-clock closures.
+The purpose of this paper is to establish, quantitatively and across multiple
+independent settings, that the operator split is measurable. We do not propose a
+new closure; that is the subject of a companion paper (Saifelden 2026, hereafter
+\textbf{P1}). We do not claim that single-diffusivity models are useless; we claim
+that they are one-clock models applied to a two-clock system, and we measure the
+discrepancy.
 
-\subsection*{1.2 What this paper does}
+The paper proceeds as follows. Section~\ref{sec:operators} states the two-operator
+structure and identifies the relevant timescales. Section~\ref{sec:temporal}
+measures the temporal decoupling in atmospheric field data.
+Section~\ref{sec:spatial} measures the spatial decoupling in direct numerical
+simulation. Section~\ref{sec:demonstrations} demonstrates the mechanism in
+controlled compressible and incompressible solvers. Section~\ref{sec:reanalysis}
+confirms the energy split in the real atmospheric wind field.
+Section~\ref{sec:discussion} discusses implications and limitations.
 
-We proceed from measurement to mechanism to consequence:
+% ============================================================
+\section{The two operators}
+\label{sec:operators}
 
-\begin{enumerate}
-\item \textbf{Measure the temporal split in the field} (\S3). NEON eddy-covariance data and multi-station 1-minute ASOS barometry/thermometry show temperature locked to the local diurnal cycle while pressure is dominated by synoptic variability plus the semidiurnal solar tide --- a \emph{global} resonance whose amplitude follows latitude, not local heating. Bulk daily $P$--$T$ coupling at a fixed site is regime-dependent and never gas-law-locked (winter $r\approx +0.07$, summer $r\approx -0.49$).
-\item \textbf{Measure the spatial split on one grid} (\S4). In a Rayleigh--B\'enard DNS, pressure and buoyancy share the same integral (roll) scale but differ $2.40\times$ in Taylor microscale and $\sim 10^{4}\times$ in high-$k$ spectral power --- the direct footprint of the inverse Laplacian's $1/k^{2}$; the microscale ratio \emph{widens} to $4.5\times$ as $Ra$ is swept $10^{6}\to 10^{8}$, and a Green's-function experiment makes the same point with a single localized source.
-\item \textbf{Measure the closure-relevant consequence} (\S5). Binned by Monin--Obukhov stability, the ratio of momentum to heat transport efficiency swings $4.3\times$ where a fixed-$Pr_{t}$ closure requires it constant.
-\item \textbf{Demonstrate the mechanism in controlled solvers} (\S6). A linear acoustics solver shows the hyperbolic$\to$elliptic crossover with $t_{90}\approx 2.3\,L/c$; a nonlinear compressible solver shows both clocks coexisting with the fast clock's energy $\sim M^{2}$; a Boussinesq solver shows that the projection method \emph{is} the two-clocks synthesis, and that a spectrum-matched stochastic surrogate cannot reproduce the elliptic correction (median $|r|=0.07$, p95 $0.20$, $n=100$; divergence unrepaired) --- the structural ceiling of SPDE-style closures.
-\item \textbf{Confirm on real winds} (\S7). A spherical-harmonic Helmholtz split of NCEP/NCAR reanalysis puts $\lesssim 4\%$ of kinetic energy in the divergent (fast) component, with the vertical structure pinned to the classical level of non-divergence and time-averaging acting as the same low-pass filter as acoustic averaging in the box.
-\end{enumerate}
+\subsection{Governing equations}
 
-Section 8 states scope and kill conditions for each claim. A companion manuscript (Saifelden 2026, hereafter \textbf{P1}) takes the diagnosis to prescription: it audits eddy-diffusivity closure operator-by-operator against the Mori--Zwanzig generalized Langevin equation and benchmarks a projected, fluctuation--dissipation-consistent repair in 2-D and 3-D. This paper is the evidence layer: every number above is regenerable from committed code (Appendix A), and none of it depends on P1's closure machinery.
+Let $\mathbf{u}$ be velocity, $p$ pressure, $\theta$ a transported scalar
+(temperature or buoyancy), and $\nu$, $\kappa$ the molecular viscosity and
+diffusivity. The scalar obeys the parabolic advection--diffusion equation
+\begin{equation}
+\partial_t \theta + (\mathbf{u}\cdot\nabla)\theta
+= \kappa\,\nabla^2\theta + S_\theta,
+\label{eq:scalar}
+\end{equation}
+whose Green's function in the diffusive limit is a spreading Gaussian of width
+$\sqrt{4\kappa t}$: local, causal, and memory-bearing.
 
-\subsection*{1.3 Relation to existing understanding}
+In an incompressible flow, pressure is determined by the elliptic Poisson equation
+obtained from the divergence of the momentum equation:
+\begin{equation}
+\nabla^2 p = -\rho\,\nabla\cdot\left[(\mathbf{u}\cdot\nabla)
+\mathbf{u}\right] + \nabla\cdot\mathbf{f}.
+\label{eq:poisson}
+\end{equation}
+Its Green's function is $\sim \ln r$ in two dimensions ($\sim -1/r$ in three
+dimensions): global, instantaneous, and boundary-aware. In Fourier space,
+$\hat{p} = -\hat{f}/k^2$; division by $k^2$ is a low-pass filter that suppresses
+small-scale power by a factor $\sim 1/k^4$ relative to the source.
 
-None of the ingredients is exotic. That low-Mach-number flow relaxes to an elliptically-constrained state is classical singular-limit theory (Klainerman \& Majda 1981); atmospheric tides are a mature subject (Chapman \& Lindzen 1970; Dai \& Wang 1999); the rotational dominance of large-scale winds and the level of non-divergence are textbook synoptic dynamics (Holton 2004); projection methods are standard numerics (Chorin 1968; Leray 1934); and stochastic parameterization is an active program (Hasselmann 1976; Berner et al. 2017). The contribution here is the \emph{joint, quantitative} case built for the closure question: the same operator split measured in field data, in a DNS, in controlled compressible and incompressible solvers, and in reanalysis, each with a falsifiable number attached, and each mapped onto the specific term of the closure problem it breaks. In particular the spectrum-matching ceiling of \S6.3 --- energy-consistent noise reproducing the fast clock's \emph{spectrum} while leaving its \emph{geometry} unreconstructed (ensemble-median correlation $0.07$, the divergence constraint unrepaired) --- is, to our knowledge, not stated quantitatively elsewhere, and it is the piece that connects the phenomenology to closure structure.
+At finite compressibility, pressure instead satisfies the hyperbolic wave equation
+\begin{equation}
+\frac{1}{c^2}\,\partial_{tt}p - \nabla^2 p = s(\mathbf{x},t),
+\label{eq:wave}
+\end{equation}
+with sound speed $c$. As $M = U/c \to 0$, Eq.~\eqref{eq:wave} degenerates into
+Eq.~\eqref{eq:poisson}: the waves become infinitely fast and vanish into the
+constraint (Klainerman \& Majda 1981).
 
-\medskip\hrule\medskip
+\subsection{Timescales}
 
-\section*{2. Two operators, two clocks}
+Three timescales are relevant for a domain of size $L$, flow speed $U$, and eddy
+scale $\ell$:
+\begin{equation}
+\tau_p \sim \frac{L}{c}, \qquad
+\tau_{\mathrm{adv}} \sim \frac{\ell}{U}, \qquad
+\tau_\kappa \sim \frac{\ell^2}{\kappa}.
+\label{eq:timescales}
+\end{equation}
+For air at laboratory-to-mesoscale $L$,
+$\tau_p/\tau_{\mathrm{adv}} = M(L/\ell)^{-1} \ll 1$. Pressure equilibrates before
+the flow moves; scalars integrate their history as the flow evolves. We refer to
+the parabolic timescale as the \emph{slow clock} and the elliptic/acoustic
+timescale as the \emph{fast clock}.
 
-\subsection*{2.1 The equations}
+% TODO: Figure 1 --- schematic of the two operators (parabolic vs elliptic Green's
+% functions and the three timescales of Eq.~\eqref{eq:timescales}). Image to be
+% created; none exists in the repository yet.
+% \begin{figure}[t]
+% \centering
+% \includegraphics[width=0.85\linewidth]{figures/schematic_two_operators.png}
+% \caption{Schematic of the two-operator structure. Left: the parabolic (slow)
+% clock --- local, causal, memory-bearing, with a Gaussian Green's function.
+% Right: the elliptic (fast) clock --- global, instantaneous, boundary-aware,
+% with a $\ln r$ Green's function in 2-D. At finite compressibility the elliptic
+% clock is replaced by a hyperbolic wave clock with speed $c$, which degenerates
+% into the elliptic constraint as $M\to 0$.}
+% \label{fig:schematic}
+% \end{figure}
 
-Let $u$ be velocity, $p$ pressure, $\theta$ a transported scalar (temperature, buoyancy, humidity), $\nu,\kappa$ molecular coefficients. The scalar obeys a \textbf{parabolic} transport equation,
-\[
-\partial_{t}\theta + (u\cdot\nabla)\theta = \kappa\nabla^{2}\theta + S_{\theta},
-\tag{1}
-\]
-whose Green's function is (in the diffusive limit) a spreading Gaussian of width $\sqrt{4\kappa t}$: \emph{local}, causal, memory-bearing. In an incompressible flow, pressure obeys the \textbf{elliptic} Poisson constraint obtained from the divergence of the momentum equation,
-\[
-\nabla^{2}p = -\rho\,\nabla\!\cdot\!\left[(u\cdot\nabla)u\right] + \nabla\!\cdot\! f,
-\tag{2}
-\]
-whose Green's function is $\sim\ln r$ in 2-D ($\sim -1/r$ in 3-D): \emph{global}, instantaneous, boundary-aware. In Fourier space $\hat{p}=-\widehat{f}/k^{2}$ --- division by $k^{2}$ is a global low-pass filter, and this single algebraic fact drives every spatial measurement in \S4. At finite compressibility pressure is instead \textbf{hyperbolic},
-\[
-\frac{1}{c^{2}}\,\partial_{tt}p - \nabla^{2}p = s(x,t),
-\tag{3}
-\]
-with sound speed $c$; as $M=U/c\to 0$, (3) degenerates into (2) --- the waves become infinitely fast and vanish into the constraint (Klainerman \& Majda 1981). The two descriptions are the same physics at different compressibility, which is exactly what \S6.1--6.2 demonstrate numerically.
+% ============================================================
+\section{Temporal decoupling in field data}
+\label{sec:temporal}
 
-\subsection*{2.2 The clocks}
+We first ask whether the two clocks are distinguishable in time-series
+measurements at fixed locations. If pressure and temperature respond to the same
+forcing on the same timescale, their spectra should be similar and their bulk
+correlation should be tight. If they respond through different operators, their
+spectra should differ qualitatively and their correlation should be weak and
+regime-dependent.
 
-Three timescales matter for a domain of size $L$, flow speed $U$, eddy scale $\ell$:
-\[
-\tau_{p}\sim L/c \;\;(\text{acoustic/elliptic adjustment}), \qquad
-\tau_{adv}\sim \ell/U \;\;(\text{advective turnover}), \qquad
-\tau_{\kappa}\sim \ell^{2}/\kappa \;\;(\text{diffusion}).
-\tag{4}
-\]
-For air at laboratory-to-mesoscale $L$, $\tau_{p}/\tau_{adv}=M\,(L/\ell)^{-1}\ll 1$; for water ($c\approx 1500$ m/s) smaller still. Pressure equilibrates before the flow moves; scalars integrate their history as the flow moves. A closure that models both with one local diffusivity therefore commits to a specific, testable set of errors:
+\subsection{Single-site measurement: NEON eddy covariance}
+\label{sec:neon}
 
-\begin{itemize}
-\item \textbf{E1 (temporal).} At a fixed site, low-frequency pressure and temperature should decouple: temperature tracks the local source spectrum; pressure tracks global/planetary modes. A one-clock picture in which ``$P$ tracks $T$'' through the gas law at fixed density predicts tight daily coupling --- so measuring the coupling tests the picture. (\S3)
-\item \textbf{E2 (spatial).} On one grid, pressure must lack small-scale power relative to a scalar by the $1/k^{4}$ spectral factor implied by $\hat{p}\propto \hat{f}/k^{2}$, even where both share the energy-containing scale. (\S4)
-\item \textbf{E3 (closure).} Momentum (shaped by the global pressure field) and heat (shaped by local buoyant plumes) cannot maintain a constant transport-efficiency ratio as the balance of shear and buoyancy changes; a fixed-$Pr_{t}$ closure says they must. (\S5)
-\item \textbf{E4 (crossover).} Making $c$ finite must turn the constraint into waves whose only role, in the slow limit, is to set the adjustment clock: relaxation time $\propto L/c$, final field $\to$ the elliptic solution, fast-clock energy $\to 0$ as $M^{2}$. (\S6.1--6.2)
-\item \textbf{E5 (structure, not spectrum).} The fast clock's correction to the slow dynamics is a global elliptic solve, not noise: a stochastic surrogate with the correct spectrum but random phases must fail to reproduce it pointwise and must fail its constraint function. (\S6.3)
-\item \textbf{E6 (real flow).} In the real atmosphere the slow clock (rotational, balanced) must dominate the kinetic energy, the fast clock (divergent) must be weak and physically structured, and time-averaging must act as a low-pass filter on it. (\S7)
-\end{itemize}
+We use the NEON bundled eddy-covariance product (DP4.00200.001) at the Wind River
+Experimental Forest site (WREF; 45.82$^\circ$N, 121.95$^\circ$W; 53~m canopy
+height) for January 2020 at 30-minute resolution: 1488 intervals, of which 1097
+carry valid pressure and 1180 valid temperature (NEON 2020).
 
-Each expectation is falsifiable, and \S8.2 lists what observation would have killed --- or would still kill --- each one.
+Figure~\ref{fig:neon} shows diurnal composites of incoming shortwave radiation,
+air temperature, sensible heat flux, and barometric pressure. Three features are
+apparent.
 
-\medskip\hrule\medskip
+First, the source--response chain is causal and ordered: incoming shortwave leads
+air temperature by approximately two hours and the sensible heat flux by
+approximately three hours. The temperature signal is driven locally by solar
+heating.
 
-\section*{3. Temporal decoupling measured in the field}
+Second, the spectral characters of the two fields are qualitatively different.
+Temperature variance is concentrated at the 24-hour diurnal line. Pressure
+variance is dominated by multi-day synoptic variability with a distinct secondary
+peak at the 12-hour semidiurnal atmospheric tide, visible as twin daily maxima in
+the raw composite.
 
-\subsection*{3.1 NEON eddy covariance: a winter month at one tower, cross-checked in summer}
+Third, the bulk daily correlation between pressure and temperature is weak:
+$r(P,T) \approx +0.07$ ($R^2 \approx 0.005$). This is far from the tight positive
+coupling that a constant-density ideal-gas relation would predict. The mismatch is
+accommodated by density fluctuations of order one percent; the gas law holds
+locally, but bulk pressure does not track bulk temperature.
 
-We use the NEON bundled eddy-covariance product (DP4.00200.001) at WREF (Wind River Experimental Forest, WA; 45.82$^{\circ}$N, 121.95$^{\circ}$W; old-growth conifer canopy, 53 m), January 2020 at 30-min resolution: 1488 intervals, of which 1097 carry valid pressure and 1180 valid temperature. Three facts (Fig.~1):
-
-\begin{itemize}
-\item \textbf{The source--response chain is causal and ordered.} Incoming shortwave leads air temperature by $\sim$2 h and the sensible heat flux by $\sim$3 h; daytime flux is upward (buoyant). The temperature clock is driven, locally, by the sun.
-\item \textbf{The two spectra are qualitatively different.} Temperature variance is overwhelmingly diurnal (24 h). Pressure variance is dominated by multi-day synoptic weather plus a distinct \textbf{semidiurnal (12 h) atmospheric tide} --- twin daily maxima visible in the raw composite.
-\item \textbf{Bulk coupling is near zero.} Pearson $r(P,T)\approx +0.07$ ($R^{2}\approx 0.005$) at the daily scale: nowhere near the steep constant-density line a fixed-parcel ideal-gas lock would predict. The mismatch is absorbed by $\sim$1\% density changes --- the gas law holds \emph{locally}; what fails is the one-clock reading ``bulk $P$ tracks bulk $T$''.
-\end{itemize}
-
-\begin{center}
+\begin{figure}[t]
+\centering
 \includegraphics[width=0.86\linewidth]{figures/01_diurnal_composites.png}
+\caption{NEON WREF, January 2020: diurnal composites of incoming shortwave
+radiation, air temperature, sensible heat flux, and barometric pressure.
+Temperature exhibits a single clean 24-hour signal driven by local solar heating.
+Pressure shows a twin-peak semidiurnal tide superimposed on multi-day synoptic
+variability.}
+\label{fig:neon}
+\end{figure}
 
-{\small \textbf{Figure 1.} NEON WREF, Jan 2020: diurnal composites of shortwave, temperature, sensible heat flux, and pressure. Temperature is a single clean 24-h signal; pressure shows the twin-peak semidiurnal tide riding on synoptic variability.}
-\end{center}
+A seasonal cross-check using July 2020 at the same site reproduces the qualitative
+fingerprint at the opposite solar extreme. The temperature diurnal signal becomes
+even cleaner (semidiurnal-to-diurnal power ratio drops from 7.3\% in winter to
+1.0\% in summer), pressure retains its semidiurnal tide component, and the bulk
+daily correlation shifts to $r = -0.49$ --- the summer thermal-low regime, in
+which hot afternoons lower surface pressure. The sign and magnitude of the bulk
+correlation are set by the synoptic regime; the spectral separation between the
+two fields is not.
 
-\textbf{Seasonal cross-check (summer month).} The same pipeline applied to July 2020 at the same tower (1036/1344 valid $P$/$T$ intervals) reproduces the fingerprint at the opposite solar extreme: temperature's semidiurnal-to-diurnal power ratio drops to $1.0\%$ (the summer diurnal line is even cleaner; winter $7.3\%$), pressure keeps a genuine tide line at $11.9$ h ($8.5\%$ of its diurnal power) with its dominant variability still synoptic ($\sim$168 h), and the bulk daily correlation moves to $r=-0.49$ --- the summer thermal-low regime, in which hot afternoons \emph{lower} surface pressure --- with observed slope $-0.024$ kPa/K against the constant-density lock's $+0.334$ kPa/K. The bulk $P$--$T$ coupling is set by synoptic regime and season; the operator fingerprint is not (artifact \code{01b\_neon\_seasonal.json}).
+\subsection{Multi-station measurement: the latitude fingerprint of a global mode}
+\label{sec:asos}
 
-\subsection*{3.2 ASOS 1-minute: the latitude fingerprint of a global mode}
+A single tower cannot distinguish ``pressure is noisy'' from ``pressure responds
+to the whole atmosphere.'' To make this distinction, we examine one-minute
+barometric and thermometric data from eight ASOS stations spanning
+24.6$^\circ$--47.4$^\circ$N (Iowa Environmental Mesonet archive; Q1 2020).
+Confidence intervals are computed via daily moving-block bootstrap ($n = 500$).
 
-A single tower cannot distinguish ``pressure is noisy'' from ``pressure listens to the whole atmosphere''. Eight ASOS stations spanning $23^{\circ}$ of latitude, coastal and interior (1-minute data, Q1 2020; Iowa Environmental Mesonet archive; daily moving-block bootstrap, $n=500$, for the 95\% CIs) can:
+Table~\ref{tab:asos} summarizes the key measurements. The 24-hour temperature
+amplitude varies with local insolation and surface type: it is largest at the
+interior desert site (PHX, 5.06$^\circ$C) and smallest at the marine sites (SEA,
+1.79$^\circ$C; EYW, 1.51$^\circ$C). It does not order monotonically with latitude.
 
-\begin{center}\small
-\begin{tabular}{lccccc}
-\toprule
-station & latitude & $S_{1,T}$ (24 h) & $S_{2,P}$ (12 h) [95\% CI] & $S_{2,P}/1.16\cos^{3}\varphi$ & daily $P$--$T$ corr [95\% CI] \\
-\midrule
-EYW & 24.6$^{\circ}$N & 1.51 $^{\circ}$C & \textbf{1.103 [1.013, 1.191] hPa} & 1.26 & $-0.16$ $[-0.30, -0.03]$ \\
-MIA & 25.8$^{\circ}$N & 2.73 $^{\circ}$C & 1.077 [0.979, 1.169] hPa & 1.27 & $-0.05$ $[-0.18, +0.08]$ \\
-MSY & 30.0$^{\circ}$N & 2.75 $^{\circ}$C & 1.018 [0.878, 1.169] hPa & 1.35 & $-0.40$ $[-0.54, -0.24]$ \\
-DFW & 32.9$^{\circ}$N & 3.28 $^{\circ}$C & 0.957 [0.794, 1.141] hPa & 1.39 & $-0.48$ $[-0.59, -0.34]$ \\
-PHX & 33.4$^{\circ}$N & 5.06 $^{\circ}$C & 0.924 [0.861, 1.008] hPa & 1.37 & $-0.20$ $[-0.29, -0.12]$ \\
-DSM & 41.5$^{\circ}$N & 2.73 $^{\circ}$C & 0.628 [0.398, 0.965] hPa & 1.29 & $-0.56$ $[-0.67, -0.41]$ \\
-CAR & 46.9$^{\circ}$N & 3.03 $^{\circ}$C & 0.439 [0.181, 0.879] hPa & 1.19 & $-0.42$ $[-0.52, -0.30]$ \\
-SEA & 47.4$^{\circ}$N & 1.79 $^{\circ}$C & \textbf{0.337 [0.262, 0.529] hPa} & 0.94 & $-0.06$ $[-0.21, +0.09]$ \\
-\bottomrule
-\end{tabular}
-\end{center}
+The 12-hour pressure-tide amplitude, by contrast, decreases monotonically from
+1.10~hPa at 24.6$^\circ$N to 0.34~hPa at 47.4$^\circ$N. This is the classical
+signature of the global solar semidiurnal tide --- a planetary normal-mode
+response whose amplitude is largest where the forcing projects onto the
+low-latitude waveguide (Chapman \& Lindzen 1970). The trend correlation with the
+migrating-tide climatology $A_H = 1.16\cos^3\varphi$~hPa (Haurwitz 1956) is 0.98.
+Station totals fall in the range $0.9$--$1.4\times A_H$, consistent with the
+expected contribution of non-migrating components (Dai \& Wang 1999).
 
-The 24-h temperature amplitude is set by local insolation and does not order with latitude in this winter-season sample (interior PHX largest, marine SEA/EYW smallest). The 12-h pressure tide \textbf{falls monotonically from equator to pole across all eight stations}, the classical signature of the global solar semidiurnal tide --- a planetary normal-mode response, largest where the forcing projects onto the low-latitude waveguide (Chapman \& Lindzen 1970). This is deliberately a \textbf{protocol validation against a known planetary signal}, not a discovery claim: the trend correlation with the migrating-tide climatology $A_{H}=1.16\cos^{3}\varphi$ hPa (Haurwitz 1956) is $0.98$, and station totals sit $0.9$--$1.4\times$ $A_{H}$, the expected excess once non-migrating components are included (Dai \& Wang 1999). Pressure ``knows about'' the geometry of the whole atmosphere; temperature knows about the sun overhead (Figs.~2--3). Station-level daily $P$--$T$ correlations range $-0.05$ to $-0.56$ with 95\% CIs excluding any tight positive lock --- variable in sign and magnitude, set by synoptic regime rather than by any gas-law coupling. \textbf{Band-resolved coherence} sharpens the bulk correlation (the blunt instrument) into the actual statement: magnitude-squared coherence between hourly $P$ and $T$ is $0.82$--$0.98$ \emph{at} the solar lines ($S_{1}$/$S_{2}$, where both fields are phase-locked to the same astronomical forcing; above the phase-randomized-surrogate 95\% level at all eight stations) and collapses to the surrogate noise floor ($0.09$--$0.30$ vs floor $0.15$--$0.20$) in the off-line sub-diurnal band (9--11 h and 13--20 h): away from the shared solar clock, nothing locks the two fields.
-
-\begin{center}
-\includegraphics[width=0.95\linewidth]{figures/11b_tide_vs_latitude_ci.png}
-
-{\small \textbf{Figure 2.} Left: semidiurnal pressure-tide amplitude vs latitude at eight stations with bootstrap 95\% CIs, against the Haurwitz $1.16\cos^{3}\varphi$ migrating-tide climatology: monotonic equator-to-pole decay --- a global resonance, not local heating. Right: band coherence --- high at the shared solar lines, at the surrogate floor off-line.}
-\end{center}
-
-\begin{center}
-\includegraphics[width=0.8\linewidth]{figures/12_asos_coupling.png}
-
-{\small \textbf{Figure 3.} Daily-scale pressure--temperature coupling at the three ASOS stations: weak and regime-dependent, nowhere near a constant-density gas-law line.}
-\end{center}
-
-\textbf{Scope.} Two months at the seasonal extremes (NEON) and one season (ASOS) at nine sites in one country: these are \emph{fingerprint} measurements --- the diurnal/semidiurnal split and its latitude ordering are the tested claims --- not a global climatology. The tide amplitudes agree with the published climatological maps (Dai \& Wang 1999) where they overlap.
-
-\medskip\hrule\medskip
-
-\section*{4. Spatial decoupling measured on one grid}
-
-\subsection*{4.1 Rayleigh--B\'enard DNS: same forcing, two geometries}
-
-Field sensors cannot separate spatial structure; a DNS can. We use the 2-D Rayleigh--B\'enard configuration of The Well (Ohana et al. 2024): $Ra=10^{6}$, $Pr=1$, $512\times 128$, periodic in $x$, no-slip walls, with velocity, buoyancy, and pressure co-resolved on one grid. The decoupling is \emph{not} about dominant sizes --- both fields share the convection-roll wavelength (integral lengths 0.195 vs 0.207, ratio $1.06\times$). It lives at small scales (Figs.~4--5):
-
-\begin{center}
-\begin{tabular}{lccc}
-\toprule
-metric & buoyancy $\theta$ & pressure $p$ & ratio $p/\theta$ \\
-\midrule
-integral length (large scale) & 0.195 & 0.207 & $1.06\times$ \\
-Taylor microscale (small scale) & 0.253 & 0.607 & $\mathbf{2.40\times}$ \\
-high-$k$ spectral power ($k\approx 10$) & --- & --- & $\theta$ larger by $\sim\mathbf{10^{4}\times}$ \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-Both numbers are the direct footprint of \S2: $\hat{p}\propto\hat{f}/k^{2}$ suppresses spectral power by $\sim 1/k^{4}$, so pressure is smooth and blobby (elliptic) while buoyancy is advected into thin filaments with intense small-scale gradients (parabolic). Nothing was tuned: the same coupled simulation produces both fields.
-
-\textbf{Robustness across Ra.} The single-snapshot $2.40\times$ is not a one-$Ra$ accident. Sweeping The Well's $Pr=1$ test files at $Ra=10^{6},10^{7},10^{8}$ (5 trajectories $\times$ 6 statistically-steady snapshots each) gives Taylor-microscale ratios of $2.58$ [$1.98$--$3.59$], $2.94$ [$2.54$--$3.65$], and $4.45$ [$3.27$--$5.88$] (median [5--95\%]; the headline snapshot sits inside the $Ra=10^{6}$ interval), while the integral-length ratio stays order one ($1.0$--$1.8$) and the high-$k$ spectral gap widens by another $\sim 70\times$. As $Ra$ grows and buoyancy plumes sharpen toward finer scales, the inverse Laplacian keeps holding pressure at the large scales: \emph{the elliptic--parabolic split widens with turbulence intensity rather than closing} (artifact \code{15b\_rb\_ra\_sweep.json}).
-
-\begin{center}
-\includegraphics[width=0.86\linewidth]{figures/13_rb_fields.png}
-
-{\small \textbf{Figure 4.} RB DNS snapshot: buoyancy (filamentary, sharp) vs pressure (smooth, domain-spanning) on the same grid at the same instant.}
-\end{center}
-
-\begin{center}
-\includegraphics[width=0.8\linewidth]{figures/15_rb_spectra.png}
-
-{\small \textbf{Figure 5.} Spatial spectra: shared energy-containing scale; $\sim 10^{4}\times$ high-$k$ gap --- the $1/k^{4}$ elliptic suppression.}
-\end{center}
-
-\subsection*{4.2 A single localized source: Green's functions in action}
-
-To isolate the operator contrast from turbulence statistics, we add a single localized bump to the bed of a developed cavity flow (frozen field), compute the continuity source it induces, $q=-\nabla\!\cdot\!(\text{bump}\cdot u)$, and apply that \emph{same} source to both operators. The elliptic response $\Delta p = \nabla^{-2}q$ spreads over the whole cavity --- \textbf{79\%} of its magnitude lies beyond one bump-width of the source --- while the heat-kernel (parabolic) response at matched time remains a confined Gaussian blob. Boundary geometry edits the \emph{global} pressure field instantly, and only the \emph{local} temperature field: any closure that models the pressure-borne flux with a local diffusivity is using the wrong Green's function.
-
-\begin{center}
-\includegraphics[width=0.8\linewidth]{figures/39_elliptic_pressure.png}
-
-{\small \textbf{Figure 6.} Identical localized source, two operators: global $\ln r$ elliptic response (79\% beyond one bump-width) vs confined Gaussian parabolic response.}
-\end{center}
-
-\medskip\hrule\medskip
-
-\section*{5. The closure-relevant consequence, measured}
-
-If momentum is shaped by the global elliptic clock and heat by the local parabolic clock, then the \emph{efficiencies} with which turbulence transports the two cannot stay in a fixed ratio as the shear/buoyancy balance changes. First-order K-theory with a constant turbulent Prandtl number ($K_{M}\approx Pr_{t}^{-1}K_{H}$) says they must.
-
-Using the same NEON tower (602 usable 30-min periods), we bin the transport-efficiency correlations $r_{uw}$ (momentum) and $|r_{wT}|$ (heat) by Monin--Obukhov stability $\zeta=(z-d)/L$ (Monin \& Obukhov 1954; Foken 2008):
-
-\begin{center}
+\begin{table}[t]
+\centering
+\caption{Semidiurnal pressure-tide amplitude and diurnal temperature amplitude at
+eight ASOS stations, Q1 2020. Bootstrap 95\% confidence intervals ($n=500$) are
+given for the pressure-tide amplitude. The ratio to the Haurwitz migrating-tide
+climatology $A_H = 1.16\cos^3\varphi$ is shown in the final column.}
+\label{tab:asos}
 \begin{tabular}{lcccc}
 \toprule
-stability class & $n$ & median $r_{uw}$ & median $|r_{wT}|$ & momentum/heat ratio \\
+Station & $\varphi$ & $S_{1,T}$ & $S_{2,P}$ [95\% CI] &
+$S_{2,P}/A_H$ \\
+ & ($^\circ$N) & ($^\circ$C) & (hPa) & \\
 \midrule
-strongly unstable & 95 & 0.182 & 0.209 & 0.87 \\
-unstable & 73 & 0.324 & 0.150 & 2.17 \\
-near-neutral & 121 & 0.312 & 0.095 & \textbf{3.28} \\
-stable & 153 & 0.225 & 0.200 & 1.13 \\
-strongly stable & 160 & 0.156 & 0.203 & \textbf{0.77} \\
+EYW & 24.6 & 1.51 & 1.103 [1.013, 1.191] & 1.26 \\
+MIA & 25.8 & 2.73 & 1.077 [0.979, 1.169] & 1.27 \\
+MSY & 30.0 & 2.75 & 1.018 [0.878, 1.169] & 1.35 \\
+DFW & 32.9 & 3.28 & 0.957 [0.794, 1.141] & 1.39 \\
+PHX & 33.4 & 5.06 & 0.924 [0.861, 1.008] & 1.37 \\
+DSM & 41.5 & 2.73 & 0.628 [0.398, 0.965] & 1.29 \\
+CAR & 46.9 & 3.03 & 0.439 [0.181, 0.879] & 1.19 \\
+SEA & 47.4 & 1.79 & 0.337 [0.262, 0.529] & 0.94 \\
 \bottomrule
 \end{tabular}
-\end{center}
+\end{table}
 
-Momentum efficiency peaks near-neutral (shear-driven, pressure-mediated); heat efficiency peaks under strong convection (buoyant plumes) --- they move \emph{oppositely}, and their ratio swings $\mathbf{4.3\times}$ ($0.77\to 3.28$). The summer month repeats the swing with more convective sampling: $0.43\to 2.60$ across the same $\zeta$ classes ($6.0\times$; 1030 usable periods), so the blind spot is not a winter artifact. The stability dependence itself is classical --- turbulent-Prandtl-number variation across $\zeta$ is embedded in the Businger--Dyer flux--profile relations (Businger et al. 1971) and reviewed at length by Li (2019) --- so the row-level numbers validate the protocol against known surface-layer physics; the claim we \emph{use} is only the structural one that follows: A single fixed-$Pr_{t}$ diffusivity is structurally unable to reproduce a $4.3\times$ swing in this ratio; stability-dependent similarity functions absorb it empirically, which is precisely the point --- the physics forces the closure to grow a second, stability-indexed degree of freedom because one clock is not enough. This is E3, and it is the field-data anchor for the operator audit in P1.
+The interpretation is direct: pressure at a fixed site carries the signature of a
+planetary-scale resonance, while temperature carries the signature of the local
+solar cycle. The two fields share a forcing (the sun) but respond through
+different operators with different spatial footprints. Station-level daily
+pressure--temperature correlations range from $-0.05$ to $-0.56$, with bootstrap
+95\% confidence intervals excluding any tight positive lock: the bulk coupling is
+set by the synoptic regime, not by a gas-law link between the two fields.
 
-\medskip\hrule\medskip
+Band-resolved coherence sharpens this statement. The magnitude-squared coherence
+between hourly pressure and temperature is high (0.82--0.98) at the solar harmonic
+lines, where both fields are phase-locked to the same astronomical forcing, and
+above the phase-randomized surrogate 95\% level at all eight stations. In the
+off-line sub-diurnal band (9--11~h and 13--20~h), coherence collapses to the
+surrogate noise floor. Away from the shared solar clock, nothing locks the two
+fields together.
 
-\section*{6. Controlled demonstrations of the mechanism}
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/11b_tide_vs_latitude_ci.png}
+\caption{Left: semidiurnal pressure-tide amplitude versus latitude at eight ASOS
+stations with bootstrap 95\% confidence intervals, compared to the Haurwitz
+migrating-tide climatology (dashed curve). The monotonic equator-to-pole decay is
+the signature of a global resonance. Right: band-resolved coherence between hourly
+pressure and temperature --- high at the shared solar lines, at the surrogate
+noise floor off-line.}
+\label{fig:tide}
+\end{figure}
 
-\subsection*{6.1 The hyperbolic $\to$ elliptic crossover (linear)}
+% ============================================================
+\section{Spatial decoupling in direct numerical simulation}
+\label{sec:spatial}
 
-A minimal 2-D linear-acoustics solver makes the elliptic-vs-hyperbolic statement concrete. An initial pressure bump radiates as a ring at speed $c$ and decays by geometric spreading (the wave regime). Under a fixed forcing, the compressible pressure relaxes to the \emph{same} field as the elliptic Poisson solve --- final relative error $\sim 2\times 10^{-3}$ for every $c$ tested --- and the approach time scales as
-\[
-t_{90}\approx 2.3\,L/c ,
-\tag{5}
-\]
-with error histories for all sound speeds collapsing onto a single curve in the rescaled time $ct/L$ (Fig.~7). $c$'s only role is to set the clock; as $c\to\infty$ the adjustment becomes instantaneous and (3) degenerates into (2). This is why water ($c\approx 1500$ m/s) is ``more fiercely elliptic'' than air ($c\approx 340$ m/s).
+Field sensors measure time series at a point; they cannot resolve spatial
+structure. A direct numerical simulation can. We use the two-dimensional
+Rayleigh--B\'enard configuration from The Well dataset (Ohana et al.\ 2024):
+$Ra = 10^6$, $Pr = 1$, $512\times 128$ grid, periodic in the horizontal, no-slip
+walls, with velocity, buoyancy, and pressure co-resolved on the same grid.
 
-\begin{center}
+\subsection{Same forcing, two geometries}
+
+The central question is whether pressure and buoyancy, driven by the same
+convective instability, develop the same spatial structure. The answer is no, and
+the difference is precisely what the operator analysis of
+Section~\ref{sec:operators} predicts.
+
+At large scales, the two fields agree: both are organized by the convection rolls,
+and their integral length scales are nearly identical (0.195 for buoyancy, 0.207
+for pressure; ratio 1.06). At small scales, they diverge sharply. The Taylor
+microscale of pressure is 2.40 times that of buoyancy, and the high-wavenumber
+spectral power of buoyancy exceeds that of pressure by a factor of approximately
+$10^4$ at $k \approx 10$.
+
+Both numbers are direct consequences of the inverse Laplacian in
+Eq.~\eqref{eq:poisson}. The factor $1/k^2$ in Fourier space suppresses pressure
+power by $\sim 1/k^4$ relative to its source, so pressure remains smooth and
+domain-spanning while buoyancy is advected into thin filaments with intense
+small-scale gradients. Figure~\ref{fig:rb_fields} shows a snapshot;
+Figure~\ref{fig:rb_spectra} shows the spectra.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.86\linewidth]{figures/13_rb_fields.png}
+\caption{Rayleigh--B\'enard DNS snapshot at $Ra = 10^6$: buoyancy (left) is
+filamentary and sharp, organized into thin plumes; pressure (right) is smooth and
+domain-spanning. Both fields are from the same simulation at the same instant.}
+\label{fig:rb_fields}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.8\linewidth]{figures/15_rb_spectra.png}
+\caption{Spatial spectra of buoyancy and pressure from the Rayleigh--B\'enard
+DNS. The energy-containing scales coincide; at high wavenumber, buoyancy exceeds
+pressure by $\sim 10^4$, consistent with the $1/k^4$ suppression of the inverse
+Laplacian.}
+\label{fig:rb_spectra}
+\end{figure}
+
+\subsection{Robustness across Rayleigh number}
+
+The microscale ratio is not an artifact of a single Rayleigh number. Sweeping
+$Ra = 10^6$, $10^7$, and $10^8$ using The Well's $Pr = 1$ test files (5
+trajectories $\times$ 6 statistically steady snapshots each) yields the results in
+Table~\ref{tab:ra_sweep}. The Taylor-microscale ratio grows from 2.58 at
+$Ra = 10^6$ to 4.45 at $Ra = 10^8$, while the integral-scale ratio remains order
+unity. As $Ra$ increases and buoyancy plumes sharpen toward finer scales, the
+inverse Laplacian continues to hold pressure at the large scales. The operator
+split widens with turbulence intensity rather than closing.
+
+\begin{table}[t]
+\centering
+\caption{Taylor-microscale ratio ($\lambda_p/\lambda_\theta$) and integral-scale
+ratio ($L_p/L_\theta$) as functions of $Ra$, from The Well $Pr=1$
+Rayleigh--B\'enard dataset. Values are medians with 5--95\% ranges over 30
+snapshots per $Ra$ (artifact \code{15b\_rb\_ra\_sweep.json}).}
+\label{tab:ra_sweep}
+\begin{tabular}{lcc}
+\toprule
+$Ra$ & $\lambda_p/\lambda_\theta$ & $L_p/L_\theta$ \\
+\midrule
+$10^6$ & 2.58 [1.98--3.59] & 1.02 [0.88--1.40] \\
+$10^7$ & 2.94 [2.54--3.65] & 1.25 [1.03--1.85] \\
+$10^8$ & 4.45 [3.27--5.88] & 1.75 [1.42--2.11] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Green's-function illustration}
+
+To isolate the operator contrast from turbulence statistics, we apply a single
+localized source to both the elliptic and parabolic operators in a developed
+cavity flow. The elliptic response spreads over the entire domain: 79\% of its
+magnitude lies beyond one source-width from the origin. The parabolic response at
+matched time remains a confined Gaussian blob. Boundary geometry edits the global
+pressure field instantly and only the local temperature field
+(Fig.~\ref{fig:green}).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.8\linewidth]{figures/39_elliptic_pressure.png}
+\caption{Response to an identical localized source applied to both operators. The
+elliptic (pressure) response spreads globally, with 79\% of its magnitude beyond
+one source-width. The parabolic (heat-kernel) response remains confined.}
+\label{fig:green}
+\end{figure}
+
+% ============================================================
+\section{Dynamical demonstrations}
+\label{sec:demonstrations}
+
+The field data and DNS establish that the two-operator structure is measurable. We
+now demonstrate the mechanism in controlled settings where every parameter is
+known.
+
+\subsection{The hyperbolic-to-elliptic crossover}
+\label{sec:crossover}
+
+A minimal two-dimensional linear-acoustics solver makes the relationship between
+Eqs.~\eqref{eq:poisson} and \eqref{eq:wave} concrete. An initial pressure
+perturbation radiates as a ring at speed $c$ and decays by geometric spreading.
+Under sustained forcing, the compressible pressure relaxes to the same field as
+the elliptic Poisson solve, with a final relative error of $\sim 2\times 10^{-3}$
+for every sound speed tested.
+
+The relaxation time scales as
+\begin{equation}
+t_{90} \approx 2.3\,\frac{L}{c},
+\label{eq:t90}
+\end{equation}
+and the error histories for all sound speeds collapse onto a single curve when
+time is rescaled as $ct/L$ (Fig.~\ref{fig:crossover}). The sound speed sets the
+clock; the final state is independent of it. As $c \to \infty$, the adjustment
+becomes instantaneous and the hyperbolic equation degenerates into the elliptic
+constraint.
+
+\begin{figure}[t]
+\centering
 \includegraphics[width=0.8\linewidth]{figures/17_crossover.png}
+\caption{Relaxation of the compressible pressure field to the elliptic (Poisson)
+solution for several sound speeds. All curves collapse in the rescaled time
+$ct/L$, with $t_{90} \approx 2.3\,L/c$.}
+\label{fig:crossover}
+\end{figure}
 
-{\small \textbf{Figure 7.} Crossover: relaxation of the compressible pressure to the elliptic field; all $c$ collapse in $ct/L$; $t_{90}\approx 2.3\,L/c$.}
-\end{center}
+\subsection{Both clocks in one nonlinear flow}
+\label{sec:nonlinear}
 
-\subsection*{6.2 Both clocks in one nonlinear flow}
+A fully nonlinear two-dimensional isothermal compressible Navier--Stokes solver
+(pseudo-spectral, periodic, with $p = c^2\rho$ so that $c$ is an explicit
+parameter) is initialized from a Taylor--Green vortex at $Re \approx 600$. The
+velocity field is Helmholtz-decomposed into solenoidal (vortical, slow) and
+dilatational (acoustic, fast) components at each time step.
 
-A fully nonlinear 2-D isothermal compressible Navier--Stokes solver (pseudo-spectral, periodic, $p=c^{2}\rho$ so $c$ is an explicit knob) is initialized from a Taylor--Green vortex at $Re\approx 600$ and Helmholtz-split into solenoidal (vortical, slow) and dilatational (acoustic, fast) parts:
+Table~\ref{tab:mach} summarizes the Mach-number sweep. The dilatational energy
+fraction scales as $\sim M^2$, vanishing in the incompressible limit. The
+time-averaged pressure (averaged over the fast acoustic period) converges to the
+elliptic Poisson pressure with correlation approaching unity and residual shrinking
+as $M^2$.
 
-\begin{center}
+\begin{table}[t]
+\centering
+\caption{Mach-number sweep in the nonlinear compressible solver.
+$\langle KE_{\mathrm{dil}}\rangle / \langle KE_{\mathrm{sol}}\rangle$ is the
+time-averaged ratio of dilatational to solenoidal kinetic energy. The pressure
+residual is the RMS difference between the acoustic-averaged compressible pressure
+and the elliptic Poisson pressure, normalized by the RMS pressure.}
+\label{tab:mach}
 \begin{tabular}{ccc}
 \toprule
-Mach $M$ & $\langle KE_{dil}\rangle/\langle KE_{sol}\rangle$ & avg-pressure residual vs elliptic \\
+$M$ & $KE_{\mathrm{dil}}/KE_{\mathrm{sol}}$ &
+Pressure residual \\
 \midrule
 0.05 & $1.5\times 10^{-4}$ & $8.1\times 10^{-4}$ \\
 0.10 & $5.9\times 10^{-4}$ & $3.2\times 10^{-3}$ \\
@@ -261,169 +462,298 @@ Mach $M$ & $\langle KE_{dil}\rangle/\langle KE_{sol}\rangle$ & avg-pressure resi
 0.40 & $9.3\times 10^{-3}$ & $1.0\times 10^{-1}$ \\
 \bottomrule
 \end{tabular}
-\end{center}
+\end{table}
 
-Two clocks coexist in one flow: the vortical energy decays on the slow advective time while the acoustic energy oscillates on the fast period (Fig.~8), and the fast clock's energy fraction scales as $\sim M^{2}$, vanishing in the incompressible limit (Fig.~9). The \emph{instantaneous} pressure is dominated by the standing acoustic wave; averaging over the fast clock (the quasi-steady second half of each run) scrubs $\tau_{p}$ and leaves a field matching the elliptic Poisson pressure at correlation $\approx 1$, with the residual itself shrinking as $M^{2}$. Averaging over the fast clock is a \emph{low-pass filter that recovers the elliptic limit} --- an operation \S7 will repeat on the real atmosphere.
+Two clocks coexist in one flow: the vortical energy decays on the slow advective
+timescale while the acoustic energy oscillates on the fast period
+(Fig.~\ref{fig:two_clocks}). Averaging over the fast clock acts as a low-pass
+filter that recovers the elliptic limit --- an operation we will repeat on the
+real atmosphere in Section~\ref{sec:reanalysis}.
 
-\begin{center}
+\begin{figure}[t]
+\centering
 \includegraphics[width=0.82\linewidth]{figures/20_ns_two_clocks.png}
+\caption{Nonlinear compressible box at $M = 0.1$: slow vortical energy decay with
+fast acoustic oscillation superimposed. Both clocks are present in one flow.}
+\label{fig:two_clocks}
+\end{figure}
 
-{\small \textbf{Figure 8.} Nonlinear compressible box: slow vortical decay with fast acoustic oscillation riding on it --- both clocks, one flow.}
-\end{center}
-
-\begin{center}
+\begin{figure}[t]
+\centering
 \includegraphics[width=0.8\linewidth]{figures/21_ns_mach_sweep.png}
+\caption{Mach-number sweep: dilatational energy fraction (circles) and
+acoustic-averaged pressure residual (squares) both scale as $\sim M^2$ (dashed
+line).}
+\label{fig:mach}
+\end{figure}
 
-{\small \textbf{Figure 9.} Mach sweep: dilatational energy fraction and acoustic-averaged pressure residual both $\sim M^{2}$.}
-\end{center}
+\subsection{The projection step as two-clocks synthesis}
+\label{sec:projection}
 
-\subsection*{6.3 The synthesis: projection is the two-clocks structure --- and spectra cannot fake it}
+The standard projection (fractional-step) method advances a Boussinesq flow by a
+local drift followed by a global elliptic correction (Chorin 1968; Leray 1934):
+\begin{align}
+\mathbf{u}^* &= \mathbf{u}^n + \Delta t\left[
+-(\mathbf{u}\cdot\nabla)\mathbf{u} + \nu\nabla^2\mathbf{u}
++ (b - \langle b\rangle)\hat{\mathbf{y}}\right],
+\label{eq:drift}\\
+\mathbf{u}^{n+1} &= \mathbb{P}\,\mathbf{u}^*,
+\label{eq:project}\\
+b^{n+1} &= b^n + \Delta t\left[
+-(\mathbf{u}\cdot\nabla)b + \kappa\nabla^2 b\right],
+\label{eq:scalar_step}
+\end{align}
+where $\mathbb{P} = I - \nabla(\nabla^2)^{-1}\nabla\cdot$ is the Leray projector.
+The drift step (Eq.~\ref{eq:drift}) is a local, Markovian update --- the parabolic
+clock. The projection step (Eq.~\ref{eq:project}) is a single global Poisson solve
+--- the elliptic clock acting as a constraint.
 
-The standard projection (fractional-step) method advances a Boussinesq flow by a slow drift followed by an elliptic correction:
-\[
-u^{*}=u^{n}+\Delta t\left[-(u\cdot\nabla)u+\nu\nabla^{2}u+(b-\langle b\rangle)\hat{y}\right],\qquad
-u^{n+1}=\mathbb{P}u^{*},\qquad
-b^{n+1}=b^{n}+\Delta t\left[-(u\cdot\nabla)b+\kappa\nabla^{2}b\right],
-\tag{6}
-\]
-with $\mathbb{P}=I-\nabla(\nabla^{2})^{-1}\nabla\cdot$ the Leray projector (Leray 1934; Chorin 1968). Read structurally: the drift is the generator of the local Markov/heat semigroup --- the \emph{perfect} local, memoryless forecaster, exactly what single-K closure and statistical predictors represent --- and the projection is one global Poisson solve per step, the fast clock acting as a constraint. Three results (Figs.~10--11):
+Three results follow.
 
-\begin{itemize}
-\item \textbf{The convection cell reappears from first principles}: plumes rise under the slow clock, the elliptic clock pulls in the compensating inflow (entrainment), and the shear between them rolls into vortices.
-\item \textbf{The local drift is divergent; one elliptic solve fixes it instantly.} The intermediate $u^{*}$ violates mass conservation at RMS $\nabla\!\cdot\!u^{*}\approx 2.7\times 10^{-2}$; a single projection drops it to $\approx 2\times 10^{-15}$ --- machine zero --- through the global potential $\phi$ with $\nabla^{2}\phi=\nabla\!\cdot\!u^{*}$.
-\item \textbf{Energy yes, structure no.} Replacing the projection correction by a phase-randomized field with the \emph{identical} power spectrum (Parseval-exact) --- the structural move of spectrum-matched stochastic/SPDE closures (Hasselmann 1976; Berner et al. 2017) --- yields pointwise correlation with the true correction of median $|r|=0.07$ (95th percentile $0.20$ over a 100-surrogate ensemble; the correction's energy sits in a few large-scale modes, so single-draw correlations scatter --- we report the ensemble, not a favourable draw) and leaves RMS $\nabla\!\cdot\!u = 3.7\times 10^{-2}$ [$3.5$--$3.8\times 10^{-2}$, 95\%] instead of zero --- no better than applying no correction at all ($2.7\times 10^{-2}$). Matching a spectrum does not reconstruct a boundary-aware, globally-coupled elliptic operator.
-\end{itemize}
+\emph{First}, the intermediate velocity $\mathbf{u}^*$ violates mass conservation
+at RMS $\nabla\cdot\mathbf{u}^* \approx 2.7\times 10^{-2}$. A single projection
+reduces this to $\approx 2\times 10^{-15}$ --- machine zero
+(Fig.~\ref{fig:projection}).
 
-\begin{center}
+\emph{Second}, replacing the projection correction by a phase-randomized field
+with the identical power spectrum (Parseval-exact) --- the structural move of
+spectrum-matched stochastic closures (Hasselmann 1976; Berner et al.\ 2017) ---
+yields a pointwise correlation with the true correction of median $|r| = 0.07$
+(95th percentile 0.20, over an ensemble of $n = 100$ surrogates). The RMS
+divergence after the surrogate correction is $3.7\times 10^{-2}$
+[$3.5$--$3.8\times 10^{-2}$, 95\% interval] --- no better than applying no
+correction at all ($2.7\times 10^{-2}$).
+
+\emph{Third}, the physical interpretation is that the fast clock's action on the
+slow dynamics is a global elliptic correction with a definite geometric structure,
+not a stochastic variance to be re-injected with the correct energy. Matching a
+power spectrum does not reconstruct a boundary-aware, globally coupled elliptic
+operator.
+
+\begin{figure}[t]
+\centering
 \includegraphics[width=0.82\linewidth]{figures/23_projection_step.png}
+\caption{One projection time step, dissected. Top: the divergent intermediate
+velocity $\mathbf{u}^*$ (RMS $\nabla\cdot\mathbf{u}^* = 2.7\times 10^{-2}$).
+Middle: the global elliptic potential $\phi$ satisfying $\nabla^2\phi =
+\nabla\cdot\mathbf{u}^*$. Bottom: the projected, solenoidal velocity
+$\mathbf{u}^{n+1}$ (RMS $\nabla\cdot\mathbf{u}^{n+1} = 2\times 10^{-15}$).}
+\label{fig:projection}
+\end{figure}
 
-{\small \textbf{Figure 10.} One time step, dissected: divergent local drift $u^{*}$; the global elliptic potential; the projected, solenoidal update (RMS $\nabla\!\cdot\!u$: $2.7\times 10^{-2}\to 2\times 10^{-15}$).}
-\end{center}
-
-\begin{center}
+\begin{figure}[t]
+\centering
 \includegraphics[width=0.82\linewidth]{figures/24_spde_limit.png}
+\caption{Spectrum-matched surrogate test. A phase-randomized field with the
+identical power spectrum as the true projection correction (Parseval-exact) fails
+to reproduce the correction pointwise: ensemble-median correlation $|r| = 0.07$
+($n=100$), and the divergence constraint is left unrepaired (RMS
+$\nabla\cdot\mathbf{u} = 3.7\times 10^{-2}$, compared to $2\times 10^{-15}$ for
+the true projection).}
+\label{fig:spde}
+\end{figure}
 
-{\small \textbf{Figure 11.} The SPDE ceiling: a Parseval-exact phase-randomized surrogate of the projection correction --- correct spectrum, correlation median $|r|=0.07$ (p95 $0.20$, $n=100$), constraint unrepaired ($\nabla\!\cdot\!u\approx 3.7\times 10^{-2}$, 95\% interval $3.5$--$3.8\times 10^{-2}$).}
-\end{center}
+% ============================================================
+\section{The two clocks in the real atmospheric wind field}
+\label{sec:reanalysis}
 
-This is E5, and it is the sharpest structural statement in the paper: the fast clock is not ``unresolved variance'' to be re-injected with the right energy --- it is a global operator with a definite geometric job. Stochastic closures that match spectra can repair energetics; they cannot repair geometry. (P1 builds the repair that can: a \emph{projected}, dissipation-tied stochastic force --- the projection is what rescues the noise.)
+The preceding sections establish the operator split in controlled and
+semi-controlled settings. We now ask whether the same structure is visible in the
+real atmosphere.
 
-\medskip\hrule\medskip
+\subsection{Method}
 
-\section*{7. The two clocks in the real atmospheric wind}
+Horizontal winds from the NCEP/NCAR Reanalysis 1 (2.5$^\circ$ resolution; Kalnay
+et al.\ 1996) are Helmholtz-decomposed on the sphere via spherical-harmonic
+inversions $\nabla^2\psi = \zeta$ and $\nabla^2\chi = \delta$ into a rotational
+(non-divergent, balanced) component and a divergent (fast) component. The same
+decomposition is applied to the NCEP--DOE Reanalysis 2 (Kanamitsu et al.\ 2002) as
+an independent cross-check.
 
-Finally, the same decomposition on real winds. NCEP/NCAR Reanalysis 1 horizontal winds (2.5$^{\circ}$; Kalnay et al. 1996), fetched live over OPeNDAP, are Helmholtz-decomposed on the sphere via the spherical-harmonic inversions $\nabla^{2}\psi=\zeta$, $\nabla^{2}\chi=\delta$ into a rotational (non-divergent, balanced --- slow) and a divergent (fast) wind.
+Horizontal divergence is not a model artifact: by three-dimensional continuity, it
+is the genuine footprint of vertical motion. The diagnostic is therefore the
+energy split, not the existence of divergence.
 
-\textbf{Honesty note.} Horizontal divergence is not a model artifact: by 3-D continuity it is the genuine footprint of vertical motion. The diagnostic is therefore the energy split, not the existence of divergence.
+\subsection{Results}
 
-\begin{center}
+Table~\ref{tab:reanalysis} gives the ratio of divergent to rotational kinetic
+energy at three pressure levels, from both reanalyses.
+
+\begin{table}[t]
+\centering
+\caption{Ratio of divergent to rotational kinetic energy (daily mean) from
+NCEP/NCAR Reanalysis 1 (R1) and NCEP--DOE Reanalysis 2 (R2). The minimum at
+500~hPa corresponds to the classical level of non-divergence.}
+\label{tab:reanalysis}
 \begin{tabular}{lcc}
 \toprule
-level & R1: $KE_{div}/KE_{rot}$ (daily mean) & R2 cross-check \\
+Level & R1: $KE_{\mathrm{div}}/KE_{\mathrm{rot}}$ &
+R2 cross-check \\
 \midrule
 850 hPa & 4.0\% & 4.5\% \\
-500 hPa & \textbf{0.7\%} & \textbf{0.8\%} \\
+500 hPa & 0.7\% & 0.8\% \\
 250 hPa & 1.0\% & 1.1\% \\
 \bottomrule
 \end{tabular}
-\end{center}
+\end{table}
 
-\begin{itemize}
-\item \textbf{The weather is rotational; the fast clock is a weak, structured residual.} The rotational wind \emph{is} the synoptic highs/lows and jets; the divergent wind is $\sim$100$\times$ weaker in energy and concentrated in convergence/overturning zones --- tropical convection, storm inflow --- the real-atmosphere analogue of the dilatational component (Fig.~12).
-\item \textbf{Divergent $\ll$ rotational at every scale.} Splitting kinetic energy by spherical wavenumber $l$, the divergent branch sits 1--2 decades below the rotational branch for all resolved $l$; integrated, $KE_{div}/KE_{rot}\approx 0.04$ at 850 hPa --- the real-data echo of $KE_{dil}/KE_{sol}\sim M^{2}\ll 1$ (Fig.~13).
-\item \textbf{The vertical structure is physics, not tuning.} The divergent fraction is smallest near 500 hPa --- the classical \emph{level of non-divergence} (Holton 2004) --- and larger in the boundary layer and jet-outflow levels (Fig.~14). \textbf{Cross-checked in a second assimilation system:} recomputing the same window with the same Helmholtz split from NCEP--DOE Reanalysis 2 (different model physics and assimilation corrections; Kanamitsu et al. 2002) gives $4.5\%/0.8\%/1.1\%$ --- same ordering, same 500-hPa minimum, $\le 15\%$ relative differences (\code{run\_\allowbreak{}reanalysis\_\allowbreak{}r2.py}, \code{figures/\allowbreak{}27b\_\allowbreak{}reanalysis\_\allowbreak{}crosscheck.json}); the ratio is a property of the analyzed atmosphere, not of one reanalysis.
-\item \textbf{Time-averaging is the low-pass filter.} The 6-hourly ratio at 500 hPa (1.1\%) exceeds the daily-mean ratio (0.7\%): averaging scrubs the fast divergent clock --- the same operation that recovered the elliptic pressure from the acoustic field in \S6.2.
-\end{itemize}
+Four features emerge.
 
-\begin{center}
+\emph{First}, the rotational wind dominates the kinetic energy at every level and
+every resolved scale. Splitting by spherical-harmonic degree $l$, the divergent
+branch sits one to two decades below the rotational branch for all $l \leq 35$
+(Fig.~\ref{fig:ke_spectrum}).
+
+\emph{Second}, the vertical structure is physically meaningful: the divergent
+fraction is smallest near 500~hPa --- the classical level of non-divergence
+(Holton 2004) --- and larger in the boundary layer and near the jet outflow
+(Fig.~\ref{fig:levels}).
+
+\emph{Third}, the cross-check with Reanalysis 2 reproduces the same ordering and
+the same 500-hPa minimum, with relative differences of 15\% or less. The ratio is
+a property of the analyzed atmosphere, not of one assimilation system.
+
+\emph{Fourth}, time-averaging acts as a low-pass filter on the fast clock: the
+six-hourly ratio at 500~hPa (1.1\%) exceeds the daily-mean ratio (0.7\%).
+Averaging scrubs the divergent component, exactly as acoustic averaging recovered
+the elliptic pressure in Section~\ref{sec:nonlinear}.
+
+\begin{figure}[t]
+\centering
 \includegraphics[width=0.86\linewidth]{figures/25_reanalysis_two_clocks.png}
+\caption{NCEP/NCAR winds, one analysis day. Left: rotational wind (synoptic highs,
+lows, and jets). Right: divergent wind (weak, confined to convergence and
+overturning zones).}
+\label{fig:reanalysis_wind}
+\end{figure}
 
-{\small \textbf{Figure 12.} NCEP/NCAR winds, one analysis day: rotational wind (synoptic systems) vs divergent wind (weak, confined to overturning zones).}
-\end{center}
-
-\begin{center}
+\begin{figure}[t]
+\centering
 \includegraphics[width=0.8\linewidth]{figures/26_reanalysis_ke_spectrum.png}
+\caption{Kinetic-energy spectra by spherical-harmonic degree $l$: the divergent
+branch sits one to two decades below the rotational branch at every resolved
+scale.}
+\label{fig:ke_spectrum}
+\end{figure}
 
-{\small \textbf{Figure 13.} Kinetic-energy spectra by spherical wavenumber: the divergent branch 1--2 decades below the rotational at every $l\le 35$.}
-\end{center}
-
-\begin{center}
+\begin{figure}[t]
+\centering
 \includegraphics[width=0.8\linewidth]{figures/27_reanalysis_levels.png}
+\caption{Vertical structure of $KE_{\mathrm{div}}/KE_{\mathrm{rot}}$: minimum at
+the level of non-divergence ($\sim$500~hPa). Six-hourly values (open symbols)
+exceed daily-mean values (filled symbols), demonstrating that time-averaging acts
+as a low-pass filter on the fast clock.}
+\label{fig:levels}
+\end{figure}
 
-{\small \textbf{Figure 14.} Vertical structure of $KE_{div}/KE_{rot}$: minimum at the level of non-divergence; 6-hourly $>$ daily --- time-averaging as low-pass.}
-\end{center}
+% ============================================================
+\section{Discussion}
+\label{sec:discussion}
 
-\textbf{Scope.} Reanalysis is a model-assimilated product, not raw observation, and 2.5$^{\circ}$ resolves only $l\le 35$. This section is a real-data \emph{confirmation} of the energy split and its structure --- not a turbulence-closure claim and not a gravity-wave climatology.
+\subsection{Summary of measurements}
 
-\medskip\hrule\medskip
+Six independent measurements, spanning field observation, direct numerical
+simulation, controlled solvers, and reanalysis, consistently reveal the same
+structure: pressure and temperature respond to the same forcing through different
+operators with different timescales and different spatial footprints. The temporal
+signatures differ (local diurnal versus planetary semidiurnal); the spatial
+signatures differ (filamentary versus smooth, with a $1/k^4$ spectral gap); the
+dynamical demonstrations show the mechanism (hyperbolic-to-elliptic crossover,
+$M^2$ energy scaling, projection as synthesis); and the real atmosphere exhibits
+the expected energy partition with the correct vertical structure.
 
-\section*{8. Discussion}
+\subsection{Implications for turbulence closure}
 
-\subsection*{8.1 What has been established}
+The measurements presented here have a direct implication for single-diffusivity
+turbulence closures. A closure that models both momentum transport (shaped by the
+global pressure field) and heat transport (shaped by local buoyant plumes) with a
+single eddy diffusivity and a fixed turbulent Prandtl number assumes that the two
+transport processes respond identically to changes in the shear-to-buoyancy ratio.
+The field data show otherwise: binned by Monin--Obukhov stability, the ratio of
+momentum to heat transport efficiency varies by a factor of 4.3 in winter and 6.0
+in summer at the NEON WREF site (Appendix~\ref{app:reproducibility}). This
+variation is consistent with the two-operator structure: momentum transport is
+mediated by the global pressure field (fast clock), while heat transport is
+mediated by local buoyant plumes (slow clock), and their relative importance
+shifts with stability.
 
-Six independent measurements, one structure. At a fixed site pressure and temperature run on different clocks with regime-dependent, never gas-law-locked bulk daily coupling (E1); on one DNS grid pressure lacks exactly the small scales the inverse Laplacian says it must lack (E2); the momentum/heat transport-efficiency ratio swings $4.3\times$ in winter and $6.0\times$ in summer where one-clock closure requires a constant (E3); finite compressibility turns the constraint into waves whose only slow-limit role is the clock $t_{90}\approx 2.3L/c$, with fast-clock energy $\sim M^{2}$ (E4); the fast clock's action on the slow dynamics is a global elliptic correction that spectrum-matched noise cannot imitate --- correlation $0.01$, constraint unrepaired (E5); and the real atmospheric wind carries $\lesssim 4\%$ of its energy in the fast clock, structured exactly where the physics puts it (E6).
+The spectrum-matched surrogate test of Section~\ref{sec:projection} further
+constrains the class of admissible closure corrections: stochastic augmentations
+that match the energy spectrum of the fast-clock correction but not its elliptic
+geometry cannot repair the divergence constraint. A constructive closure that
+addresses this limitation is developed in the companion paper (Saifelden 2026).
 
-\subsection*{8.2 Kill conditions (what would have falsified, or still would)}
+\subsection{Scope and limitations}
 
-\begin{center}
-\begin{tabular}{p{0.08\linewidth}p{0.55\linewidth}p{0.28\linewidth}}
+All numerical demonstrations are two-dimensional and periodic. No
+three-dimensional regularity claim is made. The reanalysis diagnostics are limited
+to spherical-harmonic degree $l \leq 35$ and are based on model-assimilated
+products, not raw observations. The field measurements span two months at the
+seasonal extremes (NEON) and one season at eight sites (ASOS); they establish the
+fingerprint of the operator split but do not constitute a global climatology.
+
+\subsection{Reproducibility}
+
+All figures and numerical results regenerate from the public repository at
+\url{https://github.com/abdh0saifelden2-debug/K}. Each analysis is a single
+command with fixed seeds, runnable on CPU. Input datasets are public: NEON
+DP4.00200.001 (data.neonscience.org), ASOS one-minute data via the Iowa
+Environmental Mesonet (mesonet.agron.iastate.edu), The Well Rayleigh--B\'enard
+dataset (polymathic-ai), and NCEP/NCAR Reanalysis 1 via NOAA PSL OPeNDAP
+(psl.noaa.gov). See Appendix~\ref{app:reproducibility} for the full command table.
+
+% ============================================================
+\section*{Acknowledgments}
+
+[To be added.]
+
+% ============================================================
+\appendix
+
+\section{Reproducibility}
+\label{app:reproducibility}
+
+Table~\ref{tab:commands} lists the commands that regenerate each result in this
+paper.
+
+\begin{table}[h]
+\centering
+\caption{Reproducibility commands. All are runnable from the repository root with
+fixed seeds and CPU-only execution.}
+\label{tab:commands}
+\small
+\begin{tabular}{p{0.35\linewidth}p{0.55\linewidth}}
 \toprule
-claim & observation that kills it & status \\
+Result & Command \\
 \midrule
-E1 & tight positive daily $P$--$T$ lock at fixed sites; tide amplitude ordered by local heating rather than latitude & not observed ($r\approx+0.07$ winter, $-0.49$ summer; tide $1.08\to0.63$ hPa poleward) \\
-E2 & pressure microscale $\approx$ scalar microscale; no high-$k$ suppression & not observed ($2.40\times$; $10^{4}\times$) \\
-E3 & transport-efficiency ratio constant ($\pm$tens of \%) across stability & not observed ($4.3\times$ swing) \\
-E4 & relaxation time not $\propto L/c$; compressible field $\not\to$ Poisson field & not observed (collapse in $ct/L$) \\
-E5 & spectrum-matched surrogate reproducing the projection correction pointwise & not observed (ensemble median $|r|=0.07$, p95 $0.20$; div unrepaired) \\
-E6 & $KE_{div}\sim KE_{rot}$, or structureless divergent wind & not observed ($\le 4\%$, structured) \\
+\S\ref{sec:neon} NEON diurnal composites &
+\texttt{python general\_two\_clocks/run\_analysis.py} \\
+\S\ref{sec:neon} Seasonal cross-check &
+\texttt{python general\_two\_clocks/run\_neon\_compare.py} \\
+\S\ref{sec:asos} ASOS latitude sweep &
+\texttt{python general\_two\_clocks/asos/fetch\_iem.py \&\&
+python general\_two\_clocks/run\_asos\_ci.py} \\
+\S\ref{sec:spatial} RB DNS split &
+\texttt{python general\_two\_clocks/run\_rb.py} \\
+\S\ref{sec:spatial} $Ra$ sweep &
+\texttt{python general\_two\_clocks/run\_rb\_ra\_sweep.py} \\
+\S\ref{sec:spatial} Green's function &
+\texttt{python general\_two\_clocks/run\_elliptic\_demo.py} \\
+\S\ref{sec:discussion} Stability bins (E3) &
+\texttt{python general\_two\_clocks/run\_stability.py} \\
+\S\ref{sec:crossover} Linear crossover &
+\texttt{python general\_two\_clocks/run\_compressible.py} \\
+\S\ref{sec:nonlinear} Nonlinear Mach sweep &
+\texttt{python general\_two\_clocks/run\_compressible\_ns.py} \\
+\S\ref{sec:projection} Projection / surrogate &
+\texttt{python general\_two\_clocks/run\_boussinesq.py} \\
+\S\ref{sec:reanalysis} Reanalysis split &
+\texttt{python general\_two\_clocks/run\_reanalysis.py} \\
 \bottomrule
 \end{tabular}
-\end{center}
+\end{table}
 
-Each claim remains open to stronger tests: more sites and seasons (E1), higher-$Ra$ and 3-D DNS (E2), other towers and surface types (E3), 3-D compressible sweeps (E4), wall-bounded domains where projection and filtering no longer commute (E5; see P1 \S5d), and higher-resolution reanalyses or raw soundings (E6).
-
-\subsection*{8.3 What this means for closures --- and what it does not}
-
-The measurements above do not say K-theory is useless; they say it is \emph{one-clock} physics, calibrated where the slow clock dominates and structurally silent about the fast one. Concretely: (i) any single-diffusivity model inherits E3's contradiction as soon as its calibration regime changes; (ii) any stochastic augmentation that matches spectra but not the elliptic geometry inherits E5's ceiling; (iii) any scheme that time-averages its inputs has already low-passed the fast clock and should not expect to recover fast-clock phenomena downstream (E4/E6). The constructive direction --- collapse of the Mori--Zwanzig memory kernel, restoration of the projected fluctuation--dissipation force, the resulting benchmark closures in 2-D and 3-D --- is the companion paper's subject (P1; cf. Chorin, Hald \& Kupferman 2000; Parish \& Duraisamy 2017). This paper deliberately claims none of it.
-
-Equally deliberately, nothing here is a regularity statement (no Beale--Kato--Majda claim; the demonstrations are 2-D and periodic), nothing is an operational forecast-skill claim, and the reanalysis section stands on an assimilated product at coarse resolution. The claims are exactly the six numbers of \S8.1, at the stated scopes.
-
-\section*{9. Conclusion}
-
-Pressure and temperature share a source and a fluid but not a clock: one is a global elliptic/acoustic adjustment, the other a local parabolic transport. That split is measurable in a forest, at three airports, in a convection DNS, in two compressible solvers, in a projection step, and in the planetary wind field --- six falsifiable expectations, six confirmations, with quantitative kill conditions on record. Its practical bite is structural: one-diffusivity closures and spectrum-matched stochastic augmentations are blind to the fast clock's geometry, measurably so ($4.3\times$ efficiency-ratio swing; ensemble-median correlation $0.07$ of spectrum-matched surrogates with the true elliptic correction, divergence left unrepaired). The phenomenon established here is the load-bearing premise of the closure audit and repair developed in the companion paper.
-
-\medskip\hrule\medskip
-
-\section*{Appendix A --- Reproducibility}
-
-All figures and numbers regenerate from the public repository (single commands, fixed seeds, CPU-only for every result in this paper):
-
-\begin{center}
-\begin{tabular}{p{0.30\linewidth}p{0.44\linewidth}p{0.16\linewidth}}
-\toprule
-result & command & figures \\
-\midrule
-\S3.1 NEON two clocks & \code{python general\_two\_clocks/run\_analysis.py} & 1 (and lead--lag, spectra) \\
-\S3.1 seasonal cross-check & \code{python general\_two\_clocks/run\_neon\_compare.py} & --- (artifact) \\
-\S3.2 ASOS latitude sweep + CIs & \code{python general\_two\_clocks/asos/fetch\_iem.py \&\& python general\_two\_clocks/run\_asos\_ci.py} & 15--20 \\
-\S4.1 RB DNS split & \code{python general\_two\_clocks/run\_rb.py} & 4--5 \\
-\S4.1 Ra sweep ($10^{6}$--$10^{8}$) & \code{python general\_two\_clocks/run\_rb\_ra\_sweep.py} & --- (artifact) \\
-\S4.2 Green's-function demo & \code{python general\_two\_clocks/run\_elliptic\_demo.py} & 6 \\
-\S5 stability bins & \code{python general\_two\_clocks/run\_stability.py} & --- (table) \\
-\S6.1 linear crossover & \code{python general\_two\_clocks/run\_compressible.py} & 7 \\
-\S6.2 nonlinear Mach sweep & \code{python general\_two\_clocks/run\_compressible\_ns.py} & 8--9 \\
-\S6.3 projection/SPDE & \code{python general\_two\_clocks/run\_boussinesq.py} & 10--11 \\
-\S7 reanalysis split & \code{python general\_two\_clocks/run\_reanalysis.py} & 12--14 \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-Data endpoints: NEON DP4.00200.001 (data.neonscience.org, public); ASOS 1-minute via the Iowa Environmental Mesonet archive (mesonet.agron.iastate.edu, public); The Well RB dataset (polymathic-ai, public); NCEP/NCAR Reanalysis 1 via NOAA PSL OPeNDAP (psl.noaa.gov, public, no credentials). The repository's test suite (656 passing tests at draft time) covers the analysis modules; each report in \code{general\_two\_clocks/} documents per-part method details and robustness checks.
-
-\section*{Data availability}
-
-All analysis code, committed figure data, and the manuscript source are in the public repository at https://github.com/abdh0saifelden2-debug/K. All input datasets are public as listed in Appendix A.
-
+% ============================================================
 \section*{References}
 
 Berner, J., et al. (2017). Stochastic parameterization: toward a new view of weather and climate models. \emph{Bulletin of the American Meteorological Society} 98, 565--588. doi:10.1175/BAMS-D-15-00268.1
