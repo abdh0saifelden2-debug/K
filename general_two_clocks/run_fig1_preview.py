@@ -87,9 +87,9 @@ def main() -> None:
           f"{np.median(np.abs(corrs)):.3f}, p95 {corr_abs_p95:.3f} (n={N_ENS})")
 
     # --- four-panel composite ----------------------------------------------
-    fig = plt.figure(figsize=(12.0, 8.6))
-    gs = fig.add_gridspec(2, 2, hspace=0.35, wspace=0.22,
-                          left=0.07, right=0.95, top=0.93, bottom=0.09)
+    fig = plt.figure(figsize=(12.0, 8.7))
+    gs = fig.add_gridspec(2, 2, hspace=0.42, wspace=0.30,
+                          left=0.07, right=0.95, top=0.87, bottom=0.09)
 
     # (a) true correction field
     ax_a = fig.add_subplot(gs[0, 0])
