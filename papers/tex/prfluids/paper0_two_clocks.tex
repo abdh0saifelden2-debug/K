@@ -22,7 +22,9 @@
 \date{\today}
 
 \begin{abstract}
-Weather and climate models rely on stochastic parameterizations to represent subgrid processes. A standard assumption in these schemes is that matching the energy spectrum---the variance on each wavenumber---captures the essential effect of unresolved dynamics. Operational models preserve the deterministic elliptic solve; the logic underlying spectrum-matched stochastic closures---if extended to pressure---fails catastrophically, as we demonstrate. The fast (elliptic) pressure correction in incompressible flows is a global, boundary-aware constraint; a spectrum-matched, phase-randomized surrogate with the identical power spectrum leaves the divergence essentially no better than applying no correction at all (ensemble median $3.7\times10^{-2}$ versus $2.7\times10^{-2}$ for the uncorrected drift), while the true projection reaches machine precision ($\sim2\times10^{-15}$). The surrogate test thus demonstrates that spectral equivalence is not dynamical equivalence for elliptic constraints: matching the power spectrum of an elliptic correction does not reproduce its action as a constraint. We demonstrate the operator split driving this failure across five independent settings: field data show temperature tracking local diurnal heating while pressure carries a planetary-scale semidiurnal tide; direct numerical simulation shows pressure and buoyancy share the integral scale but differ by a factor of 2.6--4.5 in Taylor microscale, with the gap widening with Rayleigh number; a controlled linear-acoustics solver shows the hyperbolic-to-elliptic crossover scaling as $t_{90}\approx2.3L/c$; a nonlinear compressible solver shows the fast-clock energy fraction scaling as $M^{2}$; and NCEP/NCAR reanalysis shows the divergent (fast) wind carries $\leq4\%$ of kinetic energy, with a minimum at the classical level of non-divergence. These measurements confirm that the operator split is a robust, measurable property of real flows. The surrogate test then proves that spectrum-matching alone cannot reconstruct the elliptic geometry---a hard constraint that stochastic closures must respect. Scope is explicit: the central surrogate demonstration is two-dimensional and periodic; three-dimensional periodic DNS and a wall-bounded channel operator test confirm the same verdict beyond the box, but no 3-D regularity claim and no forecast-skill claim is made; reanalysis is a model-assimilated confirmation at $l \leq 35$.
+Weather and climate models rely on stochastic parameterizations to represent subgrid processes. A standard assumption in these schemes is that matching the energy spectrum---the variance on each wavenumber---captures the essential effect of unresolved dynamics. Operational models preserve the deterministic elliptic solve; the logic underlying spectrum-matched stochastic closures---if extended to pressure---fails catastrophically, as we demonstrate. The fast (elliptic) pressure correction in incompressible flows is a global, boundary-aware constraint; a spectrum-matched, phase-randomized surrogate with the identical power spectrum leaves the divergence essentially no better than applying no correction at all (ensemble median $3.7\times10^{-2}$ versus $2.7\times10^{-2}$ for the uncorrected drift), while the true projection reaches machine precision ($\sim2\times10^{-15}$). The surrogate test thus demonstrates that spectral equivalence is not dynamical equivalence for elliptic constraints: matching the power spectrum of an elliptic correction does not reproduce its action as a constraint.
+
+We demonstrate the operator split driving this failure across five independent settings. In field data, temperature tracks local diurnal heating while pressure carries a planetary-scale semidiurnal tide. In Rayleigh--B\'enard direct numerical simulation, pressure and buoyancy share the integral scale but differ by a factor of 2.6--4.5 in Taylor microscale, the gap widening as the Rayleigh number rises. A controlled linear-acoustics solver shows the hyperbolic-to-elliptic crossover completing in a time $t_{90}\approx2.3L/c$, and a nonlinear compressible solver shows the fast-clock energy fraction scaling as $M^{2}$. NCEP/NCAR reanalysis finds the divergent (fast) wind carrying $\leq4\%$ of the kinetic energy, with a minimum at the classical level of non-divergence. Together these measurements confirm that the operator split is a robust, measurable property of real flows. The surrogate test then proves that spectrum-matching alone cannot reconstruct the elliptic geometry---a hard constraint that stochastic closures must respect. Scope is explicit: the central surrogate demonstration is two-dimensional and periodic; three-dimensional periodic DNS and a wall-bounded channel operator test confirm the same verdict beyond the box, but no 3-D regularity claim and no forecast-skill claim is made; the reanalysis is a model-assimilated confirmation at $l \leq 35$.
 \end{abstract}
 
 \maketitle
@@ -224,7 +226,7 @@ Strongly stable & $>1.0$ & 160 & 0.156 [0.12--0.20] & 0.203 [0.18--0.23] & 0.77 
 \section{Dynamical mechanism: why the fast clock is not just ``fast noise''}
 \label{sec:mechanism}
 
-The phenomenological evidence establishes that the operator split is large enough to matter. Before delivering the surrogate test, we demonstrate the mechanism in controlled settings where every parameter is known. We define the slow clock by the advective timescale $\tau_{\mathrm{slow}} \sim L/U$ and the fast clock by the acoustic adjustment timescale $\tau_{\mathrm{fast}} \sim L/c$; in the incompressible limit $c \to \infty$ the fast clock becomes instantaneous and the hyperbolic wave equation degenerates into the elliptic constraint. These demonstrations serve a specific purpose: they show that the fast clock converges to a deterministic global field with a unique geometry. Randomizing its phases is therefore guaranteed to fail.
+The phenomenological evidence establishes that the operator split is large enough to matter. Before delivering the surrogate test, we demonstrate the mechanism in controlled settings where every parameter is known. We define the slow clock by the advective timescale $\tau_{\mathrm{slow}} \sim L/U$ and the fast clock by the acoustic adjustment timescale $\tau_{\mathrm{fast}} \sim L/c$; in the incompressible limit $c \to \infty$ the fast clock becomes instantaneous and the hyperbolic wave equation degenerates into the elliptic constraint. These demonstrations serve a specific purpose: they show that the fast clock converges to a deterministic global field with a unique geometry. Randomizing its phases is therefore expected to fail to reproduce the constraint-preserving geometry.
 
 \subsection{The hyperbolic-to-elliptic crossover: deterministic relaxation to a global field}
 \label{sec:crossover}
@@ -357,7 +359,7 @@ the true projection).}
 
 \subsection{The target: stochastic parameterization schemes}
 
-The surrogate test establishes a general principle: spectral equivalence is not dynamical equivalence. Two fields can share identical power spectra while producing radically different outcomes under a constrained operator. The dominance of phase over amplitude for reconstructing coherent structure is a classical result in signal processing (Oppenheim \& Lim 1981); our contribution is to show that for elliptic constraints in PDEs, this translates into a hard failure mode for spectrum-matched closures. The test targets the specific hypothesis that matching the power spectrum of an unresolved correction is sufficient to reproduce its constraint-preserving action. We do not claim that all stochastic parameterizations fail; rather, we show that spectrum-matching alone is insufficient for elliptic constraints: the phase coherence enforced by the elliptic operator $\nabla^2$ is destroyed by randomization, and no spectral surrogate restores it.
+The surrogate test establishes a general principle: spectral equivalence is not dynamical equivalence. Two fields can share identical power spectra while producing radically different outcomes under a constrained operator. The dominance of phase over amplitude for reconstructing coherent structure is a classical result in signal processing (Oppenheim \& Lim 1981); our contribution is to show that for elliptic constraints in PDEs, this translates into a hard failure mode for spectrum-matched closures. The test targets the specific hypothesis that matching the power spectrum of an unresolved correction is sufficient to reproduce its constraint-preserving action. We do not claim that all stochastic parameterizations fail; rather, we show that spectrum-matching alone is insufficient for elliptic constraints: the phase coherence enforced by the elliptic operator $\nabla^2$ is destroyed by randomization, and the tested spectrum-matched phase-randomized surrogate does not restore it.
 
 Operational stochastic schemes do not currently parameterize the pressure solve: SPPT and SKEB perturb the physical tendency fields (temperature, momentum, humidity) and inject backscatter forcing, while the dynamical core continues to solve the pressure equation deterministically (Berner et al.\ 2017). Our result is therefore a design constraint, not a critique of current practice: the logic underlying spectrum-matched stochastic closures---if extended to pressure---fails catastrophically, as we demonstrate.
 
@@ -366,11 +368,40 @@ The failure is not subtle. A field that shares the exact power spectrum with the
 \subsection{The verdict beyond the periodic box}
 \label{sec:beyond}
 
-Two structural objections can be raised against the surrogate test as presented: vortex stretching, which is identically zero in two dimensions, might rescue spectrum-matching; and real turbulence has walls. Both are addressed by repository checks whose commands appear in Appendix~\ref{app:reproducibility} and whose results are presented in full in the companion paper (Saifelden 2026).
+Two structural objections can be raised against the surrogate test as presented: vortex stretching, which is identically zero in two dimensions, might rescue spectrum-matching; and real turbulence has walls. Both are addressed by repository checks whose commands appear in Appendix~\ref{app:reproducibility}; the headline numbers are collected in Table~\ref{tab:beyond}.
 
 \emph{Three dimensions.} The identical benchmark---sharp spectral filter, exact subgrid force, Leray projection, spectrum-matched surrogate---run in a forced three-dimensional incompressible DNS at $128^3$, where the stretching term $\boldsymbol{\omega}\cdot\nabla\mathbf{u}$, the engine of the forward cascade, is active, reproduces the verdict: the true projection and the projected-FDT closure are solenoidal to machine precision (relative RMS divergence $1.05\times10^{-14}$ and $8.85\times10^{-15}$), while the spectrum-matched surrogate leaves a relative RMS divergence of $9.85$---a failure of the same kind and magnitude as in two dimensions. Vortex stretching does not rescue spectrum-matching.
 
 \emph{Walls.} In the periodic box the filter--projector commutator $[F,\mathbb{P}]$ is $3\times10^{-16}$---machine zero---so filtering and projecting commute, and closure models slide $\mathbb{P}$ through $F$ legitimately. In a wall-bounded channel with no-penetration boundaries the same commutator grows to $2.3\times10^{-2}$: $7\times10^{13}$ larger, and confined to the near-wall layer (34$\times$ the bulk value), where the global elliptic pressure response to the wall---the pressure clock---sets it. The wall-blind periodic projector leaves an order-one wall-normal velocity on the walls ($0.513$), while the wall-aware discrete Leray projection enforces no-penetration to $6\times10^{-15}$. A local eddy viscosity, the temperature clock, commutes with the filter in the bulk and carries no information about the wall constraint, so it cannot represent this term---structurally outside the reach of $K$-theory exactly where $K$-theory is tuned. This is an a-priori operator test on a synthetic multiscale channel field, not an a-posteriori channel LES: it isolates $[F,\mathbb{P}]$, which is a property of the operators and the wall geometry alone. No 3-D regularity claim and no forecast-skill claim is made.
+
+\begin{table}[h]
+\centering
+\small
+\caption{The verdict beyond the periodic box. (a) Relative RMS divergence of the projected subgrid force in the three-dimensional periodic benchmark (forced $128^3$ incompressible DNS, sharp spectral filter at $k_c=24$, vortex stretching active). (b) The filter--projector commutator and wall-velocity verdict in the wall-bounded channel ($32\times49\times32$).}
+\label{tab:beyond}
+\begin{tabular}{@{}lc@{}}
+\toprule
+\multicolumn{2}{c}{\textbf{(a) 3-D periodic DNS ($128^3$)}} \\
+\midrule
+Model & rel.\ RMS $\nabla\!\cdot\!\mathbf{m}$ \\
+\midrule
+true projection & $1.05\times10^{-14}$ \\
+projected-FDT closure & $8.85\times10^{-15}$ \\
+spectrum-matched surrogate & $9.85$ \\
+\midrule
+\multicolumn{2}{c}{\textbf{(b) Wall-bounded channel ($32\times49\times32$)}} \\
+\midrule
+Quantity & Value \\
+\midrule
+$\|[F,\mathbb{P}]\mathbf{w}\|/\|\mathbf{w}\|$ in the periodic box & $3\times10^{-16}$ \\
+$\|[F,\mathbb{P}]\mathbf{w}\|/\|\mathbf{w}\|$ in the channel & $2.3\times10^{-2}$ \\
+ratio (channel / box) & $7\times10^{13}$ \\
+near-wall layer vs.\ bulk & $34\times$ \\
+wall-normal velocity, wall-blind projector & $0.513$ \\
+wall-normal velocity, wall-aware Leray & $6\times10^{-15}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 % ============================================================
 \section{The two clocks in the real atmospheric wind field}
